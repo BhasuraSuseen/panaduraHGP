@@ -63,7 +63,7 @@
       }
       echo $select;
       echo '</select>';?>
-      <input type="date" name="dateaomc" placeholder="Date from to AO" required><br>
+      <input type="date" name="dateaomc" placeholder="Date from AO" required><br>
       <input type="text" name="sub" placeholder="Subject">
       <input type="submit" name="submittt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
@@ -104,11 +104,16 @@ echo $lid1 . "was updated";
 
 
   }
-  else{
-  	echo "Letter was not updated";
-  }
-
   /*mc to ms date enter form */
+  if(isset($_POST["submitt"])){
 
+$lid2=$_POST['lid2'];
+$datemcms=$_POST['datemcms'];
+
+$sql3="UPDATE letter SET mcms='$datemcms' WHERE letter_id='$lid2'";
+mysqli_query($conn,$sql3);
+echo $lid2 . "was updated";
+}
+  
 ?>
 </html>

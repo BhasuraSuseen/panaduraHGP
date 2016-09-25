@@ -19,17 +19,30 @@
       $select= '<select name="select">';
       while($rs=mysqli_fetch_array($abc)){
      
-      $select.='<option name="nic" value="' .$rs[0]. '">'.$rs[0].'</option>';
+      $select.='<option name="lid" value="' .$rs[0]. '">'.$rs[0].'</option>';
        }
       }
       
       echo $select;
       echo '</select>'?>
-      <input type="date" name="datemcms" placeholder="Date sent to MS" required>
+      <input type="date" name="datemsao" placeholder="Date sent to MS" required>
       <input type="submit" name="submitt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
-
 	</form>
 </div>
 </body>
+<?php
+require "../connect.php";
+ /*ms to ao date enter form */
+  if(isset($_POST["submitt"])){
+
+$lid=$_POST['lid'];
+$datemsao=$_POST['datemsao'];
+
+$sql="UPDATE letter SET msao='$datemsao' WHERE letter_id='$lid'";
+mysqli_query($conn,$sql);
+echo $lid . "was updated";
+}
+  
+?>
 </html>

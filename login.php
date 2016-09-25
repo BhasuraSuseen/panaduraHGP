@@ -4,7 +4,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
 <title>Log In</title>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
 </head>
 <body>
 <div id="pop_background_login"></div>
@@ -37,21 +37,21 @@
             $_SESSION['username']=$username;
             if($count[1]=="SA" ){
                
-                header("Location: http://localhost/newgp/users/sysadmin.php");
+                header("Location: http://localhost/panaduraHGP/users/sysadmin.php");
 		          die();
 	      
             }elseif($count[1]=="DIR"){
-                header("Location:  http://localhost/newgp/users/director.php");
+                header("Location:  http://localhost/panaduraHGP/users/director.php");
 	        }elseif($count[1]=="AO"){
-                header("Location:  http://localhost/newgp/users/adminofficer.php");
+                header("Location:  http://localhost/panaduraHGP/users/adminofficer.php");
             }elseif($count[1]=="MC"){
-                header("Location:  http://localhost/newgp/users/mailclerk.php");
+                header("Location:  http://localhost/panaduraHGP/users/mailclerk.php");
             }elseif($count[1]=="MB"){
-                header("Location:  http://localhost/newgp/users/maileb.php");
+                header("Location:  http://localhost/panaduraHGP/users/maileb.php");
             }elseif($count[1]=="HB"){
-                header("Location:  http://localhost/newgp/users/hreb.php");
+                header("Location:  http://localhost/panaduraHGP/users/hreb.php");
             }elseif($count[1]=="DC"){
-                header("Location:  http://localhost/newgp/users/dietclerk.php");
+                header("Location:  http://localhost/panaduraHGP/users/dietclerk.php");
             }
             else{
                 echo "User not found";
