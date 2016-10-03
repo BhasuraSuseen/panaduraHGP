@@ -37,21 +37,21 @@
             $_SESSION['username']=$username;
             if($count[1]=="SA" ){
                
-                header("Location: http://localhost/panaduraHGP/users/sysadmin.php");
+                header("Location: sysadmin.php");
 		          die();
 	      
             }elseif($count[1]=="DIR"){
-                header("Location:  http://localhost/panaduraHGP/users/director.php");
+                header("Location:  users/director.php");
 	        }elseif($count[1]=="AO"){
-                header("Location:  http://localhost/panaduraHGP/users/adminofficer.php");
+                header("Location:  users/adminofficer.php");
             }elseif($count[1]=="MC"){
-                header("Location:  http://localhost/panaduraHGP/users/mailclerk.php");
+                header("Location:  users/mailclerk.php");
             }elseif($count[1]=="MB"){
-                header("Location:  http://localhost/panaduraHGP/users/maileb.php");
+                header("Location:  users/maileb.php");
             }elseif($count[1]=="HB"){
-                header("Location:  http://localhost/panaduraHGP/users/hreb.php");
+                header("Location:  users/hreb.php");
             }elseif($count[1]=="DC"){
-                header("Location:  http://localhost/panaduraHGP/users/dietclerk.php");
+                header("Location:  users/dietclerk.php");
             }
             else{
                 echo "User not found";
