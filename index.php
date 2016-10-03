@@ -9,9 +9,12 @@
 <body>
 <div id="pop_background_login"></div>
 <div id="login">
+<div class="login_left"><a href="#"> <spana>#</spana><spanb>OMS</spanb></a> <br> <b>Hospital Office Management System<br> For Panadura Base Hospital</b>
+<br>  T:P No: 038 2232261-62 <br>Fax: 038 2232770 <br> Address: Base Hospital, Panadura
+</div>    
+<div class="login_right">
 <h1>Log in</h1>
 <form action="" method="post">
-
     <label for="email">Username</label>
     <input type="text" placeholder="Username" name="username" required>
 	  <br>
