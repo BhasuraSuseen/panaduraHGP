@@ -203,8 +203,6 @@ ul#nav li:hover{
     opacity: 0.9;
     z-index: 1500;
     display: none;
-    border-top: 3px solid #ef5350;
-    border-bottom: 5px solid #ef5350; 
 }
 
 input[type="text"], input[type="date"], input[type="number"], input[type="password"], textarea  {
