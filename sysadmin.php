@@ -14,16 +14,16 @@
             <div class="left_side_bar_down">
                 <ul id="nav">
                         <li id="open_hr_1" >
-			    	<i> <img src="images/businessman.png" style="width:80%;height:auto; opacity: 0.6;"></i>                               
+			    	<i> <img src="images/businessman.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>                               
                         </li>
                         <li> 
-				<i> <img src="images/businessman-1.png" style="width:80%;height:auto; opacity: 0.6;"></i> 
+				<i> <img src="images/businessman-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i> 
 			</li>
                         <li>  
-				<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6;"></i>
+				<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 			</li>
 			 <li>  
-				<i> <img src="images/check.png" style="width:80%;height:auto; opacity: 0.6;"></i>
+				<i> <img src="images/check.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 			</li>
                 </ul>
            </div>
