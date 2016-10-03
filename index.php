@@ -4,7 +4,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
 <title>Log In</title>
 <link rel="stylesheet" type="text/css" href="styles/global.css">
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </head>
 <body>
 <div id="pop_background_login"></div>
