@@ -134,6 +134,18 @@ ul#nav li:hover{
     cursor: pointer;
     
 }
+.admin_panel_list{
+    border-left: 4px solid #455A64;
+}
+.letter_panel_list{
+    border-left: 4px solid #c62828;
+}
+.hr_panel_list{
+    border-left: 4px solid #2980b9;
+}
+.diet_panel_list{
+    border-left: 4px solid #4CAF50;
+}
 
 .middle_top{
     float: left;
