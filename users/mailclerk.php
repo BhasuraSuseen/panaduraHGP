@@ -31,10 +31,10 @@
       require "../connect.php";
 			$abc=mysqli_query($conn,"select letter_id from letter where mcms is NULL");
       if(mysqli_num_rows($abc)>0){
-      $select= '<select name="select">';
+      $select= '<select name="lid2">';
       while($rs=mysqli_fetch_array($abc)){
      
-      $select.='<option name="lid2" value="' .$rs[0]. '">'.$rs[0].'</option>';
+      $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
        }
       }
       
@@ -50,19 +50,30 @@
 	<form name="mctoms" action="mailclerk.php" method="post" accept-charset="utf-8">
 		  <?php  
      
-			$ab=mysqli_query($conn,"select letter_id from letter where NOT(mcms is NULL or msao is NULL) AND aomc is NULL");
-			echo mysqli_num_rows($ab);
+			$ab=mysqli_query($conn,"select letter_id from letter where aomc is NULL and msao IS NOT NULL");
 
-      if(mysqli_num_rows($ab)==0){
-      $select= '<select name="select">';
+      echo mysqli_num_rows($ab);
+      if(mysqli_num_rows($ab)>0){
+      $select1= '<select name="lid1">';
       while($rd=mysqli_fetch_array($ab)){
      
-      $select.='<option name="lid1" value="' .$rd[0]. '">'.$rd[0].'</option>';
+      $select1.='<option' .$rd[0]. '">'.$rd[0].'</option>';
        
       }
       }
-      echo $select;
+      echo $select1;
       echo '</select>';?>
+      <label>Forward to EB</label>
+      <select name="eb" >
+      <option>EB NO.1</option>
+      <option>EB NO.2</option>
+      <option>EB NO.3</option>
+      <option>EB NO.4</option>
+      <option>EB NO.5</option>
+      <option>EB NO.6</option>
+      <option>EB NO.7</option>
+      <option>EB NO.8</option>
+      </select>
       <input type="date" name="dateaomc" placeholder="Date from AO" required><br>
       <input type="text" name="sub" placeholder="Subject">
       <input type="submit" name="submittt" value="Enter Date">
@@ -97,8 +108,8 @@
 $sub=$_POST['subject'];
 $lid1=$_POST['lid1'];
 $dateaomc=$_POST['dateaomc'];
-
-$sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc' WHERE letter_id='$lid1'";
+$eb=$_POST['eb'];
+$sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc',eb='$eb' WHERE letter_id='$lid1'";
 mysqli_query($conn,$sql2);
 echo $lid1 . "was updated";
 
@@ -110,7 +121,7 @@ echo $lid1 . "was updated";
 $lid2=$_POST['lid2'];
 $datemcms=$_POST['datemcms'];
 
-$sql3="UPDATE letter SET mcms='$datemcms' WHERE letter_id='$lid2'";
+$sql3="UPDATE letter SET mcms='$datemcms'WHERE letter_id='$lid2'";
 mysqli_query($conn,$sql3);
 echo $lid2 . "was updated";
 }

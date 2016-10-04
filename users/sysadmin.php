@@ -54,7 +54,7 @@
       return false;
     }
 
-    alert(form.password.value + " was entered successfully");
+    alert(form.user_name.value + " was entered successfully");
     return true;
   }
 
@@ -85,31 +85,48 @@
 			<tr><td>NIC</td><td>
       <?php  
       require "../connect.php";
+       session_start(); 
 			$abc=mysqli_query($conn,"select employee.NIC_NO from employee where employee.NIC_NO not in(select employee.NIC_NO from employee inner join users on employee.NIC_NO=users.NIC_NO)");
       if(mysqli_num_rows($abc)>0){
-      $select= '<select name="select">';
+      $select= '<select name="nic">';
       while($rs=mysqli_fetch_array($abc)){
      
-      $select.='<option name="nic" value="' .$rs[0]. '">'.$rs[0].'</option>';
+      $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
        }
       }
       
       echo $select;
       echo '</select>'?></td></tr>
-			<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA"> System Administartor
-  			<input type="radio" name="usertype" value="DIR" required> Director<input type="radio" name="usertype" value="AO"> Admin Officer
-        <input type="radio" name="usertype" value="MC" required> Mail Clerk<input type="radio" name="usertype" value="MB"> Mail EB
-        <input type="radio" name="usertype" value="DC" required> Diet CLerk<input type="radio" name="usertype" value="HB"> HR EB</td></tr>
-        
+			<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator
+  			<input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer
+        <input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<input type="radio" name="usertype" value="MB" onclick="myFunction1()"> Mail EB
+        <input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet CLerk<input type="radio" name="usertype" value="HB" onclick="myFunction()"> HR EB</td></tr>
+      <tr><td>EB type</td><td> <select id="myText" name="ebno">
+          <option name="ebno" value="5">Type 1</option>
+          <option name="ebno" value="6">Type 2</option>
+          <option name="ebno" value="7">Type 3</option>
+          <option name="ebno" value="8">Type 4</option>
+      </select>  </td></tr>
+
 			<tr><td colspan=2 align="center">
 			<input type="submit" value="Add new user" name="submit">
 			<input type="reset" value="Reset"></td>
 			</tr></table>
 			</form>
+   
+<!--script to disable and enable eb type drop down menu -->
+<script>
+function myFunction() {
+    document.getElementById("myText").disabled = true;
+}
+function myFunction1(){
+  document.getElementById("myText").disabled = false;
+}
+</script>
 <?php
 
 
- session_start(); 
+
  
 echo "Welcome ". $_SESSION['username'];
 
@@ -133,12 +150,36 @@ if (mysqli_num_rows($result) > 0) {
 
 }
  echo"</table>";
+
  if(isset($_POST["submit"])){
- 	 $user = $_POST['user_name'];
- 	 $id = $_POST['select'];
+ 	 
+   if(isset($_POST['ebno'])){
+    $ebno = $_POST['ebno']; 
+ 
+   }
 
-   echo $id;
-
+  
+  else{
+    if ($_POST['usertype']=="HB") {
+         $ebno =4;
+       }
+   elseif ($_POST['usertype']=="SA") {
+        $ebno = 1;
+        }
+   elseif ($_POST['usertype']=="MC") {
+        $ebno = 2;
+     
+   }
+    elseif ($_POST['usertype']=="DC") {
+        $ebno = 3;
+   
+   }
+   else{
+        $ebno = 0;
+   }
+  }
+   $user = $_POST['user_name'];
+   $id = $_POST['select']; 
  	 $pass = md5($_POST['password']);
  	 $admin = $_POST['usertype'];
  	 $passc = md5($_POST['passwordc']);
@@ -161,7 +202,7 @@ if(mysqli_num_rows($result1)>=1){
   				if(mysqli_num_rows($result3)>=1){
    				echo $user." has an account already";}
    				else{
-   					$sql1="INSERT INTO users (USERNAME,PASSWORD,ADMIN,NIC_NO) VALUES ('$user','$pass','$admin','$id')";
+   					$sql1="INSERT INTO users (USERNAME,PASSWORD,ADMIN,NIC_NO,EB) VALUES ('$user','$pass','$admin','$id','$ebno')";
    					mysqli_query($conn,$sql1);
    					echo $user . "was entered successfully";
    				}

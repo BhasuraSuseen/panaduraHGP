@@ -32,7 +32,7 @@
 </div>
 </body>
 <?php
-require "../connect.php";
+
  /*ms to ao date enter form */
   if(isset($_POST["submitt"])){
 
