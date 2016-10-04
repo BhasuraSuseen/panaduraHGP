@@ -81,66 +81,46 @@
              </svg>
              
         </div>
-    <div id="pop_background"></div>
-    <div id="pop_box_hr_1">
-        <form name="new_user" action="admin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
-			<table>
-			<thead>
-			<tr>
-			<th colspan=2>Enter New User Details </th></thead>
-			</tr>
-			<tr><td>User Name</td><td> 
-			<input type="text" name="user_name" size="20" required></td></tr>
-			<tr><td>Password</td><td> 
-			<input type="password" name="password" size="20" required></td></tr>
-			<tr><td>Confirm Password</td><td> 
-			<input type="password" name="passwordc" size="20" required></td></tr>
-			<tr><td>NIC</td><td> 
-			<input type="text" name="nic" size="20" required></td></tr>
-			<tr><td>User Type</td><td><input type="radio" name="usertype" value="1"> Administrator
-  			<input type="radio" name="usertype" value="0" required=""> User</td></tr>
-			<tr><td colspan=2 align="center">
-			<input type="submit" value="Add new user" name="submit">
-			<input type="reset" value="Reset"></td>
-			</tr></table>
-			</form>
-    </div>
-    <div id="pop_box_mail_AE"><b>Enter MS to AO date</b>
-	<form name="mstoao" action="adminofficer.php" method="post" accept-charset="utf-8">
-		  <?php  
-      require "../connect.php";
-			$abc=mysqli_query($conn,"select letter_id from letter where mcms is NULL");
-      if(mysqli_num_rows($abc)>0){
-      $select= '<select name="select">';
-      while($rs=mysqli_fetch_array($abc)){
+         <div id="pop_background"></div>
+     <div id="pop_box_hr_1">
+         <form name="new_user" action="admin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
+ 			<table>
+ 			<thead>
+ 			<tr>
+ 			<th colspan=2>Enter New User Details </th></thead>
+ 			</tr>
+ 			<tr><td>User Name</td><td> 
+ 			<input type="text" name="user_name" size="20" required></td></tr>
+ 			<tr><td>Password</td><td> 
+ 			<input type="password" name="password" size="20" required></td></tr>
+ 			<tr><td>Confirm Password</td><td> 
+ 			<input type="password" name="passwordc" size="20" required></td></tr>
+ 			<tr><td>NIC</td><td> 
+ 			<input type="text" name="nic" size="20" required></td></tr>
+ 			<tr><td>User Type</td><td><input type="radio" name="usertype" value="1"> Administrator
+   			<input type="radio" name="usertype" value="0" required=""> User</td></tr>
+ 			<tr><td colspan=2 align="center">
+ 			<input type="submit" value="Add new user" name="submit">
+ 			<input type="reset" value="Reset"></td>
+ 			</tr></table>
+ 			</form>
+     </div>
+ 	</div>
      
-      $select.='<option name="lid" value="' .$rs[0]. '">'.$rs[0].'</option>';
-       }
-      }
-      
-      echo $select;
-      echo '</select>'?>
-      <input type="date" name="datemsao" placeholder="Date sent to MS" required>
-      <input type="submit" name="submitt" value="Enter Date">
-      <input type="reset" name="reset" value="Reset">
-	</form>
-</div>
-	</div>
-    
-       <script>
-        $(document).ready(function(){
-           $('#open_hr_1').click(function(){
-               $('#pop_background').fadeIn();
-               $('#pop_box_hr_1').fadeIn();
-               return false;
-           });
-           $('#pop_background').click(function(){
-               $('#pop_background').fadeOut();
-               $('#pop_box_hr_1').fadeOut();
-
-               return false;
-           });
-        });
-    </script>
-</body>
-</html>
+        <script>
+         $(document).ready(function(){
+            $('#open_hr_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_hr_1').fadeIn();
+                return false;
+            });
+            $('#pop_background').click(function(){
+                $('#pop_background').fadeOut();
+                $('#pop_box_hr_1').fadeOut();
+ 
+                return false;
+            });
+         });
+     </script>
+ </body>
+ </html>
