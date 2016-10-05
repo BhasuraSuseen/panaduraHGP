@@ -83,27 +83,94 @@
         </div>
          <div id="pop_background"></div>
      <div id="pop_box_hr_1">
-         <form name="new_user" action="admin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
- 			<table>
- 			<thead>
- 			<tr>
- 			<th colspan=2>Enter New User Details </th></thead>
- 			</tr>
- 			<tr><td>User Name</td><td> 
- 			<input type="text" name="user_name" size="20" required></td></tr>
- 			<tr><td>Password</td><td> 
- 			<input type="password" name="password" size="20" required></td></tr>
- 			<tr><td>Confirm Password</td><td> 
- 			<input type="password" name="passwordc" size="20" required></td></tr>
- 			<tr><td>NIC</td><td> 
- 			<input type="text" name="nic" size="20" required></td></tr>
- 			<tr><td>User Type</td><td><input type="radio" name="usertype" value="1"> Administrator
-   			<input type="radio" name="usertype" value="0" required=""> User</td></tr>
- 			<tr><td colspan=2 align="center">
- 			<input type="submit" value="Add new user" name="submit">
- 			<input type="reset" value="Reset"></td>
- 			</tr></table>
- 			</form>
+				  <form name="new_user" action="sysadmin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
+						<table>
+						<thead>
+						<tr>
+						<th colspan=2>Enter New User Details </th></thead>
+						</tr>
+						<tr><td>User Name</td><td> 
+						<input type="text" name="user_name" size="20" required></td></tr>
+						<tr><td>Password</td><td> 
+						<input type="password" name="password" size="20" required></td></tr>
+						<tr><td>Confirm Password</td><td> 
+						<input type="password" name="passwordc" size="20" required></td></tr>
+						<tr><td>NIC</td><td>
+			      <?php  
+			      require "../connect.php";
+				  $abc=mysqli_query($conn,"select employee.NIC_NO from employee where employee.NIC_NO not in(select employee.NIC_NO from employee inner join users on employee.NIC_NO=users.NIC_NO)");
+			      if(mysqli_num_rows($abc)>0){
+			      $select= '<select name="select">';
+			      while($rs=mysqli_fetch_array($abc)){
+
+			      $select.='<option name="nic" value="' .$rs[0]. '">'.$rs[0].'</option>';
+			       }
+			      }
+
+			      echo $select;
+			      echo '</select>'?></td></tr>
+						<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA"> System Administartor
+						<input type="radio" name="usertype" value="DIR" required> Director<input type="radio" name="usertype" value="AO"> Admin Officer
+				<input type="radio" name="usertype" value="MC" required> Mail Clerk<input type="radio" name="usertype" value="MB"> Mail EB
+				<input type="radio" name="usertype" value="DC" required> Diet CLerk<input type="radio" name="usertype" value="HB"> HR EB</td></tr>
+
+						<tr><td colspan=2 align="center">
+						<input type="submit" value="Add new user" name="submit">
+						<input type="reset" value="Reset"></td>
+						</tr></table>
+						</form>
+			     <script type="text/javascript">
+			  function checkForm(form)
+			  {
+			    if(form.user_name.value == "") {
+			      alert("Error: Username cannot be blank!");
+			      form.user_name.focus();
+			      return false;
+			    }
+			    re = /^\w+$/;
+			    if(!re.test(form.user_name.value)) {
+			      alert("Error: Username must contain only letters, numbers and underscores!");
+			      form.user_name.focus();
+			      return false;
+			    }
+			    if(form.password.value != "" && form.password.value == form.passwordc.value) {
+			      if(form.password.value.length < 6) {
+				alert("Error: Password must contain at least six characters!");
+				form.password.focus();
+				return false;
+			      }
+			      if(form.password.value == form.user_name.value) {
+				alert("Error: Password must be different from Username!");
+				form.password.focus();
+				return false;
+			      }
+			      re = /[0-9]/;
+			      if(!re.test(form.password.value)) {
+				alert("Error: password must contain at least one number (0-9)!");
+				form.password.focus();
+				return false;
+			      }
+			      re = /[a-z]/;
+			      if(!re.test(form.password.value)) {
+				alert("Error: password must contain at least one lowercase letter (a-z)!");
+				form.password.focus();
+				return false;
+			      }
+			      re = /[A-Z]/;
+			      if(!re.test(form.password.value)) {
+				alert("Error: password must contain at least one uppercase letter (A-Z)!");
+				form.password.focus();
+				return false;
+			      }
+			    } else {
+			      alert("Error: Please check that you've entered and confirmed your password!");
+			      form.password.focus();
+			      return false;
+			    }
+			    alert(form.password.value + " was entered successfully");
+			    return true;
+			  }
+			</script>
      </div>
  	</div>
      
