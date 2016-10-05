@@ -97,7 +97,7 @@
 						<input type="password" name="passwordc" size="20" required></td></tr>
 						<tr><td>NIC</td><td>
 			      <?php  
-			      require "../connect.php";
+			      require "connect.php";
 				  $abc=mysqli_query($conn,"select employee.NIC_NO from employee where employee.NIC_NO not in(select employee.NIC_NO from employee inner join users on employee.NIC_NO=users.NIC_NO)");
 			      if(mysqli_num_rows($abc)>0){
 			      $select= '<select name="select">';
