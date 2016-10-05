@@ -14,7 +14,7 @@ body {
 }	
 h1{
 	font-family: 'Open Sans';
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 400;
 	color: #455A64;
 }
@@ -24,7 +24,7 @@ h1:hover{
 }
 spanh1{
     font-family: 'Open Sans';
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 400;
 	color: #455A64;
 }
@@ -33,13 +33,13 @@ spanh1:hover{
 }
 a{
 	font-family: 'Open Sans';
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
 	color: #455A64;
 }
 a:hover{
 	font-family: 'Open Sans';
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
 	color: #2980b9;
 }
