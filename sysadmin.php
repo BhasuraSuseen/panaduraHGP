@@ -108,7 +108,9 @@
 			      }
 
 			      echo $select;
-			      echo '</select>'?></td></tr>
+			      echo '</select>';
+			?>
+						</td></tr>
 						<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA"> System Administartor
 						<input type="radio" name="usertype" value="DIR" required> Director<input type="radio" name="usertype" value="AO"> Admin Officer
 						<input type="radio" name="usertype" value="MC" required> Mail Clerk<input type="radio" name="usertype" value="MB"> Mail EB
