@@ -70,7 +70,8 @@
 			
 			
             <div class="middle_left">
-                <a> Post box and news feed</a>
+                <a href="attendence/ebatt.php"> Post box and news feed</a><br>
+		<a href="attendence/eb.php"> Post box and news feed</a>
             </div>
             <div class="middle_right">
                 <button class="button button1">GA</button>
