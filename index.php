@@ -50,7 +50,7 @@
             }elseif($count[1]=="MC"){
                 header("Location:  users/mailclerk.php");
             }elseif($count[1]=="MB"){
-                header("Location:  users/maileb.php");
+                header("Location: letterEB.php");
             }elseif($count[1]=="HB"){
                 header("Location:  users/hreb.php");
             }elseif($count[1]=="DC"){
