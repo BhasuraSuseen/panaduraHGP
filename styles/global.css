@@ -207,9 +207,21 @@ ul#nav li:hover{
     background: #ECEFF1;
     font-size: 0.9em;
     width: 54%;
-    margin: 3% 0 0 5%;
+    margin: 5% 0 0 5%;
     padding: 20px;
-    opacity: 0.9;
+    opacity: 0.95;
+    z-index: 1500;
+    display: none;
+    
+}
+#pop_box_att_1{
+    position: absolute;
+    background: #ECEFF1;
+    font-size: 0.9em;
+    width: 90%;
+    margin: 5% 0 0 5%;
+    padding: 20px;
+    opacity: 0.95;
     z-index: 1500;
     display: none;
     
