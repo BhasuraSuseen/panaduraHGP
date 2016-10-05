@@ -64,6 +64,7 @@
                       </div>
                       <div class="middle_top_right">
                           <a>Bhasura Suseen</a>
+			  <a href="index.php"><button class="button">Log Out</button></a>
                       </div>
             </div>
 			
