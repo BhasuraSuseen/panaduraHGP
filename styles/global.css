@@ -211,7 +211,7 @@ ul#nav li:hover{
     padding: 20px;
     opacity: 0.9;
     z-index: 1500;
-    display: none;
+    
 }
 
 input[type="text"], input[type="date"], input[type="number"], input[type="password"], textarea  {
