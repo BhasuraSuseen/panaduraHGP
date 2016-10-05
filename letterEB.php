@@ -55,12 +55,13 @@
                       </div>
                       <div class="middle_top_right">
                           <a>Bhasura Suseen</a>
+			  <a href="index.php"><button class="button">Log Out</button></a>
                       </div>
             </div>
 			
 			
             <div class="middle_left">
-                <a> art is the simplest imagination</a>
+                <a>Post box and news feed</a>
             </div>
             <div class="middle_right">
                 <button class="button button1">GA</button>
