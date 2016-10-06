@@ -28,8 +28,8 @@ FROM employee
                
                 <h5 ><? //php echo $date2  ?></h5>
         <h5 id="date" style="display: none"><?php echo $date3 ?></h5>
-        <h5 style="display: none"><?php echo $date4 ?></h5>
-        <h5 style="diplay: none"><?php echo $day ?></h5>
+        <h5><?php echo $date4 ?></h5>
+        <h5 style="diplay: none"><?php// echo $day ?></h5>
         <body>
             
             
