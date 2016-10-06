@@ -4,7 +4,7 @@ include '../connect.php';
 $res1 = mysqli_query($conn, "SELECT * FROM employee");
 while ($row1 = mysqli_fetch_array($res1)) {
     $nic = $row1['NIC_NO'];
-    mysqli_query($conn, "insert into attend(date,employee_nic) values ('$yearmon','$nic')");
+    mysqli_query($conn, "INSERT INTO attend(date,employee_nic) VALUES ('$yearmon','$nic')");
 }
 
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
@@ -28,8 +28,8 @@ FROM employee
                
                 <h5 ><? //php echo $date2  ?></h5>
         <h5 id="date" style="display: none"><?php echo $date3 ?></h5>
-        <h5><?php echo $date4 ?></h5>
-        <h5 style="diplay: none"><?php// echo $day ?></h5>
+        <h5 style="display: none"><?php echo $date4 ?></h5>
+        <h5 style="display: none"><?php echo $day ?></h5>
         <body>
             
             
