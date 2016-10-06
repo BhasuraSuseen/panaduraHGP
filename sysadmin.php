@@ -125,7 +125,8 @@
 						</form>
 			  
      </div>
-	<div id='pop_box_hr_2' >
+	<div id="pop_background"></div>
+     <div id="pop_box_hr_1">
 	
 
                 <?php include 'attendence/ebatt.php'; ?>
