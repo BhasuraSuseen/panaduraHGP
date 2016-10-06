@@ -12,9 +12,10 @@
 </div>
 <div style="float: right;"><b>Enter MS to AO date</b>
 	<form name="mstoao" action="adminofficer.php" method="post" accept-charset="utf-8">
+  <label>Letter ID</label>
 		  <?php  
       require "../connect.php";
-			$abc=mysqli_query($conn,"select letter_id from letter where mcms is NULL");
+			$abc=mysqli_query($conn,"select letter_id from letter where msao is NULL and mcms is NOT NULL");
       if(mysqli_num_rows($abc)>0){
       $select= '<select name="select">';
       while($rs=mysqli_fetch_array($abc)){
@@ -22,7 +23,9 @@
       $select.='<option name="lid" value="' .$rs[0]. '">'.$rs[0].'</option>';
        }
       }
-      
+      else{
+        $select='<select><option></option></select>';
+      }
       echo $select;
       echo '</select>'?>
       <input type="date" name="datemsao" placeholder="Date sent to MS" required>

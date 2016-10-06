@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mail EB</title>
+	<title>Diet clerk</title>
 </head>
 <body>
 <div>
@@ -12,6 +12,7 @@
 </div>
 <div style="float: right;"><b>Enter MC to EB date</b>
 	<form name="mstoao" action="dietclerk.php" method="post" accept-charset="utf-8">
+  <label>Letter ID</label>
 		  <?php  
       require "../connect.php";
 			$abc=mysqli_query($conn,"select letter_id from letter where mceb is NULL and aomc IS NOT NULL and eb= 3");
@@ -22,7 +23,9 @@
       $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
        }
       }
-      
+      else{
+        $select='<select><option></option></select>';
+      }
       echo $select;
       echo '</select>'?>
       <input type="date" name="datemceb" placeholder="Date received from Mail Clerk" required>

@@ -94,7 +94,10 @@
       $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
        }
       }
-      
+      else{
+        $select='<select><option></option></select>';
+      }
+
       echo $select;
       echo '</select>'?></td></tr>
 			<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator
@@ -179,7 +182,7 @@ if (mysqli_num_rows($result) > 0) {
    }
   }
    $user = $_POST['user_name'];
-   $id = $_POST['select']; 
+   $id = $_POST['nic']; 
  	 $pass = md5($_POST['password']);
  	 $admin = $_POST['usertype'];
  	 $passc = md5($_POST['passwordc']);

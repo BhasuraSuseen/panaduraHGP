@@ -28,13 +28,14 @@
 	if(isset($_POST["submit"])){
 	$username=$_POST['username'];
 	$password=md5($_POST['password']);
-	$sql = "SELECT USERNAME, ADMIN FROM users WHERE USERNAME='".$username."' AND PASSWORD='".$password."'";
+	$sql = "SELECT USERNAME, ADMIN, EB FROM users WHERE USERNAME='".$username."' AND PASSWORD='".$password."'";
 	$result = mysqli_query($conn,$sql);
     $count =mysqli_fetch_array($result);
         
         
         if(mysqli_num_rows($result)>0){
             $_SESSION['username']=$username;
+            $_SESSION['ebno']=$count[2];
             if($count[1]=="SA" ){
                
                 header("Location: http://localhost/panaduraHGP/users/sysadmin.php");

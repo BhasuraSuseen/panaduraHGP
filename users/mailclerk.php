@@ -27,7 +27,8 @@
 </div>
 <div style="float: right;"><b>Enter MC to MS date</b>
 	<form name="mctoms" action="mailclerk.php" method="post" accept-charset="utf-8">
-		  <?php  
+		  <label>Letter ID</label>
+      <?php  
       require "../connect.php";
 			$abc=mysqli_query($conn,"select letter_id from letter where mcms is NULL");
       if(mysqli_num_rows($abc)>0){
@@ -37,7 +38,9 @@
       $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
        }
       }
-      
+      else{
+      $select='<select><option></option></select>';
+        }
       echo $select;
       echo '</select>'?>
       <input type="date" name="datemcms" placeholder="Date sent to MS" required>
@@ -48,18 +51,22 @@
 	<!--methana enter karanne AO to MC date -->
 	<b>Enter AO to MC date</b>
 	<form name="mctoms" action="mailclerk.php" method="post" accept-charset="utf-8">
+  <label>Letter ID</label>
 		  <?php  
      
 			$ab=mysqli_query($conn,"select letter_id from letter where aomc is NULL and msao IS NOT NULL");
 
-      echo mysqli_num_rows($ab);
+     
       if(mysqli_num_rows($ab)>0){
       $select1= '<select name="lid1">';
       while($rd=mysqli_fetch_array($ab)){
      
-      $select1.='<option' .$rd[0]. '">'.$rd[0].'</option>';
+      $select1.='<option value="' .$rd[0]. '">'.$rd[0].'</option>';
        
       }
+      }
+      else{
+        $select1='<select><option></option></select>';
       }
       echo $select1;
       echo '</select>';?>
