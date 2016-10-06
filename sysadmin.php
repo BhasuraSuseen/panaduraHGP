@@ -126,14 +126,12 @@
 			  
      </div>
 	<div class="middle_left">
-		<div style="height: 600px">
+		
 
                         <div style="overflow-y: scroll">
 
                             <?php include 'attendence/ebatt.php'; ?>
 			</div>
-		</div>
-        </div>
  	</div>
      
         <script>
