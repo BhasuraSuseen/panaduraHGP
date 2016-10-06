@@ -4,7 +4,7 @@ include '../connect.php';
 $res1 = mysqli_query($conn, "SELECT * FROM employee");
 while ($row1 = mysqli_fetch_array($res1)) {
     $nic = $row1['NIC_NO'];
-    mysqli_query($conn, "insert into attend(date,employee_nic) values ("$yearmon","$nic")");
+    mysqli_query($conn, "insert into attend(date,employee_nic) values ('$yearmon','$nic')");
 }
 
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
@@ -58,7 +58,7 @@ FROM employee
                             <?php if ($date4 == "Monday") { ?>
 
                                 <td style="width: 8%; background-color: blanchedalmond">
-                                    <input type="checkbox" name="mon" <?php if ($row[3] == 1) {
+                                    <input type="checkbox" name="mon" <?php if ($row['$day'] == 1) {
                         echo 'Checked';
                     } ?> onclick="saveAttends('<?php echo $row[0]; ?>', document.getElementById('date').innerHTML, this.checked)"> </td>  
                                 <td style="width: 8%; background-color: appworkspace">
