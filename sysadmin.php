@@ -125,7 +125,7 @@
 						</form>
 			  
      </div>
-	<div id='open_att_1' >
+	<div id='pop_box_hr_2' >
 	
 
                 <?php include 'attendence/ebatt.php'; ?>
