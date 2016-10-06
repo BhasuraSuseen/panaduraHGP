@@ -3,15 +3,18 @@
 <meta charset=utf-8 />
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
 <title>Log In</title>
-
-
+<link rel="stylesheet" type="text/css" href="styles/global.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </head>
 <body>
 <div id="pop_background_login"></div>
 <div id="login">
+<div class="login_left"><a href="#"> <spana>#</spana><spanb>OMS</spanb></a> <br> <b>Hospital Office Management System<br> For Panadura Base Hospital</b>
+<br>  T:P No: 038 2232261-62 <br>Fax: 038 2232770 <br> Address: Base Hospital, Panadura
+</div>    
+<div class="login_right">
 <h1>Log in</h1>
 <form action="" method="post">
-
     <label for="email">Username</label>
     <input type="text" placeholder="Username" name="username" required>
 	  <br>
@@ -38,21 +41,21 @@
             $_SESSION['ebno']=$count[2];
             if($count[1]=="SA" ){
                
-                header("Location: http://localhost/panaduraHGP/users/sysadmin.php");
+                header("Location: sysadmin.php");
 		          die();
 	      
             }elseif($count[1]=="DIR"){
-                header("Location:  http://localhost/panaduraHGP/users/director.php");
+                header("Location:  users/director.php");
 	        }elseif($count[1]=="AO"){
-                header("Location:  http://localhost/panaduraHGP/users/adminofficer.php");
+                header("Location:  users/adminofficer.php");
             }elseif($count[1]=="MC"){
-                header("Location:  http://localhost/panaduraHGP/users/mailclerk.php");
+                header("Location:  users/mailclerk.php");
             }elseif($count[1]=="MB"){
-                header("Location:  http://localhost/panaduraHGP/users/maileb.php");
+                header("Location: letterEB.php");
             }elseif($count[1]=="HB"){
-                header("Location:  http://localhost/panaduraHGP/users/hreb.php");
+                header("Location:  users/hreb.php");
             }elseif($count[1]=="DC"){
-                header("Location:  http://localhost/panaduraHGP/users/dietclerk.php");
+                header("Location:  users/dietclerk.php");
             }
             else{
                 echo "User not found";
@@ -63,6 +66,7 @@
         
     }
 	?>
+	</div>
 	</div>
 
 </body>
