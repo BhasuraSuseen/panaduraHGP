@@ -1,13 +1,13 @@
 <?php
 include 'datetime.php';
-include '../connect.php';
-$res1 = mysqli_query($conn, "SELECT * FROM employee");
+include 'connection.php';
+$res1 = mysqli_query($server, "SELECT * FROM employee");
 while ($row1 = mysqli_fetch_array($res1)) {
     $nic = $row1['NIC_NO'];
     mysqli_query($conn, "insert into attend(date,employee_nic) values ('$yearmon','$nic')");
 }
 
-$res = mysqli_query($conn, "SELECT  employee.Nic_no,
+$res = mysqli_query($server, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
   attend.$day,
@@ -29,7 +29,7 @@ FROM employee
                 <h5 ><? //php echo $date2  ?></h5>
         <h5 id="date" style="display: none"><?php echo $date3 ?></h5>
         <h5 style="display: none"><?php echo $date4 ?></h5>
-        <h5 style="diplay:none"><?php echo $day ?></h5>
+        <h5 style="diplay: none"><?php echo $day ?></h5>
         <body>
             
             
