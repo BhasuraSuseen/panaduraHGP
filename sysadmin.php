@@ -125,13 +125,11 @@
 						</form>
 			  
      </div>
-	<div class="middle_left">
-		
+	<div id='open_att_1' >
+	
 
-                        <div style="overflow-y: scroll">
-
-                            <?php include 'attendence/ebatt.php'; ?>
-			</div>
+                <?php include 'attendence/ebatt.php'; ?>
+			
  	</div>
      
         <script>
