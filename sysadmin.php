@@ -130,10 +130,9 @@
 
                         <div style="overflow-y: scroll">
 
-                            <?php include 'attendence/paraatt.php'; ?>
+                            <?php include 'attendence/ebatt.php'; ?>
 			</div>
 		</div>
- 	<?php include 'attendence/ebatt.php';?>
         </div>
  	</div>
      
