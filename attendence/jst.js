@@ -44,7 +44,7 @@ function loadParadata() {
 
         }
     };
-    obj.open("POST", "viewParaArp.php", true);
+    obj.open("POST", "attendence/viewParaArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
@@ -66,7 +66,7 @@ function loadDrdata() {
 
         }
     };
-    obj.open("POST", "viewDoctorArp.php", true);
+    obj.open("POST", "attendence/viewDoctorArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
@@ -88,7 +88,7 @@ function loadEbdata() {
 
         }
     };
-    obj.open("POST", "viewEbArp.php", true);
+    obj.open("POST", "attendence/viewEbArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
@@ -111,7 +111,7 @@ function loadNurcedata() {
 
         }
     };
-    obj.open("POST", "viewNurceArp.php", true);
+    obj.open("POST", "attendence/viewNurceArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
@@ -133,7 +133,7 @@ function loadMinordata() {
 
         }
     };
-    obj.open("POST", "viewMinorArp.php", true);
+    obj.open("POST", "attendence/viewMinorArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
@@ -160,7 +160,7 @@ function saveAttends(name, date, attend) {
 //
     //            }
         };
-        obj.open("POST", "saveattends.php", true);
+        obj.open("POST", "attendence/saveattends.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         obj.send("nic=" + name + "&date=" + date + "&attend=" + attend);
 
@@ -208,7 +208,7 @@ function searchAttends(day,name,id) {
 
         }
     };
-    obj.open("POST", "search.php", true);
+    obj.open("POST", "attendence/search.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         obj.send("nic=" + id + "&day=" + day + "&name=" + name);
 
