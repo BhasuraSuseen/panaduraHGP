@@ -125,7 +125,14 @@
 						</form>
 			  
      </div>
-	<div id="pop_box_att_1">
+	<div class="middle_left">
+		<div style="height: 600px">
+
+                        <div style="overflow-y: scroll">
+
+                            <?php include 'attendence/paraatt.php'; ?>
+			</div>
+		</div>
  	<?php include 'attendence/ebatt.php';?>
         </div>
  	</div>
