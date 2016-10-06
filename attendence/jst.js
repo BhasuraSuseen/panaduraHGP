@@ -148,7 +148,7 @@ function saveAttends(name, date, attend) {
 
            
      //           if (obj.readyState === 4 && obj.status === 200) {
- alert(obj.responseText);
+// alert(obj.responseText);
 //                       
 //                    if (obj.responseText == "Hri mcn") {
 //
