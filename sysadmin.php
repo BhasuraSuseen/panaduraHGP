@@ -9,10 +9,10 @@
 </head>
 <body> 
 	<div class="all_container">
-		<div class="left_side_bar">
+		<div class="left_side_bar" style="position: relative;top: -95px;">
             <div class="left_side_bar_top">                   
             </div>
-            <div class="left_side_bar_down">
+            <div class="left_side_bar_down" >
                 <ul id="nav">
                         <li class="admin_panel_list">
 			    	<i> <img src="images/businessman.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>                               
