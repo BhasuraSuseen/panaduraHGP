@@ -58,7 +58,7 @@ FROM employee
                             <?php if ($date4 == "Monday") { ?>
 
                                 <td style="width: 8%; background-color: blanchedalmond">
-                                    <input type="checkbox" name="mon" <?php if ($row['$day'] == 1) {
+                                    <input type="checkbox" name="mon" <?php if ($row[3] == 1) {
                         echo 'Checked';
                     } ?> onclick="saveAttends('<?php echo $row[0]; ?>', document.getElementById('date').innerHTML, this.checked)"> </td>  
                                 <td style="width: 8%; background-color: appworkspace">
