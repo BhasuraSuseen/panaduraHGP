@@ -18,7 +18,7 @@ while($row = mysqli_fetch_array($presentqury)){
 }
 // echo $present." Employees came today..";
 
-$absentqury =mysqli_query($server, "SELECT
+$absentqury =mysqli_query($conn, "SELECT
   COUNT(attend.$day)
 FROM attend
   INNER JOIN employee
