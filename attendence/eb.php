@@ -104,7 +104,7 @@
                 float: left;
             }
             .container{
-                width: 100%;
+                width: 95%;
                 float: left; 
             }
             .right_side_bar{
