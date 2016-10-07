@@ -285,7 +285,7 @@
 
                         <div style="overflow-y: scroll">
 
-                            <?php include './ebatt.php'; ?>
+                            <?php include 'attendence/ebatt.php'; ?>
 
                         </div>
 
