@@ -104,7 +104,7 @@
                 float: left;
             }
             .container{
-                width: 90%;
+                width: 100%;
                 float: left; 
             }
             .right_side_bar{
@@ -171,7 +171,7 @@
             .middle_left{
                 float: left;
                 height:80%;
-                width:75%;
+                width:70%;
                 border-right: 2px solid #B0BEC5;
                 overflow-y: scroll;
             }
