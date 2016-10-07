@@ -134,13 +134,7 @@
                 <?php include 'attendence/eb.php'; ?>
 			
  	</div>
-	
-	  <div id="pop_box_att_1">
-	
 
-                <?php include 'attendence/view_report.php'; ?>
-			
- 	</div>
      
         <script>
          $(document).ready(function(){
