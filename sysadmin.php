@@ -73,8 +73,10 @@
             <div class="middle_left">
                 <a href="attendence/ebatt.php"> Post box and news feed</a><br>
 		<a href="attendence/eb.php"> Post box and news feed</a>
-		
-		<?php include 'vertical-timeline/timeline.php'; ?>
+		<a href="vertical-timeline/timeline.php"> vertical timeline</a>
+		    
+		<iframe src="vertical-timeline/timeline.php"></iframe>
+
             </div>
             <div class="middle_right">
                 <button class="button button1">GA</button>
