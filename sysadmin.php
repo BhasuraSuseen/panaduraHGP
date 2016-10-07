@@ -75,7 +75,7 @@
 		<a href="attendence/eb.php"> Post box and news feed</a><br>
 		<a href="vertical-timeline/timeline.php"> vertical timeline</a>
 		    
-		<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:auto; padding: 5px;"></iframe>
+		<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:100%; padding: 5px; overflow: hidden;"></iframe>
 
             </div>
             <div class="middle_right">
