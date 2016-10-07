@@ -131,7 +131,7 @@
      <div id="pop_box_att_1">
 	
 
-                <?php include 'attendence/ebatt.php'; ?>
+                <?php include 'attendence/eb.php'; ?>
 			
  	</div>
 	
