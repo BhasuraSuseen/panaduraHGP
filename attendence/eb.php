@@ -171,7 +171,7 @@
             .middle_left{
                 float: left;
                 height:80%;
-                width:70%;
+                width:75%;
                 border-right: 2px solid #B0BEC5;
                 overflow-y: scroll;
             }
@@ -281,7 +281,7 @@
 
                     <br>
 
-                    <div style="height: 600px; width:95%" >
+                    <div style="height: 600px" >
 
                         <div style="overflow-y: scroll">
 
