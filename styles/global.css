@@ -180,14 +180,14 @@ ul#nav li:hover{
 }
 .middle_left{
     float: left;
-    height:80%;
+    height:100%;
     width:60%;
     border-right: 2px solid #B0BEC5;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 .middle_right{
     float: left;
-    height:80%;
+    height:100%;
     width:40%;
     overflow-y: scroll;    
 }
