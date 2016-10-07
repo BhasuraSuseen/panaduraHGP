@@ -103,8 +103,8 @@
                 height: 80%;
                 float: left;
             }
-            .container{
-                width: 80%;
+            .cont{
+                width: 95%;
                 float: left; 
             }
             .right_side_bar{
@@ -274,7 +274,7 @@
     <body> 
         <div class="all_container">
            
-            <div class="container">
+            <div class="cont">
                
 
                 <div class="middle_left">
