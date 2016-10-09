@@ -182,11 +182,13 @@ ul#nav li:hover{
     height:100%;
     width:60%;
     border-right: 2px solid #B0BEC5;
+    overflow:hidden;
 }
 .middle_right{
     float: left;
     height:100%;
-    width:40%;   
+    width:40%;
+    overflow:hidden;
 }
 #pop_background{
     position: fixed;
