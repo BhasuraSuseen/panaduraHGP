@@ -10,64 +10,64 @@
 <body> 
 	<div class="all_container">
 		<div class="left_side_bar" style="position: relative;top: -76px;">
-            <div class="left_side_bar_top">                   
-            </div>
-            <div class="left_side_bar_down" >
-                <ul id="nav">
-                        <li class="admin_panel_list" style="border-left: 4px solid #455A64;">
-			    	<i> <img src="images/businessman.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>                               
-                        </li>
-                        <li id="open_hr_1" style="border-left: 4px solid #455A64;"> 
-				<i> <img src="images/businessman-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i> 
-			</li>
-                        <li class="letter_panel_list" style="border-left: 4px solid #c62828;">  
-				<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
-			</li>
-			 <li id="open_att_1" style="border-left: 4px solid #2980b9;">  
-				<i> <img src="images/check.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
-			</li>
-                </ul>
-           </div>
-        </div>
+            		<div class="left_side_bar_top">                   
+            		</div>
+            		<div class="left_side_bar_down" >
+                		<ul id="nav">
+					<li class="admin_panel_list" style="border-left: 4px solid #455A64;">
+						<i> <img src="images/businessman.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>                               
+					</li>
+					<li id="open_hr_1" style="border-left: 4px solid #455A64;"> 
+						<i> <img src="images/businessman-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i> 
+					</li>
+					<li class="letter_panel_list" style="border-left: 4px solid #c62828;">  
+						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+					</li>
+					 <li id="open_att_1" style="border-left: 4px solid #2980b9;">  
+						<i> <img src="images/check.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+					</li>
+				</ul>
+           		</div>
+        	</div>
 		<div class="container">
-            <div class="middle_top">
-			    <div class="middle_top_left">
-                    <h1>#<spanh1>OMS</spanh1></h1>
-                </div>
-                <div class="middle_top_middle">
-                <script type="text/javascript">
-                            tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-                            tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+		    <div class="middle_top">
+			<div class="middle_top_left">
+			    <h1>#<spanh1>OMS</spanh1></h1>
+			</div>
+			<div class="middle_top_middle">
+			<script type="text/javascript">
+				    tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+				    tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 
-                            function GetClock(){
-                            var d=new Date();
-                            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
-                            if(nyear<1000) nyear+=1900;
-                            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+				    function GetClock(){
+				    var d=new Date();
+				    var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+				    if(nyear<1000) nyear+=1900;
+				    var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
 
-                            if(nhour==0){ap=" AM";nhour=12;}
-                            else if(nhour<12){ap=" AM";}
-                            else if(nhour==12){ap=" PM";}
-                            else if(nhour>12){ap=" PM";nhour-=12;}
+				    if(nhour==0){ap=" AM";nhour=12;}
+				    else if(nhour<12){ap=" AM";}
+				    else if(nhour==12){ap=" PM";}
+				    else if(nhour>12){ap=" PM";nhour-=12;}
 
-                            if(nmin<=9) nmin="0"+nmin;
-                            if(nsec<=9) nsec="0"+nsec;
+				    if(nmin<=9) nmin="0"+nmin;
+				    if(nsec<=9) nsec="0"+nsec;
 
-                            document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
-                            }
+				    document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+				    }
 
-                            window.onload=function(){
-                            GetClock();
-                            setInterval(GetClock,1000);
-                            }
-                            </script>
-                            <div id="clockbox"></div>
-                      </div>
-                      <div class="middle_top_right">
-                          <a>Bhasura Suseen</a>
-			  <a href="index.php"><button class="button">Log Out</button></a>
-                      </div>
-            </div>
+				    window.onload=function(){
+				    GetClock();
+				    setInterval(GetClock,1000);
+				    }
+				    </script>
+				    <div id="clockbox"></div>
+			      	    </div>
+			   <div class="middle_top_right">
+				  <a>Bhasura Suseen</a>
+				  <a href="index.php"><button class="button">Log Out</button></a>
+			   </div>
+		    </div>
 			
 			
             <div class="middle_left">
@@ -90,7 +90,7 @@
             
         </div>
          <div id="pop_background"></div>
-     <div id="pop_box_hr_1">
+     		<div id="pop_box_hr_1">
 				  <form name="new_user" action="sysadmin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
 						<table>
 						<thead>
