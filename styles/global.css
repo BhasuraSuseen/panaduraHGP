@@ -11,7 +11,19 @@ img {
 body {
     background-color: #ECEFF1;
     font-family: 'Open Sans';
-}	
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 h1{
 	font-family: 'Open Sans';
 	font-size: 20px;
