@@ -1,4 +1,4 @@
-<div id="pop_box_hr_data_record"> 
+
           
             <div id="pop_box_hr_data_record_left">
                  <form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
@@ -43,4 +43,5 @@
                 </form>
                 <iframe class="iframehr" name="iframehr"></iframe>
 
-            </div> 
+   
+      
