@@ -96,6 +96,7 @@
             
         </div>
 	</div>
+	
          <div id="pop_background"></div>
      		<div id="pop_box_hr_1">
 				  <form name="new_user" action="sysadmin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
@@ -137,14 +138,7 @@
 						</tr></table>
 						</form>
 			  
-     </div>
-	
-     	<div id="pop_box_att_1">
-	  	<?php include 'attendence/eb.php'; ?>			
- 	</div>
-	<div id="pop_box_hr_2">
-	  	<a href="#"> pop box hr2</a>			
- 	</div>
+     			</div>
 	<div id="pop_box_hr_2">
 		<a href="#"> pop box hr2</a>
 		<div id="pop_box_hr_data_record_left">
@@ -194,6 +188,12 @@
  	</div>
 	</div>
 	
+     	<div id="pop_box_att_1">
+	  	<?php include 'attendence/eb.php'; ?>			
+ 	</div>
+	
+	
+	
 
      
         <script>
@@ -223,5 +223,6 @@
             });
          });
      </script>
+	
  </body>
  </html>
