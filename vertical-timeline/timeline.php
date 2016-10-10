@@ -17,7 +17,7 @@
 		<h1>Responsive Vertical Timeline</h1>
 	</header>
 
-	<section id="cd-timeline" class="cd-container">
+	<section id="cd-timeline" class="cd-container" style="overflow: scroll;">
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
 				<img src="vertical-timeline/img/943617865V.jpg" alt="Picture">
@@ -46,7 +46,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<img src="vertical-timeline//943617865V.jpg" alt="Picture">
+				<img src="vertical-timeline/img/943617865V.jpg" alt="Picture">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
