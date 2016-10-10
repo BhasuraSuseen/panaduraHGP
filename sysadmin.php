@@ -74,9 +74,9 @@
                 <a href="attendence/ebatt.php"> Post box and news feed</a><br>
 		<a href="attendence/eb.php"> Post box and news feed</a><br>
 		<a href="vertical-timeline/timeline.php"> vertical timeline</a>
-		    
-		<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:500px; padding: 5px; overflow: hidden;"></iframe>
-
+		 <?php include 'vertical-timeline/timeline.php'; ?>   
+		<!--<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:500px; padding: 5px; overflow: hidden;"></iframe>
+		-->
             </div>
             <div class="middle_right">
                 <button class="button button1">GA</button>
