@@ -95,6 +95,7 @@
              </svg>
             
         </div>
+	</div>
          <div id="pop_background"></div>
      		<div id="pop_box_hr_1">
 				  <form name="new_user" action="sysadmin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
@@ -192,6 +193,7 @@
 			<!--?php include 'employee_hr/hr.php'; ?-->
  	</div>
 	</div>
+	
 
      
         <script>
