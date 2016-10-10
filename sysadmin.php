@@ -142,6 +142,7 @@
 	  	<?php include 'attendence/eb.php'; ?>			
  	</div>
 	<div id="pop_box_hr_2">
+		<a href="#"> pop box hr2</a>
 		<div id="pop_box_hr_data_record_left">
                  <form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
                     <input type="text" name="nic" placeholder="NIC NO ">
