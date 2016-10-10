@@ -1,6 +1,6 @@
 
 
-	<section id="cd-timeline" class="cd-container" style="height: inherit; overflow-y: scroll;">
+	<section id="cd-timeline" class="cd-container">
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
 				<img src="vertical-timeline/img/943617865V.jpg" alt="Picture">
