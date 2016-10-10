@@ -70,7 +70,11 @@
 		    </div>
 			
 			
-            <div class="middle_left">
+            <div class="middle_left" >
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+		<script src="js/modernizr.js"></script> <!-- Modernizr -->
                 <a href="attendence/ebatt.php"> Post box and news feed</a><br>
 		<a href="attendence/eb.php"> Post box and news feed</a><br>
 		<a href="vertical-timeline/timeline.php"> vertical timeline</a>
