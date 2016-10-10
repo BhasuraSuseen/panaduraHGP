@@ -187,6 +187,7 @@
 
 			<!--?php include 'employee_hr/hr.php'; ?-->
  	</div>
+	</div>
 
      
         <script>
