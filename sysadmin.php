@@ -28,7 +28,7 @@
 					 <li id="open_att_1" style="border-left: 4px solid #2980b9;">  
 						<i> <img src="images/check.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 					</li>
-					 <li id="open_hr_1" style="border-left: 4px solid #2980b9;">  
+					 <li id="open_hr_2" style="border-left: 4px solid #2980b9;">  
 						<i> <img src="images/businessman.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 					</li>
 				</ul>
@@ -138,11 +138,11 @@
 			  
      </div>
 	
-     <div id="pop_box_att_1">
-	
-
-                <?php include 'attendence/eb.php'; ?>
-			
+     	<div id="pop_box_att_1">
+	  	<?php include 'attendence/eb.php'; ?>			
+ 	</div>
+	<div id="pop_box_hr_2">
+	  	<?php include 'employee_hr/hr.php'; ?>			
  	</div>
 
      
@@ -158,10 +158,16 @@
                 $('#pop_box_att_1').fadeIn();
                 return false;
             });
+	    $('#open_hr_2').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_hr_2').fadeIn();
+                return false;
+            });
             $('#pop_background').click(function(){
                 $('#pop_background').fadeOut();
                 $('#pop_box_hr_1').fadeOut();
                 $('#pop_box_att_1').fadeOut();
+		$('#pop_box_hr_2').fadeOut();
  
                 return false;
             });
