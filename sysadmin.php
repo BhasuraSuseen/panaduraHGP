@@ -9,7 +9,7 @@
 </head>
 <body> 
 	<div class="all_container">
-		<div class="left_side_bar" style="position: relative;top: -76px;">
+		<div class="left_side_bar" >
             		<div class="left_side_bar_top">                   
             		</div>
             		<div class="left_side_bar_down" >
