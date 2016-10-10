@@ -146,13 +146,11 @@ header h1 {
 }
 .cd-timeline-img img {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   position: relative;
   left: 50%;
   top: 50%;
-  margin-left: -5px;
-  margin-top: -5px;
 }
 .cd-timeline-img.cd-picture {
   background: #75ce66;
