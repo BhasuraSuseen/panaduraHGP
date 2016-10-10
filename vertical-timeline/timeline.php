@@ -17,7 +17,7 @@
 		<h1>Responsive Vertical Timeline</h1>
 	</header>
 
-	<section id="cd-timeline" class="cd-container" style="overflow: scroll;">
+	<section id="cd-timeline" class="cd-container" style="height: 100%; overflow-y: scroll;">
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
 				<img src="vertical-timeline/img/943617865V.jpg" alt="Picture">
