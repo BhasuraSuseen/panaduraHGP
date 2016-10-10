@@ -213,7 +213,7 @@ ul#nav li:hover{
     width: 54%;
     margin: 5% 0 0 5%;
     padding: 20px;
-    opacity: 0.95;
+    opacity: 0.99;
     z-index: 1500;
     display: none;
     
@@ -225,7 +225,7 @@ ul#nav li:hover{
     width: 90%;
     margin: 5% 0 0 5%;
     padding: 20px;
-    opacity: 0.95;
+    opacity: 0.99;
     z-index: 1500;
     display: none;
     
@@ -237,7 +237,8 @@ ul#nav li:hover{
     width: 90%;
     margin: 5% 0 0 5%;
     padding: 20px;
-    opacity: 0.95;
+    opacity: 0.99;
+    display: none;
     z-index: 1500;
     
     
@@ -540,7 +541,7 @@ Main components
   background: white;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 20px 0 #d7e4ed;
+  box-shadow: 0 3px 0 #d7e4ed;
 }
 .cd-timeline-content:after {
   content: "";
