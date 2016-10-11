@@ -342,7 +342,7 @@ input[type="submit"]:hover , input[type="file"]:hover, button[type="button"]:hov
     background: #ffffff;
     width: 50%;
     padding: 10px;
-    padding-top: 30px;
+    padding-top: 45px;
     opacity: 0.9;   
 }
 .login_right{
