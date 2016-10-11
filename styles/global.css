@@ -44,7 +44,7 @@ spanb{
 a{
 	font-family: 'Open Sans';
 	font-size: 14px;
-	font-weight: 300;
+	font-weight: 400;
 	color: #455A64;
 }
 a:hover{
@@ -355,11 +355,10 @@ input[type="submit"]:hover , input[type="file"]:hover, button[type="button"]:hov
 /* pop login end */
 
 .recordstyl{
-     background: beige;
+     background: #ECEFF1;
      font-size: 1em;             
      opacity: 0.9;
-     border-top: 3px solid #ef5350;
-     border-bottom: 5px solid #ef5350;
+     
 }
 /* -------------------------------- 
 
