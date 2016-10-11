@@ -33,6 +33,14 @@ spanh1{
 spanh1:hover{
     color: #2980b9;
 }
+spana{
+	font-size: 30px;
+	color: #c0392b;
+}
+spanb{
+	font-size: 30px;
+	color: #2980b9;
+}
 a{
 	font-family: 'Open Sans';
 	font-size: 14px;
