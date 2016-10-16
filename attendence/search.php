@@ -28,11 +28,11 @@
 <?php
 
 include 'datetime.php';
-include 'connection.php';
+include '../connect.php';
 
 $NIC = $_POST['nic'];
 $DAY = $_POST['day'];
-$res = mysqli_query($server, "select attend.employee_nic,
+$res = mysqli_query($conn, "select attend.employee_nic,
 attend.$DAY,
 employee.F_name,
 employee.L_name FROM
