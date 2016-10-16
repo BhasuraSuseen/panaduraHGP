@@ -24,3 +24,4 @@
                             <tr><td style="width:40%">Status:</td><td><label id="st5"></label></td></tr>
                             <tr><td style="width: 60%"<br><br></td><td><button onclick="searchAttends(document.getElementById('day').value,document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
+ <script type="text/javascript" src="jst.js"></script>
