@@ -1,5 +1,5 @@
 <?php
-require "connect.php";
+require "../connect.php";
 session_start();
 if(isset($_POST["submit2"])){
 	if(isset($_POST['idrep'])){
@@ -10,6 +10,8 @@ if(isset($_POST["submit2"])){
 	$idrep=$_POST['idrep'];
 	$user=$_SESSION['username'];
 	$sql="INSERT INTO letter_rep (date,subject,type,address,letter_id) VALUES ('$date','$subject','$type','$addr','$idrep','$username')";
+	mysqli_query($conn,$sql);
+	echo $idrep. "was entered";
 }
 else{echo "No letters to reply";
 
