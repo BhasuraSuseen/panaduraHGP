@@ -397,7 +397,7 @@
 
                         <div style="overflow-y: scroll">
 
-                            <?php include './paraatt.php'; ?>
+                            <?php include 'attendence/paraatt.php'; ?>
 
                         </div>
 
