@@ -181,9 +181,12 @@ function searchAttends(day,id) {
             var text = obj.responseText;
 //            alert(text);
 
-            var abc = "Present";
+            var abc = "Enter valid id";
+            if (text == '1'){
+                abc = "Present"
+            }
 
-            if (text == '0'){
+            else if (text == '0'){
                 abc = "Absent";
             }
             
