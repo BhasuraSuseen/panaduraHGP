@@ -1,10 +1,10 @@
 
 <?php
 include 'datetime.php';
-include 'connection.php';
+include '../connect.php';
 
 
-$presentqury =mysqli_query($server, "SELECT
+$presentqury =mysqli_query($conn, "SELECT
   COUNT(attend.$day)
 FROM attend
   INNER JOIN employee
@@ -18,7 +18,7 @@ while($row = mysqli_fetch_array($presentqury)){
 }
 // echo $present." Employees came today..";
 
-$absentqury =mysqli_query($server, "SELECT
+$absentqury =mysqli_query($conn, "SELECT
   COUNT(attend.$day)
 FROM attend
   INNER JOIN employee
