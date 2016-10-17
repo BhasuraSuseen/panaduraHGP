@@ -48,9 +48,9 @@
                 header("Location:  users/director.php");
 	        }elseif($count[1]=="AO"){
                 header("Location:  users/adminofficer.php");
-            }elseif($count[1]=="MC"){
-                header("Location:  users/mailclerk.php");
             }elseif($count[1]=="MB"){
+                header("Location:  users/mailclerk.php");
+            }elseif($count[1]=="MC"){
                 header("Location: letterEB.php");
             }elseif($count[1]=="HB"){
                 header("Location:  users/hreb.php");

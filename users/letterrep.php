@@ -13,7 +13,8 @@ if(isset($_POST["submit2"])){
 	mysqli_query($conn,$sql);
 	echo $idrep. "was entered";
 }
-else{echo "No letters to reply";
+else{
+	echo "No letters to reply";
 
 }
 } 
