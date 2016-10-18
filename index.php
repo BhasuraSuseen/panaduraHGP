@@ -48,12 +48,23 @@
                 header("Location:  users/director.php");
 	        }elseif($count[1]=="AO"){
                 header("Location:  users/adminofficer.php");
-            }elseif($count[1]=="MB"){
-                header("Location:  users/mailclerk.php");
+            }elseif($count[1]=="AB"){
+                    if ($count[2]==5) {
+                      header("Location:  attendancemaileb1.php");
+                    }
+                    elseif ($count[2]==6) {
+                      header("Location:  attendancemaileb2.php");
+                    }
+                    elseif ($count[2]==7) {
+                      header("Location:  attendancemaileb3.php");
+                    }
+                    elseif ($count[2]==8) {
+                      header("Location:  attendancemaileb4.php");
+                    }
             }elseif($count[1]=="MC"){
                 header("Location: letterEB.php");
-            }elseif($count[1]=="HB"){
-                header("Location:  users/hreb.php");
+            }elseif($count[1]=="NB"){
+                header("Location:  normalmaileb.php");
             }elseif($count[1]=="DC"){
                 header("Location:  users/dietclerk.php");
             }
