@@ -93,7 +93,7 @@
                         <input type="reset" value="Reset">
                         </form>
                         <b>Enter MC to MS date</b>
-                        <form name="mctoms" action="mailclerk.php" method="post" accept-charset="utf-8">
+                        <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8">
                               <label>Letter ID</label>
                           <?php  
                           
@@ -117,7 +117,7 @@
                         </form>
                         <!--methana enter karanne AO to MC date -->
                         <b>Enter AO to MC date</b>
-                        <form name="mctoms" action="mailclerk.php" method="post" accept-charset="utf-8"> 
+                        <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8"> 
                         <label>Letter ID</label>
                          <?php  
      
