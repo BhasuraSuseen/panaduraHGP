@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<head> Ela
+</head>
 <?php
 require "connect.php";
 
@@ -12,3 +16,6 @@ require "connect.php";
   echo json_encode($rows1);
   print $rows1
 ?>			     
+  
+</body>
+</html>
