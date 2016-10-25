@@ -1,14 +1,14 @@
 <?php
 require "connect.php";
 
-  $query = "SELECT * FROM employee";
+  $query1 = "SELECT * FROM employee";
 
-  $result = mysqli_query($con,$query);
+  $result1 = mysqli_query($con,$query);
 
-  $rows = array[];
-  while($r = mysqli_fetch_array($result)) {
-    $rows[] = $r;
+  $rows1 = array[];
+  while($r1 = mysqli_fetch_array($result)) {
+    $rows1[] = $r1;
   }
-  echo json_encode($rows);
-  echo $rows
+  echo json_encode($rows1);
+  print $rows1
 ?>			     
