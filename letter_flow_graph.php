@@ -1,7 +1,7 @@
 <?php
 require "connect.php";
 
-  $query = "SELECT * FROM letter WHERE letter_id ='1234567891'";
+  $query = "SELECT * FROM letter";
 
   $result = mysqli_query($con,$query);
 
