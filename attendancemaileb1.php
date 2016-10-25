@@ -7,7 +7,7 @@
 
 <?php
 require "connect.php";
-  $query1 = "SELECT * FROM employee";
+  $query1 = "SELECT * FROM users";
   $result1 = mysqli_query($con,$query);
   $rows1 = array[];
   while($r1 = mysqli_fetch_array($result)) {
