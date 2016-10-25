@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html>
-<head> Ela
-</head>
+<head> Ela</head>
+<body>
 <?php
 require "connect.php";
 
