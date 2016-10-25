@@ -144,7 +144,7 @@ require "connect.php";
                 <a href="attendence/ebatt.php"> Post box and news feed</a><br>
 		<a href="attendence/eb.php"> Post box and news feed</a><br>
 		<a href="vertical-timeline/timeline.php"> vertical timeline</a>
-		 
+		<?php include 'letter_flow_graph.php'; ?>	 
 		<!--<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:500px; padding: 5px; overflow: hidden;"></iframe>
 		-->
             </div>
