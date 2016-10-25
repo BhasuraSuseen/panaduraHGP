@@ -1,4 +1,4 @@
-
+<?php
 require "connect.php";
 
   $query = "SELECT * FROM letter WHERE letter_id ='1234567891'";
@@ -10,4 +10,4 @@ require "connect.php";
     $rows[] = $r;
   }
   echo json_encode($rows);
-			     
+?>			     
