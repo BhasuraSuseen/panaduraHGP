@@ -81,7 +81,7 @@
             <div id="pop_box_hr_1">
                         <b>New Letter Details</b>
                         <!--entering details of letters into databse for the first time -->
-                        <form name="new_letter" action="mailclerk.php" method="post" accept-charset="utf-8">
+                        <form name="new_letter" action="letterEB.php" method="post" accept-charset="utf-8">
                         <input type="number" name="let_id" placeholder="Letter ID" required><br>
                         <input type="date" name="fdate" placeholder="Date received" required><br>
                         <input type="text" name="address" placeholder="Address"><br>
