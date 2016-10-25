@@ -1,7 +1,7 @@
 <?php
 require "connect.php";
 
-  $query = "SELECT * FROM letter";
+  $query = "SELECT * FROM employee";
 
   $result = mysqli_query($con,$query);
 
