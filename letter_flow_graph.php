@@ -1,7 +1,7 @@
 
 require "connect.php";
 
-  $query = "SELECT * FROM letter WHERE letter_id ='1234567891' FOR JSON AUTO ";
+  $query = "SELECT * FROM letter WHERE letter_id ='1234567891'";
 
   $result = mysqli_query($con,$query);
 
