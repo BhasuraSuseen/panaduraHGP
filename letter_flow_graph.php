@@ -5,7 +5,7 @@ require "connect.php";
 
   $result = mysqli_query($con,$query);
 
-  $rows = array();
+  $rows = array[];
   while($r = mysqli_fetch_array($result)) {
     $rows[] = $r;
   }
