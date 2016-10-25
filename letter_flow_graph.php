@@ -9,5 +9,6 @@ require "connect.php";
   while($r = mysqli_fetch_array($result)) {
     $rows[] = $r;
   }
-  echo json_encode($rows);
+  print json_encode($rows);
+  print $rows
 ?>			     
