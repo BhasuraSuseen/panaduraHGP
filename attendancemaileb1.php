@@ -13,7 +13,7 @@ require "connect.php";
   while($r1 = mysqli_fetch_array($result)) {
     $rows1[] = $r1;
   }
-  echo json_encode($rows1);
+  //echo json_encode($rows1);
   print $rows1
 ?>			     		
 </body>
