@@ -169,6 +169,7 @@
                             }   
                             else{
                                 $sql="INSERT INTO letter (letter_id,date,address,type) VALUES('$id','$date',$addr','$type')";
+                                echo $sql;
                                 mysqli_query($conn,$sql);
                                 echo $id . "was entered successfully";
                             }
