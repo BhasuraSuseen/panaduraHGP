@@ -168,7 +168,7 @@
                             echo $id." is already taken";
                             }   
                             else{
-                                $sql="INSERT INTO letter (letter_id, date, address,type) VALUES ('$id','2010-08-09', $addr','$type')";
+                                $sql="INSERT INTO letter (letter_id, date, address,type) VALUES ('$id','2010-08-09', '$addr','$type')";
                                 echo $sql;
                                 echo $date;
                                 mysqli_query($conn,$sql);
