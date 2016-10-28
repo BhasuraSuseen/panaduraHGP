@@ -96,7 +96,7 @@ require "connect.php";
 		<div class="container">
 		    <div class="middle_top">
 			<div class="middle_top_left">
-				<img src="images/oms2.png">
+				<img src="images/oms4.png"  style= "padding: 5px;">
 			</div>
 			<div class="middle_top_middle">
 			<script type="text/javascript">
