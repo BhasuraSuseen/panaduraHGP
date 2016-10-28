@@ -96,7 +96,7 @@ require "connect.php";
 		<div class="container">
 		    <div class="middle_top">
 			<div class="middle_top_left">
-			    <h1>#<spanh1>OMS</spanh1></h1>
+				<img src="images/oms2.png">
 			</div>
 			<div class="middle_top_middle">
 			<script type="text/javascript">
