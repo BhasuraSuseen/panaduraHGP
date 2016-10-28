@@ -9,7 +9,7 @@
 <body>
 <div id="pop_background_login"></div>
 <div id="login">
-<div class="login_left"><img src="images/oms4.png"  style= "height:50px; padding: 5px;"><br> <b>Hospital Office Management System<br> For Panadura Base Hospital</b>
+<div class="login_left"><img src="images/oms4.png"  style= "padding: 10px;"><br> <b>Hospital Office Management System<br> For Panadura Base Hospital</b>
 <br>  T:P No: 038 2232261-62 <br>Fax: 038 2232770 <br> Address: Base Hospital, Panadura
 </div>    
 <div class="login_right">
