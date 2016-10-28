@@ -104,10 +104,10 @@ require "connect.php";
 			   <div class="middle_top_right">
 			   		<?php
 			   		 
-			   		echo"<a>"."<spanuser>".$_SESSION['username']."</spanuser>"."</a>";
+			   		echo"<a>".$_SESSION['username']."</a>";
 			   			 ?>
 				  
-				  <a href="index.php"><button class="button">Log Out</button></a>
+				  <a href="index.php">Log Out</a>
 			   </div>
 		    </div>
 			
