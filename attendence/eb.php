@@ -11,7 +11,7 @@
                 <div class="middle_left">
                     <div style="height: 650px">
                         <div style="overflow-y: scroll">
-                            <?php include './paraatt.php'; ?>
+                            <?php include 'attendence/ebatt.php'; ?>
                         </div>
                     </div>
                 </div>
