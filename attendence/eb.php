@@ -11,7 +11,7 @@
                 <?php include 'attendence/ebatt.php'; ?>
 
             </div>
-        </div>
+      
         <div class="middle_right">
             <!--<button class="button button1">GA</button>-->
             <div class="recordstyl"> 
