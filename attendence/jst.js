@@ -195,7 +195,7 @@ function searchAttends(day,id) {
 
         }
     };
-    obj.open("POST", "attendence/search.php", true);
+    obj.open("POST", "search.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send("nic=" + id + "&day=" + day);
 
