@@ -175,22 +175,24 @@ function searchAttends(day,id) {
 
     obj.onreadystatechange = function() {
 
-        alert(obj.responseText);
+        //alert(obj.responseText);
         if (obj.readyState === 4 && obj.status === 200) {
 
             var text = obj.responseText;
-            alert(text);
+            
+            //alert(obj.responseText);
 
-            var abc = "Enter valid id";
-            if (text == '1'){
-                abc = "Present"
-            }
+            var abc;
 
-            else if (text == '0'){
+            if (text == '0'){
                 abc = "Absent";
+            }else if(text == '1'){
+                abc = "Present";
+            }else{
+                abc = text;
             }
             
-            document.getElementById('st5').innerHTML = abc;
+            document.getElementById('st6').innerHTML = abc;
           
 
         }
