@@ -179,7 +179,7 @@ function searchAttends(day,id) {
         if (obj.readyState === 4 && obj.status === 200) {
 
             var text = obj.responseText;
-//            alert(text);
+            alert(text);
 
             var abc = "Enter valid id";
             if (text == '1'){
