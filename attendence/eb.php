@@ -51,7 +51,7 @@
 
                                 </td></tr>
                             <tr><td style="width:40%">Search by ID :</td><td><input type="text" id="serId"></td></tr>
-                            <tr><td style="width:40%">Status:</td><td><label id="stat"></label></td></tr>
+                            <tr><td style="width:40%">Status:</td><td><label id="st5"></label></td></tr>
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
 
