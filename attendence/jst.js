@@ -189,7 +189,7 @@ function searchAttends(day,id) {
             }else if(text == '1'){
                 abc = "Present";
             }else{
-                abc = text;
+                abc = "eNTER VALID iD";
             }
             
             document.getElementById('st6').innerHTML = abc;
