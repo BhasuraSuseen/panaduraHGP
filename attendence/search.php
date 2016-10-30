@@ -21,7 +21,14 @@ if ($NIC == NULL || $NIC == "") {
 
         $result = $row[01];
        // $out="Enter valid Id!"
-        echo $result;
+        //echo $result;
+        if($result == ""){
+            echo "Mo";
+        }else if($result == 0){
+            echo "Absent";
+        }else if($result == 1){
+            echo "Present";
+        }
        
        
         
