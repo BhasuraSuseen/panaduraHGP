@@ -175,24 +175,24 @@ function searchAttends(day,id) {
 
     obj.onreadystatechange = function() {
 
-        alert(obj.responseText);
+       // alert(obj.responseText);
         if (obj.readyState === 4 && obj.status === 200) {
 
-            var text = obj.responseText;
+           // var text = obj.responseText;
             
             //alert(obj.responseText);
 
-            var abc;
+//             var abc;
 
-            if (text == '0'){
-                abc = "Absent";
-            }else if(text == '1'){
-                abc = "Present";
-            }else{
-                abc = "eNTER VALID iD";
-            }
+//             if (text == '0'){
+//                 abc = "Absent";
+//             }else if(text == '1'){
+//                 abc = "Present";
+//             }else{
+//                 abc = "eNTER VALID iD";
+//             }
             
-            document.getElementById('st6').innerHTML = abc;
+//             document.getElementById('st6').innerHTML = abc;
           
 
         }
