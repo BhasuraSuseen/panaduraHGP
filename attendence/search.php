@@ -20,15 +20,14 @@ if ($NIC == NULL || $NIC == "") {
     while ($row = mysqli_fetch_array($res)) {
 
         $result = $row[01];
-       // $out="Enter valid Id!"
+        $outt="Enter valid Id!"
         echo $result;
-//         if($result == Null){
-//             echo "Mo";
-//         }else if($result == 0){
-//             echo "Absent";
-//         }else if($result == 1){
-//             echo "Present";
-//         }
+        
+        if($result == 0){
+            echo "Absent";
+        }else if($result == 1){
+            echo "Present";
+        }
        
        
         
