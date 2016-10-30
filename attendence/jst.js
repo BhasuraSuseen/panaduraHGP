@@ -192,7 +192,7 @@ function searchAttends(day,id) {
                 abc = "eNTER VALID iD";
             }
             
-            document.getElementById('st5').innerHTML = abc;
+            document.getElementById('st6').innerHTML = abc;
           
 
         }
