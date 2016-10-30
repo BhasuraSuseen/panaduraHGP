@@ -43,7 +43,7 @@
             <?php if($date4 == "Sunday"){?>
 
 
-            <table style="width: 100%"><tr><td>
+            <table style="width: 100%"><tr><td style="width:50%">
             <!--mada table 3-->
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -174,7 +174,7 @@
 
                 </tr>
             </table>
-                    </td></tr><tr><td>
+                    </td></tr><tr><td style="width:50%">
             <table style="width: 100%">
                 <tr><td style="background-color: white">
 
@@ -301,7 +301,7 @@
 
                 </tr>
             </table>
-                    </td></tr><tr><td>
+                    </td></tr><tr><td style="width:50%">
             <!--mada table 3-->
 
             <table style="width: 100%">
