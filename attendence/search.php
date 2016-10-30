@@ -20,7 +20,7 @@ if ($NIC == NULL || $NIC == "") {
     while ($row = mysqli_fetch_array($res)) {
 
         $result = $row[01];
-        $out="Enter valid Id!"
+       // $out="Enter valid Id!"
         echo $result;
        
        
