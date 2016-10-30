@@ -35,7 +35,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
 
 
 
-<?php if($date4 == "Monday"){?>
+<?php if($date4 == "Sunday"){?>
 
 
 
