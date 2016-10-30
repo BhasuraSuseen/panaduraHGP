@@ -17,20 +17,17 @@ employee INNER JOIN attend ON attend.Employee_Nic = employee.Nic_no where attend
 if ($NIC == NULL || $NIC == "") {
     echo 'Warning:Enter id!';
 } else {
-    $outt="Enter valid Id!"
     while ($row = mysqli_fetch_array($res)) {
-
         $result = $row[01];
-        
         echo $result;
         
         if($result == 0){
-            $outt = "Absent";
+            echo "Absent";
         }else if($result == 1){
-            $outt = "Present";
+            echo "Present";
         }    
     }
-   echo $outt; 
+    
 }
 
 //$json = '{"a":'.$result.'}';
