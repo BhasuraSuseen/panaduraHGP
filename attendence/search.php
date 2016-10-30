@@ -21,7 +21,14 @@ if ($NIC == NULL || $NIC == "") {
 
         $result = $row[01];
 
-        echo $result;
+        //echo $result;
+        if($result == 0){
+            echo "Absent";
+        }else{
+            echo "Present";
+        }
+        
+        
     }
 }
 
