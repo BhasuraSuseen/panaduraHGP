@@ -24,8 +24,10 @@ if ($NIC == NULL || $NIC == "") {
         //echo $result;
         if($result == 0){
             echo "Absent";
-        }else{
+        }else if($result == 1){
             echo "Present";
+        }else if($result == NULL){
+            echo "Enter valid Id!";
         }
         
         
