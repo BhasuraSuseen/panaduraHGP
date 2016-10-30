@@ -6,13 +6,12 @@ include 'datetime.php';
 include '../connect.php';
 
 $NIC = $_POST['nic'];
-$NIC = '85112342V';
 $DAY = $_POST['day'];
 $res = mysqli_query($conn, "select attend.employee_nic,
-attend.30,
+attend.$DAY,
 employee.F_name,
 employee.L_name FROM
-employee INNER JOIN attend ON attend.Employee_Nic = employee.Nic_no where attend.employee_nic='85112342V'");
+employee INNER JOIN attend ON attend.Employee_Nic = employee.Nic_no where attend.employee_nic='$NIC'");
 //$res = mysqli_query($server, "select attend.employee_nic,attend.$day,employee.F_name,employee.L_name FROM employee INNER JOIN attend ON attend.Employee_Nic = employee.Nic_no where  ");
 //echo $NIC . $DAY;
 if ($NIC == NULL || $NIC == "") {
