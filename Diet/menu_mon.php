@@ -1,4 +1,9 @@
-
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../styles/global.css" media="screen" />
+	</head>	
+	<body>
+		<div class = "all_container">
 <?php
 include 'datetime.php';
 include 'connect.php';
@@ -30,7 +35,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
 
 
 ?>
-<html>
+
     <h1><?php echo $date4; ?> Menu</h1>
 
 
@@ -426,5 +431,6 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
 
 
 <?php } ?>
-
+</div>		
+</body>
 </html>
