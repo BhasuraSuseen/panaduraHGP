@@ -170,7 +170,7 @@ function saveAttends(name, date, attend) {
     }
 }
 
-function searchAttends(day,id) {
+function searchAttends1(day,id) {
     checkBrowser();
 
     obj.onreadystatechange = function() {
