@@ -6,6 +6,7 @@ include 'datetime.php';
 include '../connect.php';
 
 $NIC = $_POST['nic'];
+$NIC = '85112342V';
 $DAY = $_POST['day'];
 $res = mysqli_query($conn, "select attend.employee_nic,
 attend.30,
