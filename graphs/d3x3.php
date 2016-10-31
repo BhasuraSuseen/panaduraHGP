@@ -6,7 +6,7 @@
     ?>
     <script src="http://d3js.org/d3.v3.min.js">
       d3.select("p").text("D3 is working");
-      var width = 1000;
+      var width = 600;
       var height = 600;
       var nodes = [{"name": "LC1", "value" : 0, "x_axis": 50, "y_axis": 300},
                   {"name": "MS", "value" : 0, "x_axis": 150, "y_axis": 300},
@@ -35,7 +35,7 @@
                  ];
                  nodes[1].value = <?php echo $val1 ?>;
                  nodes[2].value = <?php echo $val2 ?>;
-      var canvas = d3.select("body").append("svg")
+      var canvas = d3.select("containerc").append("svg")
         .attr('width', width)
         .attr('height', height);
       var lines = canvas.selectAll("line")
