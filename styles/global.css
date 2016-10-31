@@ -201,7 +201,7 @@ ul#nav li:hover{
     padding-top: 8px;
     padding-right:10px;
 }
-.middle_left{
+#middle_left{
     float: left;
     height:90%;
     width:60%;
