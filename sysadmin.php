@@ -124,13 +124,13 @@ require "connect.php";
             <div class="middle_right">
             
             </div>
-		</div>
+		</div>-->
 		<div class="right_side_bar" id="open_att_1">
 			
            
             
         </div>
-	-->
+	
 	
          <div id="pop_background"></div>
      		<div id="pop_box_hr_1">
