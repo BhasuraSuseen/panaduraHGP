@@ -126,8 +126,8 @@ a:hover{
    height: 100%;
    float: left; 
 }
-.containerc{
-   width: 100%;
+#containerc{
+   width: 90%;
    height: 100%;
    float: left; 
 }
