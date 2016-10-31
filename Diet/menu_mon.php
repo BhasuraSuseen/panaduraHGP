@@ -40,7 +40,7 @@
 
 
 
-            <?php if($date4 == "Sunday"){?>
+            <?php if($date4 == "Monday"){?>
 
 
             <table style="width: 100%"><tr><td style="width:50%">
