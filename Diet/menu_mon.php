@@ -63,8 +63,8 @@
                                         <?php while ($mcs1b = mysqli_fetch_array($monc_s1br)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mcs1b[0]; ?></td>
-                                            <td align="left"><?php echo $mcs1b[1]; ?></td>
-                                            <td align="left"><?php echo $mcs1b[2]; ?></td>
+                                            <td align="left"><?php echo $mcs1b[1].' '.$mcs1b[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -79,8 +79,8 @@
                                         <?php while ($mcs1l = mysqli_fetch_array($monc_s1lu)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mcs1l[0]; ?></td>
-                                            <td align="left"><?php echo $mcs1l[1]; ?></td>
-                                            <td align="left"><?php echo $mcs1l[2]; ?></td>
+                                            <td align="left"><?php echo $mcs1l[1].' '.$mcs1l[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -96,8 +96,8 @@
                                         <?php while ($mcs1d = mysqli_fetch_array($monc_s1di)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mcs1d[0]; ?></td>
-                                            <td align="left"><?php echo $mcs1d[1]; ?></td>
-                                            <td align="left"><?php echo $mcs1d[2]; ?></td>
+                                            <td align="left"><?php echo $mcs1d[1].' '.$mcs1d[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -126,8 +126,8 @@
                                         <?php while ($mcs2b = mysqli_fetch_array($monc_s2br)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mcs2b[0]; ?></td>
-                                            <td align="left"><?php echo $mcs2b[1]; ?></td>
-                                            <td align="left"><?php echo $mcs2b[2]; ?></td>
+                                            <td align="left"><?php echo $mcs2b[1].' '.$mcs2b[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -141,8 +141,8 @@
                                         <?php while ($mcs2l = mysqli_fetch_array($monc_s2lu)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mcs2l[0]; ?></td>
-                                            <td align="left"><?php echo $mcs2l[1]; ?></td>
-                                            <td align="left"><?php echo $mcs2l[2]; ?></td>
+                                            <td align="left"><?php echo $mcs2l[1].' '.$mcs2l[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -158,8 +158,8 @@
                                         <?php while ($mcs2d = mysqli_fetch_array($monc_s2di)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mcs2d[0]; ?></td>
-                                            <td align="left"><?php echo $mcs2d[1]; ?></td>
-                                            <td align="left"><?php echo $mcs2d[2]; ?></td>
+                                            <td align="left"><?php echo $mcs2d[1].' '.$mcs2d[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -193,8 +193,8 @@
                                         <?php while ($mcs3b = mysqli_fetch_array($monc_s3br)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mcs3b[0]; ?></td>
-                                            <td align="left"><?php echo $mcs3b[1]; ?></td>
-                                            <td align="left"><?php echo $mcs3b[2]; ?></td>
+                                            <td align="left"><?php echo $mcs3b[1].' '.$mcs3b[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -208,8 +208,8 @@
                                         <?php while ($mcs3l = mysqli_fetch_array($monc_s3lu)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mcs3l[0]; ?></td>
-                                            <td align="left"><?php echo $mcs3l[1]; ?></td>
-                                            <td align="left"><?php echo $mcs3l[2]; ?></td>
+                                            <td align="left"><?php echo $mcs3l[1].' '.$mcs3l[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -225,8 +225,8 @@
                                         <?php while ($mcs3d = mysqli_fetch_array($monc_s3di)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mcs3d[0]; ?></td>
-                                            <td align="left"><?php echo $mcs3d[1]; ?></td>
-                                            <td align="left"><?php echo $mcs3d[2]; ?></td>
+                                            <td align="left"><?php echo $mcs3d[1].' '.$mcs3d[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -254,8 +254,8 @@
                                         <?php while ($mpb = mysqli_fetch_array($monpbr)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mpb[0]; ?></td>
-                                            <td align="left"><?php echo $mpb[1]; ?></td>
-                                            <td align="left"><?php echo $mpb[2]; ?></td>
+                                            <td align="left"><?php echo $mpb[1].' '.$mpb[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -269,8 +269,8 @@
                                         <?php while ($mpl = mysqli_fetch_array($monplu)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mpl[0]; ?></td>
-                                            <td align="left"><?php echo $mpl[1]; ?></td>
-                                            <td align="left"><?php echo $mpl[2]; ?></td>
+                                            <td align="left"><?php echo $mpl[1].' '.$mpl[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -286,8 +286,8 @@
                                         <?php while ($mpd = mysqli_fetch_array($monpdi)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mpd[0]; ?></td>
-                                            <td align="left"><?php echo $mpd[1]; ?></td>
-                                            <td align="left"><?php echo $mpd[2]; ?></td>
+                                            <td align="left"><?php echo $mpd[1].' '.$mpd[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -323,8 +323,8 @@
                                         <?php while ($mdb = mysqli_fetch_array($mondbr)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mdb[0]; ?></td>
-                                            <td align="left"><?php echo $mdb[1]; ?></td>
-                                            <td align="left"><?php echo $mdb[2]; ?></td>
+                                            <td align="left"><?php echo $mdb[1].' '.$mdb[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -338,8 +338,8 @@
                                         <?php while ($mdl = mysqli_fetch_array($mondlu)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mdl[0]; ?></td>
-                                            <td align="left"><?php echo $mdl[1]; ?></td>
-                                            <td align="left"><?php echo $mdl[2]; ?></td>
+                                            <td align="left"><?php echo $mdl[1].' '.$mdl[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -355,8 +355,8 @@
                                         <?php while ($mdd = mysqli_fetch_array($monsdi)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $mdd[0]; ?></td>
-                                            <td align="left"><?php echo $mdd[1]; ?></td>
-                                            <td align="left"><?php echo $mdd[2]; ?></td>
+                                            <td align="left"><?php echo $mdd[1].' '.$mdd[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -384,8 +384,8 @@
                                         <?php while ($msb = mysqli_fetch_array($monsbr)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $msb[0]; ?></td>
-                                            <td align="left"><?php echo $msb[1]; ?></td>
-                                            <td align="left"><?php echo $msb[2]; ?></td>
+                                            <td align="left"><?php echo $msb[1].' '.$msb[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -399,8 +399,8 @@
                                         <?php while ($msd = mysqli_fetch_array($monsdi)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $msd[0]; ?></td>
-                                            <td align="left"><?php echo $msd[1]; ?></td>
-                                            <td align="left"><?php echo $msd[2]; ?></td>
+                                            <td align="left"><?php echo $msd[1].' '.$msd[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
@@ -417,8 +417,8 @@
                                         <?php while ($msl = mysqli_fetch_array($monslu)):; ?>
                                         <tr>
                                             <td align="left"><?php echo $msl[0]; ?></td>
-                                            <td align="left"><?php echo $msl[1]; ?></td>
-                                            <td align="left"><?php echo $msl[2]; ?></td>
+                                            <td align="left"><?php echo $msl[1].' '.$msl[2]; ?></td>
+                                            
                                         </tr>
                                         <?php endwhile; ?>
 
