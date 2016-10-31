@@ -111,15 +111,15 @@ require "connect.php";
 			   </div>
 		    </div>
 			
-			
-            <div class="middle_left" >
+		<div id="containerc"> <?php include "graphs/d3ex3.php" ?> </div>	
+            <!--<div class="middle_left" >
 		
                 <a href="attendence/ebatt.php"> Post box and news feed</a><br>
 		<a href="attendence/eb.php"> Post box and news feed</a><br>
 		<a href="letter_flow_graph.php"> vertical timeline</a>
 			 
-		<!--<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:500px; padding: 5px; overflow: hidden;"></iframe>
-		-->
+		//<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:500px; padding: 5px; overflow: hidden;"></iframe>
+		
             </div>
             <div class="middle_right">
             
@@ -130,7 +130,7 @@ require "connect.php";
            
             
         </div>
-	
+	-->
 	
          <div id="pop_background"></div>
      		<div id="pop_box_hr_1">
