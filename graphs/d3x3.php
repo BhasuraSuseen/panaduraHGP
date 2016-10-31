@@ -4,7 +4,7 @@
         $val1 = 10;
         $val2 = 12;
     ?>
-    <script src="http://d3js.org/d3.v3.min.js">
+    <script>
       d3.select("p").text("D3 is working");
       var width = 600;
       var height = 600;
