@@ -6,6 +6,9 @@ $monb = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Br,C_S2Br,C_S3B
 $monl = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
 $mond = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
 
+$tueb = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id");
+$tuel = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id");
+$tued = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id");
 
 $meal = $_POST['meal'];
 $c_s1 = $_POST['children_s1'];
@@ -63,6 +66,53 @@ if($date == $date3 && $meal == "Di"){
  }	 
 				
 				
+}
+
+if($date4 == "Tuesday"){
+ if($date == $date3 && $meal == "BR"){
+		<td><table>
+		 while ($tb = mysqli_fetch_array($tueb)):; 
+				
+				$result = ($tb[1]*$c_s1) + ($tb[2]*$c_s2) + ($tb[3]*$c_s3) + ($tb[4]*$patients) + ($tb[5]*$dd) + ($tb[6]*$staff);
+				
+				if($result != 0){
+					<tr>
+					<td align="left"> echo $tb[0]; </td>
+					<td align="left"> echo $result; </td>
+					//echo $mb[0].' '.':'.$result.' '.$mb[7].'<br>';
+					</tr>
+				}
+				
+		 endwhile;
+			</table><td>
+ }
+if($date == $date3 && $meal == "Lu"){
+	
+					 while ($tl = mysqli_fetch_array($tuel)):; 
+						$result = ($tl[1]*$c_s1) + ($tl[2]*$c_s2) + ($tl[3]*$c_s3) + ($tl[4]*$patients) + ($tl[5]*$dd) + ($tl[6]*$staff);
+						if($result != 0){
+                        
+                            echo $tl[0].' '.':'.$result.' '.$tl[7].'<br>';
+						}
+                     endwhile; 
+
+ }
+if($date == $date3 && $meal == "Di"){
+	 
+		 while ($td = mysqli_fetch_array($tued)):; 
+				
+                
+				$result = ($td[1]*$c_s1) + ($td[2]*$c_s2) + ($td[3]*$c_s3) + ($td[4]*$patients) + ($td[5]*$dd) + ($td[6]*$staff);
+				if($result != 0){
+				echo $td[0].' '.':'.$result.' '.$td[7].'<br>';
+				}
+				
+		 endwhile;        
+ }	 
+				
+				
 }				
+
+
 
 ?>
