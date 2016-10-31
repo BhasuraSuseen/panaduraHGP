@@ -123,8 +123,8 @@ require "connect.php";
             </div>
             <div class="middle_right">
             
-            </div>
-		</div>-->
+            </div>-->
+		</div>
 		<div class="right_side_bar" id="open_att_1">
 			
            
