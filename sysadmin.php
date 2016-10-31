@@ -157,6 +157,9 @@ require "connect.php";
 			      $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
 			       }
 			      }
+              else{
+                            $select='<select><option></option></select>';
+                          }
 
 			      echo $select;
 			      echo '</select>';
