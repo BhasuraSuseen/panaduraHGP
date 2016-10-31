@@ -35,7 +35,7 @@
                  ];
                  nodes[1].value = <?php echo $val1 ?>;
                  nodes[2].value = <?php echo $val2 ?>;
-      var canvas = d3.select("containerc").append("svg")
+      var canvas = d3.select(".container").append("svg")
         .attr('width', width)
         .attr('height', height);
       var lines = canvas.selectAll("line")
@@ -68,10 +68,10 @@
               .text(function(d){return d.name + '\n'+ d.value });
     
 
-      d3.json("mydata.json",function(data){
+      //d3.json("mydata.json",function(data){
 
 
-       })
+      // })
 
 
     </script>
