@@ -35,7 +35,7 @@
                  ];
                  nodes[1].value = <?php echo $val1 ?>;
                  nodes[2].value = <?php echo $val2 ?>;
-      var canvas = d3.select(".middle_left").append("svg")
+      var canvas = d3.select("middle_left").append("svg")
         .attr('width', width)
         .attr('height', height);
       var lines = canvas.selectAll("line")
