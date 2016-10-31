@@ -111,9 +111,9 @@ require "connect.php";
 			   </div>
 		    </div>
 			
-		<div id="containerc"> <?php include "graphs/d3ex3.php" ?> </div>	
-            <!--<div class="middle_left" >
-		
+			
+            <div class="middle_left" >
+		 <?php include "graphs/d3ex3.php" ?> 
                 <a href="attendence/ebatt.php"> Post box and news feed</a><br>
 		<a href="attendence/eb.php"> Post box and news feed</a><br>
 		<a href="letter_flow_graph.php"> vertical timeline</a>
@@ -123,7 +123,7 @@ require "connect.php";
             </div>
             <div class="middle_right">
             
-            </div>-->
+            </div>
 		</div>
 		<div class="right_side_bar" id="open_att_1">
 			
