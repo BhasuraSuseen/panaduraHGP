@@ -114,7 +114,7 @@ require "connect.php";
 			
 			
             <div id="middle_left" >
-		 <?php include "graphs/d3ex3.php" ?> 
+		 
                <!-- <a href="attendence/ebatt.php"> Post box and news feed</a><br>
 		<a href="attendence/eb.php"> Post box and news feed</a><br>
 		<a href="letter_flow_graph.php"> vertical timeline</a>
@@ -122,6 +122,7 @@ require "connect.php";
 		<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:500px; padding: 5px; overflow: hidden;"></iframe>
 		-->
             </div>
+	<?php include "graphs/d3ex3.php" ?> 
             <div class="middle_right">
             
             </div>
