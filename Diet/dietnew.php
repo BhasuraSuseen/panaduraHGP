@@ -167,60 +167,7 @@
 
                                     </table></td>
 	 	<?php }else if($day == "tuesday" && $type == "c_s3"){ ?> 
-			<table style="background-color: #CFD8DC;width: 100%" >
-                            <tr><td align="left"><b>Children S3</b></td></tr></table>
-                        <!--Methnta fitst table eka danna-->
-                        <table align="left" style="background-color: #ECEFF1;width: 100%">
-                            <tr><td align="left"><b>Breakfirst</b></td>
-                                <td align="left"><b>Lunch</b></td>
-                                <td align="left"><b>Dinner</b></td></tr>
-                            <tr><td><table align="left" style="background-color: #ECEFF1;width: 100%">
-                                        <tr>
-                                            <td align="left"><b>Item Name</b></td>
-                                            <td align="left"><b>Amount</b></td>
-                                        </tr>
-                                        <?php while ($tcs3b = mysqli_fetch_array($tuec_s3br)):; ?>
-                                        <tr>
-                                            <td align="left"><?php echo $tcs3b[0]; ?></td>
-                                            <td align="left"><?php echo $tcs3b[1].' '.$tcs3b[2]; ?></td>
-                                            
-                                        </tr>
-                                        <?php endwhile; ?>
-
-
-                                    </table></td>
-                                <td><table align="left" style="background-color: #ECEFF1;width: 100%">
-                                        <tr>
-                                            <td align="left"><b>Item Name</b></td>
-                                            <td align="left"><b>Amount</b></td>
-                                        </tr>
-                                        <?php while ($tcs3l = mysqli_fetch_array($tuec_s3lu)):; ?>
-                                        <tr>
-                                            <td align="left"><?php echo $tcs3l[0]; ?></td>
-                                            <td align="left"><?php echo $tcs3l[1].' '.$tcs3l[2]; ?></td>
-                                            
-                                        </tr>
-                                        <?php endwhile; ?>
-
-
-                                    </table></td>
-
-
-                                <td><table align="left" style="background-color: #ECEFF1;width: 100%">
-                                        <tr>
-                                            <td align="left"><b>Item Name</b></td>
-                                            <td align="left"><b>Amount</b></td>
-                                        </tr>
-                                        <?php while ($tcs3d = mysqli_fetch_array($tuec_s3di)):; ?>
-                                        <tr>
-                                            <td align="left"><?php echo $tcs3d[0]; ?></td>
-                                            <td align="left"><?php echo $tcs3d[1].' '.$tcs3d[2]; ?></td>
-                                            
-                                        </tr>
-                                        <?php endwhile; ?>
-
-
-                                    </table></td>
+			
 		<?php } ?>
 	<?php }
 
