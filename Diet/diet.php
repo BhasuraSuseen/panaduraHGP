@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-	<link rel="stylesheet" type="text/css" href="styles/global.css" />
+	<link rel="stylesheet" type="text/css" href="master/styles/global.css" />
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<script src="vertical-timeline/js/modernizr.js"></script> <!-- Modernizr -->
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
