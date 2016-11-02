@@ -14,7 +14,13 @@
 
 	    $tuec_s3br = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Br <> 0.000");
             $tuec_s3lu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Lu <> 0.000");
-            $tuec_s3di  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Di <> 0.000");
+	    $tuec_s3di  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Di <> 0.000");
+	
+	    $tuepbr = mysqli_query($conn, "SELECT item.Item_name, menu_tue.P_Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE P_Br <> 0.000");
+            $tueplu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.P_Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE P_Lu <> 0.000");
+            $tuepdi  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.P_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE P_Di <> 0.000");
+	
+	
 ?>
 <form action="" method="POST">
 						Day 
@@ -231,7 +237,68 @@
 
 
                                     </table></td>
-		<?php } ?>
+		<?php } else if($day == "tuesday" && $type == "patients"){ ?>
+				    <table style="width: 60%"><tr><td style="width:50%">
+           			<table style="width: 100%">
+                <tr><td style="background-color: white">
+				<table style="background-color: #CFD8DC;width: 100%" >
+                            <tr><td align="left"><b>Patients</b></td></tr></table>
+                        <!--Methnta fitst table eka danna-->
+                        <table align="left" style="background-color: #ECEFF1;width: 100%">
+                            <tr><td align="left"><b>Breakfirst</b></td>
+                                <td align="left"><b>Lunch</b></td>
+                                <td align="left"><b>Dinner</b></td></tr>
+                            <tr><td><table align="left" style="background-color: #ECEFF1;width: 100%">
+                                        <tr>
+                                            <td align="left"><b>Item Name</b></td>
+                                            <td align="left"><b>Amount</b></td>
+                                        </tr>
+                                        <?php while ($tpb = mysqli_fetch_array($tuepbr)):; ?>
+                                        <tr>
+                                            <td align="left"><?php echo $tpb[0]; ?></td>
+                                            <td align="left"><?php echo $tpb[1].' '.$tpb[2]; ?></td>
+                                            
+                                        </tr>
+                                        <?php endwhile; ?>
+
+
+                                    </table></td>
+                                <td><table align="left" style="background-color: #ECEFF1;width: 100%">
+                                        <tr>
+                                            <td align="left"><b>Item Name</b></td>
+                                            <td align="left"><b>Amount</b></td>
+                                        </tr>
+                                        <?php while ($tpl = mysqli_fetch_array($tueplu)):; ?>
+                                        <tr>
+                                            <td align="left"><?php echo $tpl[0]; ?></td>
+                                            <td align="left"><?php echo $tpl[1].' '.$tpl[2]; ?></td>
+                                            
+                                        </tr>
+                                        <?php endwhile; ?>
+
+
+                                    </table></td>
+
+
+                                <td><table align="left" style="background-color: #ECEFF1;width: 100%">
+                                        <tr>
+                                            <td align="left"><b>Item Name</b></td>
+                                            <td align="left"><b>Amount</b></td>
+                                        </tr>
+                                        <?php while ($tpd = mysqli_fetch_array($tuepdi)):; ?>
+                                        <tr>
+                                            <td align="left"><?php echo $tpd[0]; ?></td>
+                                            <td align="left"><?php echo $tpd[1].' '.$tpd[2]; ?></td>
+                                            
+                                        </tr>
+                                        <?php endwhile; ?>
+
+
+                                    </table></td>
+                            </tr>
+
+                        </table>
+				    <?php } ?>
 	<?php }
 
 	?>
