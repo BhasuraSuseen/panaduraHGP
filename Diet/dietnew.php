@@ -309,7 +309,7 @@
                 <tr><td style="background-color: white">
 
                         <table style="background-color: #CFD8DC;width: 100%" >
-                            <tr><td align="left"><b>DiaPatients Patients</b></td></tr></table>
+                            <tr><td align="left"><b>Diabetics Patients</b></td></tr></table>
                         
                         <table align="left" style="background-color: #ECEFF1;width: 100%">
                             <tr><td align="left"><b>Breakfirst</b></td>
