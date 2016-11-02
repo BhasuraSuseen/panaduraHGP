@@ -237,13 +237,15 @@
 
 
                                     </table></td>
-		<?php } else if($day == "tuesday" && $type == "patients"){ ?>
-				    <table style="width: 60%"><tr><td style="width:50%">
-           			<table style="width: 100%">
+		<?php } else if($day == "tuesday" && $type == "patients") { ?>
+			<table style="width: 60%"><tr><td style="width:50%">
+            
+            <table style="width: 100%">
                 <tr><td style="background-color: white">
-				<table style="background-color: #CFD8DC;width: 100%" >
+
+                        <table style="background-color: #CFD8DC;width: 100%" >
                             <tr><td align="left"><b>Patients</b></td></tr></table>
-                        <!--Methnta fitst table eka danna-->
+                        
                         <table align="left" style="background-color: #ECEFF1;width: 100%">
                             <tr><td align="left"><b>Breakfirst</b></td>
                                 <td align="left"><b>Lunch</b></td>
@@ -263,6 +265,7 @@
 
 
                                     </table></td>
+                            
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
                                             <td align="left"><b>Item Name</b></td>
@@ -278,7 +281,7 @@
 
 
                                     </table></td>
-
+                                    
 
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
@@ -295,9 +298,7 @@
 
 
                                     </table></td>
-                            </tr>
-
-                        </table>
+		
 				    <?php } ?>
 	<?php }
 
