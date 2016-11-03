@@ -26,7 +26,7 @@ $eb1=mysqli_query($conn,$eb1sql);
 $eb11=mysqli_num_rows($eb1);
 //echo $eb11;
 //eb2 letter count//
-$eb1sq2="select * from letter where mceb is NOT NULL and eb='2'";
+$eb2sql="select * from letter where mceb is NOT NULL and eb='2'";
 $eb2=mysqli_query($conn,$eb2sql);
 $eb22=mysqli_num_rows($eb2);
 //echo $eb22;
@@ -41,7 +41,7 @@ $eb4=mysqli_query($conn,$eb4sql);
 $eb44=mysqli_num_rows($eb4);
 //echo $eb44;
 //eb5 letter count//
-$eb5sql="select * from letter where mceb isNOT NULL and eb='5'";
+$eb5sql="select * from letter where mceb is NOT NULL and eb='5'";
 $eb5=mysqli_query($conn,$eb5sql);
 $eb55=mysqli_num_rows($eb5);
 //echo $eb55;
