@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-	<link rel="stylesheet" type="text/css" href="master/styles/global.css" />
+	<link rel="stylesheet" type="text/css" href="globalstyles.css" />
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<script src="vertical-timeline/js/modernizr.js"></script> <!-- Modernizr -->
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
@@ -81,6 +81,54 @@
 						</table>
 						</form></center>
 						</div>
+			<div id="pop_background"></div>
+     		<div id="pop_box_diet_1">
+			<form action="diet.php" method="post"  accept-charset="utf-8">
+            <head colspan=2><font size="+2">Select Menu:</font></head>
+			<center><table>
+			<tr><th>Day</th><td height="50px"> 
+            <select id="myText1" name="day">
+                <option name="day" value="sunday">Sunday</option>
+                <option name="day" value="monday">Monday</option>
+                <option name="day" value="tuesday">Tuesday</option>
+                <option name="day" value="wednesday">Wednesday</option>
+                <option name="day" value="wednesday">Thursday</option>
+                <option name="day" value="wednesday">Friday</option>
+                <option name="day" value="wednesday">Saturday</option>
+            </select></td>
+
+
+            <th>Catogary</th><td height="50px">  
+            <select  id="myText2" name="type">
+                <option name="type" value="c_s1">Children S1</option>
+                <option name="type" value="c_s2">Children S2</option>
+                <option name="type" value="c_s3">Children S3</option>
+                <option name="type" value="patients">Patients</option>
+                <option name="type" value="dd">Diabetics Patients</option>
+                <option name="type" value="staff">Staff</option>
+            </select></td>
+			<td height="50px" colspan=2>	
+            <input type="submit" value="Submit" name="submit"></td></tr>
+			</table></center>
+        </form>
+		
+		</div>
+		
+		<script>
+			$(document).ready(function(){
+            $('#open_hr_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_diet_1').fadeIn();
+                return false;
+            });
+            $('#pop_background').click(function(){
+                $('#pop_background').fadeOut();
+                $('#pop_box_diet_1').fadeOut();
+ 
+                return false;
+            });
+         });
+		</script>
 			 
 		<!--<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:500px; padding: 5px; overflow: hidden;"></iframe>
 		-->
