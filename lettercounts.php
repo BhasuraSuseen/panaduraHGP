@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
 <?php
 require "connect.php";
 //mail clerk 1 letter count//
@@ -62,6 +68,42 @@ $eb88=mysqli_num_rows($eb8);
 //echo $eb88;
 
 ?>
+ <form name="letterclerk" action="lettercounts.php" method="post" accept-charset="utf-8">
 <?php
+//code for mail clerk,admin officer and director
+//can use the following code for all the users, copy paste the code for priority one users and replace the eb number for priority two users.
+$p1letters=mysqli_query($conn,"select letter_id from letter");
+echo "<label>Select letter ID </label>";
+if(mysqli_num_rows($p1letters)>0){
+      $select= '<select name="letid">';
+      while($rs=mysqli_fetch_array($p1letters)){
+     
+      $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
+       }
+      }
+      else{
+        $select='<select><option></option></select>';
+      }
 
+      echo $select;
+      echo '</select>'
 ?>
+<input type="submit" name="submit" value="Search Details">
+<?php
+ if(isset($_POST["submit"])){
+ 	$letid=$_POST['letid'];
+ $letdetailsq=mysqli_query($conn,"select * from letter where letter_id='$letid'");
+ $array=mysqli_fetch_assoc($letdetailsq);
+ echo "<br><label>Letter ID : <label>". $array["letter_id"]."<br>";
+ echo "<label>Date recived : <label>". $array["date"]."<br>";
+ echo "<label>Subject : <label>". $array["subject"]."<br>";
+ echo "<label>Recived from : <label>". $array["address"]."<br>";
+ echo "<label>Type : <label>". $array["type"]."<br>";
+ echo "<label>Letter Clerk to Medical Superintendent date : <label>". $array["mcms"]."<br>";
+ echo "<label>Medical Superintendent to Admin Officer date : <label>". $array["msao"]."<br>";
+ echo "<label>Admin Officer to Letter Clerk date : <label>". $array["aomc"]."<br>";
+ }
+	?>
+</form>
+</body>
+</html>
