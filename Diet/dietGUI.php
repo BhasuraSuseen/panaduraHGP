@@ -99,35 +99,45 @@
 						</div>
 			<div id="pop_background"></div>
      		<div id="pop_box_diet_1">
-			<form action="diet.php" method="post"  accept-charset="utf-8">
+			<form>
             <head colspan=2><font size="+2">Select Menu:</font></head>
 			<center><table>
 			<tr><th>Day</th><td height="50px"> 
             <select id="myText1" name="day">
-                <option name="day" value="sunday">Sunday</option>
-                <option name="day" value="monday">Monday</option>
-                <option name="day" value="tuesday">Tuesday</option>
-                <option name="day" value="wednesday">Wednesday</option>
-                <option name="day" value="wednesday">Thursday</option>
-                <option name="day" value="wednesday">Friday</option>
-                <option name="day" value="wednesday">Saturday</option>
+                <option id="day" name="day" value="sunday">Sunday</option>
+                <option id="day" name="day" value="monday">Monday</option>
+                <option id="day" name="day" value="tuesday">Tuesday</option>
+                <option id="day" name="day" value="wednesday">Wednesday</option>
+                <option id="day" name="day" value="wednesday">Thursday</option>
+                <option id="day" name="day" value="wednesday">Friday</option>
+                <option id="day" name="day" value="wednesday">Saturday</option>
             </select></td>
 
 
             <th>Catogary</th><td height="50px">  
             <select  id="myText2" name="type">
-                <option name="type" value="c_s1">Children S1</option>
-                <option name="type" value="c_s2">Children S2</option>
-                <option name="type" value="c_s3">Children S3</option>
-                <option name="type" value="patients">Patients</option>
-                <option name="type" value="dd">Diabetics Patients</option>
-                <option name="type" value="staff">Staff</option>
+                <option id="type" name="type" value="c_s1">Children S1</option>
+                <option id="type" name="type" value="c_s2">Children S2</option>
+                <option id="type" name="type" value="c_s3">Children S3</option>
+                <option id="type" name="type" value="patients">Patients</option>
+                <option id="type" name="type" value="dd">Diabetics Patients</option>
+                <option id="type" name="type" value="staff">Staff</option>
             </select></td>
+			
+			</table>
 			<td height="50px" colspan=2>	
-            <input type="submit" value="Submit" name="submit"></td></tr>
-			</table></center>
+			<input  style="display:none"type ="submit"></td></tr>
+			</center>
         </form>
-		
+			<button style="background-color: #263238;
+                                            outline: none;
+                                            border: none;
+                                            width: 100px;
+                                            font-size: 0.9em;
+                                            padding: 0.4em;
+                                            margin-bottom: 0.8em;  
+                                            color: white;" onclick="view_menu(document.getElementsByName('day').innerHTML, document.getElementsByName('type').innerHTML )">Submit</button>
+		<label id="lb1"></label><br>
 		</div>
 		
 		<script>
@@ -199,6 +209,60 @@
             obj.open("POST", "count.php", true);
             obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             obj.send("meal=" + meal1 + "&children_s1=" + s1 + "&children_s2=" + s2 + "&children_s3=" + s3 + "&patients=" + patients + "&diabetics_patients=" + dp + "&staff=" + staff);
+        }
+        catch (err) {
+        }
+    }
+</script>
+
+<script>
+    var obj;
+    function checkBrowser() {
+        if (window.XMLHttpRequest) {
+            obj = new XMLHttpRequest();
+        } else {
+            obj = new ActiveXobject("Microfoft.ActiveXobject");
+        }
+    }
+
+    function menu_view(day,type) {
+        try {
+
+            var day1;
+			var type1;
+            for (var i = 0; i < day.length; i++) {
+				
+                if (day[i].checked) {
+                    day1 = day[i].value;
+                }
+            }
+			
+			for (var i = 0; i < day.length; i++) {
+				
+                if (type[i].checked) {
+                    type1 = type[i].value;
+                }
+            }
+//        alert(meal1);
+//        alert(s1);
+//        alert(s2);
+//        alert(s3);
+//        alert(patients);
+//        alert(dp);
+//        alert(staff);
+
+            checkBrowser();
+            obj.onreadystatechange = function () {
+
+                //alert(obj.responseText);
+                if (obj.readyState === 4 && obj.status === 200) {
+                    var text = obj.responseText;
+                    document.getElementById('lb1').innerHTML = text;
+                }
+            };
+            obj.open("POST", "menu_view.php", true);
+            obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            obj.send("day=" + day1 + "type=" + type1);
         }
         catch (err) {
         }
