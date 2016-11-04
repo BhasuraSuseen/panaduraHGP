@@ -45,7 +45,7 @@
 
 		
 		
-		<center><form name="new_count" method="post" action="diet.php">
+		<center><form>
 						<table>
 						<thead>
 						<tr>
@@ -53,33 +53,49 @@
 						</thead>
 	
 						<tr><td>Meal Type</td><td>
-						<input type="radio" name="mealtype" value="breakfast" onclick="myFunction()" required> Breakfast
-						<input type="radio" name="mealtype" value="lunch" onclick="myFunction()" required> Lunch
-						<input type="radio" name="mealtype" value="dinner" onclick="myFunction()" required> Dinner</td></tr><br>
-						<tr><td>Children S1 count</td><td> 
-						<input type="text" name="s1" value="" size="20" pattern="[0-9]{1,}" required></td></tr>
+						<input type="radio" id="meal" name="meal" value="BR" onclick="myFunction()" required> Breakfast
+						<input type="radio" id="meal" name="meal" value="Lu" onclick="myFunction()" required> Lunch
+						<input type="radio" id="meal" name="meal" value="Di" onclick="myFunction()" required> Dinner</td></tr><br>
+						<tr><td>Children S1 </td><td> 
+						<input type="text" id="s1" name="children_s1" value="" size="20" pattern="[0-9]{1,}" required></td></tr>
 						
-						<tr><td>Children S2 count</td><td> 
-						<input type="text" name="s2" size="20" pattern="[0-9]{1,}" required></td></tr>
+						<tr><td>Children S2 </td><td> 
+						<input type="text" id="s2" name="children_s2" size="20" pattern="[0-9]{1,}" required></td></tr>
 						
-						<tr><td>Children S3 count</td><td> 
-						<input type="text" name="s3" size="20" pattern="[0-9]{1,}" required></td></tr>
+						<tr><td>Children S3 </td><td> 
+						<input type="text" id="s3" name="children_s3" size="20" pattern="[0-9]{1,}" required></td></tr>
 						
-						<tr><td>Normal Patients count</td><td> 
-						<input type="text" name="norm_patients" size="20" pattern="[0-9]{1,}" required></td></tr>
+						<tr><td>Normal Patients </td><td> 
+						<input type="text" id="patients" name="patients" size="20" pattern="[0-9]{1,}" required></td></tr>
 						
-						<tr><td>DD Patients count</td><td> 
-						<input type="text" name="dd_patients" size="20" pattern="[0-9]{1,}" required></td></tr>
+						<tr><td>DD Patients </td><td> 
+						<input type="text" id="dp" name="diabetics_patients" size="20" pattern="[0-9]{1,}" required></td></tr>
 						
-						<tr><td>Staff count</td><td> 
-						<input type="text" name="staff" size="20" pattern="[0-9]{1,}" required></td></tr>
+						<tr><td>Staff </td><td> 
+						<input type="text" id="staff" name="staff" size="20" pattern="[0-9]{1,}" required></td></tr>
 						
 
 						<tr><td colspan=2 align="center">
-						<input type="submit" value="Submit" name="submit">
-						<input type="reset" value="Reset"></td></tr>
+                                      
+                                    <input type ="reset" value="Reset"></td></tr>
+						
 						</table>
-						</form></center>
+							<input  style="display:none"type ="submit"></td></tr>
+						</form>
+							 <button style="background-color: #263238;
+                                            outline: none;
+                                            border: none;
+                                            width: 100px;
+                                            font-size: 0.9em;
+                                            padding: 0.4em;
+                                            margin-bottom: 0.8em;  
+                                            color: white;" onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
+						</center>
+						</div>
+						<div class="middle_right">
+							<label id="lb1"></label><br>
+
+
 						</div>
 			<div id="pop_background"></div>
      		<div id="pop_box_diet_1">
@@ -129,6 +145,8 @@
             });
          });
 		</script>
+		
+		
 			 
 		<!--<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:500px; padding: 5px; overflow: hidden;"></iframe>
 		-->
@@ -142,3 +160,48 @@
 	
  </body>
  </html>
+ <script>
+    var obj;
+    function checkBrowser() {
+        if (window.XMLHttpRequest) {
+            obj = new XMLHttpRequest();
+        } else {
+            obj = new ActiveXobject("Microfoft.ActiveXobject");
+        }
+    }
+
+    function count(meal, s1, s2, s3, patients, dp, staff) {
+        try {
+
+            var meal1;
+            for (var i = 0; i < meal.length; i++) {
+                if (meal[i].checked) {
+                    meal1 = meal[i].value;
+                }
+            }
+//        alert(meal1);
+//        alert(s1);
+//        alert(s2);
+//        alert(s3);
+//        alert(patients);
+//        alert(dp);
+//        alert(staff);
+
+            checkBrowser();
+            obj.onreadystatechange = function () {
+
+                //alert(obj.responseText);
+                if (obj.readyState === 4 && obj.status === 200) {
+                    var text = obj.responseText;
+                    document.getElementById('lb1').innerHTML = text;
+                }
+            };
+            obj.open("POST", "count.php", true);
+            obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            obj.send("meal=" + meal1 + "&children_s1=" + s1 + "&children_s2=" + s2 + "&children_s3=" + s3 + "&patients=" + patients + "&diabetics_patients=" + dp + "&staff=" + staff);
+        }
+        catch (err) {
+        }
+    }
+</script>
+
