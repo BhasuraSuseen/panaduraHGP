@@ -99,10 +99,74 @@ if(mysqli_num_rows($p1letters)>0){
  echo "<label>Subject : <label>". $array["subject"]."<br>";
  echo "<label>Recived from : <label>". $array["address"]."<br>";
  echo "<label>Type : <label>". $array["type"]."<br>";
- echo "<label>Letter Clerk to Medical Superintendent date : <label>". $array["mcms"]."<br>";
- echo "<label>Medical Superintendent to Admin Officer date : <label>". $array["msao"]."<br>";
- echo "<label>Admin Officer to Letter Clerk date : <label>". $array["aomc"]."<br>";
+ 
+
+ if(is_null($array['mcms'])){
+ 	echo "<label>Letter Clerk to Medical Superintendent date : <label>Letter not forwarded<br>";
  }
+ else{
+ 	echo "<label>Letter Clerk to Medical Superintendent date : <label>". $array["mcms"]."<br>";
+ }
+  if(is_null($array['msao'])){
+ 	echo "<label>Medical Superintendent to Admin Officer date : <label>Letter not forwarded<br>";
+ }
+ else{
+ 	echo "<label>Medical Superintendent to Admin Officer date : <label>". $array["msao"]."<br>";
+ }
+  if(is_null($array['aomc'])){
+ 	echo "<label>Admin Officer to Letter Clerk date : <label>Letter not forwarded<br>";
+ }
+ else{
+ 	echo "<label>Admin Officer to Letter Clerk date : <label>". $array["aomc"]."<br>";
+ }
+ 
+ $current_location='';
+ if (is_null($array["mceb"])==FALSE){
+ 	if ($array["eb"]==1){
+ 		$current_location="EB No 1";
+ 	}
+ 	elseif ($array["eb"]==2){
+ 		$current_location="EB No 2";
+ 	}
+ 	elseif ($array["eb"]==3){
+ 		$current_location="EB No 3";
+ 	}
+ 	elseif ($array["eb"]==4){
+ 		$current_location="EB No 4";
+ 	}
+ 	elseif ($array["eb"]==5){
+ 		$current_location="EB No 5";
+ 	}
+ 	elseif ($array["eb"]==6){
+ 		$current_location="EB No 6";
+	}
+	elseif ($array["eb"]==7){
+ 		$current_location="EB No 7";
+	}
+	elseif ($array["eb"]==8){
+ 		$current_location="EB No 8";
+	}	 		
+ }
+ else {
+ 	if(is_null($array["aomc"])==FALSE){
+ 		$current_location="MC2";
+ 	}
+ 	else{
+ 		if(is_null($array["msao"])==FALSE){
+ 		$current_location="AO";
+ 		}
+ 		else{
+ 			if(is_null($array["mcms"])==FALSE){
+ 				$current_location="MS";
+ 			}
+ 			else{
+ 				$current_location="MC";
+ 			}
+ 		}
+ 	}
+ }
+ echo "<lable>Current Location : </label>".$current_location;
+}
 	?>
 </form>
 </body>
