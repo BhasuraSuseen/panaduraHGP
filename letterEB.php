@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script  src="http://d3js.org/d3.v3.min.js"></script>
 </head>
 <body> 
 
