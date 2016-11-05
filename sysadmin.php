@@ -214,18 +214,18 @@ $eb88=mysqli_num_rows($eb8);
                       {"x1": 350, "y1": 300, "x2": 500, "y2": 520},
                       {"x1": 350, "y1": 300, "x2": 500, "y2": 600}
                  ];
-                 nodes[0].value = $a1;
-                 nodes[1].value = $b1;
-		 nodes[2].value = $c1;
-                 nodes[3].value = $d1;
-		 nodes[4].value = $eb11;
-                 nodes[5].value = $eb22;
-		 nodes[6].value = $eb33;
-                 nodes[7].value = $eb44;
-		 nodes[8].value = $eb55;
-                 nodes[9].value = $eb66;
-		 nodes[10].value = $eb77;
-                 nodes[11].value = $eb88;
+                 nodes[0].value = <?php echo $a1 ?>;
+                 nodes[1].value = <?php echo $b1 ?>;
+		 nodes[2].value = <?php echo $c1 ?>;
+                 nodes[3].value = <?php echo $d1 ?>;
+		 nodes[4].value = <?php echo $eb11 ?>;
+                 nodes[5].value = <?php echo $eb22 ?>;
+		 nodes[6].value = <?php echo $eb33 ?>;
+                 nodes[7].value = <?php echo $eb44 ?>;
+		 nodes[8].value = <?php echo $eb55 ?>;
+                 nodes[9].value = <?php echo $eb66 ?>;
+		 nodes[10].value = <?php echo $eb77 ?>;
+                 nodes[11].value = <?php echo $eb88 ?>;
       var canvas = d3.select("#middle_left").append("svg")
         .attr('width', width)
         .attr('height', height);
