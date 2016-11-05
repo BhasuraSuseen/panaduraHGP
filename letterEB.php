@@ -63,11 +63,14 @@
 			  <a href="index.php"><button class="button">Log Out</button></a>
                       </div>
             </div>
-	 </div>
+	 
 			
 			
             <div class="middle_left">
-		    <?php
+
+            </div>
+            <div class="middle_right">
+               		    <?php
 require "connect.php";
 //mail clerk 1 letter count//
 $mcsql1="select * from letter where date is NOT NULL and mcms IS NULL";
@@ -206,10 +209,7 @@ $eb88=mysqli_num_rows($eb8);
     
       //d3.json("mydata.json",function(data){
       // })
-    </script>
-            </div>
-            <div class="middle_right">
-                
+    </script> 
             </div>
 		</div>
 		<div class="right_side_bar"> 
