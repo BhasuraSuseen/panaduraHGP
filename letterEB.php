@@ -63,6 +63,7 @@
 			  <a href="index.php"><button class="button">Log Out</button></a>
                       </div>
             </div>
+	 </div>
 			
 			
             <div class="middle_left">
