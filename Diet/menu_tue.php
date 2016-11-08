@@ -28,11 +28,9 @@
             $tuesdi  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.S_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE S_Di <> 0.000");
 		
 
-	if(isset($_POST['submit'])){
-		 $day = $_POST['day'];
-		 $type = $_POST['type'];
+	
 
-		if($day == "tuesday" && $type == "c_s1") {?>
+		if($type == "c_s1") {?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -94,7 +92,7 @@
 
                                     </table></td>
 	
-	  	<?php }else if($day == "tuesday" && $type == "c_s2"){ ?>
+	  	<?php }else if($type == "c_s2"){ ?>
 		 	<table style="background-color: #CFD8DC;width: 60%" >
                             <tr><td align="left"><b>Children S2</b></td></tr></table>
                         <!--elanga table eka(2) metnta-->
@@ -150,7 +148,7 @@
 
 
                                     </table></td>
-	 	<?php }else if($day == "tuesday" && $type == "c_s3"){ ?> 
+	 	<?php }else if($type == "c_s3"){ ?> 
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -213,7 +211,7 @@
                                     </table></td>
 					
 		 	
-		<?php } else if($day == "tuesday" && $type == "c_s3") { ?>
+		<?php } else if($type == "c_s3") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -275,7 +273,7 @@
 
                                     </table></td>
 									
-						<?php } else if($day == "tuesday" && $type == "patients") { ?>
+						<?php } else if($type == "patients") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -337,7 +335,7 @@
 
                                     </table></td>
 									
-									<?php } else if($day == "tuesday" && $type == "dd") { ?>
+			<?php } else if($type == "dd") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -399,7 +397,7 @@
 
                                     </table></td>
 									
-									<?php } else if($day == "tuesday" && $type == "staff") { ?>
+		<?php } else if($type == "staff") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -461,6 +459,6 @@
 
                                     </table></td>
 		<?php } ?>
-	<?php } ?>
+	
 </body>
 </html>
