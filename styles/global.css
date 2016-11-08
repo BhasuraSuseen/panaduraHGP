@@ -239,8 +239,8 @@ ul#nav li:hover{
     display: none;
     z-index: 1000;       
 }
-#pop_box_hr_1{
-    
+#pop_box_hr_1{  
+    position: absolute;
     background: #ECEFF1;
     font-size: 0.9em;
     width: 54%;
