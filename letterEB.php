@@ -41,7 +41,7 @@
 	 
 			     </div>
 			
-          <div class="middle_left">
+          <div id="middle_leftp1">
               <?php
                 require "connect.php";
                 //mail clerk 1 letter count//
@@ -147,7 +147,7 @@
                                 nodes[9].value = <?php echo $eb66 ?>;
                                 nodes[10].value = <?php echo $eb77 ?>;
                                 nodes[11].value = <?php echo $eb88 ?>;
-                       var canvas = d3.select("body").append("svg")
+                       var canvas = d3.select("middle_leftp1").append("svg")
                               .attr('width', width)
                               .attr('height', height);
                             var lines = canvas.selectAll("line")
@@ -207,7 +207,7 @@
                       // })
                     </script>
           </div>
-          <div class="middle_right">
+          <div id="middle_rightp1">
  
           </div>
 		
