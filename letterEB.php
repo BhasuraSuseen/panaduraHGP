@@ -214,8 +214,7 @@
 		<div class="right_side_bar"> 
                
           	</div>
-	</div>
-      <div id="pop_background"></div>
+		 <div id="pop_background"></div>
             <div id="pop_box_hr_1">
                         <b>New Letter Details</b>
                         <!--entering details of letters into databse for the first time -->
@@ -333,6 +332,8 @@
                           
                         ?>
             </div>
+	</div>
+     
         <script>
          $(document).ready(function(){
             $('#open_mail_1').click(function(){
