@@ -108,7 +108,7 @@
                     <p> Hellow </p>
                     <script>
                       d3.select("p").text("D3 is working");
-                      var width = 600;
+                      var width = 1000;
                       var height = 600;
                       var nodes = [{"name": "LC1", "value" : 0, "x_axis": 80, "y_axis": 300},
                                   {"name": "MS", "value" : 0, "x_axis": 280, "y_axis": 300},
