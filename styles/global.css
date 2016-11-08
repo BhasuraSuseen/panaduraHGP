@@ -201,7 +201,7 @@ ul#nav li:hover{
     padding-top: 8px;
     padding-right:10px;
 }
-#middle_left{
+.middle_left{
     float: left;
     height:90%;
     width:60%;
@@ -212,6 +212,19 @@ ul#nav li:hover{
     float: left;
     height:90%;
     width:40%;
+    overflow-y:scroll;
+}
+#middle_leftp1{
+    float: left;
+    height:90%;
+    width:100%;
+    border-right: 2px solid #B0BEC5;
+    overflow-y:scroll;
+}
+.middle_rightp1{
+    float: left;
+    height:90%;
+    width:0%;
     overflow-y:scroll;
 }
 #pop_background{
