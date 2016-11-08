@@ -3,8 +3,6 @@
 <head>
 <meta charset=utf-8 />
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
-	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
-	<script src="vertical-timeline/js/modernizr.js"></script> <!-- Modernizr -->
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="attendence/jst.js"></script>
@@ -106,7 +104,7 @@ require "connect.php";
 			   		<?php
 			   		 
 			   		echo"<a>".$_SESSION['username']."</a>";
-			   			 ?>
+			   			 ?><br>
 				  
 				  <a href="index.php">Log Out</a>
 			   </div>
