@@ -50,7 +50,7 @@
                 header("Location:  users/adminofficer.php");
             }elseif($count[1]=="AB"){
                     if ($count[2]==5) {
-                      header("Location:  attendancemaileb1.php");
+                      header("Location:  letterEB.php");
                     }
                     elseif ($count[2]==6) {
                       header("Location:  attendancemaileb2.php");
