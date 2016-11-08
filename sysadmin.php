@@ -69,7 +69,7 @@
 <body>
 <?php 
 require "connect.php";
-			   		 session_start();?>
+			   		 session_start(); mysqli_close($conn);?>
 	<div class="all_container">
 		<div class="left_side_bar" >
             		<div class="left_side_bar_top">                   
@@ -183,6 +183,7 @@ $eb8sql="select * from letter where mceb is NOT NULL and eb='8'";
 $eb8=mysqli_query($conn,$eb8sql);
 $eb88=mysqli_num_rows($eb8);
 //echo $eb88;
+mysqli_close($conn);
 ?>	
 		<p> Hellow </p>
     <script>
@@ -291,7 +292,7 @@ $eb88=mysqli_num_rows($eb8);
 						<input type="password" name="passwordc" size="20" required></td></tr>
 						<tr><td>NIC</td><td>
 			      <?php  
-			      
+			      require "connect.php";
 				  $abc=mysqli_query($conn,"select employee.NIC_NO from employee where employee.NIC_NO not in(select employee.NIC_NO from employee inner join users on employee.NIC_NO=users.NIC_NO)");
 			      if(mysqli_num_rows($abc)>0){
 			      $select= '<select name="nic">';
@@ -306,6 +307,7 @@ $eb88=mysqli_num_rows($eb8);
 
 			      echo $select;
 			      echo '</select>';
+			 mysqli_close($conn);
 			?>
 						</td></tr>
 						<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator
@@ -336,6 +338,7 @@ $eb88=mysqli_num_rows($eb8);
 					</script>
 					</thead>
 	<?php
+	require "connect.php";
 	if(isset($_POST["submit"])){
  	 
    if(isset($_POST['ebno'])){
@@ -399,7 +402,7 @@ if(mysqli_num_rows($result1)>=1){
 }
 else{echo "passwords do not match";}
 }
-
+mysqli_close($conn);
 ?>
      			</div>
 	<div id="pop_box_hr_2">
