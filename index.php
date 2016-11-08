@@ -34,7 +34,7 @@
 	$sql = "SELECT USERNAME, ADMIN, EB FROM users WHERE USERNAME='".$username."' AND PASSWORD='".$password."'";
 	$result = mysqli_query($conn,$sql);
     $count =mysqli_fetch_array($result);
-     mysql_close($conn);   
+     mysqli_close($conn);   
         
         if(mysqli_num_rows($result)>0){
             $_SESSION['username']=$username;
