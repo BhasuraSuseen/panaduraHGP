@@ -83,7 +83,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 						</table>
  <?php } 
  if($date == $date3 && $meal == "Dinner"){ ?>
-		<table align="left" style="width: 20%">
+		<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -125,7 +125,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 			</center>
  <?php }
 if($date == $date3 && $meal == "Lunch"){?>
-					<table align="left" style="width: 20%">
+					<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -141,7 +141,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 					 </table>
 <?php }
 if($date == $date3 && $meal == "Dinner"){?>
-		<table align="left" style="width: 20%">
+		<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -165,7 +165,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 <?php if($date4 == "Wednesday"){
 	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
  if($date == $date3 && $meal == "Breakfast"){?>
-			<table align="left" style="width: 20%">
+			<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -182,7 +182,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 			</table>
  <?php }
 if($date == $date3 && $meal == "Lunch"){?>
-					<table align="left" style="width: 20%">
+					<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -198,7 +198,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 					 </table>
 <?php }
 	if($date == $date3 && $meal == "Dinner"){?>
-					<table align="left" style="width: 20%">
+					<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -219,7 +219,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 <?php if($date4 == "Thursday"){
 	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
  if($date == $date3 && $meal == "Breakfast"){?>
-			<table align="left" style="width: 20%">
+			<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -236,7 +236,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 			</table>
  <?php }
 if($date == $date3 && $meal == "Lunch"){?>
-					<table align="left" style="width: 20%">
+					<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -252,7 +252,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 					 </table>
 <?php }
 if($date == $date3 && $meal == "Dinner"){?>
-		<table align="left" style="width: 20%">
+		<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -275,7 +275,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 <?php if($date4 == "Friday"){
 	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
  if($date == $date3 && $meal == "Breakfast"){?>
-			<table align="left" style="width: 20%">
+			<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -292,7 +292,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 			</table>
  <?php }
 if($date == $date3 && $meal == "Lunch"){?>
-					<table align="left" style="width: 20%">
+					<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -308,7 +308,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 					 </table>
 <?php }
 if($date == $date3 && $meal == "Dinner"){?>
-		<table align="left" style="width: 20%">
+		<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
