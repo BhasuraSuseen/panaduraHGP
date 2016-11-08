@@ -221,7 +221,7 @@ ul#nav li:hover{
     border-right: 2px solid #B0BEC5;
     overflow-y:scroll;
 }
-.middle_rightp1{
+#middle_rightp1{
     float: left;
     height:90%;
     width:0%;
