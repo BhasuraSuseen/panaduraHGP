@@ -211,9 +211,7 @@
  
           </div>
 		
-		      <div class="right_side_bar"> 
-               
-          </div>
+		      
          <div id="pop_background"></div>
             <div id="pop_box_hr_1">
                         <b>New Letter Details</b>
@@ -333,6 +331,10 @@
                         ?>
             </div>
  	</div>
+		<div class="right_side_bar"> 
+               
+          	</div>
+	</div>
      
         <script>
          $(document).ready(function(){
