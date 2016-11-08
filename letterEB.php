@@ -147,7 +147,7 @@
                                 nodes[9].value = <?php echo $eb66 ?>;
                                 nodes[10].value = <?php echo $eb77 ?>;
                                 nodes[11].value = <?php echo $eb88 ?>;
-                       var canvas = d3.select("middle_leftp1").append("svg")
+                       var canvas = d3.select("#middle_leftp1").append("svg")
                               .attr('width', width)
                               .attr('height', height);
                             var lines = canvas.selectAll("line")
