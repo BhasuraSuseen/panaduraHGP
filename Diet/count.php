@@ -104,7 +104,8 @@ if($date == $date3 && $meal == "Lunch"){?>
 }?>				
 
 <?php if($date4 == "Tuesday"){
-	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
+	echo '<b>'.$date3.'<br>';
+	echo $meal.' '."Menu List".'</b>'.'<br>'.'<br>';
  if($date == $date3 && $meal == "Breakfast"){?>
 			<center>
 			<table align="left" style="width: 60%">
