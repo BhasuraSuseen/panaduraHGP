@@ -105,9 +105,9 @@
                 $eb88=mysqli_num_rows($eb8);
                 //echo $eb88;
                 ?>  
-                    <p> Hellow </p>
+                    
                     <script>
-                      d3.select("p").text("D3 is working");
+                     
                       var width = 1000;
                       var height = 600;
                       var nodes = [{"name": "LC1", "value" : 0, "x_axis": 80, "y_axis": 300},
@@ -169,7 +169,7 @@
                                     .attr("r", width * 0.045)
                                     .attr("fill","#ECEFF1")
                                     .attr("stroke", "#607D8B")
-                                    .attr("stroke-width", width * 0.003)
+                                    .attr("stroke-width", width * 0.002)
                                     .on("click", click1); //radius of circle
                             canvas.selectAll("text")
                                 .data(nodes)
