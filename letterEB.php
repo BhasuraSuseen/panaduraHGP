@@ -29,7 +29,7 @@
                 <img src="images/oms4.png"  style= "padding: 5px;">
               </div>
              <div class="middle_top_middle">
-              
+              </div>
                       <div class="middle_top_right">
                         <?php 
                           require "connect.php";
@@ -39,7 +39,7 @@
                         </div>
               </div>
 	 
-			     </div>
+			     
 			
           <div id="middle_leftp1">
               <?php
