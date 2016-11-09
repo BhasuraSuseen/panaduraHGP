@@ -32,7 +32,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
 
 
 
-		if($day == "Monday" && $type == "c_s1") {?>
+		if($type == "c_s1") {?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -94,7 +94,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
 
                                     </table></td>
 	
-	  	<?php }else if($day == "Monday" && $type == "c_s2"){ ?>
+	  	<?php }else if($type == "c_s2"){ ?>
 		 	<table style="background-color: #CFD8DC;width: 60%" >
                             <tr><td align="left"><b>Children S2</b></td></tr></table>
                         <!--elanga table eka(2) metnta-->
@@ -150,69 +150,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
 
 
                                     </table></td>
-	 	<?php }else if($type == "c_s3"){ ?> 
-			<table style="width: 60%"><tr><td style="width:50%">
-            
-            <table style="width: 100%">
-                <tr><td style="background-color: white">
-
-                        <table style="background-color: #CFD8DC;width: 100%" >
-                            <tr><td align="left"><b>Children S1</b></td></tr></table>
-                        
-                        <table align="left" style="background-color: #ECEFF1;width: 100%">
-                            <tr><td align="left"><b>Breakfirst</b></td>
-                                <td align="left"><b>Lunch</b></td>
-                                <td align="left"><b>Dinner</b></td></tr>
-                            <tr><td><table align="left" style="background-color: #ECEFF1;width: 100%">
-                                        <tr>
-                                            <td align="left"><b>Item Name</b></td>
-                                            <td align="left"><b>Amount</b></td>
-                                        </tr>
-                                        <?php while ($mcs1b = mysqli_fetch_array($monc_s1br)):; ?>
-                                        <tr>
-                                            <td align="left"><?php echo $mcs1b[0]; ?></td>
-                                            <td align="left"><?php echo $mcs1b[1].' '.$mcs1b[2]; ?></td>
-                                            
-                                        </tr>
-                                        <?php endwhile; ?>
-
-
-                                    </table></td>
-                            
-                                <td><table align="left" style="background-color: #ECEFF1;width: 100%">
-                                        <tr>
-                                            <td align="left"><b>Item Name</b></td>
-                                            <td align="left"><b>Amount</b></td>
-                                        </tr>
-                                        <?php while ($mcs1l = mysqli_fetch_array($monc_s1lu)):; ?>
-                                        <tr>
-                                            <td align="left"><?php echo $mcs1l[0]; ?></td>
-                                            <td align="left"><?php echo $mcs1l[1].' '.$mcs1l[2]; ?></td>
-                                            
-                                        </tr>
-                                        <?php endwhile; ?>
-
-
-                                    </table></td>
-                                    
-
-                                <td><table align="left" style="background-color: #ECEFF1;width: 100%">
-                                        <tr>
-                                            <td align="left"><b>Item Name</b></td>
-                                            <td align="left"><b>Amount</b></td>
-                                        </tr>
-                                        <?php while ($mcs1d = mysqli_fetch_array($monc_s1di)):; ?>
-                                        <tr>
-                                            <td align="left"><?php echo $mcs1d[0]; ?></td>
-                                            <td align="left"><?php echo $mcs1d[1].' '.$mcs1d[2]; ?></td>
-                                            
-                                        </tr>
-                                        <?php endwhile; ?>
-
-
-                                    </table></td>
-					
-		 	
+	 	
 		<?php } else if($type == "c_s3") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
@@ -275,7 +213,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
 
                                     </table></td>
 									
-						<?php } else if($type == "patients") { ?>
+		<?php } else if($type == "patients") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -337,7 +275,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
 
                                     </table></td>
 									
-									<?php } else if($type == "dd") { ?>
+		<?php } else if($type == "dd") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -399,7 +337,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
 
                                     </table></td>
 									
-									<?php } else if($type == "staff") { ?>
+		<?php } else if($type == "staff") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
