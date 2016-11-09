@@ -142,12 +142,12 @@ function loadMinordata() {
 
 function saveAttends(name, date, attend) {
     try {
-        alert(name);
+     
+        checkBrowser();
+       // obj.onreadystatechange = function() {
+               alert(name);
         alert(date);
         alert(attend);
-        checkBrowser();
-        obj.onreadystatechange = function() {
-
            
            //     if (obj.readyState === 4 && obj.status === 200) {
 // alert(obj.responseText);
@@ -160,10 +160,10 @@ function saveAttends(name, date, attend) {
 
 
        //         }
-        };
-        obj.open("POST", "attendence/saveattends.php", true);
-        obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        obj.send("nic=" + name + "&date=" + date + "&attend=" + attend);
+      //  };
+       // obj.open("POST", "attendence/saveattends.php", true);
+      //  obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      //  obj.send("nic=" + name + "&date=" + date + "&attend=" + attend);
 
 
 
