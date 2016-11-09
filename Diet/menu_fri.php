@@ -213,7 +213,7 @@
 
                                     </table></td>
 									
-						<?php } else if($type == "patients") { ?>
+			<?php } else if($type == "patients") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
@@ -275,7 +275,7 @@
 
                                     </table></td>
 									
-									<?php } else if($type == "dd") { ?>
+			<?php } else if($type == "dd") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
