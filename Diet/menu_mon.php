@@ -9,25 +9,27 @@ $monc_s1br = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Br, item.u
 $monc_s1lu  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Lu, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S1Lu <> 0.000");
 $monc_s1di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Di, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S1Di <> 0.000");
 
-$monc_s2br = mysqli_query($conn, "SELECT item.Item_name, mon_breakfast.C_S2, item.unit FROM item INNER JOIN mon_breakfast ON item.Item_id = mon_breakfast.Item_id WHERE C_S2 <> 0.000");
-$monc_s2lu  = mysqli_query($conn, "SELECT item.Item_name, mon_lunch.C_S2, item.unit FROM item INNER JOIN mon_lunch ON item.Item_id = mon_lunch.Item_id WHERE C_S2 <> 0.000");
-$monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.C_S2, item.unit FROM item INNER JOIN mon_dinner ON item.Item_id = mon_dinner.Item_id WHERE C_S2 <> 0.000");
 
-$monc_s3br = mysqli_query($conn, "SELECT item.Item_name, mon_breakfast.C_S3, item.unit FROM item INNER JOIN mon_breakfast ON item.Item_id = mon_breakfast.Item_id WHERE C_S3 <> 0.000");
-$monc_s3lu  = mysqli_query($conn, "SELECT item.Item_name, mon_lunch.C_S3, item.unit FROM item INNER JOIN mon_lunch ON item.Item_id = mon_lunch.Item_id WHERE C_S3 <> 0.000");
-$monc_s3di  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.C_S3, item.unit FROM item INNER JOIN mon_dinner ON item.Item_id = mon_dinner.Item_id WHERE C_S3 <> 0.000");
 
-$monpbr = mysqli_query($conn, "SELECT item.Item_name, mon_breakfast.Patients, item.unit FROM item INNER JOIN mon_breakfast ON item.Item_id = mon_breakfast.Item_id WHERE Patients <> 0.000");
-$monplu  = mysqli_query($conn, "SELECT item.Item_name, mon_lunch.Patients, item.unit FROM item INNER JOIN mon_lunch ON item.Item_id = mon_lunch.Item_id WHERE Patients <> 0.000");
-$monpdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Patients, item.unit FROM item INNER JOIN mon_dinner ON item.Item_id = mon_dinner.Item_id WHERE Patients <> 0.000");
+$monc_s2br = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2Br, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S2Br <> 0.000");
+$monc_s2lu  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2Lu, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S2Lu <> 0.000");
+$monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S2Di <> 0.000");
+			
+			$tuec_s3br = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Br <> 0.000");
+            $tuec_s3lu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Lu <> 0.000");
+            $tuec_s3di  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Di <> 0.000");
 
-$mondbr = mysqli_query($conn, "SELECT item.Item_name, mon_breakfast.DD, item.unit FROM item INNER JOIN mon_breakfast ON item.Item_id = mon_breakfast.Item_id WHERE DD <> 0.000");
-$mondlu  = mysqli_query($conn, "SELECT item.Item_name, mon_lunch.DD, item.unit FROM item INNER JOIN mon_lunch ON item.Item_id = mon_lunch.Item_id WHERE DD <> 0.000");
-$monddi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.DD, item.unit FROM item INNER JOIN mon_dinner ON item.Item_id = mon_dinner.Item_id WHERE DD <> 0.000");
+			$tuepbr = mysqli_query($conn, "SELECT item.Item_name, menu_tue.P_Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE P_Br <> 0.000");
+            $tueplu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.P_Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE P_Lu <> 0.000");
+            $tuepdi  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.P_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE P_Di <> 0.000");
 
-$monsbr = mysqli_query($conn, "SELECT item.Item_name, mon_breakfast.Staff, item.unit FROM item INNER JOIN mon_breakfast ON item.Item_id = mon_breakfast.Item_id WHERE Staff <> 0.000");
-$monslu  = mysqli_query($conn, "SELECT item.Item_name, mon_lunch.Staff, item.unit FROM item INNER JOIN mon_lunch ON item.Item_id = mon_lunch.Item_id WHERE Staff <> 0.000");
-$monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.unit FROM item INNER JOIN mon_dinner ON item.Item_id = mon_dinner.Item_id WHERE Staff <> 0.000");
+			$tuedbr = mysqli_query($conn, "SELECT item.Item_name, menu_tue.DD_Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE DD_Br <> 0.000");
+            $tuedlu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.DD_Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE DD_Lu <> 0.000");
+            $tueddi  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.DD_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE DD_Di <> 0.000");
+
+			$tuesbr = mysqli_query($conn, "SELECT item.Item_name, menu_tue.S_Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE S_Br <> 0.000");
+            $tueslu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.S_Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE S_Lu <> 0.000");
+            $tuesdi  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.S_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE S_Di <> 0.000");
 
 
 		if($type == "c_s1") {?>
