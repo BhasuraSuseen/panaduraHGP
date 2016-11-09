@@ -147,18 +147,17 @@ function saveAttends(name, date, attend) {
         obj.onreadystatechange = function() {
 
            
-     //           if (obj.readyState === 4 && obj.status === 200) {
-// alert(obj.responseText);
-//                       
-//                    if (obj.responseText == "Hri mcn") {
-//
-//                         alert(obj.responseText);
-//                    } else {
-//                        alert("Not Added!!");
-//                    }
-//
-//
-    //            }
+                if (obj.readyState === 4 && obj.status === 200) {
+ alert(obj.responseText);
+                       
+                                if (obj.responseText == "Hri mcn") 
+                         alert(obj.responseText);
+                    } else {
+                        alert("Not Added!!");
+                    }
+
+
+                }
         };
         obj.open("POST", "attendence/saveattends.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
