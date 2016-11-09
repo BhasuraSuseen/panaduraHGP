@@ -106,10 +106,10 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
                                             <td align="left"><b>Amount</b></td>
 
                                         </tr>
-                                        <?php while ($tcs2b = mysqli_fetch_array($tuec_s2br)):; ?>
+                                        <?php while ($mcs2b = mysqli_fetch_array($monc_s2br)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tcs2b[0]; ?></td>
-                                            <td align="left"><?php echo $tcs2b[1].' '.$tcs2b[2]; ?></td>
+                                            <td align="left"><?php echo $mcs2b[0]; ?></td>
+                                            <td align="left"><?php echo $mcs2b[1].' '.$mcs2b[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -121,10 +121,10 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tcs2l = mysqli_fetch_array($tuec_s2lu)):; ?>
+                                        <?php while ($mcs2l = mysqli_fetch_array($monc_s2lu)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tcs2l[0]; ?></td>
-                                            <td align="left"><?php echo $tcs2l[1].' '.$tcs2l[2]; ?></td>
+                                            <td align="left"><?php echo $mcs2l[0]; ?></td>
+                                            <td align="left"><?php echo $mcs2l[1].' '.$mcs2l[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -138,10 +138,10 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, mon_dinner.Staff, item.un
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tcs2d = mysqli_fetch_array($tuec_s2di)):; ?>
+                                        <?php while ($mcs2d = mysqli_fetch_array($monc_s2di)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tcs2d[0]; ?></td>
-                                            <td align="left"><?php echo $tcs2d[1].' '.$tcs2d[2]; ?></td>
+                                            <td align="left"><?php echo $mcs2d[0]; ?></td>
+                                            <td align="left"><?php echo $mcs2d[1].' '.$mcs2d[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
