@@ -116,13 +116,13 @@
 
 
                                     <th>Catogary</th><td height="50px">  
-                                        <select  id="myText2" name="type">
-                                            <option id="type" name="type" value="c_s1">Children S1</option>
-                                            <option id="type" name="type" value="c_s2">Children S2</option>
-                                            <option id="type" name="type" value="c_s3">Children S3</option>
-                                            <option id="type" name="type" value="patients">Patients</option>
-                                            <option id="type" name="type" value="dd">Diabetics Patients</option>
-                                            <option id="type" name="type" value="staff">Staff</option>
+                                        <select  id="type" name="type">
+                                            <option  value="c_s1">Children S1</option>
+                                            <option  value="c_s2">Children S2</option>
+                                            <option  value="c_s3">Children S3</option>
+                                            <option  value="patients">Patients</option>
+                                            <option  value="dd">Diabetics Patients</option>
+                                            <option  value="staff">Staff</option>
                                         </select></td>
 
                             </table>
