@@ -2,25 +2,25 @@
 include './datetime.php';
 include './connect.php';
 
-$monb = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
-$monl = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
-$mond = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
+$monb = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit1 FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
+$monl = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit1 FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
+$mond = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit1 FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
 
-$tueb = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id");
-$tuel = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id");
-$tued = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id");
+$tueb = mysqli_query($conn, "SELECT  item.Item_name, menu_tue.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit1 FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id");
+$tuel = mysqli_query($conn, "SELECT  item.Item_name, menu_tue.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit1 FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id");
+$tued = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit1 FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id");
 
-$wedb = mysqli_query($conn, "SELECT item.Item_name, menu_wed.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit FROM item INNER JOIN menu_wed ON item.Item_id = menu_wed.Item_id");
-$wedl = mysqli_query($conn, "SELECT item.Item_name, menu_wed.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit FROM item INNER JOIN menu_wed ON item.Item_id = menu_wed.Item_id");
-$wedd = mysqli_query($conn, "SELECT item.Item_name, menu_wed.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit FROM item INNER JOIN menu_wed ON item.Item_id = menu_wed.Item_id");
+$wedb = mysqli_query($conn, "SELECT item.Item_name, menu_wed.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit1 FROM item INNER JOIN menu_wed ON item.Item_id = menu_wed.Item_id");
+$wedl = mysqli_query($conn, "SELECT item.Item_name, menu_wed.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit1 FROM item INNER JOIN menu_wed ON item.Item_id = menu_wed.Item_id");
+$wedd = mysqli_query($conn, "SELECT item.Item_name, menu_wed.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit1 FROM item INNER JOIN menu_wed ON item.Item_id = menu_wed.Item_id");
 
-$thub = mysqli_query($conn, "SELECT item.Item_name, menu_thu.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit FROM item INNER JOIN menu_thu ON item.Item_id = menu_thu.Item_id");
-$thul = mysqli_query($conn, "SELECT item.Item_name, menu_thu.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit FROM item INNER JOIN menu_thu ON item.Item_id = menu_thu.Item_id");
-$thud = mysqli_query($conn, "SELECT item.Item_name, menu_thu.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit FROM item INNER JOIN menu_thu ON item.Item_id = menu_thu.Item_id");
+$thub = mysqli_query($conn, "SELECT item.Item_name, menu_thu.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit1 FROM item INNER JOIN menu_thu ON item.Item_id = menu_thu.Item_id");
+$thul = mysqli_query($conn, "SELECT item.Item_name, menu_thu.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit1 FROM item INNER JOIN menu_thu ON item.Item_id = menu_thu.Item_id");
+$thud = mysqli_query($conn, "SELECT item.Item_name, menu_thu.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit1 FROM item INNER JOIN menu_thu ON item.Item_id = menu_thu.Item_id");
 
-$frib = mysqli_query($conn, "SELECT item.Item_name, menu_fri.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit FROM item INNER JOIN menu_fri ON item.Item_id = menu_fri.Item_id");
-$fril = mysqli_query($conn, "SELECT item.Item_name, menu_fri.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit FROM item INNER JOIN menu_fri ON item.Item_id = menu_fri.Item_id");
-$frid = mysqli_query($conn, "SELECT item.Item_name, menu_fri.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit FROM item INNER JOIN menu_fri ON item.Item_id = menu_fri.Item_id");
+$frib = mysqli_query($conn, "SELECT item.Item_name, menu_fri.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit1 FROM item INNER JOIN menu_fri ON item.Item_id = menu_fri.Item_id");
+$fril = mysqli_query($conn, "SELECT item.Item_name, menu_fri.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit1 FROM item INNER JOIN menu_fri ON item.Item_id = menu_fri.Item_id");
+$frid = mysqli_query($conn, "SELECT item.Item_name, menu_fri.C_S1Di,C_S2Di,C_S3Di,P_Di,DD_Di,S_Di, item.unit1 FROM item INNER JOIN menu_fri ON item.Item_id = menu_fri.Item_id");
 
 $date = $date3;
 $meal = $_POST['meal'];
@@ -35,7 +35,7 @@ $staff = $_POST['staff'];
     if (mysqli_query($conn, $sql)) {
         //echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
 
@@ -53,7 +53,17 @@ if($date4 == "Monday"){
 				
 				<?php $result = ($mb[1]*$c_s1) + ($mb[2]*$c_s2) + ($mb[3]*$c_s3) + ($mb[4]*$patients) + ($mb[5]*$dd) + ($mb[6]*$staff);?>
 				
-				<?php if($result != 0){?>
+				<?php if($result != 0){
+					if($mb[7] == "kg" || $mb[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 					
 					<tr>
                             <td align="left"><?php echo $mb[0]; ?></td>
@@ -74,7 +84,17 @@ if($date == $date3 && $meal == "Lunch"){?>
                     </tr>
 					<?php  while ($ml = mysqli_fetch_array($monl)):; 
 						$result = ($ml[1]*$c_s1) + ($ml[2]*$c_s2) + ($ml[3]*$c_s3) + ($ml[4]*$patients) + ($ml[5]*$dd) + ($ml[6]*$staff);
-						if($result != 0){?>
+						if($result != 0){
+							if($ml[7] == "kg" || $ml[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
                         <tr>
                             <td align="left"><?php echo $ml[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$ml[7]; ?></td></tr>	
@@ -91,7 +111,17 @@ if($date == $date3 && $meal == "Lunch"){?>
 		 <?php while ($md = mysqli_fetch_array($mond)):; 
 				
 				$result = ($md[1]*$c_s1) + ($md[2]*$c_s2) + ($md[3]*$c_s3) + ($md[4]*$patients) + ($md[5]*$dd) + ($md[6]*$staff);
-				if($result != 0){?>
+				if($result != 0){
+					if($md[7] == "kg" || $md[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 					<tr>
                             <td align="left"><?php echo $md[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$md[7]; ?></td></tr>
@@ -104,8 +134,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 }?>				
 
 <?php if($date4 == "Tuesday"){
-	echo '<b>'.$date3.'<br>';
-	echo $meal.' '."Menu List".'</b>'.'<br>'.'<br>';
+	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
  if($date == $date3 && $meal == "Breakfast"){?>
 			<center>
 			<table align="left" style="width: 60%">
@@ -114,14 +143,25 @@ if($date == $date3 && $meal == "Lunch"){?>
                         <td align="left"><b>Amount</b></td>
                     </tr>
 				 <?php while ($tb = mysqli_fetch_array($tueb)):; 
-						$result = ($tb[1]*$c_s1) + ($tb[2]*$c_s2) + ($tb[3]*$c_s3) + ($tb[4]*$patients) + ($tb[5]*$dd) + ($tb[6]*$staff);
-				if($result != 0){?>
-					<tr>
-                            <td align="left"><?php echo $tb[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$tb[7]; ?></td></tr>
-				<?php }
+						$result = ($tb[2]*$c_s1) + ($tb[3]*$c_s2) + ($tb[4]*$c_s3) + ($tb[5]*$patients) + ($tb[6]*$dd) + ($tb[7]*$staff);
+						
+						 if($result != 0){
+							 if($tb[7] == "kg" || $tb[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
+						<tr>
+                            <td align="left"><?php echo $tb[1]; ?></td>
+                            <td align="left"><?php echo $result.' '.$tb[8]; ?></td></tr>
+						<?php }
 				
-		 endwhile;?>
+				 endwhile;?>
 			</table>
 			</center>
  <?php }
@@ -132,11 +172,22 @@ if($date == $date3 && $meal == "Lunch"){?>
                         <td align="left"><b>Amount</b></td>
                     </tr>
 					 <?php while ($tl = mysqli_fetch_array($tuel)):; 
-						$result = ($tl[1]*$c_s1) + ($tl[2]*$c_s2) + ($tl[3]*$c_s3) + ($tl[4]*$patients) + ($tl[5]*$dd) + ($tl[6]*$staff);
-						if($result != 0){?>
+						$result = ($tl[2]*$c_s1) + ($tl[3]*$c_s2) + ($tl[4]*$c_s3) + ($tl[5]*$patients) + ($tl[6]*$dd) + ($tl[7]*$staff);
+						
+						if($result != 0){
+							if($tl[7] == "kg" || $tl[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 							<tr>
-                            <td align="left"><?php echo $tl[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$tl[7]; ?></td></tr>
+                            <td align="left"><?php echo $tl[1]; ?></td>
+                            <td align="left"><?php echo $result.' '.$tl[8]; ?></td></tr>
 						<?php }
                      endwhile; ?>
 					 </table>
@@ -149,7 +200,17 @@ if($date == $date3 && $meal == "Dinner"){?>
                     </tr>
 		 <?php while ($td = mysqli_fetch_array($tued)):; 
 				$result = ($td[1]*$c_s1) + ($td[2]*$c_s2) + ($td[3]*$c_s3) + ($td[4]*$patients) + ($td[5]*$dd) + ($td[6]*$staff);
-				if($result != 0){?>
+				if($result != 0){
+					if($td[7] == "kg" || $td[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 					<tr>
                         <td align="left"><?php echo $td[0]; ?></td>
                         <td align="left"><?php echo $result.' '.$td[7]; ?></td></tr>
@@ -173,8 +234,20 @@ if($date == $date3 && $meal == "Dinner"){?>
                     </tr>
 				 <?php while ($wb = mysqli_fetch_array($wedb)):; 
 						$result = ($wb[1]*$c_s1) + ($wb[2]*$c_s2) + ($wb[3]*$c_s3) + ($wb[4]*$patients) + ($wb[5]*$dd) + ($wb[6]*$staff);
-				if($result != 0){?>
-					<tr>
+						
+						if($result != 0){
+							if($wb[7] == "kg" || $wb[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							} ?>
+						
+						<tr>
                             <td align="left"><?php echo $wb[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$wb[7]; ?></td></tr>
 				<?php }
@@ -190,7 +263,18 @@ if($date == $date3 && $meal == "Lunch"){?>
                     </tr>
 					 <?php while ($wl = mysqli_fetch_array($wedl)):; 
 						$result = ($wl[1]*$c_s1) + ($wl[2]*$c_s2) + ($wl[3]*$c_s3) + ($wl[4]*$patients) + ($wl[5]*$dd) + ($wl[6]*$staff);
-						if($result != 0){?>
+						if($result != 0){
+							if($wl[7] == "kg" || $wl[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							} 
+							 ?>
 							<tr>
                             <td align="left"><?php echo $wl[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$wl[7]; ?></td></tr>
@@ -206,7 +290,17 @@ if($date == $date3 && $meal == "Lunch"){?>
                     </tr>
 					 <?php while ($wd = mysqli_fetch_array($wedd)):; 
 						$result = ($wd[1]*$c_s1) + ($wd[2]*$c_s2) + ($wd[3]*$c_s3) + ($wd[4]*$patients) + ($wd[5]*$dd) + ($wd[6]*$staff);
-						if($result != 0){?>
+						if($result != 0){
+							if($wd[7] == "kg" || $wd[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 							<tr>
                             <td align="left"><?php echo $wd[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$wd[7]; ?></td></tr>
@@ -227,7 +321,17 @@ if($date == $date3 && $meal == "Lunch"){?>
                     </tr>
 				 <?php while ($tb = mysqli_fetch_array($thub)):; 
 						$result = ($tb[1]*$c_s1) + ($tb[2]*$c_s2) + ($tb[3]*$c_s3) + ($tb[4]*$patients) + ($tb[5]*$dd) + ($tb[6]*$staff);
-				if($result != 0){?>
+				if($result != 0){
+					if($tb[7] == "kg" || $tb[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 					<tr>
                             <td align="left"><?php echo $tb[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$tb[7]; ?></td></tr>
@@ -244,7 +348,17 @@ if($date == $date3 && $meal == "Lunch"){?>
                     </tr>
 					 <?php while ($tl = mysqli_fetch_array($thul)):; 
 						$result = ($tl[1]*$c_s1) + ($tl[2]*$c_s2) + ($tl[3]*$c_s3) + ($tl[4]*$patients) + ($tl[5]*$dd) + ($tl[6]*$staff);
-						if($result != 0){?>
+						if($result != 0){
+							if($tl[7] == "kg" || $tl[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 							<tr>
                             <td align="left"><?php echo $tl[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$tl[7]; ?></td></tr>
@@ -260,7 +374,17 @@ if($date == $date3 && $meal == "Dinner"){?>
                     </tr>
 		 <?php while ($td = mysqli_fetch_array($thud)):; 
 				$result = ($td[1]*$c_s1) + ($td[2]*$c_s2) + ($td[3]*$c_s3) + ($td[4]*$patients) + ($td[5]*$dd) + ($td[6]*$staff);
-				if($result != 0){?>
+				if($result != 0){
+					if($td[7] == "kg" || $td[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 					<tr>
                         <td align="left"><?php echo $td[0]; ?></td>
                         <td align="left"><?php echo $result.' '.$td[7]; ?></td></tr>
@@ -283,7 +407,17 @@ if($date == $date3 && $meal == "Dinner"){?>
                     </tr>
 				 <?php while ($fb = mysqli_fetch_array($frib)):; 
 						$result = ($fb[1]*$c_s1) + ($fb[2]*$c_s2) + ($fb[3]*$c_s3) + ($fb[4]*$patients) + ($fb[5]*$dd) + ($fb[6]*$staff);
-				if($result != 0){?>
+				if($result != 0){
+					if($fb[7] == "kg" || $fb[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 					<tr>
                             <td align="left"><?php echo $fb[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$fb[7]; ?></td></tr>
@@ -300,7 +434,17 @@ if($date == $date3 && $meal == "Lunch"){?>
                     </tr>
 					 <?php while ($fl = mysqli_fetch_array($fril)):; 
 						$result = ($fl[1]*$c_s1) + ($fl[2]*$c_s2) + ($fl[3]*$c_s3) + ($fl[4]*$patients) + ($fl[5]*$dd) + ($fl[6]*$staff);
-						if($result != 0){?>
+						if($result != 0){
+							if($fl[7] == "kg" || $fl[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 							<tr>
                             <td align="left"><?php echo $fl[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$fl[7]; ?></td></tr>
@@ -316,7 +460,17 @@ if($date == $date3 && $meal == "Dinner"){?>
                     </tr>
 		 <?php while ($fd = mysqli_fetch_array($frid)):; 
 				$result = ($fd[1]*$c_s1) + ($fd[2]*$c_s2) + ($fd[3]*$c_s3) + ($fd[4]*$patients) + ($fd[5]*$dd) + ($fd[6]*$staff);
-				if($result != 0){?>
+				if($result != 0){
+					if($fd[7] == "kg" || $fd[7] == "L"){
+								$result = $result/1000;
+							}else{
+								$result1 = round($result);
+								if($result1 == $result || $result1 > $result){
+									$result = $result1;
+								}else{
+									$result = $result1 + 1;
+								}
+							}?> 
 					<tr>
                         <td align="left"><?php echo $fd[0]; ?></td>
                         <td align="left"><?php echo $result.' '.$fd[7]; ?></td></tr>
@@ -329,6 +483,8 @@ if($date == $date3 && $meal == "Dinner"){?>
 				
 }				
 ?>
+
+
 
 
 
