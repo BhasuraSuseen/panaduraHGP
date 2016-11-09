@@ -2,6 +2,22 @@
 
 include 'datetime.php';
 include '../connect.php';
+
+$res1 = mysqli_query($conn, "SELECT * FROM employee");
+while ($row1 = mysqli_fetch_array($res1)) {
+    $nic = $row1[0];
+    mysqli_query($conn, "insert into attend(date,employee_nic) values ('$yearmon','$nic')");
+}
+$res = mysqli_query($conn, "SELECT  employee.Nic_no,
+  employee.F_Name,
+  employee.L_Name,
+  attend.$day,
+  employee.E_type
+FROM employee
+  INNER JOIN attend
+    ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon'");
+//$res2 = mysqli_query($server, "SELECT * FROM attleave");
+
 ?>
 
 
@@ -12,7 +28,7 @@ echo "<br>";
 echo 'Month attendence report                                                                                                   ';
 echo $yearmon;
 
-require 'pdfcrowd.php';
+
 ?>
 <html>
  <header>Monthly Report</header>
@@ -54,7 +70,7 @@ require 'pdfcrowd.php';
 </html>
 
 <?php
-
+require 'pdfcrowd.php';
 try
 {   
     // create an API client instance
