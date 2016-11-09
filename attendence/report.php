@@ -1,7 +1,7 @@
 <?php
 
 include 'datetime.php';
-include 'connection.php';
+include '../connect.php';
 ?>
 
 
