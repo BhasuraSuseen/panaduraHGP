@@ -33,12 +33,12 @@ echo $yearmon;
 <html>
  <header>Monthly Report</header>
  <body>
- <table border="1" style="width: 100%">
+ <table border="1" style="width: 60%">
                 <tr>
                     <td style="background-color: appworkspace">ID</td>
                     <td style="background-color: appworkspace">Name</td>
-                    <td style="width: 8%; background-color: blanchedalmond">present</td>
-                    <td style="width: 8%; background-color: appworkspace">absent</td>
+                    <td style="background-color: blanchedalmond">present</td>
+                    <td style="background-color: appworkspace">absent</td>
                     
 
                 </tr>
