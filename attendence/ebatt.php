@@ -95,21 +95,21 @@ FROM employee
 
                             <?php } else if ($date4 == "Wednesday") { ?>
 
-                                <td style="width: 8%; background-color: blanchedalmond">
+                                <td style="width: 8%; background-color: lightgrey">
                                     <input type="checkbox" name="mon" style="display: none" onclick="saveAttends('<?php echo $row[0]; ?>', document.getElementById('date').innerHTML, this.checked)"></td>  
-                                <td style="width: 8%; background-color: appworkspace">
+                                <td style="width: 8%; background-color: #ECEFF1">
                                     <input type="checkbox" name="tue" style="display: none" onclick="saveAttends('<?php echo $row[0]; ?>', document.getElementById('date').innerHTML, this.checked)"></td>
-                                <td style="width: 8%; background-color: blanchedalmond">
+                                <td style="width: 8%; background-color: lightgrey">
                                     <input type="checkbox" name="wed" <?php if ($row[3] == 1) {
                         echo 'Checked';
                     } ?> onclick="saveAttends('<?php echo $row[0]; ?>', document.getElementById('date').innerHTML, this.checked)"></td>
-                                <td style="width: 8%; background-color: appworkspace">
+                                <td style="width: 8%; background-color: #ECEFF1">
                                     <input type="checkbox" name="thu" style="display: none" onclick="saveAttends('<?php echo $row[0]; ?>', document.getElementById('date').innerHTML, this.checked)"></td>
-                                <td style="width: 8%; background-color: blanchedalmond">
+                                <td style="width: 8%; background-color: lightgrey">
                                     <input type="checkbox" name="fri" style="display: none" onclick="saveAttends('<?php echo $row[0]; ?>', document.getElementById('date').innerHTML, this.checked)"></td>
-                                <td style="width: 8%; background-color: appworkspace">
+                                <td style="width: 8%; background-color: #ECEFF1">
                                     <input type="checkbox" name="sat" style="display: none" onclick="saveAttends('<?php echo $row[0]; ?>', document.getElementById('date').innerHTML, this.checked)"></td>
-                                <td style="width: 8%; background-color: blanchedalmond">
+                                <td style="width: 8%; background-color: lightgrey">
                                     <input type="checkbox" name="sun" style="display: none" onclick="saveAttends('<?php echo $row[0]; ?>', document.getElementById('date').innerHTML, this.checked)"></td>
 
         <?php } else if ($date4 == "Thursday") { ?>
