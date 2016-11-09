@@ -148,67 +148,7 @@
 
 
                                     </table></td>
-	 	<?php }else if($type == "c_s3"){ ?> 
-			<table style="width: 60%"><tr><td style="width:50%">
-            
-            <table style="width: 100%">
-                <tr><td style="background-color: white">
-
-                        <table style="background-color: #CFD8DC;width: 100%" >
-                            <tr><td align="left"><b>Children S1</b></td></tr></table>
-                        
-                        <table align="left" style="background-color: #ECEFF1;width: 100%">
-                            <tr><td align="left"><b>Breakfirst</b></td>
-                                <td align="left"><b>Lunch</b></td>
-                                <td align="left"><b>Dinner</b></td></tr>
-                            <tr><td><table align="left" style="background-color: #ECEFF1;width: 100%">
-                                        <tr>
-                                            <td align="left"><b>Item Name</b></td>
-                                            <td align="left"><b>Amount</b></td>
-                                        </tr>
-                                        <?php while ($tcs1b = mysqli_fetch_array($tuec_s1br)):; ?>
-                                        <tr>
-                                            <td align="left"><?php echo $tcs1b[0]; ?></td>
-                                            <td align="left"><?php echo $tcs1b[1].' '.$tcs1b[2]; ?></td>
-                                            
-                                        </tr>
-                                        <?php endwhile; ?>
-
-
-                                    </table></td>
-                            
-                                <td><table align="left" style="background-color: #ECEFF1;width: 100%">
-                                        <tr>
-                                            <td align="left"><b>Item Name</b></td>
-                                            <td align="left"><b>Amount</b></td>
-                                        </tr>
-                                        <?php while ($tcs1l = mysqli_fetch_array($tuec_s1lu)):; ?>
-                                        <tr>
-                                            <td align="left"><?php echo $tcs1l[0]; ?></td>
-                                            <td align="left"><?php echo $tcs1l[1].' '.$tcs1l[2]; ?></td>
-                                            
-                                        </tr>
-                                        <?php endwhile; ?>
-
-
-                                    </table></td>
-                                    
-
-                                <td><table align="left" style="background-color: #ECEFF1;width: 100%">
-                                        <tr>
-                                            <td align="left"><b>Item Name</b></td>
-                                            <td align="left"><b>Amount</b></td>
-                                        </tr>
-                                        <?php while ($tcs1d = mysqli_fetch_array($tuec_s1di)):; ?>
-                                        <tr>
-                                            <td align="left"><?php echo $tcs1d[0]; ?></td>
-                                            <td align="left"><?php echo $tcs1d[1].' '.$tcs1d[2]; ?></td>
-                                            
-                                        </tr>
-                                        <?php endwhile; ?>
-
-
-                                    </table></td>
+	 	
 					
 		 	
 		<?php } else if($type == "c_s3") { ?>
