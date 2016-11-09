@@ -33,7 +33,7 @@ echo $yearmon;
 <html>
  <header>Monthly Report</header>
  <body>
- <table border="1" style="width: 60%">
+ <table border="0" style="width: 60%">
                 <tr>
                     <td style="background-color: appworkspace">ID</td>
                     <td style="background-color: appworkspace">Name</td>
