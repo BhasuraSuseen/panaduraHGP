@@ -8,5 +8,7 @@ date_default_timezone_set("Asia/Colombo");
         $date4 = "$mydate[weekday]";
         $day=date("d");
         $yearmon=date("Y-m-");
+	$yearmon2=date("Y-");
+        $date5 = "$mydate[month]";
 
 ?>
