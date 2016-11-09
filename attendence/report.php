@@ -15,6 +15,8 @@ echo $yearmon;
 require 'pdfcrowd.php';
 ?>
 <html>
+ <header>Monthly Report</header>
+ <body>
  <table border="1" style="width: 100%">
                 <tr>
                     <td style="background-color: appworkspace">ID</td>
