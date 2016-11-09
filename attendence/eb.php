@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="../styles/attend styl.css" media="screen" />
@@ -9,7 +9,7 @@
 
             <div class="attcontainer">
                 <div class="attmiddle_left">
-                    <div style="height: 80%">
+                    <div style="height: 650px">
                         <div style="overflow-y: scroll">
                             <?php include 'attendence/ebatt.php'; ?>
                         </div>
