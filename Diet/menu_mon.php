@@ -15,21 +15,21 @@ $monc_s2br = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2Br, item.u
 $monc_s2lu  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2Lu, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S2Lu <> 0.000");
 $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S2Di <> 0.000");
 			
-			$tuec_s3br = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Br <> 0.000");
-            $tuec_s3lu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Lu <> 0.000");
-            $tuec_s3di  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.C_S3Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE C_S3Di <> 0.000");
+$monc_s3br = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S3Br, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S3Br <> 0.000");
+$monc_s3lu  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S3Lu, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S3Lu <> 0.000");
+$monc_s3di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S3Di, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE C_S3Di <> 0.000");
 
-			$tuepbr = mysqli_query($conn, "SELECT item.Item_name, menu_tue.P_Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE P_Br <> 0.000");
-            $tueplu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.P_Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE P_Lu <> 0.000");
-            $tuepdi  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.P_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE P_Di <> 0.000");
+$tuepbr = mysqli_query($conn, "SELECT item.Item_name, menu_mon.P_Br, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE P_Br <> 0.000");
+$tueplu  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.P_Lu, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE P_Lu <> 0.000");
+$tuepdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.P_Di, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE P_Di <> 0.000");
 
-			$tuedbr = mysqli_query($conn, "SELECT item.Item_name, menu_tue.DD_Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE DD_Br <> 0.000");
-            $tuedlu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.DD_Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE DD_Lu <> 0.000");
-            $tueddi  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.DD_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE DD_Di <> 0.000");
+$tuedbr = mysqli_query($conn, "SELECT item.Item_name, menu_mon.DD_Br, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE DD_Br <> 0.000");
+$tuedlu  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.DD_Lu, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE DD_Lu <> 0.000");
+$tueddi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.DD_Di, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE DD_Di <> 0.000");
 
-			$tuesbr = mysqli_query($conn, "SELECT item.Item_name, menu_tue.S_Br, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE S_Br <> 0.000");
-            $tueslu  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.S_Lu, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE S_Lu <> 0.000");
-            $tuesdi  = mysqli_query($conn, "SELECT item.Item_name, menu_tue.S_Di, item.unit FROM item INNER JOIN menu_tue ON item.Item_id = menu_tue.Item_id WHERE S_Di <> 0.000");
+$tuesbr = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Br, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE S_Br <> 0.000");
+$tueslu  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Lu, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE S_Lu <> 0.000");
+$tuesdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id WHERE S_Di <> 0.000");
 
 
 		if($type == "c_s1") {?>
@@ -171,10 +171,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tcs3b = mysqli_fetch_array($tuec_s3br)):; ?>
+                                        <?php while ($mcs3b = mysqli_fetch_array($monc_s3br)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tcs3b[0]; ?></td>
-                                            <td align="left"><?php echo $tcs3b[1].' '.$tcs3b[2]; ?></td>
+                                            <td align="left"><?php echo $mcs3b[0]; ?></td>
+                                            <td align="left"><?php echo $mcs3b[1].' '.$mcs3b[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -187,10 +187,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tcs3l = mysqli_fetch_array($tuec_s3lu)):; ?>
+                                        <?php while ($mcs3l = mysqli_fetch_array($monc_s3lu)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tcs3l[0]; ?></td>
-                                            <td align="left"><?php echo $tcs3l[1].' '.$tcs3l[2]; ?></td>
+                                            <td align="left"><?php echo $mcs3l[0]; ?></td>
+                                            <td align="left"><?php echo $mcs3l[1].' '.$mcs3l[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -204,10 +204,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tcs3d = mysqli_fetch_array($tuec_s3di)):; ?>
+                                        <?php while ($mcs3d = mysqli_fetch_array($monc_s3di)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tcs3d[0]; ?></td>
-                                            <td align="left"><?php echo $tcs3d[1].' '.$tcs3d[2]; ?></td>
+                                            <td align="left"><?php echo $mcs3d[0]; ?></td>
+                                            <td align="left"><?php echo $mcs3d[1].' '.$mcs3d[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -233,10 +233,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tpb = mysqli_fetch_array($tuepbr)):; ?>
+                                        <?php while ($mpb = mysqli_fetch_array($monpbr)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tpb[0]; ?></td>
-                                            <td align="left"><?php echo $tpb[1].' '.$tpb[2]; ?></td>
+                                            <td align="left"><?php echo $mpb[0]; ?></td>
+                                            <td align="left"><?php echo $mpb[1].' '.$mpb[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -249,10 +249,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tpl = mysqli_fetch_array($tueplu)):; ?>
+                                        <?php while ($mpl = mysqli_fetch_array($monplu)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tpl[0]; ?></td>
-                                            <td align="left"><?php echo $tpl[1].' '.$tpl[2]; ?></td>
+                                            <td align="left"><?php echo $mpl[0]; ?></td>
+                                            <td align="left"><?php echo $mpl[1].' '.$mpl[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -266,10 +266,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tpd = mysqli_fetch_array($tuepdi)):; ?>
+                                        <?php while ($mpd = mysqli_fetch_array($monpdi)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tpd[0]; ?></td>
-                                            <td align="left"><?php echo $tpd[1].' '.$tpd[2]; ?></td>
+                                            <td align="left"><?php echo $mpd[0]; ?></td>
+                                            <td align="left"><?php echo $mpd[1].' '.$mpd[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -295,10 +295,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tdb = mysqli_fetch_array($tuedbr)):; ?>
+                                        <?php while ($mdb = mysqli_fetch_array($mondbr)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tdb[0]; ?></td>
-                                            <td align="left"><?php echo $tdb[1].' '.$tdb[2]; ?></td>
+                                            <td align="left"><?php echo $mdb[0]; ?></td>
+                                            <td align="left"><?php echo $mdb[1].' '.$mdb[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -311,10 +311,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tdl = mysqli_fetch_array($tuedlu)):; ?>
+                                        <?php while ($mdl = mysqli_fetch_array($mondlu)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tdl[0]; ?></td>
-                                            <td align="left"><?php echo $tdl[1].' '.$tdl[2]; ?></td>
+                                            <td align="left"><?php echo $mdl[0]; ?></td>
+                                            <td align="left"><?php echo $mdl[1].' '.$mdl[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -328,10 +328,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tdd = mysqli_fetch_array($tueddi)):; ?>
+                                        <?php while ($mdd = mysqli_fetch_array($monddi)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tdd[0]; ?></td>
-                                            <td align="left"><?php echo $tdd[1].' '.$tdd[2]; ?></td>
+                                            <td align="left"><?php echo $mdd[0]; ?></td>
+                                            <td align="left"><?php echo $mdd[1].' '.$mdd[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -357,10 +357,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tsb = mysqli_fetch_array($tuesbr)):; ?>
+                                        <?php while ($msb = mysqli_fetch_array($monsbr)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tsb[0]; ?></td>
-                                            <td align="left"><?php echo $tsb[1].' '.$tsb[2]; ?></td>
+                                            <td align="left"><?php echo $msb[0]; ?></td>
+                                            <td align="left"><?php echo $msb[1].' '.$msb[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -373,10 +373,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tsl = mysqli_fetch_array($tueslu)):; ?>
+                                        <?php while ($msl = mysqli_fetch_array($monslu)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tsl[0]; ?></td>
-                                            <td align="left"><?php echo $tsl[1].' '.$tsl[2]; ?></td>
+                                            <td align="left"><?php echo $msl[0]; ?></td>
+                                            <td align="left"><?php echo $msl[1].' '.$msl[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -390,10 +390,10 @@ $monc_s2di  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S2DI, item.
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($tsd = mysqli_fetch_array($tuesdi)):; ?>
+                                        <?php while ($msd = mysqli_fetch_array($monsdi)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $tsd[0]; ?></td>
-                                            <td align="left"><?php echo $tsd[1].' '.$tsd[2]; ?></td>
+                                            <td align="left"><?php echo $msd[0]; ?></td>
+                                            <td align="left"><?php echo $msd[1].' '.$msd[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
