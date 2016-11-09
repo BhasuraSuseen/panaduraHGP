@@ -215,7 +215,7 @@ $tuesdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
 
                                     </table></td>
 									
-						<?php } else if($type == "patients") { ?>
+			<?php } else if($type == "patients") { ?>
 			<table style="width: 60%"><tr><td style="width:50%">
             
             <table style="width: 100%">
