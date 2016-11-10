@@ -10,11 +10,11 @@
             <div class="attcontainer">
                 <div class="attmiddle_left">
                     <div style="height: 850px">
-                        <div style="overflow-y: scroll">
+                       <!-- <div style="overflow-y: scroll">-->
                             <?php include 'ebatt.php';
                             echo 'methana wada';
                             ?>
-                        </div>
+                      <!--  </div>-->
                     </div>
                 </div>
                 <div class="attmiddle_right">
