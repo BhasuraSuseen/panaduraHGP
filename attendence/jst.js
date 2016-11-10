@@ -144,12 +144,10 @@ function saveAttends(name, date, attend) {
     try {
      
         checkBrowser();
-       // obj.onreadystatechange = function() {
-               alert(name);
-        alert(date);
-        alert(attend);
+        obj.onreadystatechange = function() {
+         
            
-           //     if (obj.readyState === 4 && obj.status === 200) {
+                if (obj.readyState === 4 && obj.status === 200) {
 // alert(obj.responseText);
                        
          //                       if (obj.responseText == "Hri mcn") 
@@ -159,11 +157,11 @@ function saveAttends(name, date, attend) {
        //             }
 
 
-       //         }
-      //  };
-       // obj.open("POST", "attendence/saveattends.php", true);
-      //  obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-      //  obj.send("nic=" + name + "&date=" + date + "&attend=" + attend);
+                }
+        };
+        obj.open("POST", "attendence/saveattends.php", true);
+        obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        obj.send("nic=" + name + "&date=" + date + "&attend=" + attend);
 
 
 
@@ -171,7 +169,7 @@ function saveAttends(name, date, attend) {
     }
 }
 
-function searchAttends(day,id) {
+function searchAttends1(day,id) {
     checkBrowser();
 
     obj.onreadystatechange = function() {
