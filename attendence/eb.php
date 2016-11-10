@@ -11,7 +11,9 @@
                 <div class="attmiddle_left">
                     <div style="height: 850px">
                         <div style="overflow-y: scroll">
-                            <?php include 'attendence/ebatt.php'; ?>
+                            <?php include 'attendence/ebatt.php';
+                            echo 'methana wada';
+                            ?>
                         </div>
                     </div>
                 </div>
