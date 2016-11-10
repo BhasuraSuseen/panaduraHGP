@@ -9,9 +9,9 @@
 
             <div class="attcontainer">
                 <div class="attmiddle_left">
-                    <div style="height: 650px">
+                    <div style="height: 850px">
                         <div style="overflow-y: scroll">
-                            <?php include 'attendence/paraatt.php'; ?>
+                            <?php include 'attendence/ebatt.php'; ?>
                         </div>
                     </div>
                 </div>
