@@ -7,6 +7,24 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script  src="http://d3js.org/d3.v3.min.js"></script>
+<style>
+    body {
+    }
+    .node{
+      fill:ECEFF1;
+    }
+    .link{
+      stroke: #90A4AE;
+      stroke-width: 10px;
+    }
+    .arc {
+    fill: #ef5350;
+  }
+   .arcb {
+    fill: #CFD8DC;
+  }
+
+</style>
 </head>
 <body> 
 
@@ -110,20 +128,20 @@
                      
                       var width = 1000;
                       var height = 600;
-                      var nodes = [{"name": "LC1", "value" : 0, "x_axis": 80, "y_axis": 300},
-                                  {"name": "MS", "value" : 0, "x_axis": 280, "y_axis": 300},
-                                  {"name": "AO", "value" : 0, "x_axis": 480, "y_axis": 300},
-                                  {"name": "LC2", "value" : 0, "x_axis": 680, "y_axis": 300},
-                                  {"name": "EB1", "value" : 0, "x_axis": 600, "y_axis": 80},
-                                  {"name": "EB2", "value" : 0, "x_axis": 740, "y_axis": 80},
-                                  {"name": "EB3", "value" : 0, "x_axis": 860, "y_axis": 120},
-                                  {"name": "EB4", "value" : 0, "x_axis": 940, "y_axis": 230},
-                                  {"name": "EB4", "value" : 0, "x_axis": 940, "y_axis": 370},
-                                  {"name": "EB6", "value" : 0, "x_axis": 860, "y_axis": 480},
-                                  {"name": "EB7", "value" : 0, "x_axis": 740, "y_axis": 520},
-                                  {"name": "EB8", "value" : 0, "x_axis": 600, "y_axis": 520}
-                                 ];
-                        var links = [{"x1": 80, "y1": 300, "x2": 280, "y2": 300},
+                     var nodes = [{"name": "LC1", "value" : 0, "x_axis": 80, "y_axis": 300},
+				  {"name": "MS", "value" : 0, "x_axis": 280, "y_axis": 300},
+				  {"name": "AO", "value" : 0, "x_axis": 480, "y_axis": 300},
+				  {"name": "LC2", "value" : 0, "x_axis": 680, "y_axis": 300},
+				  {"name": "EB1", "value" : 0, "x_axis": 940, "y_axis": 55},
+				  {"name": "EB2", "value" : 0, "x_axis": 940, "y_axis": 125},
+				  {"name": "EB3", "value" : 0, "x_axis": 940, "y_axis": 195},
+				  {"name": "EB4", "value" : 0, "x_axis": 940, "y_axis": 265},
+				  {"name": "EB5", "value" : 0, "x_axis": 940, "y_axis": 335},
+				  {"name": "EB6", "value" : 0, "x_axis": 940, "y_axis": 405},
+				  {"name": "EB7", "value" : 0, "x_axis": 940, "y_axis": 475},
+				  {"name": "EB8", "value" : 0, "x_axis": 940, "y_axis": 545}
+				 ];
+			var links = [{"x1": 80, "y1": 300, "x2": 280, "y2": 300},
 				      {"x1": 280, "y1": 300, "x2": 480, "y2": 300},
 				      {"x1": 480, "y1": 300, "x2": 680, "y2": 300},
 				      {"x1": 680, "y1": 300, "x2": 800, "y2": 300},
