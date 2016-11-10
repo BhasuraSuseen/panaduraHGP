@@ -13,7 +13,19 @@ body {
     background-color: #ECEFF1;
     font-family: 'Open Sans';
 }
-
+.node{
+      fill:ECEFF1;
+}
+.link{
+      stroke: #90A4AE;
+      stroke-width: 10px;
+}
+.arc {
+    fill: #ef5350;
+}
+.arcb {
+    fill: #CFD8DC;
+}
 h1{
 	font-family: 'Open Sans';
 	font-size: 20px;
