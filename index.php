@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<meta name="viewport" content="user-scalable = yes">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Log In</title>
 <link rel="stylesheet" type="text/css" href="styles/global.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
