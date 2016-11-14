@@ -4,7 +4,7 @@
 <head>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
-<meta name="viewport" content="user-scalable=yes, initial-scale=0.0, minimum-scale=0.1, maximum-scale=1.0, minimal-ui"/>
+<meta name="viewport" content="user-scalable=yes, initial-scale=0.0, minimum-scale=0.0, maximum-scale=1.0, minimal-ui"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script  src="http://d3js.org/d3.v3.min.js"></script>
 <style>
