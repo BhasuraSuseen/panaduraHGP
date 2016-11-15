@@ -53,7 +53,7 @@
                           require "connect.php";
                           session_start();
                           echo"<a>".$_SESSION['username']."</a>";?><br>
-			                   <a href="index.php">Log Out</a>
+			                   <a href="logout.php">Log Out</a>
                         </div>
               </div>
 	 
@@ -61,7 +61,7 @@
 			
           <div id="middle_leftp1">
               <?php
-                require "connect.php";
+            
                 //mail clerk 1 letter count//
                 $mcsql1="select * from letter where date is NOT NULL and mcms IS NULL";
                 $a=mysqli_query($conn,$mcsql1);

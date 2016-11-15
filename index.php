@@ -45,9 +45,9 @@
 		          die();
 	      
             }elseif($count[1]=="DIR"){
-                header("Location:  users/director.php");
+                header("Location:  director.php");
 	        }elseif($count[1]=="AO"){
-                header("Location:  users/adminofficer.php");
+                header("Location:  adminofficer.php");
             }elseif($count[1]=="AB"){
                     if ($count[2]==5) {
                       header("Location:  letterEB.php");
