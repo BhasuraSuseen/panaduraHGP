@@ -143,7 +143,7 @@ if($date == $date3 && $meal == "Lunch"){?>
                         <td align="left"><b>Amount</b></td>
                     </tr>
 				 <?php while ($tb = mysqli_fetch_array($tueb)):; 
-						$result = ($tb[2]*$c_s1) + ($tb[3]*$c_s2) + ($tb[4]*$c_s3) + ($tb[5]*$patients) + ($tb[6]*$dd) + ($tb[7]*$staff);
+						$result = ($tb[1]*$c_s1) + ($tb[2]*$c_s2) + ($tb[3]*$c_s3) + ($tb[4]*$patients) + ($tb[5]*$dd) + ($tb[6]*$staff);
 						
 						 if($result != 0){
 							 if($tb[7] == "kg" || $tb[7] == "L"){
@@ -157,8 +157,8 @@ if($date == $date3 && $meal == "Lunch"){?>
 								}
 							}?> 
 						<tr>
-                            <td align="left"><?php echo $tb[1]; ?></td>
-                            <td align="left"><?php echo $result.' '.$tb[8]; ?></td></tr>
+                            <td align="left"><?php echo $tb[0]; ?></td>
+                            <td align="left"><?php echo $result.' '.$tb[7]; ?></td></tr>
 						<?php }
 				
 				 endwhile;?>
@@ -172,7 +172,7 @@ if($date == $date3 && $meal == "Lunch"){?>
                         <td align="left"><b>Amount</b></td>
                     </tr>
 					 <?php while ($tl = mysqli_fetch_array($tuel)):; 
-						$result = ($tl[2]*$c_s1) + ($tl[3]*$c_s2) + ($tl[4]*$c_s3) + ($tl[5]*$patients) + ($tl[6]*$dd) + ($tl[7]*$staff);
+						$result = ($tl[1]*$c_s1) + ($tl[2]*$c_s2) + ($tl[3]*$c_s3) + ($tl[4]*$patients) + ($tl[5]*$dd) + ($tl[6]*$staff);
 						
 						if($result != 0){
 							if($tl[7] == "kg" || $tl[7] == "L"){
@@ -186,8 +186,8 @@ if($date == $date3 && $meal == "Lunch"){?>
 								}
 							}?> 
 							<tr>
-                            <td align="left"><?php echo $tl[1]; ?></td>
-                            <td align="left"><?php echo $result.' '.$tl[8]; ?></td></tr>
+                            <td align="left"><?php echo $tl[0]; ?></td>
+                            <td align="left"><?php echo $result.' '.$tl[7]; ?></td></tr>
 						<?php }
                      endwhile; ?>
 					 </table>
