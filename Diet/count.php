@@ -31,12 +31,25 @@ $patients = $_POST['patients'];
 $dd = $_POST['diabetics_patients'];
 $staff = $_POST['staff'];
 
-    $sql = "INSERT INTO counts(Date,meal,C_S1,C_S2,C_S3,Patients,DD,Staff) VALUES('$date','$meal','$c_s1','$c_s2','$c_s3','$patients','$dd','$staff')";
-    if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+   $sql1 = "INSERT INTO counts(Date,meal,C_S1,C_S2,C_S3,Patients,DD,Staff) VALUES('$date','$meal','$c_s1','$c_s2','$c_s3','$patients','$dd','$staff')";
+   $sql2= "Update counts SET Date='$date', meal='$meal', C_S1='$c_s1', C_S2='$c_s2', C_S3='$c_s3', Patients='$patients', DD='$dd', Staff='$staff' WHERE Date='$date3' AND meal='$meal' ";
+			
+   $result = mysqli_query($conn, "SELECT Date,meal FROM counts WHERE Date='$date3' AND meal ='$meal'");
+   $num_rows = mysqli_num_rows($result);
+
+	if ($num_rows == 0) {
+		if (mysqli_query($conn, $sql1)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+			}
+	}else{
+		if (mysqli_query($conn, $sql2)) {
+			//echo "Record updated successfully";
+		} else {
+			echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+		}
+	} 
 
 
 if($date4 == "Monday"){
