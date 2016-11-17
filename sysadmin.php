@@ -67,7 +67,7 @@
 <body>
 <?php 
 require "connect.php";
-			   		 session_start(); mysqli_close($conn);?>
+			   		 session_start();?>
 	<div class="all_container">
 		<div class="left_side_bar" >
             		<div class="left_side_bar_top">                   
@@ -150,7 +150,7 @@ require "connect.php";
 						<input type="password" name="passwordc" size="20" required></td></tr>
 						<tr><td>NIC</td><td>
 			      <?php  
-			      require "connect.php";
+			      
 				  $abc=mysqli_query($conn,"select employee.NIC_NO from employee where employee.NIC_NO not in(select employee.NIC_NO from employee inner join users on employee.NIC_NO=users.NIC_NO)");
 			      if(mysqli_num_rows($abc)>0){
 			      $select= '<select name="nic">';
@@ -196,7 +196,7 @@ require "connect.php";
 					</script>
 					</thead>
 	<?php
-	require "connect.php";
+	
 	if(isset($_POST["submit"])){
  	 
    if(isset($_POST['ebno'])){
@@ -260,7 +260,7 @@ if(mysqli_num_rows($result1)>=1){
 }
 else{echo "passwords do not match";}
 }
-mysqli_close($conn);
+
 ?>
      			</div>
 	<div id="pop_box_hr_2">
