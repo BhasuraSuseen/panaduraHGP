@@ -66,7 +66,7 @@
             }elseif($count[1]=="NB"){
                 header("Location:  normalmaileb.php");
             }elseif($count[1]=="DC"){
-                header("Location:  users/dietclerk.php");
+                header("Location:  dietEB.php");
             }
             else{
                 echo "User not found";

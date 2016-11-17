@@ -34,13 +34,16 @@
           </div>
           <div class="left_side_bar_down">
               <ul id="nav">
-                  <li  id="open_mail_1" class="letter_panel_list">  
-				              <i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;">
-                            </i>
-			                 </li>
+                 <li id="open_mail_1" style="border-left: 4px solid #c62828;">  
+						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+					</li>
+					 <li id="open_diet_1" style="border-left: 4px solid #03C9A9;">  
+						<i> <img src="images/count.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+					</li>
               </ul>
           </div>
       </div>
+
 		  <div class="container">
           <div class="middle_top">
 			       <div class="middle_top_left">
@@ -53,25 +56,38 @@
                           require "connect.php";
                           session_start();
                           echo"<a>".$_SESSION['username']."</a>";?><br>
-			                   <a href="logout.php">Log Out</a>
+			                   <a href="index.php">Log Out</a>
                         </div>
               </div>
 	 
 			     
 			
           <div id="middle_leftp1">
-            
+             
           </div>
           <div id="middle_rightp1">
  
           </div>				             
  	</div>
 		<div class="right_side_bar"> 
-               
+               <div class="right_side_bar_top">                   
+          </div>
+          <div class="right_side_bar_down">
+              <ul id="nav">
+                 <li id="open_hr_1" style="border-right: 4px solid #03C9A9;"> 
+
+						<i> <img src="images/menuv.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+					</li>
+					 <li id="open_diet_2" style="border-right: 4px solid #03C9A9;"> 
+
+						<i> <img src="images/food-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+					</li>
+              </ul>
+          </div> 
           	</div>
 		 <div id="pop_background"></div>
-            <div id="pop_box_hr_1">
-                       
+            <div id="pop_box_mail_1">
+			
             </div>
 	</div>
      
@@ -79,16 +95,30 @@
          $(document).ready(function(){
             $('#open_mail_1').click(function(){
                 $('#pop_background').fadeIn();
-                $('#pop_box_hr_1').fadeIn();
+                $('#pop_box_mail_1').fadeIn();
                 return false;
             });
+            $('#open_diet_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_diet_1').fadeIn();
+                return false;
+            });
+             $('#open_diet_2').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_diet_2').fadeIn();
+                return false;
+            });
+	   
+            
             $('#pop_background').click(function(){
                 $('#pop_background').fadeOut();
-                $('#pop_box_hr_1').fadeOut();
+                $('#pop_box_mail_1').fadeOut();
+                $('#pop_box_diet_1').fadeOut();
+		        $('#pop_box_diet_2').fadeOut();
  
                 return false;
             });
          });
-        </script>
+     </script>
  </body>
  </html>

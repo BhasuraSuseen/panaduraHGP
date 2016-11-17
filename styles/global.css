@@ -133,25 +133,7 @@ a:hover{
     height: 80%;
     float: left;
 }
-.right_side_bar{
-    width: 5%;
-    height: 100%;
-    float: right;
-    border-right: 2px solid #CFD8DC;
-}
-.right_side_bar:hover{
-   border-right: 2px solid #B0BEC5;
-}
-.right_side_bar_top{
-    width: 100%;
-    height: 20%;
-    float: right;
-}
-.right_side_bar_down{
-    width: 100%;
-    height: 80%;
-    float: right;
-}
+
 .container{
    width: 90%;
    height: 100%;
@@ -166,8 +148,21 @@ a:hover{
    width: 5%;
    height: 100%;
    float: left;
-   background-color:#CFD8DC;
+   background-color: #ECEFF1;
    border-left: 2px solid #B0BEC5;
+}
+.right_side_bar:hover{
+   border-right: 2px solid #B0BEC5;
+}
+.right_side_bar_top{
+    width: 100%;
+    height: 20%;
+    float: left;
+}
+.right_side_bar_down{
+    width: 100%;
+    height: 80%;
+    float: left;
 }
 ul#nav li{
     list-style: none;
@@ -177,7 +172,7 @@ ul#nav li{
     font-size: 14px;
     text-align: center;
     background-color:#CFD8DC;
-    border-left: 4px solid #B0BEC5;
+   
     transition: 0.2s;
     text-align: center;
     

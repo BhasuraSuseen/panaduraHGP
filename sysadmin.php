@@ -341,7 +341,7 @@ else{echo "passwords do not match";}
                 $('#pop_background').fadeOut();
                 $('#pop_box_hr_1').fadeOut();
                 $('#pop_box_att_1').fadeOut();
-		$('#pop_box_hr_2').fadeOut();
+		            $('#pop_box_hr_2').fadeOut();
  
                 return false;
             });
