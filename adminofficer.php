@@ -34,10 +34,20 @@
           </div>
           <div class="left_side_bar_down">
               <ul id="nav">
-                  <li  id="open_mail_1" class="letter_panel_list">  
-				              <i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;">
-                            </i>
-			                 </li>
+                 <li id="open_mail_1" style="border-left: 4px solid #c62828;">  
+						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+					</li>
+              </ul>
+          </div>
+      </div>
+      		  <div class="right_side_bar">
+          <div class="right_side_bar_top">                   
+          </div>
+          <div class="right_side_bar_down">
+              <ul id="nav">
+                 <li id="open_mail_1" style="border-right: 4px solid #c62828;">  
+						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+					</li>
               </ul>
           </div>
       </div>
@@ -348,15 +358,10 @@
  
           </div>				             
  	</div>
-		<div class="right_side_bar"> 
-               
-          	</div>
+		
 		 <div id="pop_background"></div>
             <div id="pop_box_hr_1">
-			
-            </div>
-	</div>
-     <form name="mstoao" action="adminofficer.php" method="post" accept-charset="utf-8">
+			<form name="mstoao" action="adminofficer.php" method="post" accept-charset="utf-8">
 				  <label>Letter ID</label>
 						  <?php  
 				     
@@ -392,6 +397,9 @@
 				}
 				  
 				?>
+            </div>
+	</div>
+     
         <script>
          $(document).ready(function(){
             $('#open_mail_1').click(function(){
