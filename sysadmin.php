@@ -87,7 +87,7 @@ require "connect.php";
 						<i> <img src="images/check.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 					</li>
 					 <li id="open_hr_2" style="border-left: 4px solid #2980b9;">  
-						<i> <img src="images/businessman.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+						<i> <img src="images/empadd.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 					</li>
 				</ul>
            		</div>

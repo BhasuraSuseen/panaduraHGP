@@ -35,11 +35,11 @@
           <div class="left_side_bar_down">
               <ul id="nav">
                     
-				            <li id="open_hr_1" style="border-left: 4px solid #455A64;"> 
+				            <li id="open_hr_1" style="border-left: 4px solid #2980b9;"> 
 
 						<i> <img src="images/businessman-7.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 					</li>
-					 <li id="open_hr_1" style="border-left: 4px solid #03C9A9;"> 
+					 <li id="open_diet_1" style="border-left: 4px solid #03C9A9;"> 
 
 						<i> <img src="images/food-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 					</li>
