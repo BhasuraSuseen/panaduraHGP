@@ -58,6 +58,9 @@
                         <?php 
                           require "connect.php";
                           session_start();
+                          if($_SESSION['username']==''){
+                            header("Location:  index.php");
+                          }
                           echo"<a>".$_SESSION['username']."</a>";?><br>
 			                   <a href="logout.php">Log Out</a>
                         </div>

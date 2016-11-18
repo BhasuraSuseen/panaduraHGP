@@ -55,8 +55,11 @@
                         <?php 
                           require "connect.php";
                           session_start();
+                          if($_SESSION['username']==''){
+                            header("Location:  index.php");
+                          }
                           echo"<a>".$_SESSION['username']."</a>";?><br>
-			                   <a href="index.php">Log Out</a>
+			                   <a href="logout.php">Log Out</a>
                         </div>
               </div>
 	 
@@ -85,12 +88,47 @@
               </ul>
           </div> 
           	</div>
-		 <div id="pop_background"></div>
+		 <div id="pop_background">
             <div id="pop_box_mail_1">
-			
+			<p>adwfesgjkhj</p>
+            </div>
             </div>
 	</div>
+     <div>
+    <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
+    <b>Enter Letter EB to EB date</b><br>
+    <label>Letter ID</label>
+      <?php  
+      $eb=$_SESSION['ebno'];
+      $abcd=mysqli_query($conn,"select letter_id from letter where mceb is NULL and eb ='".$eb."'");
+      if(mysqli_num_rows($abcd)>0){
+      $select= '<select name="lid">';
+      while($rsl=mysqli_fetch_array($abcd)){
      
+      $select.='<option value="' .$rsl[0]. '">'.$rsl[0].'</option>';
+       }
+      }
+       else{
+        $select='<select><option></option></select>';
+      }
+      echo $select;
+      echo '</select>'?>
+      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required>
+      <input type="submit" name="submitt" value="Enter Date">
+      <input type="reset" name="reset" value="Reset">
+  </form>
+  <?php
+   if(isset($_POST["submitt"])){
+
+    $lid=$_POST['lid'];
+    $datemceb=$_POST['datemceb'];
+
+    $sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
+    mysqli_query($conn,$sql);
+    echo $lid . "was updated";
+    }
+    ?>
+  </div>
         <script>
          $(document).ready(function(){
             $('#open_mail_1').click(function(){

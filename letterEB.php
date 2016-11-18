@@ -52,6 +52,9 @@
                         <?php 
                           require "connect.php";
                           session_start();
+                          if($_SESSION['username']==''){
+                            header("Location:  index.php");
+                          }
                           echo"<a>".$_SESSION['username']."</a>";?><br>
 			                   <a href="logout.php">Log Out</a>
                         </div>
@@ -410,23 +413,45 @@
                           }
                           echo $select1;
                           echo '</select>';?>
-                          <label>Forward to EB</label>
+                          <label>Forward to EB NO.</label>
                           <select name="eb" >
-                          <option>EB NO.1</option>
-                          <option>EB NO.2</option>
-                          <option>EB NO.3</option>
-                          <option>EB NO.4</option>
-                          <option>EB NO.5</option>
-                          <option>EB NO.6</option>
-                          <option>EB NO.7</option>
-                          <option>EB NO.8</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
                           </select>
                           <input type="date" name="dateaomc" placeholder="Date from AO" required><br>
                           <input type="text" name="sub" placeholder="Subject">
-                          <input type="submit" name="submittt" value="Enter Date">
+                          <input type="submit" name="submittt" value="Enter details">
                           <input type="reset" name="reset" value="Reset">
 
                         </form>
+                        <form name="mctoeb" action="letterEB.php" method="post" accept-charset="utf-8">
+						    <b>Enter Letter EB to EB date</b><br>
+						 	<label>Letter ID</label>
+						      <?php  
+						      $eb=$_SESSION['ebno'];
+						      $abcd=mysqli_query($conn,"select letter_id from letter where mceb is NULL and eb ='".$eb."'");
+						      if(mysqli_num_rows($abcd)>0){
+						      $select= '<select name="lid">';
+						      while($rsl=mysqli_fetch_array($abcd)){
+						     
+						      $select.='<option value="' .$rsl[0]. '">'.$rsl[0].'</option>';
+						       }
+						      }
+						       else{
+						        $select='<select><option></option></select>';
+						      }
+						      echo $select;
+						      echo '</select>'?>
+						      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required>
+						      <input type="submit" name="submitttt" value="Enter Date">
+						      <input type="reset" name="reset" value="Reset">
+						  </form>
                         <?php
                          if(isset($_POST["submit"])){
                             $id= $_POST['let_id'];
@@ -443,19 +468,20 @@
                                 $sql="INSERT INTO letter (letter_id, date, address,type) VALUES ('$id','$date', '$addr','$type')";
                            
                                 mysqli_query($conn,$sql);
-                                echo $id . "was entered successfully";
+                                echo $id . " was entered successfully";
                             }
                             
                          }
                          /*ac to mc date and subject enter form */
                           if(isset($_POST["submittt"])){
-                        $sub=$_POST['subject'];
+                        $sub=$_POST['sub'];
                         $lid1=$_POST['lid1'];
                         $dateaomc=$_POST['dateaomc'];
                         $eb=$_POST['eb'];
                         $sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc',eb='$eb' WHERE letter_id='$lid1'";
                         mysqli_query($conn,$sql2);
-                        echo $lid1 . "was updated";
+                        echo $lid1 . " was updated";
+                 
                           }
                           /*mc to ms date enter form */
                           if(isset($_POST["submitt"])){
@@ -463,10 +489,21 @@
                         $datemcms=$_POST['datemcms'];
                         $sql3="UPDATE letter SET mcms='$datemcms'WHERE letter_id='$lid2'";
                         mysqli_query($conn,$sql3);
-                        echo $lid2 . "was updated";
+                        echo $lid2 . " was updated";
                         }
                           
                         ?>
+                          <?php
+						   if(isset($_POST["submitttt"])){
+
+						$lid=$_POST['lid'];
+						$datemceb=$_POST['datemceb'];
+
+						$sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
+						mysqli_query($conn,$sql);
+						echo $lid . " was updated";
+						}
+						?>
             </div>
 	</div>
      

@@ -52,8 +52,11 @@
                         <?php 
                           require "connect.php";
                           session_start();
+                          if($_SESSION['username']==''){
+                            header("Location:  index.php");
+                          }
                           echo"<a>".$_SESSION['username']."</a>";?><br>
-			                   <a href="index.php">Log Out</a>
+			                   <a href="logout.php">Log Out</a>
                         </div>
               </div>
 	 
@@ -367,6 +370,7 @@
 		 <div id="pop_background"></div>
             <div id="pop_box_hr_1">
 			<form name="mstoao" action="adminofficer.php" method="post" accept-charset="utf-8">
+				<b>Enter MS to MC date</b></br>
 				  <label>Letter ID</label>
 						  <?php  
 				     
