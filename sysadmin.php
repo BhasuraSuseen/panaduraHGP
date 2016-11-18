@@ -81,7 +81,7 @@ require "connect.php";
 					<li class="admin_panel_list" style="border-left: 4px solid #455A64;">
 						<i> <img src="images/users.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>                               
 					</li>
-					<a style="margin-top: -10px;">3</a>
+					<a style="margin-top: -10px;"></a>
 					<li id="open_hr_1" style="border-left: 4px solid #455A64;"> 
 						<i> <img src="images/businessman-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i> 
 					</li>
@@ -341,7 +341,7 @@ else{echo "passwords do not match";}
       <?php  
       $eb=$_SESSION['ebno'];
       $abcd=mysqli_query($conn,"select letter_id from letter where mceb is NULL and eb ='".$eb."'");
-      echo "select letter_id from letter where mceb is NULL and eb ='".$eb."'";
+     
       if(mysqli_num_rows($abcd)>0){
       $select= '<select name="lid">';
       while($rsl=mysqli_fetch_array($abcd)){
