@@ -39,6 +39,7 @@
         if(mysqli_num_rows($result)>0){
             $_SESSION['username']=$username;
             $_SESSION['ebno']=$count[2];
+            $_SESSION['admin']=$count[1];
             if($count[1]=="SA" ){
                
                 header("Location: sysadmin.php");

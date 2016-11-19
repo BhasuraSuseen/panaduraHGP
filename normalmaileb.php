@@ -27,7 +27,14 @@
 </style>
 </head>
 <body> 
-
+<?php
+require "connect.php";
+  session_start();
+  if($_SESSION['username']==''){
+    header("Location:  index.php");
+  }
+  
+?>
 	<div class="all_container">
 		  <div class="left_side_bar">
           <div class="left_side_bar_top">                   
@@ -49,13 +56,7 @@
              <div class="middle_top_middle">
               </div>
                       <div class="middle_top_right">
-                        <?php 
-                          require "connect.php";
-                          session_start();
-                          if($_SESSION['username']==''){
-                            header("Location:  index.php");
-                          }
-                          
+                        <?php
                           echo"<a>".$_SESSION['username']."</a>";?><br>
 			                   <a href="logout.php">Log Out</a>
                         </div>
