@@ -146,6 +146,11 @@
                 $('#pop_box_diet_2').fadeIn();
                 return false;
             });
+		$('#open_hr_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_diet_3').fadeIn();
+                return false;
+            });
 	   
             
             $('#pop_background').click(function(){
