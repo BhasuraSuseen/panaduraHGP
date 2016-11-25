@@ -923,7 +923,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 							$total =  mysqli_query($conn,"SELECT total FROM report WHERE Item_id='$fb[8]' ");
 							$t=mysqli_fetch_array($total);
 							//echo $t[0];
-							$sql3 = "UPDATE report SET total = mon_br + mon_lu + mon_di +tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br";
+							$sql3 = "UPDATE report SET total = $t[0] + fri_br";
 							$sql34 = "UPDATE report SET total =fri_br";
 							if($t[0] == NULL){
 								if (mysqli_query($conn, $sql34)) {
