@@ -6,25 +6,23 @@
         $type = $_POST['type'];
 
         if ($day == "Tuesday") {
-                include 'menu_tue.php';
+            include 'menu_tue.php';
         } else if ($day == "Monday") {
-                include 'menu_mon.php';
+            include 'menu_mon.php';
         } else if ($day == "Wednesday") {
-                include 'menu_wed.php';
+            include 'menu_wed.php';
         } else if ($day == "Thursday") {
-                include 'menu_thu.php';
+            include 'menu_thu.php';
         } else if ($day == "Friday") {
-                include 'menu_fri.php';
-        }else if($day == "Saturay"){
-                include 'menu_sat.php';
-        }else{
-                include 'menu_sun.php';
-        }
+            include 'menu_fri.php';
+        }else if($day == "Saturday"){
+			include 'menu_sat.php';
+		}else{
+			include 'menu_sun.php';
+		}
         
         
         
         ?>
-
-
 
 
