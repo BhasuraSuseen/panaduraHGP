@@ -125,12 +125,11 @@ a:hover{
 }
 .left_side_bar_top{
     width: 100%;
-    height: 20%;
+    height: 100px;
     float: left;
 }
 .left_side_bar_down{
     width: 100%;
-    height: 80%;
     float: left;
 }
 
@@ -156,7 +155,7 @@ a:hover{
 }
 .right_side_bar_top{
     width: 100%;
-    height: 20%;
+    height: 100px;
     float: left;
 }
 .right_side_bar_down{
@@ -252,7 +251,7 @@ ul#nav li:hover{
     float: left;
     height:90%;
     width:0%;
-    overflow-y:scroll;
+    
 }
 #pop_background{
     position: fixed;
