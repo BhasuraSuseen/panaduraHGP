@@ -164,7 +164,7 @@
              
 				
 				
-				<input type="text" id="search-box"  placeholder=" Select by letter ID" style="float:left margin: 10px; "/>
+				<input type="text" id="search-box"  placeholder=" Select by letter ID" style="float:left; margin: 10px; "/>
 				<input type="text" id="search-box1" placeholder=" Select by Subject" style="float:left;margin: 10px;" />
 				<input type="text" id="search-box2" placeholder=" Select by Address" style="float:left;margin: 10px;" />
 				<div id="suggesstion-box"></div>
