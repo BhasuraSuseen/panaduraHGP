@@ -11,7 +11,7 @@ if(!empty($_POST["keyword"])) {
 
 		foreach($p1letters as $letter_id) {
 			?>
-			<li onClick="selectletterid('<?php echo $letter_id["letter_id"]; ?>');"><?php echo $letter_id["letter_id"]; ?></li>
+			<li onClick="selectletterid('<?php echo $letter_id["letter_id"]; ?>');"><?php echo $letter_id["letter_id"]. "  |  ".$letter_id["subject"]."  |  ".$letter_id["address"]; ?></li>
 			<?php 
 		} ?>
 		</ul>
@@ -27,7 +27,7 @@ if(!empty($_POST["keyword1"])) {
 
 		foreach($p1letters as $subject) {
 			?>
-			<li onClick="selectletterid1('<?php echo $subject["letter_id"]; ?>');"><?php echo $subject["subject"]; ?></li>
+			<li onClick="selectletterid1('<?php echo $subject["letter_id"]; ?>');"><?php echo $subject["letter_id"]. "  |  ".$subject["subject"]."  |  ".$subject["address"]; ?></li>
 			<?php 
 		} ?>
 		</ul>
@@ -43,7 +43,7 @@ if(!empty($_POST["keyword2"])) {
 
 		foreach($p1letters as $address) {
 			?>
-			<li onClick="selectaddress('<?php echo $address["letter_id"]; ?>');"><?php echo $address["address"]; ?></li>
+			<li onClick="selectaddress('<?php echo $address["letter_id"]; ?>');"><?php echo $address["letter_id"]. "  |  ".$address["subject"]."  |  ".$address["address"]; ?></li>
 			<?php 
 		} ?>
 		</ul>
