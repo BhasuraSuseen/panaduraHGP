@@ -112,16 +112,16 @@ a:hover{
     min-width: 1170px;
     height:100%;
     border-top: 5px solid #2980b9; 
-    border-bottom: 5px solid #2980b9; 
+    
 }
 .left_side_bar{
     width: 5%;
     height: 100%;
     float: left;
-    border-right: 2px solid #CFD8DC;
+    
 }
 .left_side_bar:hover{
-   border-right: 2px solid #B0BEC5;
+   
 }
 .left_side_bar_top{
     width: 100%;
@@ -148,10 +148,10 @@ a:hover{
    height: 100%;
    float: left;
    background-color: #ECEFF1;
-   border-left: 2px solid #B0BEC5;
+   
 }
 .right_side_bar:hover{
-   border-right: 2px solid #B0BEC5;
+   
 }
 .right_side_bar_top{
     width: 100%;
@@ -244,6 +244,7 @@ ul#nav li:hover{
     height:90%;
     width:100%;
     border-right: 2px solid #B0BEC5;
+    border-left: 2px solid #B0BEC5;
     
 }
 #middle_rightp1{
