@@ -1,5 +1,5 @@
 
-    <p> Hellow </p>
+    
 <?php
 
             require "connect.php";
@@ -164,7 +164,7 @@ mysqli_close($conn);
 
     <script id = "scriptid1"src="http://d3js.org/d3.v3.min.js"></script>
     <script id = "scriptid2">
-      d3.select("p").text("D3 is working");
+      
       var width = 1000;
       var height = 600;
       var nodes = [{"name": "LC1", "value" : 0, "x_axis": 80, "y_axis": 300},
