@@ -37,12 +37,12 @@
 				    url: "readCountry.php",
 				    data:'keyword='+$(this).val(),
 				    beforeSend: function(){
-				      $("#search-box").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+				      
 				    },
 				    success: function(data){
 				      $("#suggesstion-box").show();
 				      $("#suggesstion-box").html(data);
-				      $("#search-box").css("background","#FFF");
+				      
 				    }
 				    });
 				  });
@@ -66,12 +66,12 @@
 				    url: "readCountry.php",
 				    data:'keyword1='+$(this).val(),
 				    beforeSend: function(){
-				      $("#search-box1").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+				     
 				    },
 				    success: function(data){
 				      $("#suggesstion-box").show();
 				      $("#suggesstion-box").html(data);
-				      $("#search-box1").css("background","#FFF");
+				      
 				    }
 				    });
 				  });
@@ -81,12 +81,12 @@
 				    url: "readCountry.php",
 				    data:'keyword2='+$(this).val(),
 				    beforeSend: function(){
-				      $("#search-box2").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+				      
 				    },
 				    success: function(data){
 				      $("#suggesstion-box").show();
 				      $("#suggesstion-box").html(data);
-				      $("#search-box1").css("background","#FFF");
+				      
 				    }
 				    });
 				  });
