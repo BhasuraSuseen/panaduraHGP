@@ -194,7 +194,7 @@ function searchAttends(day,id) {
 //            }
             
             
-//            alert(obj.responseText);
+            alert(obj.responseText);
             document.getElementById('st6').innerHTML = text;
           
 
