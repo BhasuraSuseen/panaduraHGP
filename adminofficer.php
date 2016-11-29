@@ -2,6 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php
+require "connect.php";
+session_start();
+if($_SESSION['username']==''){
+header("Location:  index.php");
+}
+?>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -134,7 +141,10 @@
               <ul id="nav">
                  <li title="Update letter details" id="open_mail_1" style="border-left: 4px solid #c62828;">  
 						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
-					</li>
+				</li>
+				 <li title="Delete letter" id="open_mail_2" style="border-left: 4px solid #c62828;">  
+						<i> <img src="images/maildel.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+				</li>
               </ul>
           </div>
       </div>
@@ -148,11 +158,6 @@
               </div>
                       <div class="middle_top_right">
                         <?php 
-                          require "connect.php";
-                          session_start();
-                          if($_SESSION['username']==''){
-                            header("Location:  index.php");
-                          }
                           echo"<a>".$_SESSION['username']."</a>";?><br>
 			                   <a href="logout.php">Log Out</a>
                         </div>
@@ -230,9 +235,10 @@
 				}
 				  
 				?>
+				
             </div>
 	</div>
-     
+    
         <script>
          $(document).ready(function(){
             $('#open_mail_1').click(function(){
@@ -240,9 +246,15 @@
                 $('#pop_box_hr_1').fadeIn();
                 return false;
             });
+             $('#open_mail_2').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_hr_2').fadeIn();
+                return false;
+            });
             $('#pop_background').click(function(){
                 $('#pop_background').fadeOut();
                 $('#pop_box_hr_1').fadeOut();
+                $('#pop_box_hr_2').fadeOut();
  
                 return false;
             });

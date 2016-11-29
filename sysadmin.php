@@ -184,10 +184,10 @@ require "connect.php";
 			 
 			?>
 						</td></tr>
-						<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator
-  						<input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer
-        				<input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB
-       					<input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet Clerk<input type="radio" name="usertype" value="NB" onclick="myFunction()">Normal Mail EB</td></tr>
+						<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator<br>
+  						<input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer<br>
+        				<input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB<br>
+       					<input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet Clerk<br><input type="radio" name="usertype" value="NB" onclick="myFunction()">Normal Mail EB</td></tr>
      					<tr><td>EB type</td><td> <select id="myText" name="ebno">
          				<option name="ebno" value="5">Type 1</option>
           				<option name="ebno" value="6">Type 2</option>

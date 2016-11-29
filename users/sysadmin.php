@@ -126,34 +126,35 @@ function myFunction1(){
   document.getElementById("myText").disabled = false;
 }
 </script>
+
+<div style="text-align:center;">
 <?php
 
 
 
  
-echo "Welcome ". $_SESSION['username'];
 
-$sql = "SELECT USERNAME,ADMIN,NIC_NO FROM users WHERE USERNAME!='".$_SESSION['username']."'";
+$sql = "SELECT USERNAME,ADMIN,NIC_NO FROM users WHERE USERNAME!='asd'";
 
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
 	echo "<table width=100%><tr><th>User Name</th>
-	<th>Administrator</th><th>NIC</th></tr>";
+	<th>Administrator</th><th>NIC</th><th></th><th></th></tr>";
    
 	while($row = mysqli_fetch_assoc($result)) {
 		
-        echo "<tr><td>".$row["USERNAME"]."</td><td>" 
-		. $row["ADMIN"]. "</td><td>" . $row["NIC_NO"].
-		"</td></tr>" ;
+        echo "<tr><td>".$row["USERNAME"]."</td><td>" . $row["ADMIN"]. "</td><td>" . $row["NIC_NO"]."</td><td><input type='submit' value='Update' name='submit'></td><td><input type='submit' value='Delete' name='submit'></td></tr>" ;
 		
 	
 	}
 
 }
  echo"</table>";
-
+ ?>
+</div>
+<?php
  if(isset($_POST["submit"])){
  	 
    if(isset($_POST['ebno'])){
