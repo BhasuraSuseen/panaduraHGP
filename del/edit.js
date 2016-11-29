@@ -47,3 +47,52 @@
     return true;
   }
 
+
+
+function toggle() {
+
+      var ele = document.getElementById("toggleText");
+
+      var text = document.getElementById("displayText");
+
+      if(ele.style.display == "block") {
+
+            ele.style.display = "none";
+
+        text.innerHTML = "Change username";
+
+        }
+
+      else {
+
+        ele.style.display = "block";
+
+        text.innerHTML = "Back";
+
+      }
+
+    } 
+
+function toggle1() {
+
+      var ele = document.getElementById("toggleText1");
+
+      var text = document.getElementById("displayText1");
+
+      if(ele.style.display == "block") {
+
+            ele.style.display = "none";
+
+        text.innerHTML = "Change password";
+
+        }
+
+      else {
+
+        ele.style.display = "block";
+
+        text.innerHTML = "Back";
+
+      }
+
+    } 
