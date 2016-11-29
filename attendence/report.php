@@ -1,7 +1,7 @@
 <?php
 
 include 'datetime.php';
-include '../connect.php';
+include '..connect.php';
 
 $res1 = mysqli_query($conn, "SELECT * FROM employee");
 while ($row1 = mysqli_fetch_array($res1)) {
@@ -53,12 +53,13 @@ echo $yearmon;
                             <td style="width: 15%; "><input type="text" value="<?php echo $row['Nic_no']; ?>"  id="NIC" readonly></td>
                             <td style=""><input type="text" value="<?php echo $row['F_Name'] . " " . $row['L_Name']; ?>" name="name"</td>
   
-     } ?>
-  <?php endwhile; ?> 
+    <?php } ?>
+                 <?php endwhile;?>
                         </tr>
      </table>
 
             <!--<button onclick="loadParadata()">aaaa</button>-->
+
 
 
     </center>
