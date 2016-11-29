@@ -93,6 +93,9 @@
             <div id="pop_box_mail_1">
 			<p>adwfesgjkhj</p>
             </div>
+			 <div id="open_diet_1">
+	  	<?php include 'Diet/dui.php'; ?>			
+ 	</div>
             </div>
 	</div>
      <div>
