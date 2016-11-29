@@ -49,20 +49,14 @@ echo $yearmon;
                 <tr>
 <?php while ($row = mysqli_fetch_array($res)):; ?> 
                
-     <?php if ($row['E_type'] == "para") ?> 
+     <?php if ($row['E_type'] == "para"){ ?> 
                             <td style="width: 15%; "><input type="text" value="<?php echo $row['Nic_no']; ?>"  id="NIC" readonly></td>
                             <td style=""><input type="text" value="<?php echo $row['F_Name'] . " " . $row['L_Name']; ?>" name="name"</td>
-   
- 
-      <?php endwhile; ?> 
-
-
-
+  
+     } ?>
+  <?php endwhile; ?> 
                         </tr>
-    
-                    } ?>
-
-            </table>
+     </table>
 
             <!--<button onclick="loadParadata()">aaaa</button>-->
 
