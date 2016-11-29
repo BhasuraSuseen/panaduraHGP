@@ -179,7 +179,22 @@ function searchAttends(day,id) {
 
             var text = obj.responseText;
             
- 
+            //alert(obj.responseText);
+//
+//            var abc;
+//
+//            if (text == '0'){
+//                abc = "Absent";
+//            }else if(text == '1'){
+//                abc = "Present";
+//            }else if(text == null){
+//                abc = "valid error";
+//            }else{
+//                abc = text;
+//            }
+            
+            
+//            alert(obj.responseText);
             document.getElementById('st6').innerHTML = text;
           
 
@@ -188,5 +203,6 @@ function searchAttends(day,id) {
     obj.open("POST", "search.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send("nic=" + id + "&day=" + day);
+
 
 }
