@@ -78,9 +78,7 @@ require "connect.php";
             		</div>
             		<div class="left_side_bar_down" >
                 		<ul id="nav">
-					<li class="admin_panel_list" style="border-left: 4px solid #455A64;">
-						<i> <img src="images/users.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>                               
-					</li>
+					
 					<a style="margin-top: -10px;"></a>
 					<li id="open_hr_1" style="border-left: 4px solid #455A64;"> 
 						<i> <img src="images/businessman-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i> 
