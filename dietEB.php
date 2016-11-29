@@ -88,6 +88,9 @@
               </ul>
           </div> 
           	</div>
+		<div id="open_diet_2">
+	  	<?php include 'Diet/dui.php'; ?>			
+ 		</div>
 		 <div id="pop_background">
             <div id="pop_box_mail_1">
 			<p>adwfesgjkhj</p>
