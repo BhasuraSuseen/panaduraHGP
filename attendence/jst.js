@@ -169,36 +169,24 @@ function saveAttends(name, date, attend) {
     }
 }
 
-function searchAttends1(day,id) {
+function searchAttends(day,id) {
     checkBrowser();
 
     obj.onreadystatechange = function() {
 
-       // alert(obj.responseText);
+        //alert(obj.responseText);
         if (obj.readyState === 4 && obj.status === 200) {
 
             var text = obj.responseText;
             
-            //alert(obj.responseText);
-
-            // var abc;
-
-            // if (text == '0'){
-            //     abc = "Absent";
-            // }else if(text == '1'){
-           // abc = "Present";
-           //  }else{
-           //      abc = "eNTER VALID iD";
-//}
-            
-             document.getElementById('st6').innerHTML = abc;
+ 
+            document.getElementById('st6').innerHTML = text;
           
 
         }
     };
-    obj.open("POST", "attendence/search.php", true);
+    obj.open("POST", "search.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send("nic=" + id + "&day=" + day);
-
 
 }
