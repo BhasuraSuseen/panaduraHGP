@@ -47,26 +47,14 @@ echo $yearmon;
                 </tr>
 
                 <tr>
-<?php while ($row = mysqli_fetch_array($res)):; 
-     
-$count = mysqli_query($conn, "Select
-  attend.01 + attend.02 + attend.03 + attend.04 + attend.05 + attend.06 + attend.07 + attend.08 + attend.09 + attend.10 + attend.11 + attend.12 + attend.13 + attend.14 + attend.15 + attend.16 + attend.17 + attend.18 + attend.19 + attend.20 + attend.21 + attend.22 + attend.23 + attend.24 + attend.25 + attend.26 + attend.27 + attend.28 + attend.29 + attend.30 + attend.31 As Tot
-From
-  homs1.attend
-Where
-  homs1.attend.employee_nic ='$row['Nic_no']' and homs1.attend.date = '$yearmon'");               
-                    
-                    
-                    
+<?php while ($row = mysqli_fetch_array($res)):; ?> 
+               
      <?php if ($row['E_type'] == "para") ?> 
                             <td style="width: 15%; "><input type="text" value="<?php echo $row['Nic_no']; ?>"  id="NIC" readonly></td>
                             <td style=""><input type="text" value="<?php echo $row['F_Name'] . " " . $row['L_Name']; ?>" name="name"</td>
- <?php while($row2 = mysqli_fetch_array($count)):; ?>
-                           <td style=""><input type="text" value="<?php echo $row2['tot']; ?>" name="present"</td>     
+   
  
- <?php endwhile;?>
-     
-     <?php endwhile; ?> 
+      <?php endwhile; ?> 
 
 
 
