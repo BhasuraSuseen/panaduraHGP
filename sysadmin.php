@@ -24,8 +24,8 @@
     }
 
     if(form.password.value != "" && form.password.value == form.passwordc.value) {
-      if(form.password.value.length < 6) {
-        alert("Error: Password must contain at least six characters!");
+      if(form.password.value.length < 8) {
+        alert("Error: Password must contain at least eight characters!");
         form.password.focus();
         return false;
       }
@@ -152,7 +152,7 @@ require "connect.php";
 	
          <div id="pop_background"></div>
      		<div id="pop_box_hr_1">
-				  <form name="new_user" action="sysadmin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
+				  <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
 						<table>
 						<thead>
 						<tr>
@@ -185,8 +185,8 @@ require "connect.php";
 			?>
 						</td></tr>
 						<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator<br>
-  						<input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer<br>
-        				<input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB<br>
+  						<input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<br><input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer<br>
+        				<input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<br><input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB<br>
        					<input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet Clerk<br><input type="radio" name="usertype" value="NB" onclick="myFunction()">Normal Mail EB</td></tr>
      					<tr><td>EB type</td><td> <select id="myText" name="ebno">
          				<option name="ebno" value="5">Type 1</option>
@@ -211,73 +211,7 @@ require "connect.php";
 					}
 					</script>
 					</thead>
-	<?php
-	
-	if(isset($_POST["submit"])){
- 	 
-   if(isset($_POST['ebno'])){
-    $ebno = $_POST['ebno']; 
- 
-   }
 
-  
-  else{
-    if ($_POST['usertype']=="NB") {
-         $ebno =4;
-       }
-   elseif ($_POST['usertype']=="SA") {
-        $ebno = 1;
-        }
-   elseif ($_POST['usertype']=="MC") {
-        $ebno = 2;
-     
-   }
-    elseif ($_POST['usertype']=="DC") {
-        $ebno = 3;
-   
-   }
-   else{
-        $ebno = 0;
-   }
-  }
-   $user = $_POST['user_name'];
-   $id = $_POST['nic']; 
- 	 $pass = md5($_POST['password']);
- 	 $admin = $_POST['usertype'];
- 	 $passc = md5($_POST['passwordc']);
- 	 if ($pass == $passc){
- 	 /*checking if the user name is taken */
-  $usernamecheck="select * from users where USERNAME='$user'";
-  $result1=mysqli_query($conn,$usernamecheck);
-if(mysqli_num_rows($result1)>=1){
-   echo $user." is already taken";
-  		
- }
- else{
- 	/*checking if the user is in the database*/
- 		$idcheck="select * from employee where NIC_NO='$id'";
-   		$result2=mysqli_query($conn,$idcheck);
-   		if(mysqli_num_rows($result2)>=1){
-   			/*checking if the user has an account already*/
-  				$idcheck2="select * from users where NIC_NO='$id'";
-  				$result3=mysqli_query($conn,$idcheck2);
-  				if(mysqli_num_rows($result3)>=1){
-   				echo $user." has an account already";}
-   				else{
-   					$sql1="INSERT INTO users (USERNAME,PASSWORD,ADMIN,NIC_NO,EB) VALUES ('$user','$pass','$admin','$id','$ebno')";
-   					mysqli_query($conn,$sql1);
-   					echo $user . "was entered successfully";
-   				}
-   		}		
-   		else{echo "Please enter a valid Employee ID number";}
-		 
-		 
- }
-}
-else{echo "passwords do not match";}
-}
-
-?>
      			</div>
 	<div id="pop_box_hr_2">
 		<a href="#"> pop box hr2</a>
