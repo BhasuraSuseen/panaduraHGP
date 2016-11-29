@@ -18,18 +18,20 @@ if ($NIC == NULL || $NIC == "") {
     echo 'Warning:Enter id!';
 } else {
     while ($row = mysqli_fetch_array($res)) {
+
         $result = $row[01];
-       // echo $result;
-        
-        if($result == 0){
-            echo "Absent";
-        }else if($result == 1){
-            echo "Present";
-        }else{
-            echo "Enter valid ID!";
-        }   
+        $reslt = "";
+        //echo $result;
+
+        if ($result == '1') {
+            $reslt = "Present";
+        } else if ($result == '0') {
+            $reslt = "Absent";
+        } else {
+            $reslt = "valid error";
+        }
     }
-    
+    echo $reslt;
 }
 
 //$json = '{"a":'.$result.'}';
