@@ -21,7 +21,7 @@ if ($NIC == NULL || $NIC == "") {
 
         $result = $row[01];
         $reslt = "";
-        //echo $result;
+  
 
         if ($result == '1') {
             $reslt = "Present";
