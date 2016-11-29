@@ -54,8 +54,9 @@ echo $yearmon;
                             <td style=""><input type="text" value="<?php echo $row['F_Name'] . " " . $row['L_Name']; ?>" name="name"</td>
   
     <?php } ?>
+                                   </tr>
                  <?php endwhile;?>
-                        </tr>
+                     
      </table>
 
             <!--<button onclick="loadParadata()">aaaa</button>-->
