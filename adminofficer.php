@@ -32,7 +32,7 @@ header("Location:  index.php");
    .arcb {
     fill: #CFD8DC;
   }
-  #suggesstion-box{ height: 100px; overflow-y: auto; display: none;}
+  #suggesstion-box{ height: 100px; overflow: auto; display: none;}
   #letterid-list{list-style:none;margin:10px;padding:0;width:100%; }
   #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;}
   #letterid-list li:hover{background:#fafafa;}
@@ -195,7 +195,7 @@ $.ajax({
       <input type="text" id="search-box1" placeholder=" Select by Subject" style="float: left;width:30%; margin: 10px;background:#fff;"/>
       <input type="text" id="search-box2" placeholder=" Select by Address" style="float: left;width:30%; margin: 10px;background:#fff;" />
 
-		<div id="suggesstion-box" style="width: 90%; "></div>
+		<div id="suggesstion-box" style="width: 100%; "></div>
   
 </div>
   <div class="current-flow" style="width:100%; margin:10px; margin-left: 20px; margin-top:20px;background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
