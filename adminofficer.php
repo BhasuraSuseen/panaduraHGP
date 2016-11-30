@@ -195,7 +195,7 @@ $.ajax({
       <input type="text" id="search-box1" placeholder=" Select by Subject" style="float: left;width:30%; margin: 10px;background:#fff;"/>
       <input type="text" id="search-box2" placeholder=" Select by Address" style="float: left;width:30%; margin: 10px;background:#fff;" />
 
-		<div id="suggesstion-box" style="width: 100%; margin-left: 10px; margin-right: 10px; padding: 10px;"></div>
+		<div id="suggesstion-box" style="width: 90%; "></div>
   
 </div>
   <div class="current-flow" style="width:100%; margin:10px; margin-top:20px;background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
