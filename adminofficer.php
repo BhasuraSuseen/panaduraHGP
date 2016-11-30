@@ -243,7 +243,8 @@ $.ajax({
 						  <?php  
 				     			require "connect.php";
 							$abc=mysqli_query($conn,"select letter_id from letter where msao is NULL and mcms is NOT NULL");
-				      if(mysqli_num_rows($abc)>0){
+				     mysqli_close($conn); 
+		    		     if(mysqli_num_rows($abc)>0){
 				      $select= '<select name="select">';
 				      while($rs=mysqli_fetch_array($abc)){
 				     
@@ -255,7 +256,7 @@ $.ajax({
 				      }
 				      echo $select;
 				      echo '</select>'
-					mysqli_close($conn); 
+					
 		    			?>
 				      <input type="date" name="datemsao" placeholder="Date from MS" required>
 				      <input type="submit" name="submitt" value="Enter Date">
@@ -263,13 +264,13 @@ $.ajax({
 					</form>
 				
 				<?php
-				require "connect.php";
+				
 				 /*ms to ao date enter form */
 				  if(isset($_POST["submitt"])){
 
 				$lid=$_POST['select'];
 				$datemsao=$_POST['datemsao'];
-
+				require "connect.php";
 				$sql="UPDATE letter SET msao='$datemsao' WHERE letter_id='$lid'";
 				mysqli_query($conn,$sql);
 				echo $lid . "was updated";
