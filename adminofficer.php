@@ -159,11 +159,11 @@ $.ajax({
           <div class="left_side_bar_top">                   
           </div>
           <div class="left_side_bar_down">
-              <ul id="nav" style="background-color:#fff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
-                 <li title="Update letter details" id="open_mail_1" style="border-left: 4px solid #c62828;">  
+              <ul id="nav" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
+                 <li title="Update letter details" id="open_mail_1" style="background-color:#fff; border-left: 4px solid #c62828;">  
 						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 				</li>
-				 <li title="Delete letter" id="open_mail_2" style="border-left: 4px solid #c62828;">  
+				 <li title="Delete letter" id="open_mail_2" style="background-color:#fff; border-left: 4px solid #c62828;">  
 						<i> <img src="images/maildel.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 				</li>
               </ul>
@@ -188,7 +188,7 @@ $.ajax({
 			
           <div id="middle_leftp1">
   <div class="current-flow-left" style="float: left; width:65%;">
-  <div class="search-letters" style="width:100%; min-height: 100px; margin: 10px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <div class="search-letters" style="width:100%; min-height: 100px; margin: 10px; margin-left: 20px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
 	
       <input type="text" id="search-box"  placeholder=" Select by letter ID" style="float: left;width:30%; margin: 10px; background:#fff;"/>
@@ -198,7 +198,7 @@ $.ajax({
 		<div id="suggesstion-box" style="width: 90%; "></div>
   
 </div>
-  <div class="current-flow" style="width:100%; margin:10px; margin-top:20px;background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <div class="current-flow" style="width:100%; margin:10px; margin-left: 20px; margin-top:20px;background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">CURRENT FLOW</a></div>
     <div id ="svgcontent" style="width:100%; overflow:auto;"></div>
   </div>
