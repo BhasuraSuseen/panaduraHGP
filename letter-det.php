@@ -5,7 +5,7 @@
              if(!empty($_POST["keyword"])){
 
               $letid=$_POST["keyword"];
-             require "connect.php";  
+             require_once "connect.php";  
              $letdetailsq=mysqli_query($conn,"SELECT * FROM letter WHERE letter_id='$letid'");
              $array=mysqli_fetch_assoc($letdetailsq);
              mysqli_close($conn); 
@@ -97,7 +97,7 @@
             echo "<lable>Current Location : </label>".$current_location;
             }
             echo "<br><br><br><label>REPLY DETAILS<label><br>";
-            require "connect.php";
+            require_once "connect.php";
             $letreply=mysqli_query($conn,"SELECT * FROM letter_rep WHERE letter_id='$letid'");
             $array1=mysqli_fetch_assoc($letreply);
             mysqli_close($conn); 
