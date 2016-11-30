@@ -147,7 +147,7 @@ a:hover{
    width: 5%;
    height: 100%;
    float: left;
-   background-color: #ECEFF1;
+   
    
 }
 .right_side_bar:hover{
@@ -170,7 +170,7 @@ ul#nav li{
     display: block;    
     font-size: 14px;
     text-align: center;
-    background-color:#ECEFF1;
+    background-color:#fafafa;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    /*border-left: 4px solid #B0BEC5;*/
     transition: 0.2s;
@@ -179,7 +179,7 @@ ul#nav li{
     
 }
 ul#nav li:hover{
-    background-color: #fafafa;    
+    background-color: #ECEFF1;    
     cursor: pointer;
     
 }
