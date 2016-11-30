@@ -14,6 +14,10 @@ header("Location:  index.php");
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
     body {
+    background-color: #ECEFF1;
+    font-family: 'Open Sans';
+    color: #607D8B ;
+    font-weight: 600; 
     }
     .node{
       fill:ECEFF1;
@@ -28,108 +32,125 @@ header("Location:  index.php");
    .arcb {
     fill: #CFD8DC;
   }
-  #suggesstion-box{z-index: 1500; height: 100px; overflow-y: scroll; display: none;}
+  #suggesstion-box{z-index: 1500; height: 100px; overflow-y: auto; display: none;}
   #letterid-list{list-style:none;margin:0;padding:0;width:100%; z-index: 1500;}
-  #letterid-list li{padding: 5px; background:#FAFAFA;border-bottom:#F0F0F0 1px solid;z-index: 1500;}
-  #letterid-list li:hover{background:#F0F0F0;}
+  #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;z-index: 1500;}
+  #letterid-list li:hover{background:#fafafa;}
 
 </style>
-				<script src="http://d3js.org/d3.v3.min.js"></script>
-				<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-				<script>
-				$(document).ready(function(){
-				  $("#search-box").keyup(function(){
-				    $.ajax({
-				    type: "POST",
-				    url: "readCountry.php",
-				    data:'keyword='+$(this).val(),
-				    beforeSend: function(){
-				      
-				    },
-				    success: function(data){
-				      $("#suggesstion-box").show();
-				      $("#suggesstion-box").html(data);
-				      
-				    }
-				    });
-				  });
-				  $("#suggesstion-box").click(function(){
-				    $.ajax({
-				    type: "POST",
-				    url: "readCountry.php",
-				    data:'keyword='+$(this).val(),
-				    beforeSend: function(){
-				      
-				    },
-				    success: function(data){
-				     
-				    }
-				    });
-				  });
-				  
-				  $("#search-box1").keyup(function(){
-				    $.ajax({
-				    type: "POST",
-				    url: "readCountry.php",
-				    data:'keyword1='+$(this).val(),
-				    beforeSend: function(){
-				     
-				    },
-				    success: function(data){
-				      $("#suggesstion-box").show();
-				      $("#suggesstion-box").html(data);
-				      
-				    }
-				    });
-				  });
-				    $("#search-box2").keyup(function(){
-				    $.ajax({
-				    type: "POST",
-				    url: "readCountry.php",
-				    data:'keyword2='+$(this).val(),
-				    beforeSend: function(){
-				      
-				    },
-				    success: function(data){
-				      $("#suggesstion-box").show();
-				      $("#suggesstion-box").html(data);
-				      
-				    }
-				    });
-				  });
-				});
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+  $("#search-box").keyup(function(){
+    $.ajax({
+    type: "POST",
+    url: "readCountry.php",
+    data:'keyword='+$(this).val(),
+    beforeSend: function(){
+      $("#search-box").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+    },
+    success: function(data){
+      $("#suggesstion-box").show();
+      $("#suggesstion-box").html(data);
+      $("#search-box").css("background","#FFF");
+    }
+    });
+  });
+  $("#suggesstion-box").click(function(){
+    $.ajax({
+    type: "POST",
+    url: "readCountry.php",
+    data:'keyword='+$(this).val(),
+    beforeSend: function(){
+      
+    },
+    success: function(data){
+     
+    }
+    });
+  });
+  
+  $("#search-box1").keyup(function(){
+    $.ajax({
+    type: "POST",
+    url: "readCountry.php",
+    data:'keyword1='+$(this).val(),
+    beforeSend: function(){
+      $("#search-box1").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+    },
+    success: function(data){
+      $("#suggesstion-box").show();
+      $("#suggesstion-box").html(data);
+      $("#search-box1").css("background","#FFF");
+    }
+    });
+  });
+    $("#search-box2").keyup(function(){
+    $.ajax({
+    type: "POST",
+    url: "readCountry.php",
+    data:'keyword2='+$(this).val(),
+    beforeSend: function(){
+      $("#search-box2").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+    },
+    success: function(data){
+      $("#suggesstion-box").show();
+      $("#suggesstion-box").html(data);
+      $("#search-box1").css("background","#FFF");
+    }
+    });
+  });
+});
 
-				function selectletterid(val) {
-				$("#search-box").val(val);
-				$("#suggesstion-box").hide();
-				func1(val);
-				}
-				function selectletterid1(val) {
-				$("#search-box1").val(val);
-				$("#suggesstion-box").hide();
-				func1(val);
-				}
-				function selectaddress(val) {
-				$("#search-box2").val(val);
-				$("#suggesstion-box").hide();
-				func1(val);
-				}
-				function func1(data){
-				$.ajax({
-				    type: "POST",
-				    url: "newgraph.php",
-				    data:'keyword='+data,
-				    beforeSend: function(){
-				      
-				    },
-				    success: function(data){
-				     $("#svgcontent").html(data)
-				    }
-				  });
-				 
-				}
+function selectletterid(val) {
+$("#search-box").val(val);
+$("#suggesstion-box").hide();
+func1(val);
+func2(val);
+}
+function selectletterid1(val) {
+$("#search-box1").val(val);
+$("#suggesstion-box").hide();
+func1(val);
+func2(val);
+}
+function selectaddress(val) {
+$("#search-box2").val(val);
+$("#suggesstion-box").hide();
+func1(val);
+func2(val);
+}
+function func1(data){
+$.ajax({
+    type: "POST",
+    url: "newgraph1.php",
+    data:'keyword='+data,
+    beforeSend: function(){
+      
+    },
+    success: function(data){
+     $("#svgcontent").html(data)
+    }
+  });
+ 
+}
+function func2(data){
+$.ajax({
+    type: "POST",
+    url: "letter-det.php",
+    data:'keyword='+data,
+    beforeSend: function(){
+      
+    },
+    success: function(data){
+     $("#lettercontent").html(data)
+    }
+  });
+ 
+}
 
-				</script>
+</script>
 </head>
 <body> 
 
@@ -166,14 +187,32 @@ header("Location:  index.php");
 			     
 			
           <div id="middle_leftp1">
-             
-				
-				
-				<input type="text" id="search-box"  placeholder=" Select by letter ID" style="float:left; margin: 10px; "/>
-				<input type="text" id="search-box1" placeholder=" Select by Subject" style="float:left;margin: 10px;" />
-				<input type="text" id="search-box2" placeholder=" Select by Address" style="float:left;margin: 10px;" />
-				<div id="suggesstion-box" style="width:100%;margin: 10px;"></div>
-				<div id ="svgcontent"></div>				             				           				
+  <div class="current-flow-left" style="float: left; width:60%;"">
+  <div class="search-letters" style="width:100%; margin: 10px;  background: #fff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
+
+      <input type="text" id="search-box"  placeholder=" Select by letter ID" style="margin: 10px;"/>
+      <input type="text" id="search-box1" placeholder=" Select by Subject" style="margin: 10px;"/>
+      <input type="text" id="search-box2" placeholder=" Select by Address" style="margin: 10px;" />
+      <div id="suggesstion-box" style="margin-left: 10px; margin-left: 10px;"></div>
+  </div>
+  <div class="current-flow" style="width:100%; margin:10px; margin-top:20px;background: #fff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">CURRENT FLOW</a></div>
+    <div id ="svgcontent" style="width:100%; overflow:auto;"></div>
+  </div>
+</div>
+<script> 
+ func1(1000); 
+ func2(1000);          
+</script>
+<div class="current-flow-right" style="float: left; width:35%; margin-left: 20px">
+  <div class="letters-details" style="width:100%; margin: 10px;  background: #fff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px; ">LETTER DETAILS</a></div>
+    
+    <div id ="lettercontent" style="width:100%; padding :10px; overflow:auto; font-size: 14px;"></div>
+  </div>
+</div>          
+			             				           				
 				
           </div>
           <div id="middle_rightp1">
