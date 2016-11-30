@@ -188,7 +188,7 @@ $.ajax({
 			
           <div id="middle_leftp1">
   <div class="current-flow-left" style="float: left; width:60%;">
-  <div class="search-letters" style="width:100%; margin: 10px;  background: #fff;">
+  <div class="search-letters" style="width:100%; margin: 10px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
 
       <input type="text" id="search-box"  placeholder=" Select by letter ID" style="float: left;width:30%; margin: 10px;"/>
@@ -196,7 +196,7 @@ $.ajax({
       <input type="text" id="search-box2" placeholder=" Select by Address" style="float: left;width:30%; margin: 10px;" />
       <div id="suggesstion-box" style="width: 100%; margin-left: 10px; margin-left: 10px;"></div>
   </div>
-  <div class="current-flow" style="width:100%; margin:10px; margin-top:20px;background: #fff;">
+  <div class="current-flow" style="width:100%; margin:10px; margin-top:20px;background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">CURRENT FLOW</a></div>
     <div id ="svgcontent" style="width:100%; overflow:auto;"></div>
   </div>
