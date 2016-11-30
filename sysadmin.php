@@ -83,19 +83,19 @@ require "connect.php";
 					</li>
 					<a style="margin-top: -10px;"></a>
 					<li id="open_hr_1" style="border-left: 4px solid #455A64;"> 
-						<i> <img src="images/businessman-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i> 
+						<i> <img src="images/businessman-1.png" style="width:80%;height:auto;padding: 5px;"></i> 
 					</li>
 					<li id="open_mail_1" style="border-left: 4px solid #c62828;">  
-						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+						<i> <img src="images/web.png" style="width:80%;height:auto; padding: 5px;"></i>
 					</li>
 					 <li id="open_att_1" style="border-left: 4px solid #2980b9;">  
-						<i> <img src="images/check.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+						<i> <img src="images/check.png" style="width:80%;height:auto; padding: 5px;"></i>
 					</li>
 					 <li id="open_hr_2" style="border-left: 4px solid #2980b9;">  
-						<i> <img src="images/photo.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+						<i> <img src="images/photo.png" style="width:80%;height:auto;padding: 5px;"></i>
 					</li>
            <li id="open_hr_2" style="border-left: 4px solid #2980b9;">  
-            <i> <img src="images/user_refresh.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+            <i> <img src="images/user_refresh.png" style="width:80%;height:auto; padding: 5px;"></i>
           </li>
 				</ul>
            		</div>
