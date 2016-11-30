@@ -1,7 +1,7 @@
 
 
 <?php
-require "connect.php";
+require_once "connect.php";
 if(!empty($_POST["keyword"])) {
 	$p1letters=mysqli_query($conn,"SELECT * FROM letter WHERE letter_id LIKE '" . $_POST["keyword"] . "%'");
 	if(!empty($p1letters)){
