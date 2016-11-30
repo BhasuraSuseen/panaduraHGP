@@ -32,9 +32,9 @@ header("Location:  index.php");
    .arcb {
     fill: #CFD8DC;
   }
-  #suggesstion-box{z-index: 1500; height: 100px; overflow-y: auto; display: none;}
-  #letterid-list{list-style:none;margin:10px;padding:0;width:100%; z-index: 1500;}
-  #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;z-index: 1500;}
+  #suggesstion-box{ height: 100px; overflow-y: auto; display: none;}
+  #letterid-list{list-style:none;margin:10px;padding:0;width:100%; }
+  #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;}
   #letterid-list li:hover{background:#fafafa;}
 
 </style>
@@ -160,7 +160,7 @@ $.ajax({
           </div>
           <div class="left_side_bar_down">
               <ul id="nav">
-                 <li title="Update letter details" id="open_mail_1" style="border-left: 4px solid #c62828;">  
+                 <li title="Update letter details" id="open_mail_1" style="background: #fff; border-left: 4px solid #c62828;">  
 						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 				</li>
 				 <li title="Delete letter" id="open_mail_2" style="border-left: 4px solid #c62828;">  
