@@ -170,7 +170,8 @@ ul#nav li{
     display: block;    
     font-size: 14px;
     text-align: center;
-    background-color:#CFD8DC;
+    background-color:#fafafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    /*border-left: 4px solid #B0BEC5;*/
     transition: 0.2s;
     text-align: center;
