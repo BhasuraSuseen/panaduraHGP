@@ -191,10 +191,10 @@ $.ajax({
   <div class="search-letters" style="width:100%; margin: 10px;  background: #fff;">
     <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
 
-      <input type="text" id="search-box"  placeholder=" Select by letter ID" style="float: left; margin: 10px;"/>
-      <input type="text" id="search-box1" placeholder=" Select by Subject" style="float: left; margin: 10px;"/>
-      <input type="text" id="search-box2" placeholder=" Select by Address" style="float: left; margin: 10px;" />
-      <div id="suggesstion-box" style="margin-left: 10px; margin-left: 10px;"></div>
+      <input type="text" id="search-box"  placeholder=" Select by letter ID" style="float: left;width:30%; margin: 10px;"/>
+      <input type="text" id="search-box1" placeholder=" Select by Subject" style="float: left;width:30%; margin: 10px;"/>
+      <input type="text" id="search-box2" placeholder=" Select by Address" style="float: left;width:30%; margin: 10px;" />
+      <div id="suggesstion-box" style="width: 100%; margin-left: 10px; margin-left: 10px;"></div>
   </div>
   <div class="current-flow" style="width:100%; margin:10px; margin-top:20px;background: #fff;">
     <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">CURRENT FLOW</a></div>
