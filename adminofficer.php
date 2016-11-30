@@ -189,12 +189,12 @@ $.ajax({
           <div id="middle_leftp1">
   <div class="current-flow-left" style="float: left; width:65%;">
   <div class="search-letters" style="width:100%; margin: 10px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-    <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
-	<div class="search-letters-text" style="width:100%;background: #fff;">
+    <div style="width: 100%; background-color: #2980b9;"><a style="min-height: 50px; font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
+	
       <input type="text" id="search-box"  placeholder=" Select by letter ID" style="float: left;width:30%; margin: 10px; background:#fff;"/>
       <input type="text" id="search-box1" placeholder=" Select by Subject" style="float: left;width:30%; margin: 10px;background:#fff;"/>
       <input type="text" id="search-box2" placeholder=" Select by Address" style="float: left;width:30%; margin: 10px;background:#fff;" />
-	  </div>
+
 		<div id="suggesstion-box" style="width: 100%; margin-left: 10px; margin-left: 10px; padding: 10px;"></div>
   
 </div>
