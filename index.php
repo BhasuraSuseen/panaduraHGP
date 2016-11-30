@@ -26,7 +26,7 @@
       </form>
       
  <?php
-    require "connect.php";
+    require_once "connect.php";
 	session_start();
 	if(isset($_POST["submit"])){
 	$username=$_POST['username'];
