@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset=utf-8 />
-        <link rel="stylesheet" type="text/css" href="globalstyles.css" />
+        <link rel="stylesheet" type="text/css" href="global.css" />
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <script src="vertical-timeline/js/modernizr.js"></script> <!-- Modernizr -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
@@ -76,50 +76,8 @@
 
 
                 </div>
-                <div id="pop_background"></div>
-                <div id="pop_box_diet_1">
-                    <form>
-                        <head colspan=2><font size="+2">Select Menu:</font></head>
-                        <center><table>
-                                <tr><th>Day</th><td height="50px"> 
-                                        <select id="dy" name="day">
-                                            
-                                            <option>Monday</option>
-                                            <option>Tuesday</option>
-                                            <option>Wednesday</option>
-                                            <option>Thursday</option>
-                                            <option>Friday</option>
-                                            <option>Saturday</option>
-											<option>Sunday</option>
-                                        </select></td>
-
-
-                                    <th>Catogary</th><td height="50px">  
-                                        <select  id="type" name="type">
-                                            <option  value="c_s1">Children S1</option>
-                                            <option  value="c_s2">Children S2</option>
-                                            <option  value="c_s3">Children S3</option>
-                                            <option  value="patients">Patients</option>
-                                            <option  value="dd">Diabetics Patients</option>
-                                            <option   value="staff">Staff</option>
-                                        </select></td>
-
-                            </table>
-                            <td height="50px" colspan=2>	
-                                <input  style="display:none"type ="submit"></td></tr>
-                        </center>
-                    </form>
-                    <button style="background-color: #263238;
-                            outline: none;
-                            border: none;
-                            width: 100px;
-                            font-size: 0.9em;
-                            padding: 0.4em;
-                            margin-bottom: 0.8em;  
-                            color: white;" onclick="menu_view(document.getElementById('dy').value, document.getElementById('type').value)">Search</button>
-                    
-                            <label  style="width: 100%" id="lbpop"></label><br>
-                </div>
+               
+                
 
                 <script>
                     $(document).ready(function () {
