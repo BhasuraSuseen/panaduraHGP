@@ -159,8 +159,8 @@ $.ajax({
           <div class="left_side_bar_top">                   
           </div>
           <div class="left_side_bar_down">
-              <ul id="nav" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
-                 <li title="Update letter details" id="open_mail_1" style="background-color:#fff; border-left: 4px solid #c62828;">  
+              <ul id="nav" >
+                 <li title="Update letter details" id="open_mail_1" style="border-left: 4px solid #c62828;">  
 						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 				</li>
 				 <li title="Delete letter" id="open_mail_2" style="background-color:#fff; border-left: 4px solid #c62828;">  
