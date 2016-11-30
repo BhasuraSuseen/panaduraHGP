@@ -241,7 +241,7 @@ $.ajax({
 				<b>Enter MS to MC date</b></br>
 				  <label>Letter ID</label>
 						  <?php  
-				     			require "connect.php";
+				     			require_once "connect.php";
 							$abc=mysqli_query($conn,"select letter_id from letter where msao is NULL and mcms is NOT NULL");
 				     mysqli_close($conn); 
 		    		     if(mysqli_num_rows($abc)>0){
@@ -270,7 +270,7 @@ $.ajax({
 
 				$lid=$_POST['select'];
 				$datemsao=$_POST['datemsao'];
-				require "connect.php";
+				require_once "connect.php";
 				$sql="UPDATE letter SET msao='$datemsao' WHERE letter_id='$lid'";
 				mysqli_query($conn,$sql);
 				echo $lid . "was updated";
