@@ -1,6 +1,10 @@
 <?php
 require "../connect.php";
-$id = $_GET['id'];
+session_start();
+if(isset($_GET['id'])){
+	$_SESSION['id'] = $_GET['id'];
+	echo $_SESSION['id'];
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +21,7 @@ $id = $_GET['id'];
  <div class="main">
       <div class="one">
         <div class="register">
-          <h3>Edit User <?php echo $id; ?></h3>
+          <h3>Edit User <?php echo $_SESSION['id']; ?></h3>
           <form id="usernameform" name="edit_username" action="edit_user.php" method="post" accept-charset="utf-8" >
            <a id="displayText" href="javascript:toggle();">Change username</a> 
            <div id="toggleText" style="display: none">
@@ -63,34 +67,36 @@ $id = $_GET['id'];
 if(isset($_POST["submit"])){
 
 $un=$_POST['user_name'];
-
+$id=$_SESSION['id'];
+echo $id;
 $usernamecheck="SELECT * from users where USERNAME='$un' AND NIC_NO !='$id'";
+echo $usernamecheck;
 $result1=mysqli_query($conn,$usernamecheck);
 if(mysqli_num_rows($result1)>=1){
-  	echo '<script language="javascript">';
-	echo 'alert("'.$un.'" is already taken")';
-	echo '</script>';	
+	echo "fuck";
+  	 $message = $un." is already taken";
+  echo "<script type='text/javascript'>alert('$message');</script>";	
  }
  else{
 $sql="UPDATE users SET USERNAME='$un' WHERE NIC_NO='$id'";
+echo $sql;
 mysqli_query($conn,$sql);
-echo '<script language="javascript">';
-echo 'alert("'.$un.'" updated successfully")';
-echo '</script>';	
+ $message = $un." updated successfully";
+  echo "<script type='text/javascript'>alert('$message');</script>";
 }
 }
 
 if(isset($_POST["submit1"])){
 
 $pass=md5($_POST['password']);
- 
+$id=$_SESSION['id'];
 
 $sql="UPDATE users SET PASSWORD='$pass' WHERE NIC_NO='$id'";
 mysqli_query($conn,$sql);
 echo '<script language="javascript">';
 echo 'alert("Password updated successfully")';
 echo '</script>';	
-}
+
 }
 ?>
 </html>
