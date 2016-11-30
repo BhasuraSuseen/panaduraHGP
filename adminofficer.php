@@ -32,7 +32,7 @@ header("Location:  index.php");
    .arcb {
     fill: #CFD8DC;
   }
-  #suggesstion-box{ height: 100px; overflow: auto; display: none;}
+  #suggesstion-box{ height: 100px; overflow-y: auto; overflow-x: hidden;display: none;}
   #letterid-list{list-style:none;margin:10px;padding:0;width:100%; }
   #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;}
   #letterid-list li:hover{background:#fafafa;}
