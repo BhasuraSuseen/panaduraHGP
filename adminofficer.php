@@ -33,7 +33,7 @@ header("Location:  index.php");
     fill: #CFD8DC;
   }
   #suggesstion-box{z-index: 1500; height: 100px; overflow-y: auto; display: none;}
-  #letterid-list{list-style:none;margin:0;padding:0;width:100%; z-index: 1500;}
+  #letterid-list{list-style:none;margin:10px;padding:0;width:100%; z-index: 1500;}
   #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;z-index: 1500;}
   #letterid-list li:hover{background:#fafafa;}
 
@@ -187,7 +187,7 @@ $.ajax({
 			     
 			
           <div id="middle_leftp1">
-  <div class="current-flow-left" style="float: left; width:60%;">
+  <div class="current-flow-left" style="float: left; width:65%;">
   <div class="search-letters" style="width:100%; margin: 10px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
 
