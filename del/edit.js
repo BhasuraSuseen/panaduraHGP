@@ -7,7 +7,8 @@
       form.user_name.focus();
       return false;
     }
-
+  }
+function checkpass(form){
     if(form.password.value != "" && form.password.value == form.passwordc.value) {
       if(form.password.value.length < 8) {
         alert("Error: Password must contain at least eight characters!");
