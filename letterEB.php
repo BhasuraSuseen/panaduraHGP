@@ -462,47 +462,68 @@
                             $letidheck="select * from letter where letter_id='$id'";
                             $result=mysqli_query($conn,$letidheck);
                             if(mysqli_num_rows($result)>=1){
-                            echo $id." is already taken";
+                             $message4= $id." is already taken";
+                               echo  "<script type='text/javascript'>alert('$message4');</script>";
                             }   
                             else{
                                 $sql="INSERT INTO letter (letter_id, date, address,type) VALUES ('$id','$date', '$addr','$type')";
                            
                                 mysqli_query($conn,$sql);
-                                echo $id . " was entered successfully";
+                                 $message3= $id. " was entered";
+                               echo  "<script type='text/javascript'>alert('$message3');</script>";
                             }
                             
                          }
                          /*ac to mc date and subject enter form */
                           if(isset($_POST["submittt"])){
+                            if(isset($_POST['lid1'])){
                         $sub=$_POST['sub'];
                         $lid1=$_POST['lid1'];
                         $dateaomc=$_POST['dateaomc'];
                         $eb=$_POST['eb'];
                         $sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc',eb='$eb' WHERE letter_id='$lid1'";
                         mysqli_query($conn,$sql2);
-                        echo $lid1 . " was updated";
-                 
+                         $message1= $lid1. " was forwarded";
+                         echo  "<script type='text/javascript'>alert('$message1');</script>";
                           }
+                          else{
+                             $message1= "No letters to forward";
+                            echo  "<script type='text/javascript'>alert('$message1');</script>";
+                          }
+                        }
                           /*mc to ms date enter form */
                           if(isset($_POST["submitt"])){
+                            if(isset($_POST['lid2'])){
                         $lid2=$_POST['lid2'];
                         $datemcms=$_POST['datemcms'];
                         $sql3="UPDATE letter SET mcms='$datemcms'WHERE letter_id='$lid2'";
                         mysqli_query($conn,$sql3);
-                        echo $lid2 . " was updated";
+                         $message= $lid2. " was forwarded";
+                        echo  "<script type='text/javascript'>alert('$message');</script>";
                         }
-                          
+                        else{
+                           $message= "No letters to forward";
+                            echo  "<script type='text/javascript'>alert('$message');</script>";
+                        }
+                         } 
                         ?>
                           <?php
 						   if(isset($_POST["submitttt"])){
+                if(isset($_POST['lid'])){
 
 						$lid=$_POST['lid'];
 						$datemceb=$_POST['datemceb'];
 
 						$sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
 						mysqli_query($conn,$sql);
-						echo $lid . " was updated";
+						 $message2= $lid. " was entered";
+             echo  "<script type='text/javascript'>alert('$message2');</script>";
 						}
+            else{
+               $messag2="No letters to forward";
+              echo  "<script type='text/javascript'>alert('$message2');</script>";
+            }
+          }
 						?>
             </div>
 	</div>

@@ -1,6 +1,7 @@
 	<?php
 	require "connect.php";
 	if(isset($_POST["submit"])){
+    if(isset($_POST['nic'])){
  	 
    if(isset($_POST['ebno'])){
     $ebno = $_POST['ebno']; 
@@ -64,5 +65,9 @@ if(mysqli_num_rows($result1)>=1){
 }
 else{echo "passwords do not match";}
 }
-
+else{
+  $message="Can't select an employee";
+  echo  "<script type='text/javascript'>alert('$message');</script>";
+  }
+}
 ?>

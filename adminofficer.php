@@ -159,15 +159,23 @@ header("Location:  index.php");
 				
 				 /*ms to ao date enter form */
 				  if(isset($_POST["submitt"])){
-
+            if(isset($_POST['select'])){
 				$lid=$_POST['select'];
 				$datemsao=$_POST['datemsao'];
 				require_once "connect.php";
 				$sql="UPDATE letter SET msao='$datemsao' WHERE letter_id='$lid'";
 				mysqli_query($conn,$sql);
-				echo $lid . "was updated";
+				$message= $lid. " was entered";
+        echo  "<script type='text/javascript'>alert('$message');</script>";
 				}
-				mysqli_close($conn);   
+	      else{
+          $message="No letters to forward";
+          echo  "<script type='text/javascript'>alert('$message');</script>";
+  
+            }
+
+        }
+              mysqli_close($conn);  
 				?>
 				
             </div>
