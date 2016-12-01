@@ -131,7 +131,7 @@
      <div>
     <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
-    <label>Letter ID</label>
+  <label>Letter ID</label>
       <?php  
       $eb=$_SESSION['ebno'];
       $abcd=mysqli_query($conn,"select letter_id from letter where mceb is NULL and eb ='".$eb."'");
@@ -153,15 +153,24 @@
   </form>
   <?php
    if(isset($_POST["submitt"])){
+    if(isset($_POST['lid'])){
 
-    $lid=$_POST['lid'];
-    $datemceb=$_POST['datemceb'];
+$lid=$_POST['lid'];
+$datemceb=$_POST['datemceb'];
 
-    $sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
-    mysqli_query($conn,$sql);
-    echo $lid . "was updated";
-    }
-    ?>
+$sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
+mysqli_query($conn,$sql);
+$message= $lid. " was updated";
+  echo  "<script type='text/javascript'>alert('$message');</script>";
+}
+else{
+  $message="No letters to reply";
+  echo  "<script type='text/javascript'>alert('$message');</script>";
+  
+}
+
+}
+?>
   </div>
         <script>
          $(document).ready(function(){

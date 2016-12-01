@@ -104,16 +104,24 @@ require "connect.php";
   </form>
   <?php
    if(isset($_POST["submitt"])){
+    if(isset($_POST['lid'])){
 
 $lid=$_POST['lid'];
 $datemceb=$_POST['datemceb'];
 
 $sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
 mysqli_query($conn,$sql);
-echo $lid . "was updated";
+$message= $lid. " was updated";
+  echo  "<script type='text/javascript'>alert('$message');</script>";
 }
-?>
-  </div>
+else{
+  $message="No letters to reply";
+  echo  "<script type='text/javascript'>alert('$message');</script>";
+  
+}
+
+}
+?>  </div>
         <script>
          $(document).ready(function(){
             $('#open_mail_1').click(function(){

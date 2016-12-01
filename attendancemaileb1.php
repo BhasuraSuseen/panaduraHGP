@@ -87,11 +87,7 @@
           	</div>
 		 <div id="pop_background"></div>
             <div id="pop_box_hr_1">
-			
-            </div>
-	</div>
-     <div>
-    <form name="mctoeb" action="attendancemaileb1.php" method="post" accept-charset="utf-8">
+			<form name="mctoeb" action="attendancemaileb1.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
   <label>Letter ID</label>
       <?php  
@@ -115,16 +111,27 @@
   </form>
   <?php
    if(isset($_POST["submitt"])){
+    if(isset($_POST['lid'])){
 
 $lid=$_POST['lid'];
 $datemceb=$_POST['datemceb'];
 
 $sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
 mysqli_query($conn,$sql);
-echo $lid . " was updated";
+$message= $lid. " was updated";
+  echo  "<script type='text/javascript'>alert('$message');</script>";
+}
+else{
+  $message="No letters to reply";
+  echo  "<script type='text/javascript'>alert('$message');</script>";
+  
+}
+
 }
 ?>
-  </div>
+            </div>
+	</div>
+    
         <script>
          $(document).ready(function(){
             $('#open_mail_1').click(function(){
