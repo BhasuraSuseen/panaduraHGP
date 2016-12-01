@@ -276,6 +276,45 @@ ul#nav li:hover{
     display: none;
     
 }
+#pop_box_diet_1{  
+    position: absolute;
+    background: #ECEFF1;
+    font-size: 0.9em;
+    width: 90%;
+    height:70%;
+    margin: 5% 0 0 5%;
+    padding: 20px;
+    opacity: 1;
+    z-index: 1500;
+    display: none;
+    
+}
+#pop_box_diet_2{  
+    position: absolute;
+    background: #ECEFF1;
+    font-size: 0.9em;
+    width: 90%;
+    height:70%;
+    margin: 5% 0 0 5%;
+    padding: 20px;
+    opacity: 1;
+    z-index: 1500;
+    display: none;
+    
+}
+#pop_box_diet_3{  
+    position: absolute;
+    background: #ECEFF1;
+    font-size: 0.9em;
+    width: 90%;
+    height:70%;
+    margin: 5% 0 0 5%;
+    padding: 20px;
+    opacity: 1;
+    z-index: 1500;
+    display: none;
+    
+}
 #pop_box_att_1{
     position: absolute;
     background: #ECEFF1;
