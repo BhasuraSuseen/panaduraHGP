@@ -106,7 +106,7 @@
 		                                            <option>Thursday</option>
 		                                            <option>Friday</option>
 		                                            <option>Saturday</option>
-													<option>Sunday</option>
+							<option>Sunday</option>
 		                                        </select></td>
 
 
@@ -136,7 +136,7 @@
 		</center>			
  
             </div>
-	
+	</div>
      <div>
     <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
