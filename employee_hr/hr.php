@@ -10,15 +10,21 @@
                 <iframe class="iframe1" name="iframe"></iframe>
                 
                 <form action="hr.php" method="post" target="iframehr">
+                    First Name      
                     <input type="text" name="fname" placeholder="First Name">
+                    Last Name      
                     <input type="text" name="lname" placeholder="Last Name">
                     Birth Date
                     <input type="date" name="bdate" placeholder="Birth Date yyyy-mm-dd">
+                    Address      
                     <input type="text" name="address" placeholder="Address">
+                    Contact Number      
                     <input type="int" name="cnumber" placeholder="Contact NO">
+                    Gender      
                     <input type="text" name="gender" placeholder="Gender M/F">
+                    NIC      
                     <input type="text" name="nic" placeholder="NIC NO ">
-                    
+                    Employee Type
                     <input type="text" name="etype" placeholder="Employee type">
                     
              </div>
