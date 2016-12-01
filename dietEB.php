@@ -89,7 +89,7 @@
           </div> 
           	</div>
 		
-		<div id="pop_background"></div>
+		<div id="pop_background">
             <div id="pop_box_mail_1">
 			<p>adwfesgjkhj</p>
             </div>
@@ -123,18 +123,9 @@
 		                            </table>
 					</form>
 
-			<button style="background-color: #263238;
-                            outline: none;
-                            border: none;
-                            width: 100px;
-                            font-size: 0.9em;
-                            padding: 0.4em;
-                            margin-bottom: 0.8em;
-                            color: white;" onclick="menu_view(document.getElementById('dy').value, document.getElementById('type').value)">Search</button></tr>
-
-                            <label  style="width: 100%" id="lbpop"></label><br>
+			
 		</center>			
- 
+			</div>
             </div>
 	</div>
      <div>
