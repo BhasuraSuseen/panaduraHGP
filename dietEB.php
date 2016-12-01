@@ -89,7 +89,7 @@
           </div> 
           	</div>
 		
-		 <div id="pop_background">
+		<div id="pop_background"></div>
             <div id="pop_box_mail_1">
 			<p>adwfesgjkhj</p>
             </div>
@@ -121,9 +121,9 @@
 		                                        </select></td>
 
 		                            </table>
-															</form>
+					</form>
 
-												<button style="background-color: #263238;
+			<button style="background-color: #263238;
                             outline: none;
                             border: none;
                             width: 100px;
@@ -134,9 +134,9 @@
 
                             <label  style="width: 100%" id="lbpop"></label><br>
 		</center>			
- 	</div>
+ 
             </div>
-	</div>
+	
      <div>
     <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
