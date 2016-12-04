@@ -1222,8 +1222,9 @@ if($date == $date3 && $meal == "Dinner"){?>
 							?> 
 				
 					<tr>
+						<table align="center">
                             <td align="left"><?php echo $sb[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$sb[7]; ?></td></tr>
+                            <td align="left"><?php echo $result.' '.$sb[7]; ?> </td> </table></tr>
 				<?php }
 				
 		 endwhile;?>
