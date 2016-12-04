@@ -177,7 +177,59 @@
 border-top: 5px solid #2980b9;
     border-bottom: 5px solid #2980b9;">
 	  		<?php //include 'dui.php';?>
-		
+		 <center><head><font size="+3" color=#2980b9><b>DIET SCHEDULE</b></font></head></center>
+
+
+
+                    <center><form>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan=2>Enter Counts</th></tr>
+                                </thead>
+
+                                <tr><td>Meal Type</td><td>
+                                        <input type="radio" id="meal" name="meal" value="Breakfast" onclick="myFunction()" required> Breakfast
+                                        <input type="radio" id="meal" name="meal" value="Lunch" onclick="myFunction()" required> Lunch
+                                        <input type="radio" id="meal" name="meal" value="Dinner" onclick="myFunction()" required> Dinner</td></tr><br>
+                                <tr><td>Children S1 </td><td> 
+                                        <input type="number" id="s1" name="children_s1" value="" size="20" pattern="[0-9]{1,}" required></td></tr>
+
+                                <tr><td>Children S2 </td><td> 
+                                        <input type="number" id="s2" name="children_s2" size="20" pattern="[0-9]{1,}" required></td></tr>
+
+                                <tr><td>Children S3 </td><td> 
+                                        <input type="number" id="s3" name="children_s3" size="20" pattern="[0-9]{1,}" required></td></tr>
+
+                                <tr><td>Normal Patients </td><td> 
+                                        <input type="number" id="patients" name="patients" size="20" pattern="[0-9]{1,}" required></td></tr>
+
+                                <tr><td>DD Patients </td><td> 
+                                        <input type="number" id="dp" name="diabetics_patients" size="20" pattern="[0-9]{1,}" required></td></tr>
+
+                                <tr><td>Staff </td><td> 
+                                        <input type="number" id="staff" name="staff" size="20" pattern="[0-9]{1,}" required></td></tr>
+
+
+                                <tr><td colspan=2 align="center">
+
+                                        <input type ="reset" value="Reset"></td></tr>
+
+                            </table>
+                            <input  style="display:none"type ="submit"></td></tr>
+                        </form>
+                        <button style="background-color: #263238;
+                                outline: none;
+                                border: none;
+                                width: 100px;
+                                font-size: 0.9em;
+                                padding: 0.4em;
+                                margin-bottom: 0.8em;  
+                                color: white;" onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
+                    </center>
+                </div>
+                <div class="middle_right">
+                    <label id="lb1"></label><br>
                    
  	</div>
 	
