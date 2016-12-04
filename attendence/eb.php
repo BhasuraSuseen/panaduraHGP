@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="attendence/attend styl.css" media="screen" />
-        <?php include 'attendence/datetime.php';?>
+        <?php include 'datetime.php';?>
     </head>
     <body> 
         <div class="all_container">
@@ -11,7 +11,7 @@
                 <div class="middle_left">
                     <div style="height: 650px">
                         <div style="overflow-y: scroll">
-                            <?php include 'attendence/ebatt.php'; ?>
+                            <?php include 'ebatt.php'; ?>
                         </div>
                     </div>
                 </div>
