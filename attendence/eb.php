@@ -3,8 +3,12 @@
     <head>
         <link rel="stylesheet" type="text/css" href="attendence/attend styl.css" media="screen" />
         <?php include 'datetime.php';?>
+        <script type="text/javascript" src="jst.js"></script>
     </head>
-    <body> 
+    <body onlord="abc('Awa Awa')"> 
+        
+        
+        
         <div class="all_container">
 
             <div class="container">
@@ -64,5 +68,5 @@
             </div>
 
     </body>
-    <script type="text/javascript" src="jst.js"></script>
+    
 </html>
