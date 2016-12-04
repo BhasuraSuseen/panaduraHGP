@@ -30,10 +30,7 @@
 					 <li id="open_att_1" title="Establishment Branch Attendence Record" style="border-left: 4px solid #2980b9;">  
 						<i> <img src="images/count.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
 					</li>
-					 <li id="open_hr_2" title="Add New Employee" style="border-left: 4px solid #2980b9;">  
-						<i> <img src="images/menuv.png" style="width:80%;height:auto;opacity: 0.6;padding: 5px;"></i>
-					</li>
-           
+					 
 				</ul>
            		</div>
         	</div>
@@ -72,9 +69,10 @@
 
             <i> <img src="images/food-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
           </li>
-		  <li id="open_hr_1" title="Add New System User" style="border-left: 4px solid #455A64;"> 
-						<i> <img src="images/businessman-1.png" style="width:80%;height:auto;opacity: 0.6;padding: 5px;"></i> 
+		  <li id="open_hr_2" title="Add New Employee" style="border-left: 4px solid #2980b9;">  
+						<i> <img src="images/menuv.png" style="width:80%;height:auto;opacity: 0.6;padding: 5px;"></i>
 					</li>
+           
           
               </ul>
           </div> 
