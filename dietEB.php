@@ -230,8 +230,10 @@ border-top: 5px solid #2980b9;
                     </center>
                 </div>
 		<div class="middle_right" style="float: left;
-    height:90%;
-    width:40%;"><label id="lb1"></label><br></div>
+        height:90%;
+	width:40%;">
+			<center><label id="lb1"></label></center><br>
+		</div>
 	</div>
                 
 	
