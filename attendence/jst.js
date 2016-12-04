@@ -62,7 +62,7 @@ function loadEbdata() {
 
 
        if (obj.readyState === 4 && obj.status === 200) {
-            alert(obj.responseText);
+           // alert(obj.responseText);
             var text = obj.responseText;
 
             document.getElementById('st1').innerHTML = JSON.parse(text).a;
