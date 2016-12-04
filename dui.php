@@ -11,7 +11,9 @@
         <script type="text/javascript"></script>
     </head>
     <body>
-        <div class="all_container">
+        <div class="all_container" style="width: 100%;
+    min-width: 1170px;
+    height:677px;">
             
 
             <div class="container">
