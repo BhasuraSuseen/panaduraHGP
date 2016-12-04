@@ -5,7 +5,7 @@
         <?php include 'datetime.php';?>
         
         <?php
-        var_dump('<script type="text/javascript" src="jst.js"></script>');
+        var_dump(include 'datetime.php');
         ?>
     </head>
     <body onlord="abc('Awa Awa')"> 
