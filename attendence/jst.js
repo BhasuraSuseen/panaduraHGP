@@ -124,11 +124,13 @@ function loadMinordata() {
 }
 
 function saveAttends(name, date, attend) {
-    alert("attendance awa");
-    /*
+   
+   
     try {
-
+ alert("attendance awa");
         checkBrowser();
+        
+         /*
         obj.onreadystatechange = function() {
 
 
@@ -150,10 +152,10 @@ function saveAttends(name, date, attend) {
         obj.send("nic=" + name + "&date=" + date + "&attend=" + attend);
 
 
-
+    */
     } catch (err) {
     }
-    */
+
 }
 
 //function chng(){
