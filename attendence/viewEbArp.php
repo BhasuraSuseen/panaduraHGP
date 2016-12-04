@@ -1,7 +1,7 @@
 
 <?php
-include './attendence/datetime.php';
-include './attendence/connect.php';
+include 'datetime.php';
+include 'connect.php';
 
 
 $presentqury =mysqli_query($conn, "SELECT
