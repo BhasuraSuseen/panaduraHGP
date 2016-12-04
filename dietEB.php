@@ -37,7 +37,7 @@
                  <li id="open_mail_1" style="border-left: 4px solid #c62828;">  
 						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 					</li>
-					 <li id="open_diet_1" style="border-left: 4px solid #03C9A9;">  
+					 <li id="open_att_1" style="border-left: 4px solid #03C9A9;">  
 						<i> <img src="images/count.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
 					</li>
               </ul>
@@ -93,7 +93,7 @@
             <div id="pop_box_mail_1">
 			<p>adwfesgjkhj</p>
             </div>
-			 <div id="open_diet_1" style="position: absolute;
+			 <div id="open_att_1" style="position: absolute;
     background: #ECEFF1;
     font-size: 0.9em;
     width: 90%;
@@ -158,9 +158,9 @@ else{
                 $('#pop_box_mail_1').fadeIn();
                 return false;
             });
-            $('#open_diet_1').click(function(){
+            $('#open_att_1').click(function(){
                 $('#pop_background').fadeIn();
-                $('#pop_box_diet_1').fadeIn();
+                $('#pop_box_att_1').fadeIn();
                 return false;
             });
              $('#open_diet_2').click(function(){
@@ -178,7 +178,7 @@ else{
             $('#pop_background').click(function(){
                 $('#pop_background').fadeOut();
                 $('#pop_box_mail_1').fadeOut();
-                $('#pop_box_diet_1').fadeOut();
+                $('#pop_box_att_1').fadeOut();
 		        $('#pop_box_diet_2').fadeOut();
  
                 return false;
