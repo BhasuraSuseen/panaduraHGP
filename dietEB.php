@@ -177,6 +177,11 @@
 border-top: 5px solid #2980b9;
     border-bottom: 5px solid #2980b9;">
 	  		<?php //include 'dui.php';?>
+		<div class="middle_left" style="float: left;
+    height:90%;
+    width:60%;
+    border-right: 2px solid #B0BEC5;
+    overflow-y:scroll;">
 		 <center><head><font size="+3" color=#2980b9><b>DIET SCHEDULE</b></font></head></center>
 
 
@@ -225,6 +230,11 @@ border-top: 5px solid #2980b9;
                                 color: white;" onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
                     </center>
                 </div>
+		<div class="middle_right" style="float: left;
+    height:90%;
+    width:40%;
+    overflow-y:scroll;"></div>
+	</div>
                 
 	
 	<div id="pop_box_hr_3" style="position: absolute;
