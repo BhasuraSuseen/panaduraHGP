@@ -93,7 +93,16 @@
             <div id="pop_box_mail_1">
 			<p>adwfesgjkhj</p>
             </div>
-			 <div id="open_diet_1">
+			 <div id="open_diet_1" style="position: absolute;
+    background: #ECEFF1;
+    font-size: 0.9em;
+    width: 90%;
+    height:70%;
+    margin: 5% 0 0 5%;
+    padding: 20px;
+    opacity: 1;
+    z-index: 1500;
+    display: none;">
 	  				
 			</div>
             </div>
