@@ -185,7 +185,7 @@
     opacity: 0.99;
     display: none;
     z-index: 1500;">
-	  		<form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
+	 <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
     <label>Letter ID</label>
       <?php  
@@ -256,7 +256,8 @@
                 $('#pop_background').fadeOut();
                 $('#pop_box_hr_1').fadeOut();
                 $('#pop_box_att_1').fadeOut();
-		            $('#pop_box_hr_2').fadeOut();
+		$('#pop_box_hr_2').fadeOut();
+		$('#pop_box_hr_3').fadeOut();
  
                 return false;
             });
