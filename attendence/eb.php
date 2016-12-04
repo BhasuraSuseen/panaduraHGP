@@ -3,9 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="attendence/attend styl.css" media="screen" />
         <?php include 'attendence/datetime.php';?>
-       
-    
-     
+   
     </head>
     <body> 
         
@@ -70,5 +68,5 @@
             </div>
 
     </body>
-        <script type="text/javascript" src="jst.js"></script>
+        <script type="text/javascript" src="../jst.js"></script>
 </html>
