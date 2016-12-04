@@ -1174,7 +1174,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 <?php if($date4 == "Sunday"){
 	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
  if($date == $date3 && $meal == "Breakfast"){?>
-			<table align="center" style="background-color: #CFD8DC;width: 60%">
+			<table align="left" style="background-color: #CFD8DC;width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -1220,7 +1220,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 							
 							if($result != 0){
 							?> 
-				<table style="background-color: #ECEFF1;width: 60%">
+				<table  align="left" style="background-color: #ECEFF1;width: 60%">
 					<tr>
                             <td align="left"><?php echo $sb[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$sb[7]; ?></td></tr></table>
