@@ -57,12 +57,12 @@ function loadDrdata() {
 
 function loadEbdata() {
     checkBrowser();
-    
-    
+    alert("awaaaa");
+    /*
     obj.onreadystatechange = function() {
 
 
-        if (obj.readyState === 4 && obj.status === 200) {
+       if (obj.readyState === 4 && obj.status === 200) {
             alert(obj.responseText);
             var text = obj.responseText;
 
@@ -75,7 +75,7 @@ function loadEbdata() {
     obj.open("POST", "viewEbArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
-
+*/
 }
 
 
