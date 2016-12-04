@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="attendence/attend styl.css" media="screen" />
-        <?php include 'attendence/datetime.php';?>
+        <link rel="stylesheet" type="text/css" href="attend styl.css" media="screen" />
+        <?php include 'datetime.php';?>
        
     
      
