@@ -130,7 +130,7 @@ function saveAttends(name, date, attend) {
  alert("attendance awa");
         checkBrowser();
         
-         /*
+        
         obj.onreadystatechange = function() {
 
 
@@ -147,12 +147,10 @@ function saveAttends(name, date, attend) {
 //
             //            }
         };
-        obj.open("POST", "saveattends.php", true);
+        obj.open("POST", "./attendence/saveattends.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         obj.send("nic=" + name + "&date=" + date + "&attend=" + attend);
 
-
-    */
     } catch (err) {
     }
 
