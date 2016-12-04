@@ -5,9 +5,19 @@
         <?php include 'datetime.php';?>
        
         <script type="text/javascript" src="jst.js"></script>
+        
+        <script type="text/javascript">
+        
+            function ac(y){
+            
+                alert(y);
+                abc('Awa Awa')
+            }
+        
+        </script>
        
     </head>
-    <body onlord="abc('Awa Awa')"> 
+    <body onlord="ac('Awa Awa')"> 
         
         
         
