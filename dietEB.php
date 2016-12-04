@@ -201,7 +201,7 @@
             });
 		 $('#open_mail_1').click(function(){
                 $('#pop_background').fadeIn();
-                $('#pop_box_hr_2').fadeIn();
+                $('#pop_box_hr_3').fadeIn();
                 return false;
             });
             $('#pop_background').click(function(){
