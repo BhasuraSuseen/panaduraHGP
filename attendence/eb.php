@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="attendence/attend styl.css" media="screen" />
-        <?php include 'datetime.php';?>
+        <?php include 'attendence/datetime.php';?>
        
     
      
