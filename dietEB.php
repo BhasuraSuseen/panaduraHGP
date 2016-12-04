@@ -165,7 +165,7 @@
     display: none;
     z-index: 1500;">
 	  		<?php include 'dui.php';?>
-		Himashini
+	
                    
  	</div>
 
