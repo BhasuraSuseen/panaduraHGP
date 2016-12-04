@@ -201,7 +201,7 @@ FROM employee
     </center>
 </body>
 
-<script type="text/javascript" src="jst.js"></script>
+<script type="text/javascript" src="./jst.js"></script>
 
 
 </html>
