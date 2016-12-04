@@ -94,37 +94,7 @@
 			<p>adwfesgjkhj</p>
             </div>
 			 <div id="open_diet_1">
-	  	<center><form>
-		                        <head colspan=2><font size="+2">Select Menu:</font></head>
-		                        <table>
-		                                <tr><th>Day</th><td height="50px">
-		                                        <select id="dy" name="day">
-
-		                                            <option>Monday</option>
-		                                            <option>Tuesday</option>
-		                                            <option>Wednesday</option>
-		                                            <option>Thursday</option>
-		                                            <option>Friday</option>
-		                                            <option>Saturday</option>
-							<option>Sunday</option>
-		                                        </select></td>
-
-
-		                                    <th>Catogary</th><td height="50px">
-		                                        <select  id="type" name="type">
-		                                            <option  value="c_s1">Children S1</option>
-		                                            <option  value="c_s2">Children S2</option>
-		                                            <option  value="c_s3">Children S3</option>
-		                                            <option  value="patients">Patients</option>
-		                                            <option  value="dd">Diabetics Patients</option>
-		                                            <option  value="staff">Staff</option>
-		                                        </select></td>
-
-		                            </table>
-					</form>
-
-			
-		</center>			
+	  				
 			</div>
             </div>
 	</div>
