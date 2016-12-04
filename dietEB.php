@@ -69,7 +69,7 @@
 
             <i> <img src="images/food-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
           </li>
-		  <li id="open_hr_2" title="Add New Employee" style="border-left: 4px solid #2980b9;">  
+		  <li id="open_hr_2" title="Add New Employee" style="border-right: 4px solid #2980b9;">  
 						<i> <img src="images/menuv.png" style="width:80%;height:auto;opacity: 0.6;padding: 5px;"></i>
 					</li>
            
