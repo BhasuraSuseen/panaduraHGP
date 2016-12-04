@@ -1220,7 +1220,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 							
 							if($result != 0){
 							?> 
-				<table style="background-color: #ECEFF1;width: 100%">
+				<table style="background-color: #ECEFF1;width: 60%">
 					<tr>
                             <td align="left"><?php echo $sb[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$sb[7]; ?></td></tr></table>
