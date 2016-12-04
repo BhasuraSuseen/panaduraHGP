@@ -232,7 +232,7 @@ border-top: 5px solid #2980b9;
 		<div class="middle_right" style="float: left;
         height:90%;
 	width:40%;">
-			<center><label id="lb1"></label></center><br>
+			<center><label align="center" id="lb1" style="background-color: #2980B9"></label></center><br>
 		</div>
 	</div>
                 
