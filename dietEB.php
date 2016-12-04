@@ -158,14 +158,14 @@
     background: #ECEFF1;
     font-size: 0.9em;
     width: 90%;
-	height:70%;
+	height:75%;
     margin: 5% 0 0 5%;
     padding: 20px;
     opacity: 0.99;
     display: none;
     z-index: 1500;">
 	  		<?php include 'dui.php';?>
-	
+		
                    
  	</div>
 
