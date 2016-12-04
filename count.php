@@ -1176,8 +1176,8 @@ if($date == $date3 && $meal == "Dinner"){?>
  if($date == $date3 && $meal == "Breakfast"){?>
 			<table align="center" style="background-color: #CFD8DC;width: 60%">
 					<tr>
-                        <td align="center"><b>Item Name</b></td>
-                        <td align="center"><b>Amount</b></td>
+                        <td align="left"><b>Item Name</b></td>
+                        <td align="left"><b>Amount</b></td>
                     </tr>
 				 <?php while ($sb = mysqli_fetch_array($sunb)):; 
 						$result = ($sb[1]*$c_s1) + ($sb[2]*$c_s2) + ($sb[3]*$c_s3) + ($sb[4]*$patients) + ($sb[5]*$dd) + ($sb[6]*$staff);
@@ -1222,7 +1222,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 							?> 
 				
 					<tr>
-						<table align="center" style="background-color: #ECEFF1;width: 60%">
+						<table align="left" style="background-color: #ECEFF1;width: 60%">
                             <td align="left"><?php echo $sb[0]; ?></td>
                             <td align="left"><?php echo $result.' '.$sb[7]; ?> </td> </table></tr>
 				<?php }
