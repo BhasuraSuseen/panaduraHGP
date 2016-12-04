@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="attendence/attend styl.css" media="screen" />
-        <?php include 'datetime.php';?>
+        <?php include 'attendence/datetime.php';?>
     </head>
     <body> 
         <div class="all_container">
@@ -31,7 +31,7 @@
 
                         <table border="0" style="width: 100%">
                             <tr>Employee came</tr>
-                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select style="width:30%" id="day">
+                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select class="styled-select" style="width:30%" id="day">
 
 
                                         <?php
