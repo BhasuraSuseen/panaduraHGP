@@ -164,7 +164,7 @@
     opacity: 0.99;
     display: none;
     z-index: 1500;">
-	  		<?php include 'Diet/dui.php';?>
+	  		<?php include 'dui.php';?>
 		
                    
  	</div>
