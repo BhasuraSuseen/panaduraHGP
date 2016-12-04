@@ -180,8 +180,7 @@ border-top: 5px solid #2980b9;
 		<div class="middle_left" style="float: left;
     height:90%;
     width:60%;
-    border-right: 2px solid #B0BEC5;
-    overflow-y:scroll;">
+    border-right: 2px solid #B0BEC5;">
 		 <center><head><font size="+3" color=#2980b9><b>DIET SCHEDULE</b></font></head></center>
 
 
@@ -232,8 +231,7 @@ border-top: 5px solid #2980b9;
                 </div>
 		<div class="middle_right" style="float: left;
     height:90%;
-    width:40%;
-    overflow-y:scroll;"></div>
+    width:40%;"></div>
 	</div>
                 
 	
@@ -290,7 +288,7 @@ border-top: 5px solid #2980b9;
 	</div>
 	
   <div>
-0    
+   
   
   </div>
      
