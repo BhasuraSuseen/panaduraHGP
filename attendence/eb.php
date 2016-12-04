@@ -2,22 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="attendence/attend styl.css" media="screen" />
-        <?php include 'datetime.php';?>
+        <?php include 'attendence/datetime.php';?>
        
-        <script type="text/javascript" src="jst.js"></script>
-        
-        <script type="text/javascript">
-        
-            function ac(y){
-            
-                alert(y);
-                abc('Awa Awa')
-            }
-        
-        </script>
-       
+    
+     
     </head>
-    <body onlord="ac('Awa Awa')"> 
+    <body> 
         
         
         
@@ -80,5 +70,5 @@
             </div>
 
     </body>
-    
+        <script type="text/javascript" src="attendence/jst.js"></script>
 </html>
