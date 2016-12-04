@@ -72,7 +72,7 @@ function loadEbdata() {
 
         }
     };
-    obj.open("POST", "viewEbArp.php", true);
+    obj.open("POST", "./attendence/viewEbArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
