@@ -158,7 +158,7 @@
     background: #ECEFF1;
     font-size: 0.9em;
     width: 90%;
-	height:75%;
+	height:80%;
     margin: 5% 0 0 5%;
     padding: 20px;
     opacity: 0.99;
