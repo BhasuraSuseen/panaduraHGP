@@ -1,6 +1,6 @@
 <?php
 include 'attendence/datetime.php';
-include 'attendence/connect.php';
+include '../connect.php';
 $res1 = mysqli_query($conn, "SELECT * FROM employee");
 while ($row1 = mysqli_fetch_array($res1)) {
     $nic = $row1[0];
