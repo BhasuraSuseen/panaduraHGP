@@ -3,7 +3,10 @@
     <head>
         <link rel="stylesheet" type="text/css" href="attendence/attend styl.css" media="screen" />
         <?php include 'datetime.php';?>
-        <script type="text/javascript" src="jst.js"></script>
+        
+        <?php
+        var_dump('<script type="text/javascript" src="jst.js"></script>');
+        ?>
     </head>
     <body onlord="abc('Awa Awa')"> 
         
