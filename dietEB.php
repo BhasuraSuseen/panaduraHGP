@@ -183,10 +183,7 @@ border-top: 5px solid #2980b9;
 
                     <center><form>
                             <table>
-                                <thead>
-                                    <tr>
-                                        <th colspan=2>Enter Counts</th></tr>
-                                </thead>
+				    <thead><tr><th colspan=2>Enter Counts</th></tr></thead>
 
                                 <tr><td>Meal Type</td><td>
                                         <input type="radio" id="meal" name="meal" value="Breakfast" onclick="myFunction()" required> Breakfast
@@ -216,7 +213,7 @@ border-top: 5px solid #2980b9;
                                         <input type ="reset" value="Reset"></td></tr>
 
                             </table>
-                            <input  style="display:none"type ="submit"></td></tr>
+                            <tr><td><input  style="display:none"type ="submit"></td></tr>
                         </form>
                         <button style="background-color: #263238;
                                 outline: none;
@@ -228,10 +225,7 @@ border-top: 5px solid #2980b9;
                                 color: white;" onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
                     </center>
                 </div>
-                <div class="middle_right">
-                    <label id="lb1"></label><br>
-                   
- 	</div>
+                
 	
 	<div id="pop_box_hr_3" style="position: absolute;
     background: #ECEFF1;
@@ -286,7 +280,7 @@ border-top: 5px solid #2980b9;
 	</div>
 	
   <div>
-    
+0    
   
   </div>
      
