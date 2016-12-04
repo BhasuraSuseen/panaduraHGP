@@ -231,7 +231,7 @@ border-top: 5px solid #2980b9;
                 </div>
 		<div class="middle_right" style="float: left;
     height:90%;
-    width:40%;"></div>
+    width:40%;"><label id="lb1"></label><br></div>
 	</div>
                 
 	
@@ -341,6 +341,67 @@ border-top: 5px solid #2980b9;
 //                            alert(type);
                             checkBrowser();
                             obj.onreadystatechange = function () {
+                            //alert(obj.responseText);
+                                if (obj.readyState === 4 && obj.status === 200) {
+                                    var text1 = obj.responseText;
+                                    document.getElementById('lbpop').innerHTML = text1;
+                                }
+                            };
+                            obj.open("POST", "menu_view.php", true);
+                            obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                            obj.send("day=" + day + "&type=" + type);
+                        }
+                        catch (err) {
+                        }
+                    }
+                </script>
+ <script>
+                    var obj;
+                    function checkBrowser() {
+                        if (window.XMLHttpRequest) {
+                            obj = new XMLHttpRequest();
+                        } else {
+                            obj = new ActiveXobject("Microfoft.ActiveXobject");
+                        }
+                    }
+
+                    function count(meal, s1, s2, s3, patients, dp, staff) {
+                        try {
+
+                            var meal1;
+                            for (var i = 0; i < meal.length; i++) {
+                                if (meal[i].checked) {
+                                    meal1 = meal[i].value;
+                                }
+                            }
+
+
+                            checkBrowser();
+                            obj.onreadystatechange = function () {
+
+                                //alert(obj.responseText);
+                                if (obj.readyState === 4 && obj.status === 200) {
+                                    var text = obj.responseText;
+                                    document.getElementById('lb1').innerHTML = text;
+                                }
+                            };
+                            obj.open("POST", "count.php", true);
+                            obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                            obj.send("meal=" + meal1 + "&children_s1=" + s1 + "&children_s2=" + s2 + "&children_s3=" + s3 + "&patients=" + patients + "&diabetics_patients=" + dp + "&staff=" + staff);
+                        }
+                        catch (err) {
+                        }
+                    }
+
+
+                    function menu_view(day, type) {
+                        try {
+
+//                            alert(day);
+//                            alert(type);
+                            checkBrowser();
+                            obj.onreadystatechange = function () {
+
                             //alert(obj.responseText);
                                 if (obj.readyState === 4 && obj.status === 200) {
                                     var text1 = obj.responseText;
