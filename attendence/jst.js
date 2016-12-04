@@ -57,6 +57,7 @@ function loadDrdata() {
 
 function loadEbdata() {
     checkBrowser();
+    alert("enwa eb");
    /*
     obj.onreadystatechange = function() {
 
@@ -123,6 +124,8 @@ function loadMinordata() {
 }
 
 function saveAttends(name, date, attend) {
+    alert("attendance awa");
+    /*
     try {
 
         checkBrowser();
@@ -150,6 +153,7 @@ function saveAttends(name, date, attend) {
 
     } catch (err) {
     }
+    */
 }
 
 //function chng(){
