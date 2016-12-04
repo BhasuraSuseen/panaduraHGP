@@ -26,7 +26,7 @@ function loadParadata() {
 
         }
     };
-    obj.open("POST", "viewParaArp.php", true);
+    obj.open("POST", "./attendence/viewParaArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
@@ -48,7 +48,7 @@ function loadDrdata() {
 
         }
     };
-    obj.open("POST", "viewDoctorArp.php", true);
+    obj.open("POST", "./attendence/viewDoctorArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
@@ -94,7 +94,7 @@ function loadNurcedata() {
 
         }
     };
-    obj.open("POST", "viewNurceArp.php", true);
+    obj.open("POST", "./attendence/viewNurceArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
@@ -116,7 +116,7 @@ function loadMinordata() {
 
         }
     };
-    obj.open("POST", "viewMinorArp.php", true);
+    obj.open("POST", "./attendence/viewMinorArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
@@ -247,7 +247,7 @@ function searchAttends(day,id) {
 
                 }
             };
-            obj.open("POST", "saveLeave.php", true);
+            obj.open("POST", "./attendence/saveLeave.php", true);
             obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             obj.send("leave=" + leave + "&type=" + type + "&rtype=" + reqType + "&nic=" + nic);
 
