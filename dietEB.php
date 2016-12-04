@@ -97,7 +97,9 @@
     padding: 20px;
     opacity: 1;
     z-index: 1500;
-    display: none;">
+    display: none;
+	border-top: 5px solid #2980b9;
+    border-bottom: 5px solid #2980b9;">
 				 
 				 <?php include 'report.php';?>
 				
@@ -114,7 +116,9 @@
     padding: 20px;
     opacity: 1;
     z-index: 1500;
-    display: none;">
+    display: none;
+	border-top: 5px solid #2980b9;
+    border-bottom: 5px solid #2980b9;">
 		 <form>
                         <head colspan=2><font size="+2">Select Menu:</font></head>
                         <center><table>
@@ -169,7 +173,9 @@
     padding: 20px;
     opacity: 0.99;
     display: none;
-    z-index: 1500;">
+    z-index: 1500;
+border-top: 5px solid #2980b9;
+    border-bottom: 5px solid #2980b9;">
 	  		<?php include 'dui.php';?>
 		
                    
@@ -184,7 +190,9 @@
     padding: 20px;
     opacity: 0.99;
     display: none;
-    z-index: 1500;">
+    z-index: 1500;
+	border-top: 5px solid #2980b9;
+    border-bottom: 5px solid #2980b9;">
 	 <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
     <label>Letter ID</label>
