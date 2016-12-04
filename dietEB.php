@@ -176,7 +176,7 @@
     z-index: 1500;
 border-top: 5px solid #2980b9;
     border-bottom: 5px solid #2980b9;">
-	  		<?php include 'dui.php';?>
+	  		<?php //include 'dui.php';?>
 		
                    
  	</div>
