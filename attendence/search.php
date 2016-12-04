@@ -1,7 +1,7 @@
 <?php
 
-include 'datetime.php';
-include 'connect.php';
+include 'attendence/datetime.php';
+include 'attendence/connect.php';
 
 $NIC = $_POST['nic'];
 $DAY = $_POST['day'];
