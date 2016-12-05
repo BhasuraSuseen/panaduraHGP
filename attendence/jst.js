@@ -57,13 +57,12 @@ function loadDrdata() {
 
 function loadEbdata() {
     checkBrowser();
-    alert("enwa eb");
-   
+       
     obj.onreadystatechange = function() {
 
 
        if (obj.readyState === 4 && obj.status === 200) {
-            alert(obj.responseText);
+            //alert(obj.responseText);
             var text = obj.responseText;
 
             document.getElementById('st1').innerHTML = JSON.parse(text).a;
