@@ -143,7 +143,7 @@ if($date4 == "Monday"){
 							}
 						
 							
-							$sql4 = "UPDATE report SET total = mon_br";
+							$sql4 = "UPDATE report SET lastenter= 'Monday Breakfast' ,total = mon_br";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -203,7 +203,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 								}
 							} 
 							
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu";
+							$sql4 = "UPDATE report SET lastenter= 'Monday Lunch' ,total = mon_br + mon_lu";
 							
 								if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -260,7 +260,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 								}
 							} 
 							
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di";
+							$sql4 = "UPDATE report SET lastenter= 'Monday Dinner', total = mon_br + mon_lu + mon_di";
 							
 								if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -357,7 +357,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							} 
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br";
+							$sql4 = "UPDATE report SET lastenter= 'Tuesday Breakfast', total = mon_br + mon_lu + mon_di + tue_br";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -413,7 +413,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 								}
 							}
 							
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu";
+							$sql4 = "UPDATE report SET lastenter= 'Tuesday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -469,7 +469,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							} 
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di";
+							$sql4 = "UPDATE report SET lastenter= 'Tuesday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -533,7 +533,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							} 
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br";
+							$sql4 = "UPDATE report SET lastenter= 'Wednesday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -589,7 +589,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							} 
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu";
+							$sql4 = "UPDATE report SET lastenter= 'Wednesday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -644,7 +644,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							} 
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di";
+							$sql4 = "UPDATE report SET lastenter= 'Wednesday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -703,7 +703,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							} 
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br";
+							$sql4 = "UPDATE report SET lastenter= 'Thursday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -758,7 +758,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu";
+							$sql4 = "UPDATE report SET lastenter= 'Thursday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -812,7 +812,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di";
+							$sql4 = "UPDATE report SET lastenter= 'Thursday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -872,7 +872,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br";
+							$sql4 = "UPDATE report SET lastenter= 'Friday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -927,7 +927,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu";
+							$sql4 = "UPDATE report SET lastenter= 'Friday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -980,7 +980,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_di";
+							$sql4 = "UPDATE report SET lastenter= 'Friday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_di";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -1041,7 +1041,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di +sat_br";
+							$sql4 = "UPDATE report SET lastenter= 'Saturday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di +sat_br";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -1096,7 +1096,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu ";
+							$sql4 = "UPDATE report SET lastenter= 'Saturday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu ";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -1149,7 +1149,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di";
+							$sql4 = "UPDATE report SET lastenter= 'Saturday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -1174,7 +1174,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 <?php if($date4 == "Sunday"){
 	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
  if($date == $date3 && $meal == "Breakfast"){?>
-			<table align="center" style="width: 60%">
+			<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -1210,7 +1210,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di +sat_br + sat_lu + sat_di+ sun_br";
+							$sql4 = "UPDATE report SET lastenter= 'Sunday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di +sat_br + sat_lu + sat_di+ sun_br";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -1220,19 +1220,16 @@ if($date == $date3 && $meal == "Dinner"){?>
 							
 							if($result != 0){
 							?> 
-				
 					<tr>
-						
                             <td align="left"><?php echo $sb[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$sb[7]; ?> </td> </tr>
+                            <td align="left"><?php echo $result.' '.$sb[7]; ?></td></tr>
 				<?php }
 				
 		 endwhile;?>
-				</table>
-			
+			</table>
  <?php }
 if($date == $date3 && $meal == "Lunch"){?>
-					<table align="center" style="width: 60%">
+					<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -1268,7 +1265,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di + sun_br + sun_lu";
+							$sql4 = "UPDATE report SET lastenter= 'Sunday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di + sun_br + sun_lu";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
@@ -1285,7 +1282,7 @@ if($date == $date3 && $meal == "Lunch"){?>
 					 </table>
 <?php }
 if($date == $date3 && $meal == "Dinner"){?>
-		<table align="center" style="width: 60%">
+		<table align="left" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -1321,7 +1318,7 @@ if($date == $date3 && $meal == "Dinner"){?>
 									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 								}
 							}
-							$sql4 = "UPDATE report SET total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di + sun_br + sun_lu + sun_di";
+							$sql4 = "UPDATE report SET lastenter= 'Sunday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di + sun_br + sun_lu + sun_di";
 							
 							if (mysqli_query($conn, $sql4)) {
 									//echo "New record created successfully";
