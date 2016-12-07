@@ -250,7 +250,7 @@ border-top: 5px solid #2980b9;
 		<div class="middle_right" style="float: left;
         height:90%;
 	width:40%;">
-			<center><label style="background-color: #263238" align="center" id="lb1" ></label></center><br>
+			<center><label style="background-color: #455A64" align="center" id="lb1" ></label></center><br>
 		</div>
 	</div>
                 
