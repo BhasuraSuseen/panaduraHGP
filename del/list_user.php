@@ -1,13 +1,13 @@
 <?php
-require "../connect.php";
+
 $result = mysqli_query($conn,"SELECT * FROM users");
-session_start();
+
 ?>
 <html>
 <head>
 <title>Users List</title>
 <link rel="stylesheet" type="text/css" href="styles.css" />
-<script language="javascript" src="users.js" type="text/javascript"></script>
+<script language="javascript" src="del/users.js" type="text/javascript"></script>
 </head>
 <body>
 <form name="frmUser" method="post" action="">
@@ -36,7 +36,7 @@ $classname="oddRow";
 <td><?php echo $row["ADMIN"]; ?></td>
 <td><?php echo $row["NIC_NO"]; ?></td>
 <td><?php echo $row["EB"]; ?></td>
-<td><?php echo"<a href='edit_user.php?id=". $row['NIC_NO'] ."'>Edit</a>" ; ?></td>
+<td><?php echo"<a class='link' href='del/edit_user.php?id=". $row['NIC_NO'] ."'>Edit</a>" ; ?></td>
 </tr>
 <?php
 $i++;

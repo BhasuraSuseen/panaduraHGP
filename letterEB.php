@@ -4,6 +4,7 @@
 <head>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
+<link rel="stylesheet" type="text/css" href="del/styles.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script  src="http://d3js.org/d3.v3.min.js"></script>
@@ -527,7 +528,9 @@
 						?>
             </div>
 	</div>
-     
+     <div>
+       <?php include "del_let/list_letter.php"; ?>
+     </div>
         <script>
          $(document).ready(function(){
             $('#open_mail_1').click(function(){

@@ -1,13 +1,13 @@
 <?php
-require "../connect.php";
+
 $result = mysqli_query($conn,"SELECT * FROM letter");
-session_start();
+
 ?>
 <html>
 <head>
 <title>Letters List</title>
-<link rel="stylesheet" type="text/css" href="styles.css" />
-<script language="javascript" src="users.js" type="text/javascript"></script>
+
+<script language="javascript" src="del_let/users.js" type="text/javascript"></script>
 </head>
 <body>
 <form name="frmUser" method="post" action="">

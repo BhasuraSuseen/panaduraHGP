@@ -3,6 +3,7 @@
 <head>
 <meta charset=utf-8 />
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
+  <link rel="stylesheet" type="text/css" href="del/styles.css" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="attendence/jst.js"></script>
@@ -153,6 +154,7 @@ require "connect.php";
 	
 	
          <div id="pop_background"></div>
+
      		<div id="pop_box_hr_1">
 				  <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
 						<table>
@@ -313,7 +315,9 @@ else{
 }
 ?>
   </div>
-     
+     <div>
+         <?php include "del/list_user.php"  ?>
+         </div>
         <script>
          $(document).ready(function(){
             $('#open_hr_1').click(function(){
