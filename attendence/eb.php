@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="middle_left">
                     <div style="height: 650px">
-                       
+                       Tis is test...
                             <?php include 'ebatt.php'; ?>
                        
                     </div>
