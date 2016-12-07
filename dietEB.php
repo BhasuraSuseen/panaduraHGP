@@ -89,7 +89,34 @@
 	
 	
          <div id="pop_background"></div>
-     		<div id="pop_box_hr_1">
+     		<div id="pop_box_hr_1" style="position: absolute;
+    background:  #ECEFF1;
+    font-size: 0.9em;
+    width: 60%;
+	height:150%;
+    margin: 5% 0 0 5%;
+    padding: 20px;
+    opacity: 1;
+    z-index: 1500;
+    display: none;">
+	
+				 <center>
+                    <button style="background-color: #263238;
+                            outline: none;
+                            border: none;
+                            width: 100px;
+                            font-size: 0.9em;
+                            padding: 0.4em;
+                            margin-bottom: 0.8em;  
+                            color: white;" onclick="report(document.getElementById('dy').value, document.getElementById('type').value)">Get report</button>
+                    
+                            <label  style="width: 100%" id="lbpop1"></label><br></center>
+				 <?php include 'report.php';?>
+				
+				
+					
+
+     			</div>
 				 
 				
 					
