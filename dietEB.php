@@ -88,7 +88,7 @@
 	
 	
          <div id="pop_background"></div>
-     		<div id="pop_box_hr_1" 
+     		<div id="pop_box_hr_1">
 				 
 				
 					
