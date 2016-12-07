@@ -74,7 +74,8 @@ require "connect.php";
             ?>
 	<div class="all_container">
 		<div class="left_side_bar" >
-            		<div class="left_side_bar_top">                   
+            		<div class="left_side_bar_top">
+				       Tis is test...
             		</div>
             		<div class="left_side_bar_down" >
                 		<ul id="nav">
