@@ -94,7 +94,7 @@
                 </div>
                 <div class="middle_right">
                     <label id="lb1"></label><br>
-
+			wargrhjkkiiu
 
                 </div>
                 <div id="pop_background"></div>
