@@ -95,7 +95,7 @@ require "connect.php";
 					 <li id="open_hr_2" title="Add New Employee" style="border-left: 4px solid #2980b9;">  
 						<i> <img src="images/photo.png" style="width:80%;height:auto;opacity: 0.6;padding: 5px;"></i>
 					</li>
-           <li id="open_hr_2" title="Get Employee Details" style="border-left: 4px solid #2980b9;">  
+           <li id="open_hr_3" title="View and Edit Employee Details" style="border-left: 4px solid #2980b9;">  
             <i> <img src="images/user_refresh.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
           </li>
 				</ul>
@@ -197,7 +197,7 @@ require "connect.php";
          				<option name="ebno" value="8">Type 4</option>
       					</select>  </td></tr>
 
-						<tr><td colspan=2 align="center">
+						<tr><td colspan=2 align="center"><br>
 						<input type="submit" value="Add new user" name="submit">
 						<input type="reset" value="Reset"></td>
 						</tr></table>
