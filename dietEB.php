@@ -93,12 +93,14 @@
     background:  #ECEFF1;
     font-size: 0.9em;
     width: 60%;
-	height:150%;
+    height:150%;
     margin: 5% 0 0 5%;
     padding: 20px;
     opacity: 1;
     z-index: 1500;
-    display: none;">
+    display: none;
+    border-top: 5px solid #2980b9;
+    border-bottom: 5px solid #2980b9;">
 	
 				 <center>
                     <button style="background-color: #263238;
@@ -248,7 +250,7 @@ border-top: 5px solid #2980b9;
 		<div class="middle_right" style="float: left;
         height:90%;
 	width:40%;">
-			<center><label align="center" id="lb1"></label></center><br>
+			<center><label style="background-color: #263238" align="center" id="lb1" ></label></center><br>
 		</div>
 	</div>
                 
