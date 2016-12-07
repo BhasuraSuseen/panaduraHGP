@@ -100,8 +100,20 @@
     display: none;
 	border-top: 5px solid #2980b9;
     border-bottom: 5px solid #2980b9;">
+			
+			<center>
+                    <button style="background-color: #263238;
+                            outline: none;
+                            border: none;
+                            width: 100px;
+                            font-size: 0.9em;
+                            padding: 0.4em;
+                            margin-bottom: 0.8em;  
+                            color: white;" onclick="report(document.getElementById('dy').value, document.getElementById('type').value)">Get report</button>
+                    
+                            <label  style="width: 100%" id="lbpop1"></label><br></center>
 				 
-				 <?php include 'report.php';?>
+				 <?php //include 'report.php';?>
 				
 				
 					
@@ -411,6 +423,25 @@ border-top: 5px solid #2980b9;
                                 }
                             };
                             obj.open("POST", "menu_view.php", true);
+                            obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                            obj.send("day=" + day + "&type=" + type);
+                        }
+                        catch (err) {
+                        }
+                    }
+	 function report(day, type) {
+                        try {
+//                            alert(day);
+//                            alert(type);
+                            checkBrowser();
+                            obj.onreadystatechange = function () {
+                            //alert(obj.responseText);
+                                if (obj.readyState === 4 && obj.status === 200) {
+                                    var text1 = obj.responseText;
+                                    document.getElementById('lbpop1').innerHTML = text1;
+                                }
+                            };
+                            obj.open("POST", "report.php", true);
                             obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                             obj.send("day=" + day + "&type=" + type);
                         }
