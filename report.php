@@ -2,8 +2,10 @@
 include './datetime.php';
 include './connect.php';
 $a1=mysqli_query($conn,"SELECT item.Item_name,unit1, report.total  FROM item INNER JOIN report ON item.Item_id = report.Item_id  WHERE total <> 0");?>
+	
 	<center>
-	<table align="left" style="width: 40%">
+	
+	<table align="center" style="background-color: #CFD8DC;width: 45%"">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
@@ -19,4 +21,6 @@ $a1=mysqli_query($conn,"SELECT item.Item_name,unit1, report.total  FROM item INN
 		 endwhile; ?>
 			</table>
 			</center>
+
+
 
