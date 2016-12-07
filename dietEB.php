@@ -113,8 +113,7 @@
                     
                             <label  style="width: 100%" id="lbpop1"></label><br></center>
 				 
-				 <?php //include 'report.php';?>
-				
+				 
 				
 					
 
