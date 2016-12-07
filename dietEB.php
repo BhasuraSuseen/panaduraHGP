@@ -59,7 +59,7 @@
 			
 			
             <div id="middle_left" >
-		 afdghghjhkkih
+		 
                
 
             </div>
