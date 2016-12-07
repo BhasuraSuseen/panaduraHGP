@@ -16,7 +16,7 @@
 <body>
 
 	<div class="all_container">
-		this is test
+		
 		<div class="left_side_bar" >
             		<div class="left_side_bar_top">                   
             		</div>
