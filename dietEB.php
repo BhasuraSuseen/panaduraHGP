@@ -265,6 +265,7 @@ border-top: 5px solid #2980b9;
     z-index: 1500;
 	border-top: 5px solid #2980b9;
     border-bottom: 5px solid #2980b9;">
+		<center>
 	 <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
     <label>Letter ID</label>
@@ -287,6 +288,7 @@ border-top: 5px solid #2980b9;
       <input type="submit" name="submitt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
   </form>
+		</center>
   <?php
    if(isset($_POST["submitt"])){
 
