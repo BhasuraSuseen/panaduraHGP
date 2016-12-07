@@ -9,7 +9,7 @@ $b = mysqli_fetch_array($b1)
 ?>
 	
 	<center>
-	<h3>Monday Breakfast to <?php echo $b[0];?> Diet Report</h3>
+	<h3>Monday Breakfast to <?php echo $b[0];?> Diet Report</h3><br><br>
 	<table align="center" style="background-color: #CFD8DC;width: 45%"">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
