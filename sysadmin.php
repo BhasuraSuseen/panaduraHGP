@@ -76,7 +76,7 @@ require "connect.php";
 	<div class="all_container">
 		<div class="left_side_bar" >
             		<div class="left_side_bar_top">
-				       Tis is test...
+				      
             		</div>
             		<div class="left_side_bar_down" >
                 		<ul id="nav">
@@ -105,7 +105,7 @@ require "connect.php";
 		<div class="container">
 		    <div class="middle_top">
 			<div class="middle_top_left">
-				       Tis is test...
+				
 				<img src="images/oms4.png"  style= "padding: 5px;">
 			</div>
 			<div class="middle_top_middle">			
