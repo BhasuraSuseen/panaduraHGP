@@ -93,10 +93,15 @@
                                     </table></td>
 	
 	  	<?php }else if($type == "c_s2"){ ?>
-		 	<table style="background-color: #CFD8DC;width: 60%" >
+		 	<table style="width: 60%"><tr><td style="width:50%">
+            
+            <table style="width: 100%">
+                <tr><td style="background-color: white">
+
+                        <table style="background-color: #CFD8DC;width: 100%" >
                             <tr><td align="left"><b>Children S2</b></td></tr></table>
-                        <!--elanga table eka(2) metnta-->
-                        <table align="left" style="background-color: #ECEFF1;width: 60%">
+                        
+                        <table align="left" style="background-color: #ECEFF1;width: 100%">
                             <tr><td align="left"><b>Breakfirst</b></td>
                                 <td align="left"><b>Lunch</b></td>
                                 <td align="left"><b>Dinner</b></td></tr>
@@ -104,7 +109,6 @@
                                         <tr>
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
-
                                         </tr>
                                         <?php while ($tcs2b = mysqli_fetch_array($thuc_s2br)):; ?>
                                         <tr>
@@ -116,6 +120,7 @@
 
 
                                     </table></td>
+                            
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
                                             <td align="left"><b>Item Name</b></td>
@@ -131,7 +136,7 @@
 
 
                                     </table></td>
-
+                                    
 
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
@@ -147,8 +152,6 @@
                                         <?php endwhile; ?>
 
 
-                                    </table></td>
-	 	
 					
 		 	
 		<?php } else if( $type == "c_s3") { ?>
