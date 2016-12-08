@@ -22,7 +22,7 @@
                 <div class="attmiddle_right">
                     <!--<button class="button button1">GA</button>-->
                     <div class="attrecordstyl">
-                               This is test...
+                            
                         <table border="0" style="width: 100%">
                             
                             <tr><td style="width:70%">Employees Present :</td><td><strong id="st1"></strong></td></tr>
