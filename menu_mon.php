@@ -150,7 +150,6 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
 
 
                                     </table></td>
-	 	
 					
 		 	
 		<?php } else if($type == "c_s3") { ?>
