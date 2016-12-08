@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="attendence/attend styl.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
         <?php include 'datetime.php';?>
    
     </head>
@@ -9,19 +9,19 @@
         
         
         
-        <div class="all_container">
+        <div class="attall_container">
 
-            <div class="container">
-                <div class="middle_left">
+            <div class="attcontainer">
+                <div class="attmiddle_left">
                     <div style="height: 650px">
                 
                             <?php include 'ebatt.php'; ?>
                        
                     </div>
                 </div>
-                <div class="middle_right">
+                <div class="attmiddle_right">
                     <!--<button class="button button1">GA</button>-->
-                    <div class="recordstyl">
+                    <div class="attrecordstyl">
                                This is test...
                         <table border="0" style="width: 100%">
                             
@@ -37,7 +37,7 @@
 
                         <table border="0" style="width: 100%">
                             <tr>Employee came</tr>
-                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select class="styled-select" style="width:30%" id="day">
+                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select class="attstyled-select" style="width:30%" id="day">
 
 
                                         <?php
@@ -58,10 +58,10 @@
                                 </td></tr>
                             <tr><td style="width:30%">Search by ID :</td><td><input type="text" id="serId"></td></tr>
                             <tr><td style="width:30%">Status:</td><td><label id="st6"></label></td></tr>
-                            <tr><td><button class="black_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
+                            <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                            <button class="black_btn" style="width: 150px" type="submit" onclick="callme();">Download</button>
+                            <button class="attblack_btn" style="width: 150px" type="submit" onclick="callme();">Download</button>
 
 
                     </div>
