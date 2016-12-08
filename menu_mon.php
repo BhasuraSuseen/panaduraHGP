@@ -101,7 +101,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
                 <tr><td style="background-color: white">
 
                         <table style="background-color: #CFD8DC;width: 100%" >
-                            <tr><td align="left"><b>Children S1</b></td></tr></table>
+                            <tr><td align="left"><b>Children S2</b></td></tr></table>
                         
                         <table align="left" style="background-color: #ECEFF1;width: 100%">
                             <tr><td align="left"><b>Breakfirst</b></td>
@@ -112,10 +112,10 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($mcs1b = mysqli_fetch_array($monc_s1br)):; ?>
+                                        <?php while ($mcs2b = mysqli_fetch_array($monc_s2br)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $mcs1b[0]; ?></td>
-                                            <td align="left"><?php echo $mcs1b[1].' '.$mcs1b[2]; ?></td>
+                                            <td align="left"><?php echo $mcs2b[0]; ?></td>
+                                            <td align="left"><?php echo $mcs2b[1].' '.$mcs2b[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -128,10 +128,10 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($mcs1l = mysqli_fetch_array($monc_s1lu)):; ?>
+                                        <?php while ($mcs2l = mysqli_fetch_array($monc_s2lu)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $mcs1l[0]; ?></td>
-                                            <td align="left"><?php echo $mcs1l[1].' '.$mcs1l[2]; ?></td>
+                                            <td align="left"><?php echo $mcs2l[0]; ?></td>
+                                            <td align="left"><?php echo $mcs2l[1].' '.$mcs2l[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
@@ -145,10 +145,10 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
                                         </tr>
-                                        <?php while ($mcs1d = mysqli_fetch_array($monc_s1di)):; ?>
+                                        <?php while ($mcs2d = mysqli_fetch_array($monc_s2di)):; ?>
                                         <tr>
-                                            <td align="left"><?php echo $mcs1d[0]; ?></td>
-                                            <td align="left"><?php echo $mcs1d[1].' '.$mcs1d[2]; ?></td>
+                                            <td align="left"><?php echo $mcs2d[0]; ?></td>
+                                            <td align="left"><?php echo $mcs2d[1].' '.$mcs2d[2]; ?></td>
                                             
                                         </tr>
                                         <?php endwhile; ?>
