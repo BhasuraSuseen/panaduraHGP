@@ -95,10 +95,15 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
                                     </table></td>
 	
 	  	<?php }else if($type == "c_s2"){ ?>
-		 	<table style="background-color: #CFD8DC;width: 60%" >
+		 	<table style="width: 60%"><tr><td style="width:50%">
+            
+            <table style="width: 100%">
+                <tr><td style="background-color: white">
+
+                        <table style="background-color: #CFD8DC;width: 100%" >
                             <tr><td align="left"><b>Children S2</b></td></tr></table>
-                        <!--elanga table eka(2) metnta-->
-                        <table align="left" style="background-color: #ECEFF1;width: 60%">
+                        
+                        <table align="left" style="background-color: #ECEFF1;width: 100%">
                             <tr><td align="left"><b>Breakfirst</b></td>
                                 <td align="left"><b>Lunch</b></td>
                                 <td align="left"><b>Dinner</b></td></tr>
@@ -106,7 +111,6 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
                                         <tr>
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
-
                                         </tr>
                                         <?php while ($scs2b = mysqli_fetch_array($satc_s2br)):; ?>
                                         <tr>
@@ -118,6 +122,7 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
 
 
                                     </table></td>
+                            
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
                                             <td align="left"><b>Item Name</b></td>
@@ -133,7 +138,7 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
 
 
                                     </table></td>
-
+                                    
 
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
