@@ -64,6 +64,7 @@
   }
 
 </script>
+<title>System Administrator</title>>
 </head>
 <body>
 <?php 

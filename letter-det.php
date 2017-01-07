@@ -5,16 +5,16 @@
              if(!empty($_POST["keyword"])){
 
               $letid=$_POST["keyword"];
-             require_once "connect.php";  
+             require"connect.php";  
              $letdetailsq=mysqli_query($conn,"SELECT * FROM letter WHERE letter_id='$letid'");
              $array=mysqli_fetch_assoc($letdetailsq);
-             mysqli_close($conn); 
-             echo "<br><label>RECEIVED DETAILS<label><br>";
-            echo "<br><label>Letter ID : <label>". $array["letter_id"]."<br>";
-             echo "<label>Date recived : <label>". $array["date"]."<br>";
-             echo "<label>Subject : <label>". $array["subject"]."<br>";
-             echo "<label>Recived from : <label>". $array["address"]."<br>";
-             echo "<label>Type : <label>". $array["type"]."<br>";
+            
+             echo "<br><label><b><u>RECEIVED DETAILS</u></b><label><br>";
+            echo "<br><label><b>Letter ID : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["letter_id"]."<br>";
+             echo "<label><b>Date recived : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["date"]."<br>";
+             echo "<label><b>Subject : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["subject"]."<br>";
+             echo "<label><b>Received from : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["address"]."<br>";
+             echo "<label><b>Type : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["type"]."<br>";
              $letter_id = $array["letter_id"];
              $date = $array["date"];
              $subject = $array["subject"];
@@ -25,27 +25,27 @@
              $AO_to_LC = "";
 
              if(is_null($array['mcms'])){
-              echo "<label>Letter Clerk to Medical Superintendent date : <label>Letter not forwarded<br>";
+              echo "<label><b>Letter Clerk to Medical Superintendent date : </b><label><br>&emsp;&emsp;&emsp;&emsp;Letter not forwarded<br>";
                $LC_to_MS = "";
              }
              else{
-              echo "<label>Letter Clerk to Medical Superintendent date : <label>". $array["mcms"]."<br>";
+              echo "<label><b>Letter Clerk to Medical Superintendent date : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["mcms"]."<br>";
               $LC_to_MS = $array["mcms"];
              }
               if(is_null($array['msao'])){
-              echo "<label>Medical Superintendent to Admin Officer date : <label>Letter not forwarded<br>";
+              echo "<label><b>Medical Superintendent to Admin Officer date : </b><label><br>&emsp;&emsp;&emsp;&emsp;Letter not forwarded<br>";
               $MS_to_AO="";
              }
              else{
-             echo "<label>Medical Superintendent to Admin Officer date : <label>". $array["msao"]."<br>";
+             echo "<label><b>Medical Superintendent to Admin Officer date : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["msao"]."<br>";
               $MS_to_AO = $array["msao"];
              }
               if(is_null($array['aomc'])){
-             echo "<label>Admin Officer to Letter Clerk date : <label>Letter not forwarded<br>";
+             echo "<label><b>Admin Officer to Letter Clerk date : </b><label><br>&emsp;&emsp;&emsp;&emsp;Letter not forwarded<br>";
               $AO_to_LC = "";
              }
              else{
-             echo "<label>Admin Officer to Letter Clerk date : <label>". $array["aomc"]."<br>";
+             echo "<label><b>Admin Officer to Letter Clerk date : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["aomc"]."<br>";
               $AO_to_LC = $array["aomc"];
              }
              
@@ -94,21 +94,21 @@
                 }
               }
              }
-            echo "<lable>Current Location : </label>".$current_location;
+            echo "<lable><b>Current Location : </b></label><br>&emsp;&emsp;&emsp;&emsp;".$current_location;
             }
-            echo "<br><br><br><label>REPLY DETAILS<label><br>";
-            require_once "connect.php";
+            echo "<br><br><br><label><b><u>REPLY DETAILS</u></b><label><br>";
+          
             $letreply=mysqli_query($conn,"SELECT * FROM letter_rep WHERE letter_id='$letid'");
             $array1=mysqli_fetch_assoc($letreply);
             mysqli_close($conn); 
             if($array1 > 0){
-              echo "<br><label>Reply Letter ID : <label>". $array1["rep_id"]."<br>";
-             echo "<label>Date replied : <label>". $array1["date"]."<br>";
-             echo "<label>Subject : <label>". $array1["subject"]."<br>";
-             echo "<label>Reply Address : <label>". $array1["address"]."<br>";
-             echo "<label>Type : <label>". $array1["type"]."<br>";
+              echo "<br><label><b>Reply Letter ID : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["rep_id"]."<br>";
+             echo "<label><b>Date replied : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["date"]."<br>";
+             echo "<label><b>Subject : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["subject"]."<br>";
+             echo "<label><b>Reply Address : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["address"]."<br>";
+             echo "<label><b>Type : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["type"]."<br>";
            }else{
-            echo "<br><label>NO REPLIES YET<label><br>";
+            echo "<br><label><b>NO REPLIES YET</b><label><br>";
            }
             
             
