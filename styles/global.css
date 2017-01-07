@@ -264,6 +264,18 @@ ul#nav li:hover{
     display: none;
     z-index: 1000;       
 }
+#pop_box_mail_1{  
+    position: absolute;
+    background: #ECEFF1;
+    font-size: 0.9em;
+    width: 54%;
+    margin: 5% 0 0 5%;
+    padding: 20px;
+    opacity: 1;
+    z-index: 1500;
+    display: none;
+    
+}
 #pop_box_hr_1{  
     position: absolute;
     background: #ECEFF1;
