@@ -64,7 +64,7 @@
   }
 
 </script>
-<title>System Administrator</title>>
+<title>System Administrator</title>
 </head>
 <body>
 <?php 
@@ -153,7 +153,7 @@ require "connect.php";
           </div> 
             </div>
 	
-	
+	</div>
          <div id="pop_background"></div>
 
      		<div id="pop_box_hr_1">
