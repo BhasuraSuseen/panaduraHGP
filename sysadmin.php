@@ -293,13 +293,6 @@ require "connect.php";
 		      <input type="submit" name="submitt" value="Enter Date">
 		      <input type="reset" name="reset" value="Reset">
 		  </form>			
- 	</div>
-
-
-	
-	
-  <div>
-  
           <?php
            if(isset($_POST["submitt"])){
             if(isset($_POST['lid'])){
