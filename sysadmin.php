@@ -269,7 +269,7 @@ require "connect.php";
      	<div id="pop_box_att_1">
 	  	<?php include 'attendence/eb.php'; ?>			
  	</div>
-	<div id="pop_box_Letter_ebtoeb_1">
+	<div id="pop_box_mail_1">
 	  	  <form name="mctoeb" action="sysadmin.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
   <label>Letter ID</label>
@@ -336,6 +336,11 @@ else{
 	    $('#open_hr_2').click(function(){
                 $('#pop_background').fadeIn();
                 $('#pop_box_hr_2').fadeIn();
+                return false;
+            });
+	    $('#open_mail_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_mail_1').fadeIn();
                 return false;
             });
             $('#pop_background').click(function(){
