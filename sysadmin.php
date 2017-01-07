@@ -220,7 +220,7 @@ require "connect.php";
      			</div>
 	<div id="pop_box_hr_2">
 		<a href="#"> pop box hr2</a>
-		<div id="pop_box_hr_data_record_left">
+		  <div id="pop_box_hr_data_record_left">
                  <form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
                     <input type="text" name="nic" placeholder="NIC NO ">
                     Select Employee photo to upload:
@@ -241,8 +241,7 @@ require "connect.php";
                     
                     <input type="text" name="etype" placeholder="Employee type">
                     
-             </div>
-             <div id="pop_box_hr_data_record_right">
+             
                     First Employment Date
                     <input type="Date" name="fedate" placeholder="FE Date ">
                     Employment Commencement Date
@@ -264,7 +263,7 @@ require "connect.php";
                 <iframe class="iframehr" name="iframehr"></iframe>
 
 			<!--?php include 'employee_hr/hr.php'; ?-->
- 	</div>
+ 	    </div>
 	</div>
 	
      	<div id="pop_box_att_1">
@@ -295,31 +294,30 @@ require "connect.php";
 		      <input type="reset" name="reset" value="Reset">
 		  </form>			
  	</div>
-	</div>
-	</div>
+
 
 	
 	
   <div>
   
-  <?php
-   if(isset($_POST["submitt"])){
-    if(isset($_POST['lid'])){
-$lid=$_POST['lid'];
-$datemceb=$_POST['datemceb'];
+          <?php
+           if(isset($_POST["submitt"])){
+            if(isset($_POST['lid'])){
+        $lid=$_POST['lid'];
+        $datemceb=$_POST['datemceb'];
 
-$sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
-mysqli_query($conn,$sql);
- $message= $lid. " was forwarded";
-  echo  "<script type='text/javascript'>alert('$message');</script>";
-}
-else{
-   $message="No letters to forward";
-  echo  "<script type='text/javascript'>alert('$message');</script>";
-  
-}
-}
-?>
+        $sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
+        mysqli_query($conn,$sql);
+         $message= $lid. " was forwarded";
+          echo  "<script type='text/javascript'>alert('$message');</script>";
+        }
+        else{
+           $message="No letters to forward";
+          echo  "<script type='text/javascript'>alert('$message');</script>";
+          
+        }
+        }
+        ?>
   </div>
      <div>
          <?php include "del/list_user.php"  ?>
