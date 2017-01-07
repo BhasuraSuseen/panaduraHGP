@@ -269,11 +269,8 @@ require "connect.php";
      	<div id="pop_box_att_1">
 	  	<?php include 'attendence/eb.php'; ?>			
  	</div>
-
-	</div>
-	
-  <div>
-    <form name="mctoeb" action="sysadmin.php" method="post" accept-charset="utf-8">
+	<div id="pop_box_Letter_ebtoeb_1">
+	  	  <form name="mctoeb" action="sysadmin.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
   <label>Letter ID</label>
       <?php  
@@ -295,7 +292,13 @@ require "connect.php";
       <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required>
       <input type="submit" name="submitt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
-  </form>
+  </form>			
+ 	</div>
+
+	</div>
+	
+  <div>
+  
   <?php
    if(isset($_POST["submitt"])){
     if(isset($_POST['lid'])){
