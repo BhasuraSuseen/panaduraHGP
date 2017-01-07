@@ -102,11 +102,20 @@
     border-top: 5px solid #2980b9;
     border-bottom: 5px solid #2980b9;">
 	
-				 <center>
+				 
                
                     
                             <label  style="width: 100%" id="lbpop1"></label><br></center>
 				 <?php include 'report.php';?>
+		
+		<center><button style="background-color: #263238;
+                            outline: none;
+                            border: none;
+                            width: 100px;
+                            font-size: 0.9em;
+                            padding: 0.4em;
+                            margin-bottom: 0.8em;  
+                            color: white;" >Download</button></center>
 				
 				
 					
