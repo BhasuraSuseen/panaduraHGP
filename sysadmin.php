@@ -81,7 +81,7 @@ require "connect.php";
             		</div>
             		<div class="left_side_bar_down" >
                 		<ul id="nav">
-					<li class="admin_panel_list" title="System User Update" style="border-left: 4px solid #455A64;">
+					<li id="admin_panel_list" title="System User Update" style="border-left: 4px solid #455A64;">
 						<i> <img src="images/users.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>                               
 					</li>
 					<a style="margin-top: -10px;"></a>
@@ -155,7 +155,9 @@ require "connect.php";
 	
 	</div>
          <div id="pop_background"></div>
-
+         <div id="pop_box_mail_2">   
+                <?php include "del/list_user.php"  ?>       
+         </div>
      		<div id="pop_box_hr_1">
 				  <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
 						<table>
@@ -218,6 +220,8 @@ require "connect.php";
 					</thead>
 
      			</div>
+          </div>
+  
 	<div id="pop_box_hr_2">
 		<a href="#"> pop box hr2</a>
 		  <div id="pop_box_hr_data_record_left">
@@ -265,34 +269,30 @@ require "connect.php";
 			<!--?php include 'employee_hr/hr.php'; ?-->
  	    </div>
 	</div>
-	
-     	<div id="pop_box_att_1">
-	  	<?php include 'attendence/eb.php'; ?>			
- 	</div>
-	<div id="pop_box_mail_1">
-	  	  <form name="mctoeb" action="sysadmin.php" method="post" accept-charset="utf-8">
-		    <b>Enter Letter EB to EB date</b><br>
-		  <label>Letter ID</label>
-		      <?php  
-		      $eb=$_SESSION['ebno'];
-		      $abcd=mysqli_query($conn,"select letter_id from letter where mceb is NULL and eb ='".$eb."'");
+	 <div id="pop_box_mail_1">
+        <form name="mctoeb" action="#" method="post" accept-charset="utf-8">
+        <b>Enter Letter EB to EB date</b><br>
+      <label>Letter ID</label>
+          <?php  
+          $eb=$_SESSION['ebno'];
+          $abcd=mysqli_query($conn,"select letter_id from letter where mceb is NULL and eb ='".$eb."'");
 
-		      if(mysqli_num_rows($abcd)>0){
-		      $select= '<select name="lid">';
-		      while($rsl=mysqli_fetch_array($abcd)){
+          if(mysqli_num_rows($abcd)>0){
+          $select= '<select name="lid">';
+          while($rsl=mysqli_fetch_array($abcd)){
 
-		      $select.='<option value="' .$rsl[0]. '">'.$rsl[0].'</option>';
-		       }
-		      }
-		       else{
-			$select='<select><option></option></select>';
-		      }
-		      echo $select;
-		      echo '</select>'?>
-		      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required>
-		      <input type="submit" name="submitt" value="Enter Date">
-		      <input type="reset" name="reset" value="Reset">
-		  </form>			
+          $select.='<option value="' .$rsl[0]. '">'.$rsl[0].'</option>';
+           }
+          }
+           else{
+      $select='<select><option></option></select>';
+          }
+          echo $select;
+          echo '</select>'?>
+          <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required>
+          <input type="submit" name="submitt" value="Enter Date">
+          <input type="reset" name="reset" value="Reset">
+      </form>     
           <?php
            if(isset($_POST["submitt"])){
             if(isset($_POST['lid'])){
@@ -312,11 +312,18 @@ require "connect.php";
         }
         ?>
   </div>
-     <div>
-         <?php include "del/list_user.php"  ?>
-         </div>
+     	<div id="pop_box_att_1">
+	  	<?php include 'attendence/eb.php'; ?>			
+ 	</div>
+
+    
         <script>
          $(document).ready(function(){
+            $('#admin_panel_list').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_mail_2').fadeIn();
+                return false;
+            });
             $('#open_hr_1').click(function(){
                 $('#pop_background').fadeIn();
                 $('#pop_box_hr_1').fadeIn();
@@ -343,6 +350,7 @@ require "connect.php";
                 $('#pop_box_att_1').fadeOut();
 		            $('#pop_box_hr_2').fadeOut();
 		    $('#pop_box_mail_1').fadeOut();
+        $('#pop_box_mail_2').fadeOut();
  
                 return false;
             });
