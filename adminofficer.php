@@ -131,12 +131,12 @@ header("Location:  index.php");
 		 <div id="pop_background"></div>
             <div id="pop_box_hr_1">
 			<form name="mstoao" action="adminofficer.php" method="post" accept-charset="utf-8">
-				<b>Enter MS to MC date</b></br>
+				<b>Enter MS to AO date</b></br>
 				  <label>Letter ID</label>
 						  <?php  
-				     			require_once "connect.php";
+				     			require "connect.php";
 							$abc=mysqli_query($conn,"select letter_id from letter where msao is NULL and mcms is NOT NULL");
-				     mysqli_close($conn); 
+				    
 		    		     if(mysqli_num_rows($abc)>0){
 				      $select= '<select name="select">';
 				      while($rs=mysqli_fetch_array($abc)){
@@ -163,7 +163,7 @@ header("Location:  index.php");
             if(isset($_POST['select'])){
 				$lid=$_POST['select'];
 				$datemsao=$_POST['datemsao'];
-				require_once "connect.php";
+				
 				$sql="UPDATE letter SET msao='$datemsao' WHERE letter_id='$lid'";
 				mysqli_query($conn,$sql);
 				$message= $lid. " was entered";

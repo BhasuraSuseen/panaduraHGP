@@ -76,7 +76,7 @@
              }
              else {
               if(is_null($array["aomc"])==FALSE){
-                $current_location="MC2";
+                $current_location="LC2";
               }
               else{
                 if(is_null($array["msao"])==FALSE){
@@ -87,7 +87,7 @@
                     $current_location="MS";
                   }
                   else{
-                    $current_location="MC";
+                    $current_location="LC1";
                   }
                 }
               }
