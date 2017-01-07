@@ -294,6 +294,8 @@ require "connect.php";
 		      <input type="reset" name="reset" value="Reset">
 		  </form>			
  	</div>
+	</div>
+	</div>
 
 	
 	
