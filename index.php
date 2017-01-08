@@ -30,7 +30,7 @@
 	session_start();
 	if(isset($_POST["submit"])){
 	$username=$_POST['username'];
-	$password=md5($_POST['password']);
+	$password=hash('sha256',$_POST['password']);
 	$sql = "SELECT USERNAME, ADMIN, EB FROM users WHERE USERNAME='".$username."' AND PASSWORD='".$password."'";
 	$result = mysqli_query($conn,$sql);
     $count =mysqli_fetch_array($result);

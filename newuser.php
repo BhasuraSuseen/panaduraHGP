@@ -30,9 +30,9 @@
   }
    $user = $_POST['user_name'];
    $id = $_POST['nic']; 
- 	 $pass = md5($_POST['password']);
+ 	 $pass = hash('sha256',$_POST['password']);
  	 $admin = $_POST['usertype'];
- 	 $passc = md5($_POST['passwordc']);
+ 	 $passc = hash('sha256',$_POST['passwordc']);
  	 if ($pass == $passc){
  	 /*checking if the user name is taken */
   $usernamecheck="select * from users where USERNAME='$user'";
