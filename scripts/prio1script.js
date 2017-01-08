@@ -1,18 +1,18 @@
 $(document).ready(function(){
   $('#open_mail_1').click(function(){
       $('#pop_background').fadeIn();
-      $('#pop_box_hr_1').fadeIn();
+      $('#pop_box_mail_1').fadeIn();
       return false;
   });
      $('#open_mail_2').click(function(){
      $('#pop_background').fadeIn();
-     $('#pop_box_hr_2').fadeIn();
+     $('#pop_box_mail_2').fadeIn();
       return false;
   });
   $('#pop_background').click(function(){
      $('#pop_background').fadeOut();
-     $('#pop_box_hr_1').fadeOut();
-     $('#pop_box_hr_2').fadeOut();
+     $('#pop_box_mail_1').fadeOut();
+     $('#pop_box_mail_2').fadeOut();
  
       return false;
   });

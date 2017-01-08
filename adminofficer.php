@@ -50,14 +50,14 @@ header("Location:  index.php");
           <div class="left_side_bar_top">                   
           </div>
           <div class="left_side_bar_down">
-              <ul id="nav" >
-                 <li title="Update letter details" id="open_mail_1" style="border-left: 4px solid #c62828;">  
-						<i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
-				</li>
-				 <li title="Delete letter" id="open_mail_2" style="border-left: 4px solid #c62828;">  
-						<i> <img src="images/maildel.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
-				</li>
-              </ul>
+            <ul id="nav" >
+                   <li title="Update letter details" id="open_mail_1" style="border-left: 4px solid #c62828;">  
+  						          <i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+  				        </li>
+          				 <li title="Delete letter" id="open_mail_2" style="border-left: 4px solid #c62828;">  
+          						  <i> <img src="images/maildel.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+          				</li>
+            </ul>
           </div>
       </div>
 
@@ -119,68 +119,77 @@ header("Location:  index.php");
               <ul id="nav">
                  <li title="Employee Details" id="open_hr_1" style="border-right: 4px solid #2980b9;"> 
 
-						<i> <img src="images/businessman-7.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
-					</li>
-					 <li title="Diet Report" id="open_diet_1" style="border-right: 4px solid #03C9A9;"> 
+      						<i> <img src="images/businessman-7.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+      					</li>
+      					 <li title="Diet Report" id="open_diet_1" style="border-right: 4px solid #03C9A9;"> 
 
-						<i> <img src="images/food-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
-					</li>
+      						<i> <img src="images/food-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
+      					</li>
               </ul>
           </div> 
           	</div>
 		 <div id="pop_background"></div>
-            <div id="pop_box_hr_1">
-			<form name="mstoao" action="adminofficer.php" method="post" accept-charset="utf-8">
-				<b>Enter MS to AO date</b></br>
-				  <label>Letter ID</label>
-						  <?php  
-				     			require "connect.php";
-							$abc=mysqli_query($conn,"select letter_id from letter where msao is NULL and mcms is NOT NULL");
-				    
-		    		     if(mysqli_num_rows($abc)>0){
-				      $select= '<select name="select">';
-				      while($rs=mysqli_fetch_array($abc)){
-				     
-				      $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
-				       }
-				      }
-				      else{
-				        $select='<select><option></option></select>';
-				      }
-				      echo $select;
-				      echo '</select>'
-					
-		    			?>
-				      <input type="date" name="datemsao" placeholder="Date from MS" required>
-				      <input type="submit" name="submitt" value="Enter Date">
-				      <input type="reset" name="reset" value="Reset">
-					</form>
-				
-				<?php
-				
-				 /*ms to ao date enter form */
-				  if(isset($_POST["submitt"])){
-            if(isset($_POST['select'])){
-				$lid=$_POST['select'];
-				$datemsao=$_POST['datemsao'];
-				
-				$sql="UPDATE letter SET msao='$datemsao' WHERE letter_id='$lid'";
-				mysqli_query($conn,$sql);
-				$message= $lid. " was entered";
-        echo  "<script type='text/javascript'>alert('$message');</script>";
-				}
-	      else{
-          $message="No letters to forward";
-          echo  "<script type='text/javascript'>alert('$message');</script>";
-  
-            }
+            <div id="pop_box_mail_1">
+            <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>
+                <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+        			<form name="mstoao" action="adminofficer.php" method="post" accept-charset="utf-8">
+        				<b>Enter MS to AO date</b></br>
+        				  <label>Letter ID</label>
+        						  <?php  
+        				     			require "connect.php";
+        							$abc=mysqli_query($conn,"select letter_id from letter where msao is NULL and mcms is NOT NULL");
+        				    
+        		    		     if(mysqli_num_rows($abc)>0){
+        				      $select= '<select name="select">';
+        				      while($rs=mysqli_fetch_array($abc)){
+        				     
+        				      $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
+        				       }
+        				      }
+        				      else{
+        				        $select='<select><option></option></select>';
+        				      }
+        				      echo $select;
+        				      echo '</select>'
+        					
+        		    			?>
+        				      <input type="date" name="datemsao" placeholder="Date from MS" required>
+        				      <input type="submit" name="submitt" value="Enter Date">
+        				      <input type="reset" name="reset" value="Reset">
+        					</form>
+        				
+        				<?php
+        				
+        				 /*ms to ao date enter form */
+        				  if(isset($_POST["submitt"])){
+                    if(isset($_POST['select'])){
+        				$lid=$_POST['select'];
+        				$datemsao=$_POST['datemsao'];
+        				
+        				$sql="UPDATE letter SET msao='$datemsao' WHERE letter_id='$lid'";
+        				mysqli_query($conn,$sql);
+        				$message= $lid. " was entered";
+                echo  "<script type='text/javascript'>alert('$message');</script>";
+        				}
+        	      else{
+                  $message="No letters to forward";
+                  echo  "<script type='text/javascript'>alert('$message');</script>";
+          
+                    }
 
-        }
-              mysqli_close($conn);  
-				?>
-				
-            </div>
+                }
+                      mysqli_close($conn);  
+        				?>
+        				
+          </div>
+          </div>
 	</div>
+  <div id="pop_box_mail_2">
+            <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER DELETE </a></div>
+                <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+                <?php include "del_let/list_letter.php"; ?>
+                </div>
+  </div>
     
         
  </body>

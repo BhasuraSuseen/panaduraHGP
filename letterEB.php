@@ -528,9 +528,7 @@
 						?>
             </div>
 	</div>
-     <div>
-       <?php include "del_let/list_letter.php"; ?>
-     </div>
+     
         <script>
          $(document).ready(function(){
             $('#open_mail_1').click(function(){
