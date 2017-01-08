@@ -155,75 +155,77 @@ require "connect.php";
 	
 	</div>
          <div id="pop_background"></div>
-         <div id="pop_box_mail_2">   
+         <div id="pop_box_mail_2">
+         <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">DELETE / EDIT USER PROFILE</a></div>   
                 <?php include "del/list_user.php"  ?>       
          </div>
      		<div id="pop_box_hr_1">
-				  <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
-						<table>
-						<thead>
-						<tr>
-						<th colspan=2>Enter New User Details </th></thead>
-						</tr>
-						<tr><td>User Name</td><td> 
-						<input type="text" name="user_name" size="20" required></td></tr>
-						<tr><td>Password</td><td> 
-						<input type="password" name="password" size="20" required></td></tr>
-						<tr><td>Confirm Password</td><td> 
-						<input type="password" name="passwordc" size="20" required></td></tr>
-						<tr><td>NIC</td><td>
-			      <?php  
-			      
-				  $abc=mysqli_query($conn,"select employee.NIC_NO from employee where employee.NIC_NO not in(select employee.NIC_NO from employee inner join users on employee.NIC_NO=users.NIC_NO)");
-			      if(mysqli_num_rows($abc)>0){
-			      $select= '<select name="nic">';
-			      while($rs=mysqli_fetch_array($abc)){
+        <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">ATTENDANCE / LEAVE</a></div>
+				          <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
+            <table>
+            <thead>
+            <tr>
+            <th colspan=2>Enter New User Details </th></thead>
+            </tr>
+            <tr><td>User Name</td><td> 
+            <input type="text" name="user_name" size="20" required></td></tr>
+            <tr><td>Password</td><td> 
+            <input type="password" name="password" size="20" required></td></tr>
+            <tr><td>Confirm Password</td><td> 
+            <input type="password" name="passwordc" size="20" required></td></tr>
+            <tr><td>NIC</td><td>
+            <?php  
+            
+          $abc=mysqli_query($conn,"select employee.NIC_NO from employee where employee.NIC_NO not in(select employee.NIC_NO from employee inner join users on employee.NIC_NO=users.NIC_NO)");
+            if(mysqli_num_rows($abc)>0){
+            $select= '<select name="nic">';
+            while($rs=mysqli_fetch_array($abc)){
 
-			      $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
-			       }
-			      }
+            $select.='<option value="' .$rs[0]. '">'.$rs[0].'</option>';
+             }
+            }
               else{
                             $select='<select><option></option></select>';
                           }
 
-			      echo $select;
-			      echo '</select>';
-			 
-			?>
-						</td></tr>
-						<tr><td>User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator<br>
-  						<input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<br><input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer<br>
-        				<input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<br><input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB<br>
-       					<input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet Clerk<br><input type="radio" name="usertype" value="NB" onclick="myFunction()">Normal Mail EB</td></tr>
-     					<tr><td>EB type</td><td> <select id="myText" name="ebno">
-         				<option name="ebno" value="5">Type 1</option>
-          				<option name="ebno" value="6">Type 2</option>
-          				<option name="ebno" value="7">Type 3</option>
-         				<option name="ebno" value="8">Type 4</option>
-      					</select>  </td></tr>
+            echo $select;
+            echo '</select>';
+       
+      ?>
+            </td></tr>
+            <tr><td>User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator<br>
+              <input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<br><input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer<br>
+                <input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<br><input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB<br>
+                <input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet Clerk<br><input type="radio" name="usertype" value="NB" onclick="myFunction()">Normal Mail EB</td></tr>
+              <tr><td>EB type</td><td> <select id="myText" name="ebno">
+                <option name="ebno" value="5">Type 1</option>
+                  <option name="ebno" value="6">Type 2</option>
+                  <option name="ebno" value="7">Type 3</option>
+                <option name="ebno" value="8">Type 4</option>
+                </select>  </td></tr>
 
-						<tr><td colspan=2 align="center"><br>
-						<input type="submit" value="Add new user" name="submit">
-						<input type="reset" value="Reset"></td>
-						</tr></table>
-						</form>
+            <tr><td colspan=2 align="center"><br>
+            <input type="submit" value="Add new user" name="submit">
+            <input type="reset" value="Reset"></td>
+            </tr></table>
+            </form>
    
 <!--script to disable and enable eb type drop down menu -->
-					<script>
-					function myFunction() {
-					    document.getElementById("myText").disabled = true;
-					}
-					function myFunction1(){
-					  document.getElementById("myText").disabled = false;
-					}
-					</script>
-					</thead>
+          <script>
+          function myFunction() {
+              document.getElementById("myText").disabled = true;
+          }
+          function myFunction1(){
+            document.getElementById("myText").disabled = false;
+          }
+          </script>
+          </thead>
 
      			</div>
-          </div>
+          
   
 	<div id="pop_box_hr_2">
-		<a href="#"> pop box hr2</a>
+  <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">RECORD EMPLOYEE DETALIS</a></div>
 		  <div id="pop_box_hr_data_record_left">
                  <form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
                     <input type="text" name="nic" placeholder="NIC NO ">
@@ -270,7 +272,7 @@ require "connect.php";
  	    </div>
 	</div>
 	 <div id="pop_box_mail_1">
-        <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">MAIL UPDATE</a></div>
+        <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; ">MAIL UPDATE</a></div>
         <form name="mctoeb" action="#" method="post" accept-charset="utf-8">
         <b>Enter Letter EB to EB date</b><br>
       <label>Letter ID</label>
