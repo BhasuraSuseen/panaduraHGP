@@ -117,7 +117,7 @@ header("Location:  index.php");
           </div>
           <div class="right_side_bar_down">
               <ul id="nav">
-                 <li title="Employee Details" id="open_hr_1" style="border-right: 4px solid #2980b9;"> 
+                 <li title="Employee Details" id="open_report_1" style="border-right: 4px solid #2980b9;"> 
 
       						<i> <img src="images/businessman-7.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
       					</li>
@@ -190,6 +190,23 @@ header("Location:  index.php");
                 <?php include "del_let/list_letter.php"; ?>
                 </div>
   </div>
+  <div id="pop_box_report_1">
+      
+                <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> EMPLOYEE DETAILS </a></div>
+                <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+                   <a>Sajini / Ramba<br> this is your part<br> do this in a separate file and include it here  <br> 1. There should be a dropdown of alll the emploees/ Or Search. <br>
+                                              2. Should be able to get a list of employees/ by selecting department.
+                                              <br>
+                                              3. Should be able to get employee details by searching.</a>
+                </div>    
+</div>
+<div id="pop_box_report_2">
+      
+                <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET REPORT </a></div>
+                <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+                   <a>Himashini / Ridmi<br> this is your part<br> do this in a separate file and include it here  <br> 1. Diet Report</a>
+                </div>    
+        </div>
     
         
  </body>
