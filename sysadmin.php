@@ -144,7 +144,7 @@ require "connect.php";
           </div>
           <div class="right_side_bar_down">
               <ul id="nav">
-                 <li id="open_hr_1" title="Employee Details" style="border-right: 4px solid #2980b9;"> 
+                 <li id="open_report_1" title="Employee Details" style="border-right: 4px solid #2980b9;"> 
 
             <i> <img src="images/businessman-7.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
           </li>
@@ -155,13 +155,31 @@ require "connect.php";
 	
 	</div>
          <div id="pop_background"></div>
+         <div id="pop_box_report_1">
+      
+                <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> EMPLOYEE DETAILS </a></div>
+                <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+                   <a>Sajini / Ramba<br> this is your part<br> do this in a separate file and include it here  <br> 1. There should be a dropdown of alll the emploees/ Or Search. <br>
+                                              2. Should be able to get a list of employees/ by selecting department.
+                                              <br>
+                                              3. Should be able to get employee details by searching.</a>
+                </div>    
+        </div>
          <div id="pop_box_mail_2">
           
-         <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> DELETE / EDIT USER PROFILE</a></div>  
-         <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">  
-                <?php include "del/list_user.php"  ?>       
+               <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> DELETE / EDIT USER PROFILE</a></div>  
+               <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">  
+                      <?php include "del/list_user.php"  ?>       
+               </div>
          </div>
-         </div>
+         <div id="pop_box_hr_3">
+      
+                <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> UPDATE EMPLOYEE DETAILS </a></div>
+                <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+                   <a>Sajini / Ramba<br> this is your part<br> do this in a separate file and include it here  <br> 1. There should be a dropdown of alll the emploees/ Or Search. <br>
+                                              2. Should be able to update selected Employees details.</a>
+                </div>    
+        </div>
      		<div id="pop_box_hr_1">
         
         <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> CREATE SYSTEM USER</a></div>
@@ -334,10 +352,16 @@ require "connect.php";
 	  	<?php include 'attendence/eb.php'; ?>	
       </div>		
  	</div>
+  
 
     
         <script>
          $(document).ready(function(){
+             $('#open_report_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_report_1').fadeIn();
+                return false;
+            });
             $('#admin_panel_list').click(function(){
                 $('#pop_background').fadeIn();
                 $('#pop_box_mail_2').fadeIn();
@@ -353,23 +377,30 @@ require "connect.php";
                 $('#pop_box_att_1').fadeIn();
                 return false;
             });
-	    $('#open_hr_2').click(function(){
+	         $('#open_hr_2').click(function(){
                 $('#pop_background').fadeIn();
                 $('#pop_box_hr_2').fadeIn();
                 return false;
             });
-	    $('#open_mail_1').click(function(){
+	          $('#open_mail_1').click(function(){
                 $('#pop_background').fadeIn();
                 $('#pop_box_mail_1').fadeIn();
                 return false;
             });
+            $('#open_hr_3').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_hr_3').fadeIn();
+                return false;
+            });
             $('#pop_background').click(function(){
                 $('#pop_background').fadeOut();
+                $('#pop_box_report_1').fadeOut();
                 $('#pop_box_hr_1').fadeOut();
                 $('#pop_box_att_1').fadeOut();
 		            $('#pop_box_hr_2').fadeOut();
-		    $('#pop_box_mail_1').fadeOut();
-        $('#pop_box_mail_2').fadeOut();
+		            $('#pop_box_mail_1').fadeOut();
+                $('#pop_box_mail_2').fadeOut();
+                $('#pop_box_hr_3').fadeOut();
  
                 return false;
             });

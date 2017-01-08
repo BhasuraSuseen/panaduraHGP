@@ -312,6 +312,18 @@ ul#nav li:hover{
     display: none;
     
 }
+#pop_box_report_1{  
+    position: absolute;
+    background: #ECEFF1;
+    font-size: 0.9em;
+    width: 54%;
+    margin: 5% 0 0 40%;
+    padding: 20px;
+    opacity: 1;
+    z-index: 1500;
+    display: none;
+    
+}
 #pop_box_diet_1{  
     position: absolute;
     background: #ECEFF1;
