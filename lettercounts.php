@@ -72,6 +72,7 @@ $eb88=mysqli_num_rows($eb8);
 <?php
 //code for mail clerk,admin officer and director
 //can use the following code for all the users, copy paste the code for priority one users and replace the eb number for priority two users.
+//for priority two users $p1letters=mysqli_query($conn,"select letter_id from letter"); should be replaced as $p1letters=mysqli_query($conn,"select letter_id from letter where eb=$_SESSION['ebno']");
 $p1letters=mysqli_query($conn,"select letter_id from letter");
 echo "<label>Select letter ID </label>";
 if(mysqli_num_rows($p1letters)>0){
