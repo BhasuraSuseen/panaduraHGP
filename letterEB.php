@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+<title>Letter EB</title>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 <link rel="stylesheet" type="text/css" href="del/styles.css" />
@@ -475,10 +475,15 @@
                             }
                             
                          }
-                         /*ac to mc date and subject enter form */
+                         /*ao to mc date and subject enter form */
                           if(isset($_POST["submittt"])){
                             if(isset($_POST['lid1'])){
-                        $sub=$_POST['sub'];
+                            	if($_POST['sub']==''){
+                        $sub="No subject entered";
+                    	}
+                        else{
+                        	$sub=$_POST['sub'];
+                        }
                         $lid1=$_POST['lid1'];
                         $dateaomc=$_POST['dateaomc'];
                         $eb=$_POST['eb'];
