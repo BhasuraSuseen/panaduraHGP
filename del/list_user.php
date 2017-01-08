@@ -11,8 +11,8 @@ $result = mysqli_query($conn,"SELECT * FROM users");
 </head>
 <body>
 <form name="frmUser" method="post" action="">
-<div style="width:500px;">
-<table border="0" cellpadding="10" cellspacing="1" width="500" class="tblListForm">
+<div style="width:100%;">
+<table border="0" cellpadding="10" cellspacing="1" class="tblListForm">
 <tr class="listheader">
 <td></td>
 <td>Username</td>

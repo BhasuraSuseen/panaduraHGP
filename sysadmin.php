@@ -156,11 +156,16 @@ require "connect.php";
 	</div>
          <div id="pop_background"></div>
          <div id="pop_box_mail_2">
-         <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">DELETE / EDIT USER PROFILE</a></div>   
+          
+         <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> DELETE / EDIT USER PROFILE</a></div>  
+         <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">  
                 <?php include "del/list_user.php"  ?>       
          </div>
+         </div>
      		<div id="pop_box_hr_1">
-        <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">ATTENDANCE / LEAVE</a></div>
+        
+        <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> CREATE SYSTEM USER</a></div>
+        <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
 				          <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
             <table>
             <thead>
@@ -220,13 +225,15 @@ require "connect.php";
           }
           </script>
           </thead>
-
-     			</div>
+          </div>
+          </div>
+     			
           
   
 	<div id="pop_box_hr_2">
-  <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">RECORD EMPLOYEE DETALIS</a></div>
-		  <div id="pop_box_hr_data_record_left">
+  
+  <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> RECORD EMPLOYEE DETALIS</a></div>
+		<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">  
                  <form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
                     <input type="text" name="nic" placeholder="NIC NO ">
                     Select Employee photo to upload:
@@ -269,10 +276,14 @@ require "connect.php";
                 <iframe class="iframehr" name="iframehr"></iframe>
 
 			<!--?php include 'employee_hr/hr.php'; ?-->
- 	    </div>
+ 	    
+      </div>
+      </div>
 	</div>
 	 <div id="pop_box_mail_1">
-        <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; ">MAIL UPDATE</a></div>
+          
+        <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px; "> LETTER UPDATE</a></div>
+        <div style="width:100%;background: #fff;padding: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <form name="mctoeb" action="#" method="post" accept-charset="utf-8">
         <b>Enter Letter EB to EB date</b><br>
       <label>Letter ID</label>
@@ -314,9 +325,14 @@ require "connect.php";
         }
         }
         ?>
+        </div>
   </div>
      	<div id="pop_box_att_1">
-	  	<?php include 'attendence/eb.php'; ?>			
+      
+      <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> RECORD ATTENDANCE / LEAVE </a></div>
+      <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+	  	<?php include 'attendence/eb.php'; ?>	
+      </div>		
  	</div>
 
     
