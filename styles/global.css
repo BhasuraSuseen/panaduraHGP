@@ -771,6 +771,62 @@ Main components
   }
 }
 
+.tblSaveForm {
+border-top:2px #999999 solid;
+background-color: #f8f8f8;
+}
+.tableheader {
+background-color: #fedc4d;
+}
+.tablerow {
+background-color: #A7D6F1;
+color:white;
+}
+.btnSubmit {
+background-color:#fd9512;
+padding:5px;
+border-color:#FF6600;
+border-radius:4px;
+color:white;
+}
+.message {
+color: #FF0000;
+text-align: center;
+width: 100%;
+}
+.txtField {
+padding: 5px;
+border:#fedc4d 1px solid;
+border-radius:4px;
+}
+.evenRow {
+background-color:#D3D3D3;
+font-size:12px;
+color:#101010;
+}
+.evenRow:hover {
+background-color: #2980B9;
+}
+.oddRow {
+background-color: #ECEFF1;
+font-size:12px;
+color:#101010;
+}
+.oddRow:hover {
+background-color: #2980B9;
+}
+.tblListForm {
+border-top:2px #999999 solid;
+}
+.listheader {
+background-color: #CFD8DC;
+font-size:12px;
+font-weight:bold;
+}
+.link:hover{
+  color:#000000; 
+}
+
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {

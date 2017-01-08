@@ -270,6 +270,7 @@ require "connect.php";
  	    </div>
 	</div>
 	 <div id="pop_box_mail_1">
+        <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">MAIL UPDATE</a></div>
         <form name="mctoeb" action="#" method="post" accept-charset="utf-8">
         <b>Enter Letter EB to EB date</b><br>
       <label>Letter ID</label>

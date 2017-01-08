@@ -6,7 +6,7 @@ $result = mysqli_query($conn,"SELECT * FROM users");
 <html>
 <head>
 <title>Users List</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="./styles/global.css">
 <script language="javascript" src="del/users.js" type="text/javascript"></script>
 </head>
 <body>
