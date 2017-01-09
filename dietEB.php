@@ -89,7 +89,7 @@
 	
 	
          <div id="pop_background"></div>
-	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>	
+		
      		<div id="pop_box_hr_1" style="position: absolute;
    width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	
