@@ -93,7 +93,7 @@
      		<div id="pop_box_hr_1">
 			<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET REPORT </a></div>
 		     <div style="position: absolute;
-   width:90%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+   width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	
 				 
                
@@ -119,19 +119,9 @@
 					
 
      			</div>
-	<div id="pop_box_hr_2"  style="position: absolute;
-    background:  #ECEFF1;
-    font-size: 0.9em;
-    width: 70%;
-	height:60%;
-    margin: 5% 0 0 5%;
-    padding: 20px;
-    opacity: 1;
-    z-index: 1500;
-    display: none;
-	border-top: 5px solid #2980b9;
-    border-bottom: 5px solid #2980b9;">
-		
+	<div id="pop_box_hr_2">
+	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET MENU </a></div>	
+	<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 		 <form>
                         <head colspan=2><font size="+2">Select Menu:</font></head>
                         <center><table>
