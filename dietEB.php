@@ -90,10 +90,9 @@
 	
          <div id="pop_background"></div>
 		
-     		<div id="pop_box_hr_1">
-			<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET REPORT </a></div>
-		     <div style="position: absolute;
-   width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+     		<div id="pop_box_report_2">
+		<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET REPORT </a></div>
+		<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	
 				 
                
@@ -166,30 +165,14 @@
  	</div>
 	</div>
 	
-     	<div id="pop_box_att_1" style="position: absolute;
-    background: #ECEFF1;
-    font-size: 0.9em;
-    width: 90%;
-	height:80%;
-    margin: 5% 0 0 5%;
-    padding: 20px;
-    opacity: 0.99;
-    display: none;
-    z-index: 1500;
-border-top: 5px solid #2980b9;
-    border-bottom: 5px solid #2980b9;">
+     	<div id="pop_box_att_1">
+		<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET SCHEDULE </a></div>
+		<div style="width:100%; height:90%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	  		<?php //include 'dui.php';?>
-		<div class="middle_left" style="float: left;
-    height:90%;
-    width:60%;
-    border-right: 2px solid #B0BEC5;">
-		 <center><head><font size="+3" color=#2980b9><b>DIET SCHEDULE</b></font></head></center>
-
-
-
-                    <center><form>
+		<div class="middle_left" style="float: left width:100%; height:90%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			<center><form>
                             <table>
-				    <thead><tr><th colspan=2>Enter Counts</th></tr></thead>
+				    <thead><tr><th colspan=2 size="+2" color=#2980b9>ENTER COUNTS</th></tr></thead>
 
                                 <tr><td>Meal Type</td><td>
                                         <input type="radio" id="meal" name="meal" value="Breakfast" onclick="myFunction()" required> Breakfast
@@ -239,19 +222,9 @@ border-top: 5px solid #2980b9;
 	</div>
                 
 	
-	<div id="pop_box_hr_3" style="position: absolute;
-    background: #ECEFF1;
-    font-size: 0.9em;
-    width: 50%;
-	height:50%;
-    margin: 5% 0 0 5%;
-    padding: 20px;
-    opacity: 0.99;
-    display: none;
-    z-index: 1500;
-	border-top: 5px solid #2980b9;
-    border-bottom: 5px solid #2980b9;">
-		<center>
+	<div id="pop_box_hr_3">
+	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>
+        <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 	 <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
     <label>Letter ID</label>
@@ -274,7 +247,7 @@ border-top: 5px solid #2980b9;
       <input type="submit" name="submitt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
   </form>
-		</center>
+		
   <?php
    if(isset($_POST["submitt"])){
 
@@ -288,7 +261,7 @@ border-top: 5px solid #2980b9;
     ?>
 
 		
-                   
+		</div>           
  	</div>
 
 	</div>
@@ -302,7 +275,7 @@ border-top: 5px solid #2980b9;
          $(document).ready(function(){
             $('#open_hr_1').click(function(){
                 $('#pop_background').fadeIn();
-                $('#pop_box_hr_1').fadeIn();
+                $('#pop_box_report_2').fadeIn();
                 return false;
             });
             $('#open_att_1').click(function(){
@@ -322,7 +295,7 @@ border-top: 5px solid #2980b9;
             });
             $('#pop_background').click(function(){
                 $('#pop_background').fadeOut();
-                $('#pop_box_hr_1').fadeOut();
+                $('#pop_box_report_2').fadeOut();
                 $('#pop_box_att_1').fadeOut();
 		$('#pop_box_hr_2').fadeOut();
 		$('#pop_box_hr_3').fadeOut();

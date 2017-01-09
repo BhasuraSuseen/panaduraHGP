@@ -168,14 +168,8 @@ mysqli_close($conn);
       var width = 800;
       var height = 600;
       var nodes = [
-                  {"name": "EB1", "value" : 0, "x_axis": 100, "y_axis": 55},
-                  {"name": "EB2", "value" : 0, "x_axis": 100, "y_axis": 125},
-                  {"name": "EB3", "value" : 0, "x_axis": 100, "y_axis": 195},
-                  {"name": "EB4", "value" : 0, "x_axis": 100, "y_axis": 265},
-                  {"name": "EB5", "value" : 0, "x_axis": 100, "y_axis": 335},
-                  {"name": "EB6", "value" : 0, "x_axis": 100, "y_axis": 405},
-                  {"name": "EB7", "value" : 0, "x_axis": 100, "y_axis": 475},
-                  {"name": "EB8", "value" : 0, "x_axis": 100, "y_axis": 545}
+                  {"name": "Recieved", "value" : 0, "x_axis": 100, "y_axis": 50},
+                  {"name": "Replied", "value" : 0, "x_axis": 200, "y_axis": 50},
                  ];
       
                  nodes[0].value = <?php echo $eb11 ?>;
@@ -187,47 +181,26 @@ mysqli_close($conn);
                   nodes[6].value = <?php echo $eb77 ?>;
                   nodes[7].value = <?php echo $eb88 ?>;
                   
-      var nodes3 = [{"name": "Letter ID : ", "value" : 0, "x_axis": 20, "y_axis": 25},
-                  {"name": "Date received ................. ", "value" : "", "x_axis": 20, "y_axis": 70},
-                  {"name": "Subject ............................ ", "value" : "", "x_axis": 20, "y_axis": 85},
-                  {"name": "Received from ................ ", "value" : "", "x_axis": 20, "y_axis": 100},
-                  {"name": "Type ................................. ", "value" : "", "x_axis": 20, "y_axis": 115},
-                  {"name": "Letter Clerk to Medical Superintendent date : ", "value" : "", "x_axis": 100, "y_axis": 250},
-                  {"name": "Medical Superintendent to Admin Officer date :", "value" : "", "x_axis": 250, "y_axis": 250},
-                  {"name": "Admin Officer to Letter Clerk date : ", "value" : "", "x_axis": 400, "y_axis": 250}
-                 ];
-                  nodes3[0].value = <?php echo $letter_id ?>;
-                  nodes3[1].value = "<?php echo $date ?>";
-                  nodes3[2].value = "<?php echo $subject ?>";
-                  nodes3[3].value = "<?php echo $address ?>";
-                  nodes3[4].value = "<?php echo $type ?>";
-                  nodes3[5].value = "<?php echo $LC_to_MS ?>";
-                  nodes3[6].value = "<?php echo $MS_to_AO ?>";
-                  nodes3[7].value = "<?php echo $AO_to_LC ?>";
+     
                   
       var current_location = "<?php echo $current_location ?>";
                  
-      var count = 0;
+      var count1 = 0;
       for (i = 0; i < 8; i++) { 
-          count = count + nodes[i].value;
+          count1 = count1 + nodes[i].value;
       }
 
 
       var canvas = d3.select("#svgcontent").append("svg")
-        .attr('width', width)
-        .attr('height', height)
+        .attr('width', 300)
+        .attr('height', 200)
         ;
       
                 
      
         var a0 = (nodes[0].value  /  count) * 2 ;
         var a1 = (nodes[1].value  /  count) * 2  ;
-        var a2 = (nodes[2].value  /  count) * 2  ;
-        var a3 = (nodes[3].value  /  count) * 2  ;
-        var a4 = (nodes[4].value  /  count) * 2  ;
-        var a5 = (nodes[5].value  /  count) * 2  ;
-        var a6 = (nodes[6].value  /  count) * 2  ;
-        var a7 = (nodes[7].value  /  count) * 2  ;
+        
         
          
         var arc4 = d3.svg.arc()
@@ -240,36 +213,7 @@ mysqli_close($conn);
               .outerRadius(width * 0.038)
               .startAngle(0)
               .endAngle(a1 * Math.PI); 
-        var arc6 = d3.svg.arc()
-              .innerRadius(width * 0.03)
-              .outerRadius(width * 0.038)
-              .startAngle(0)
-              .endAngle(a2 * Math.PI); 
-        var arc7 = d3.svg.arc()
-              .innerRadius(width * 0.03)
-              .outerRadius(width * 0.038)
-              .startAngle(0)
-              .endAngle(a3 * Math.PI); 
-        var arc8 = d3.svg.arc()
-              .innerRadius(width * 0.03)
-              .outerRadius(width * 0.038)
-              .startAngle(0)
-              .endAngle(a4 * Math.PI); 
-        var arc9 = d3.svg.arc()
-              .innerRadius(width * 0.03)
-              .outerRadius(width * 0.038)
-              .startAngle(0)
-              .endAngle(a5 * Math.PI); 
-        var arc10 = d3.svg.arc()
-              .innerRadius(width * 0.03)
-              .outerRadius(width * 0.038)
-              .startAngle(0)
-              .endAngle(a6 * Math.PI); 
-        var arc11 = d3.svg.arc()
-              .innerRadius(width * 0.03)
-              .outerRadius(width * 0.038)
-              .startAngle(0)
-              .endAngle(a7 * Math.PI);
+       
         var arc12 = d3.svg.arc()
               .innerRadius(width * 0.045)
               .outerRadius(width * 0.055)
@@ -287,7 +231,7 @@ mysqli_close($conn);
               .attr("transform",function(d) {return "translate(" + d.x_axis + " , " + d.y_axis + ")";})
               .append("path")                          
               .attr("class", "arcb")
-              .attr("d", function(d){if(d.name == "EB1"){return arc13(d)}if(d.name == "EB2"){return arc13(d)}if(d.name == "EB3"){return arc13(d)}if(d.name == "EB4"){return arc13(d)}if(d.name == "EB5"){return arc13(d)}if(d.name == "EB6"){return arc13(d)}if(d.name == "EB7"){return arc13(d)}if(d.name == "EB8"){return arc13(d)}} );
+              .attr("d", function(d){if(d.name == "Recieved"){return arc13(d)}if(d.name == "Replied"){return arc13(d)}} );
       var arcs = canvas.selectAll("g.b")
           .data(nodes)
           .enter()
@@ -295,7 +239,7 @@ mysqli_close($conn);
               .attr("transform",function(d) {return "translate(" + d.x_axis + " , " + d.y_axis + ")";})
               .append("path")                          
               .attr("class", "arc")
-              .attr("d", function(d){if(d.name == "EB1"){return arc4(d)}if(d.name == "EB2"){return arc5(d)}if(d.name == "EB3"){return arc6(d)}if(d.name == "EB4"){return arc7(d)}if(d.name == "EB5"){return arc8(d)}if(d.name == "EB6"){return arc9(d)}if(d.name == "EB7"){return arc10(d)}if(d.name == "EB8"){return arc11(d)}} );
+              .attr("d", function(d){if(d.name == "Recieved"){return arc4(d)}if(d.name == "Replied"){return arc5(d)}} );
       
     /*  canvas.append("path")
           .attr("class", "arc")
@@ -308,8 +252,8 @@ mysqli_close($conn);
               .attr("cy", function (d) { return d.y_axis; })
               .attr("r", width * 0.03)
               .attr("fill","#ECEFF1")
-              .attr("stroke",function (d) { if(d.name == current_location){return "#ef5350"}else{return "#607D8B"} })
-              .attr("stroke-width", function (d) { if(d.name == current_location){return width * 0.005}else{return width * 0.003} })
+              .attr("stroke",function (d) { if(d.name == Reply_location){return "#ef5350"}else{return "#607D8B"} })
+              .attr("stroke-width", function (d) { if(d.name == Reply_location){return width * 0.005}else{return width * 0.003} })
               .on("click", click1)
               ;
                //radius of circle
