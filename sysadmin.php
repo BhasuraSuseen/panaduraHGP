@@ -5,9 +5,37 @@
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
   <link rel="stylesheet" type="text/css" href="del/styles.css" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+  <style>
+    body {
+    background-color: #ECEFF1;
+    font-family: 'Open Sans';
+    color: #607D8B ;
+    font-weight: 600; 
+    }
+    .node{
+      fill:ECEFF1;
+    }
+    .link{
+      stroke: #90A4AE;
+      stroke-width: 10px;
+    }
+    .arc {
+    fill: #ef5350;
+  }
+   .arcb {
+    fill: #CFD8DC;
+  }
+  #suggesstion-box{ height: 100px; overflow-y: auto; overflow-x: hidden;display: none;}
+  #letterid-list{list-style:none;margin:10px;padding:0;width:100%; }
+  #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;}
+  #letterid-list li:hover{background:#fafafa;}
+
+</style>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <script src="scripts/prio2script.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="attendence/jst.js"></script>
-	<script  src="http://d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript">
 
   function checkForm(form)
@@ -123,17 +151,51 @@ require "connect.php";
 		    </div>
 			
 			
-            <div id="middle_left" >
-		 
-               <!-- <a href="attendence/ebatt.php"> Post box and news feed</a><br>
-		<a href="attendence/eb.php"> Post box and news feed</a><br>
-		<a href="letter_flow_graph.php"> vertical timeline</a>
-			 
-		<iframe src="vertical-timeline/timeline.php" style="float: left; width:100%;height:500px; padding: 5px; overflow: hidden;"></iframe>
-		-->
+        <div id="middle_leftp1">
+                <div class="current-flow-left" style="float: left; width:75%;">
+                <div class="current-flow-left-top" style="float: left; width:100%;">
+                <div class="current-flow-left-top-left" style="width:60%; float: left; ">
+                  <div class="search-letters" style="width:95%; min-height: 80px; margin: 10px; margin-left: 20px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <div style="width: 100%; float: left;background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
+                  
+                      <input type="text" id="search-box"  placeholder=" Select by letter ID" style="float: left;width:28%; margin: 10px; background:#fff;"/>
+                      <input type="text" id="search-box1" placeholder=" Select by Subject" style="float: left;width:28%; margin: 10px;background:#fff;"/>
+                      <input type="text" id="search-box2" placeholder=" Select by Address" style="float: left;width:28%; margin: 10px;background:#fff;" />
 
+                    <div id="suggesstion-box" style="width: 100%; "></div>
+                  
+                </div>
+                </div>
+                <div class="current-flow-left-top-right" style="width:40%; float: left;">
+                <div class="search-letters1" style="width:100%;  min-height: 80px; margin: 10px; margin-left: 20px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">REPLIED OR NOT</a></div>
+                  
+                      
 
-            </div>
+                    <div id="reply-box" style="width: 100%; "> Reply </div>
+                  
+                </div>
+                </div>
+              </div>
+                <div class="current-flow" style="float: left; width:100%; margin:10px; margin-left: 20px; margin-top:20px;background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                  <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">CURRENT FLOW</a></div>
+                  <div id ="svgcontent" style="width:100%; overflow:auto;"><p>Hellow</p></div>
+                </div>
+              </div>
+              <script> 
+               func1(1000); 
+               func2(1000);          
+              </script>
+              <div class="current-flow-right" style="float: left; width:20%; margin-left: 20px">
+                <div class="letters-details" style="width:100%; margin: 10px; margin-left: 20px;  background: #fff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                  <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px; ">LETTER DETAILS</a></div>
+                  
+                  <div id ="lettercontent" style="width:100%; padding :10px; overflow:auto; font-size: 14px;"></div>
+                </div>
+              </div>          
+                                                          
+                      
+          </div>
 	
             <div class="middle_right">
             

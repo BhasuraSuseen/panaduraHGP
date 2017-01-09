@@ -109,7 +109,7 @@ a:hover{
 }
 .all_container{
     width: 100%;
-    min-width: 1170px;
+    min-width: 980px;
     height:100%;
     border-top: 5px solid #2980b9; 
     
@@ -256,7 +256,7 @@ ul#nav li:hover{
 #pop_background{
     position: fixed;
     width: 100%;
-    height: 677px;
+    height: 1024px;
     top: 0;
     left:0;
     background: #ECEFF1;
@@ -554,7 +554,7 @@ Main components
   width: 4px;
   background: #d7e4ed;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 980px) {
   #cd-timeline {
     margin-top: 3em;
     margin-bottom: 3em;
@@ -580,7 +580,7 @@ Main components
 .cd-timeline-block:last-child {
   margin-bottom: 0;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 980px) {
   .cd-timeline-block {
     margin: 4em 0;
   }
@@ -614,7 +614,7 @@ Main components
 .cd-timeline-img.cd-location {
   background: #f0ca45;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 980px) {
   .cd-timeline-img {
     width: 60px;
     height: 60px;
@@ -755,7 +755,7 @@ Main components
     font-size: 12px;
   }
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 980px) {
   .cd-timeline-content {
     margin-left: 0;
     padding: 1.6em;
@@ -863,7 +863,7 @@ font-weight:bold;
   color:#000000; 
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 980px) {
   /* inverse bounce effect on even content blocks */
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
