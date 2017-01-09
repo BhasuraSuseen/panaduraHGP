@@ -197,7 +197,7 @@ mysqli_close($conn);
 
 
       var canvas = d3.select("#svgcontent").append("svg")
-        .attr('width', width)
+        .attr('width', 160)
         .attr('height', height)
         ;
       
@@ -344,10 +344,7 @@ mysqli_close($conn);
   }    
 
 
-      d3.json("mydata.json",function(data){
-
-
-       })
+     
 
 
     </script>
