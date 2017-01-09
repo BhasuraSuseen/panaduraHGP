@@ -15,12 +15,8 @@ function checkpass(form){
         form.password.focus();
         return false;
       }
-      if(form.password.value == form.user_name.value) {
-        alert("Error: Password must be different from Username!");
-        form.password.focus();
-        return false;
-      }
-      re = /[0-9]/;
+    
+     re = /[0-9]/;
       if(!re.test(form.password.value)) {
         alert("Error: password must contain at least one number (0-9)!");
         form.password.focus();
