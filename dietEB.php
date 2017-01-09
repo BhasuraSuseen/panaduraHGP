@@ -166,18 +166,10 @@
  	</div>
 	</div>
 	
-     	<div id="pop_box_att_1" style="position: absolute;
-    background: #ECEFF1;
-    font-size: 0.9em;
-    width: 90%;
-	height:80%;
-    margin: 5% 0 0 5%;
-    padding: 20px;
-    opacity: 0.99;
-    display: none;
-    z-index: 1500;
-border-top: 5px solid #2980b9;
-    border-bottom: 5px solid #2980b9;">
+     	<div id="pop_box_att_1">
+		<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET REPORT </a></div>
+		     <div style="position: absolute;
+   width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	  		<?php //include 'dui.php';?>
 		<div class="middle_left" style="float: left;
     height:90%;
