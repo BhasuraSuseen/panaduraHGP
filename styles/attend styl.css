@@ -15,7 +15,7 @@ spanh1{
     color: #455A64;
 }
 
-a{
+/*a{
     font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 600;
@@ -26,7 +26,7 @@ a:hover{
     font-size: 16px;
     font-weight: 600;
     color: #2980b9;
-}
+}*/
 .attbutton {
     background-color: #ECEFF1; /* Green */
     border: none;

@@ -13,24 +13,7 @@ if(isset($_GET['id'])){
 <link rel="stylesheet" type="text/css" href="../styles/global.css" />
 <link rel="stylesheet" type="text/css" href="edit.css" />
 <script language="javascript" src="edit.js" type="text/javascript"></script>
-<style>
-    body {
-    }
-    .node{
-      fill:ECEFF1;
-    }
-    .link{
-      stroke: #90A4AE;
-      stroke-width: 10px;
-    }
-    .arc {
-    fill: #ef5350;
-  }
-   .arcb {
-    fill: #CFD8DC;
-  }
 
-</style>
 </head>
 <body>
 
