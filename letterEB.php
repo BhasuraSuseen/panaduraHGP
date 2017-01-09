@@ -360,16 +360,18 @@
                         <b>New Letter Details</b>
                         <!--entering details of letters into databse for the first time -->
                         <form name="new_letter" action="letterEB.php" method="post" accept-charset="utf-8">
-                        <input type="number" name="let_id" placeholder="Letter ID" required><br>
+                        <!--input type="number" name="let_id" placeholder="Letter ID" required--><!--br-->
                         <input type="date" name="fdate" placeholder="Date received" required><br>
                         <input type="text" name="address" placeholder="Address"><br>
                         <input type="radio" name="lettype" value="Post Card" required>Post Card
                         <input type="radio" name="lettype" value="Normal Letter" required>Normal Letter
                         <input type="radio" name="lettype" value="Registered Post" required>Registered Post
-                        <input type="radio" name="lettype" value="Other" required>Other<br>
+                        <input type="radio" name="lettype" value="Other" required>Other<br><br>
                         <input type="submit" value="Add new letter" name="submit">
                         <input type="reset" value="Reset">
+                        <input type="submit" value="Last letter ID" name="submit1">
                         </form>
+
                         <b>Enter MC to MS date</b>
                         <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8">
                               <label>Letter ID</label>
@@ -393,6 +395,7 @@
                           <input type="reset" name="reset" value="Reset">
 
                         </form>
+
                         <!--methana enter karanne AO to MC date -->
                         <b>Enter AO to MC date</b>
                         <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8"> 
@@ -429,8 +432,8 @@
                           <input type="text" name="sub" placeholder="Subject">
                           <input type="submit" name="submittt" value="Enter details">
                           <input type="reset" name="reset" value="Reset">
-
                         </form>
+
                         <form name="mctoeb" action="letterEB.php" method="post" accept-charset="utf-8">
 						    <b>Enter Letter EB to EB date</b><br>
 						 	<label>Letter ID</label>
@@ -454,27 +457,45 @@
 						      <input type="reset" name="reset" value="Reset">
 						  </form>
                         <?php
+                        if($_POST){
                          if(isset($_POST["submit"])){
-                            $id= $_POST['let_id'];
+                          		submit();
+                         }
+                         elseif (isset($_POST["submit1"])) {
+                         		submit1();
+                         }
+                     }
+                     function submit(){
+                     	  //$id= $_POST['let_id'];
                             $date= $_POST['fdate'];
                             $type=$_POST['lettype'];
                             $addr=$_POST['address'];
                             /*check if the given id already exists*/
-                            $letidheck="select * from letter where letter_id='$id'";
-                            $result=mysqli_query($conn,$letidheck);
-                            if(mysqli_num_rows($result)>=1){
-                             $message4= $id." is already taken";
-                               echo  "<script type='text/javascript'>alert('$message4');</script>";
-                            }   
-                            else{
-                                $sql="INSERT INTO letter (letter_id, date, address,type) VALUES ('$id','$date', '$addr','$type')";
-                           
+                           // $letidheck="select * from letter where letter_id='$id'";
+                            //$result=mysqli_query($conn,$letidheck);
+                           // if(mysqli_num_rows($result)>=1){
+                            // $message4= $id." is already taken";
+                              // echo  "<script type='text/javascript'>alert('$message4');</script>";
+                           // }   
+                           // else{
+                                $sql="INSERT INTO letter (date, address,type) VALUES ('$date', '$addr','$type')";
+                           		$newid="SELECT letter_id FROM letter ORDER BY letter_id DESC LIMIT 1";
                                 mysqli_query($conn,$sql);
-                                 $message3= $id. " was entered";
+                               	$newidd=mysqli_query($conn,$newid);
+                               	$newiddd=mysqli_fetch_array($newidd);
+                                 $message3="New letter entered \\nLetter id:".$newiddd[0];
                                echo  "<script type='text/javascript'>alert('$message3');</script>";
-                            }
+                           // }
                             
-                         }
+                     }
+                     function submit1(){
+                     	$new="SELECT letter_id FROM letter ORDER BY letter_id DESC LIMIT 1";
+                               
+                               	$neww=mysqli_query($conn,$new);
+                               	$newww=mysqli_fetch_array($neww);
+                               	$message34="Letter id:".$newww[0];
+                               echo  "<script type='text/javascript'>alert('$message34');</script>";
+                     }
                          /*ao to mc date and subject enter form */
                           if(isset($_POST["submittt"])){
                             if(isset($_POST['lid1'])){
