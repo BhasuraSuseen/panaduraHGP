@@ -12,7 +12,7 @@ employee.L_name FROM
 employee INNER JOIN attend ON attend.Employee_Nic = employee.Nic_no where attend.employee_nic='$NIC'");
 //$res = mysqli_query($conn, "select attend.employee_nic,attend.$day,employee.F_name,employee.L_name FROM employee INNER JOIN attend ON attend.Employee_Nic = employee.Nic_no where  ");
 //echo $NIC . $DAY;
-        $reslt = '<html><p style=" color:red;">Warning:Check the id</p><html>!';
+        $reslt = '<html><p style=" color:red;">Warning:Check the id!</p><html>';
 if ($NIC == NULL || $NIC == "") {
     echo '<html><p style=" color:red;">Warning:Enter id!</p><html>';
 } else {
@@ -22,7 +22,7 @@ if ($NIC == NULL || $NIC == "") {
         //echo $result;
 
         if ($result == '1') {
-            $reslt = "Present";
+            $reslt = '<html><p style=" color:green;">Present</p><html>';
         } else if ($result == '0') {
             $reslt = "Absent";
         } else {
