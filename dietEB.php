@@ -120,9 +120,10 @@
 
      			</div>
 	<div id="pop_box_hr_2">
-	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET MENU </a></div>	
+	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> SELECT MENU </a></div>	
 	<div style="width:100%;height:70%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
-		 <form><center><table>
+		 <form>
+			 <center><table>
                                 <tr><th>Day</th><td height="50px"> 
                                         <select id="dy" name="day">
                                             
