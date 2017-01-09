@@ -174,7 +174,7 @@
 		<div class="middle_left" style="float: left">
 			<center><form>
                             <table>
-				    <thead><tr><th colspan=2 size="+2" color=#2980b9>Enter Counts</th></tr></thead>
+				    <thead><tr><th colspan=2 size="+2" color=#2980b9>ENTER COUNTS</th></tr></thead>
 
                                 <tr><td>Meal Type</td><td>
                                         <input type="radio" id="meal" name="meal" value="Breakfast" onclick="myFunction()" required> Breakfast
@@ -224,19 +224,9 @@
 	</div>
                 
 	
-	<div id="pop_box_hr_3" style="position: absolute;
-    background: #ECEFF1;
-    font-size: 0.9em;
-    width: 50%;
-	height:50%;
-    margin: 5% 0 0 5%;
-    padding: 20px;
-    opacity: 0.99;
-    display: none;
-    z-index: 1500;
-	border-top: 5px solid #2980b9;
-    border-bottom: 5px solid #2980b9;">
-		<center>
+	<div id="pop_box_hr_3">
+	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>
+                <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 	 <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
     <b>Enter Letter EB to EB date</b><br>
     <label>Letter ID</label>
@@ -259,7 +249,7 @@
       <input type="submit" name="submitt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
   </form>
-		</center>
+		
   <?php
    if(isset($_POST["submitt"])){
 
