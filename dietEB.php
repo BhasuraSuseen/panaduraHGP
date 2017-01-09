@@ -297,7 +297,7 @@
             });
             $('#pop_background').click(function(){
                 $('#pop_background').fadeOut();
-                $('#pop_box_hr_1').fadeOut();
+                $('#pop_box_report_2').fadeOut();
                 $('#pop_box_att_1').fadeOut();
 		$('#pop_box_hr_2').fadeOut();
 		$('#pop_box_hr_3').fadeOut();
