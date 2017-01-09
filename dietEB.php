@@ -169,7 +169,7 @@
 		<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET SCHEDULE </a></div>
 		<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	  		<?php //include 'dui.php';?>
-		<div class="middle_left" style="float: left">
+		<div class="middle_left" style="float: left height:90%; width:60%; border-right: 2px solid #B0BEC5;">
 			<center><form>
                             <table>
 				    <thead><tr><th colspan=2 size="+2" color=#2980b9>ENTER COUNTS</th></tr></thead>
