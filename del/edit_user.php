@@ -10,14 +10,37 @@ if(isset($_GET['id'])){
 <html>
 <head>
 	<title>Edit users</title>
+<link rel="stylesheet" type="text/css" href="../styles/global.css" />
 <link rel="stylesheet" type="text/css" href="edit.css" />
 <script language="javascript" src="edit.js" type="text/javascript"></script>
+<style>
+    body {
+    }
+    .node{
+      fill:ECEFF1;
+    }
+    .link{
+      stroke: #90A4AE;
+      stroke-width: 10px;
+    }
+    .arc {
+    fill: #ef5350;
+  }
+   .arcb {
+    fill: #CFD8DC;
+  }
 
+</style>
 </head>
 <body>
 
-
-
+ <div class="middle_top">
+             <div class="middle_top_left">
+                <a href="../sysadmin.php"><img src="../images/oms4.png"  style= "padding: 5px;"></a>
+              </div>
+             <div class="middle_top_middle">
+              </div>
+</div>
  <div class="main">
       <div class="one">
         <div class="register">
@@ -33,7 +56,7 @@ if(isset($_GET['id'])){
            
             <div>
               <br>
-              <input type="submit" value="Update username" id="create-account" class="button" name="submit" />
+              <input type="submit" value="Update username" id="create-account" class="button" name="submit" style="width:12em;" />
             </div>
              </div>
           </form>
@@ -53,7 +76,7 @@ if(isset($_GET['id'])){
            
             <div>
               <br>
-              <input type="submit" value="Update password" id="create-account" class="button" name="submit1" />
+              <input type="submit" value="Update password" id="create-account" class="button" name="submit1" style="width:12em;"/>
             </div>
              </div>
           </form>        
@@ -86,7 +109,8 @@ mysqli_query($conn,$sql);
 
 if(isset($_POST["submit1"])){
 
-$pass=md5($_POST['password']);
+$pass=hash('sha256',$_POST['password']);
+
 $id=$_SESSION['id'];
 
 $sql="UPDATE users SET PASSWORD='$pass' WHERE NIC_NO='$id'";
