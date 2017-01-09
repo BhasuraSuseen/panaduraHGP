@@ -89,23 +89,14 @@
 	
 	
          <div id="pop_background"></div>
+	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>	
      		<div id="pop_box_hr_1" style="position: absolute;
-    background:  #ECEFF1;
-    font-size: 0.9em;
-    width: 60%;
-    height:150%;
-    margin: 5% 0 0 5%;
-    padding: 20px;
-    opacity: 1;
-    z-index: 1500;
-    display: none;
-    border-top: 5px solid #2980b9;
-    border-bottom: 5px solid #2980b9;">
+   width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	
 				 
                
                     
-                            <label  style="width: 100%" id="lbpop1"></label><br></center>
+                            <center><label  style="width: 100%" id="lbpop1"></label><br></center>
 				 <?php include 'report.php';?>
 		
 		<center><button style="background-color: #263238;
