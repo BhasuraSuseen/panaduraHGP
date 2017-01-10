@@ -9,7 +9,7 @@ $b = mysqli_fetch_array($b1)
 ?>
 	
 	
-	<h3><?php echo "Year: " .  date("Y");?><br>Period:Monday Breakfast to <?php echo $b[0];?></h3><br>
+	<h3><?php echo "Year: " .  date("Y");?><br><?php echo "Month: " .  date("M");?><br>Period: Monday Breakfast to <?php echo $b[0];?></h3><br>
 	<center><table align="center" style="background-color: #CFD8DC;width: 45%"">
 					<tr>
                         <td align="left"b>Item Name</b></td>
