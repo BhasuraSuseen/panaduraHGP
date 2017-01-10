@@ -22,6 +22,49 @@
    </style>
 
 </head>
+<script type="text/javascript">
+   <!--
+      // Form validation code will come here.
+      function validateForm()
+      {
+      
+         if( document.new_count.s1.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.s1.focus() ;
+            return false;
+         }
+		 if( document.new_count.s2.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.s2.focus() ;
+            return false;
+         }
+		 if( document.new_count.s3.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.s3.focus() ;
+            return false;
+         }
+		 if( document.new_count.norm_patients.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.norm_patients.focus() ;
+            return false;
+         }
+		 if( document.new_count.dd_patients.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.dd_patients.focus() ;
+            return false;
+         }
+		 if( document.new_count.staff.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.staff.focus() ;
+            return false;
+         }
+	</script>
 <body>
 
 	<div class="all_container">
@@ -182,7 +225,7 @@
 		<div style="position: absolute; width:100%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	  		<?php //include 'dui.php';?>
 		<div class="middle_left">
-			<center><form>
+			<center><form name="new_count" method="post" action="dietEB.php" onsubmit="return validateForm()">
                             <table>
 				    <thead><tr><th colspan=2 size="+2" color=#2980b9>ENTER COUNTS</th></tr></thead>
 
