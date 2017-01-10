@@ -10,6 +10,7 @@ $b = mysqli_fetch_array($b1)
 	
 	
 	Panadura Base Hospital-Weekly Diet Report<br><?php echo "Year: " .  date("Y");?><br><?php echo "Month: " .  date("M");?><br><?php echo "Week No: " .  date("W");?><br>Period: Monday Breakfast to <?php echo $b[0];?><br>
+	Consumption of food items:<br>
 	<center><table align="center" style="background-color: #CFD8DC;width: 45%"">
 					<tr>
                         <td align=left><b>Item Name</b></td>
