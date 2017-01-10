@@ -227,7 +227,7 @@
 		<div class="middle_left">
 			<center><form name="new_count" method="post" action="dietEB.php" onsubmit="return validateForm()">
                             <table>
-				    <thead><tr><th colspan=2 size="+2" color=#2980b9>ENTER COUNTS</th></tr></thead>
+				    <thead><tr><th colspan=2 size="+2" color=#2980b9><b>ENTER COUNTS</b></th></tr></thead>
 
                                 <tr><td>Meal Type</td><td>
                                         <input type="radio" id="meal" name="meal" value="Breakfast" onclick="myFunction()" required> Breakfast
