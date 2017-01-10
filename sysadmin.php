@@ -119,9 +119,15 @@ require "connect.php";
 					<li id="open_mail_1" title="Update Letter Details" style="border-left: 4px solid #c62828;">  
 						<i> <img src="images/web.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
 					</li>
+          <li id="open_mail_1" title="Update Letter Details" style="border-left: 4px solid #c62828;">  
+            <i> <img src="images/mailrep.ico" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
+          </li>
 					 <li id="open_att_1" title="Establishment Branch Attendence Record" style="border-left: 4px solid #2980b9;">  
 						<i> <img src="images/check.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
 					</li>
+           <li id="open_att_1" title="Establishment Branch Attendence Record" style="border-left: 4px solid #2980b9;">  
+            <i> <img src="images/leave.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
+          </li>
 					 <li id="open_hr_2" title="Add New Employee" style="border-left: 4px solid #2980b9;">  
 						<i> <img src="images/photo.png" style="width:80%;height:auto;opacity: 0.6;padding: 5px;"></i>
 					</li>
