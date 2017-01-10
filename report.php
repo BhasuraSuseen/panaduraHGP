@@ -14,7 +14,7 @@ $b = mysqli_fetch_array($b1)
 	<center><table align="center" style="background-color: #ECEFF1;width: 100%">
 					<tr>
                         <td align=left><b>Item Name</b></td>
-                        <td align=left><b>Amount</b><br></td>
+                        <td align=right><b>Amount</b><br></td>
                     </tr><br>
 		 <?php while ($a = mysqli_fetch_array($a1)):; ?>
 				
