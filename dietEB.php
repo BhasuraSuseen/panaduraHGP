@@ -182,22 +182,22 @@
                                         <input type="radio" id="meal" name="meal" value="Lunch" onclick="myFunction()" required> Lunch
                                         <input type="radio" id="meal" name="meal" value="Dinner" onclick="myFunction()" required> Dinner</td></tr><br>
                                 <tr><td>Children S1 </td><td> 
-                                        <input type="number" id="s1" name="children_s1" value="" size="20" pattern="[0-9]{1,}" required></td></tr>
+                                        <input type="number" id="s1" name="children_s1" value="" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
                                 <tr><td>Children S2 </td><td> 
-                                        <input type="number" id="s2" name="children_s2" size="20" pattern="[0-9]{1,}" required></td></tr>
+                                        <input type="number" id="s2" name="children_s2" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
                                 <tr><td>Children S3 </td><td> 
-                                        <input type="number" id="s3" name="children_s3" size="20" pattern="[0-9]{1,}" required></td></tr>
+                                        <input type="number" id="s3" name="children_s3" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
                                 <tr><td>Normal Patients </td><td> 
-                                        <input type="number" id="patients" name="patients" size="20" pattern="[0-9]{1,}" required></td></tr>
+                                        <input type="number" id="patients" name="patients" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
                                 <tr><td>DD Patients </td><td> 
-                                        <input type="number" id="dp" name="diabetics_patients" size="20" pattern="[0-9]{1,}" required></td></tr>
+                                        <input type="number" id="dp" name="diabetics_patients" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
                                 <tr><td>Staff </td><td> 
-                                        <input type="number" id="staff" name="staff" size="20" pattern="[0-9]{1,}" required></td></tr>
+                                        <input type="number" id="staff" name="staff" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
 
                                 <tr><td colspan=2 align="center">
