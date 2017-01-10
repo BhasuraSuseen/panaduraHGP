@@ -9,10 +9,10 @@ $b = mysqli_fetch_array($b1)
 ?>
 	
 	
-	<h3>Panadura Base Hospital-Weekly Diet Report<br><?php echo "Year: " .  date("Y");?><br><?php echo "Month: " .  date("M");?><br><?php echo "Week No: " .  date("W");?><br>Period: Monday Breakfast to <?php echo $b[0];?></h3><br>
+	Panadura Base Hospital-Weekly Diet Report<br><?php echo "Year: " .  date("Y");?><br><?php echo "Month: " .  date("M");?><br><?php echo "Week No: " .  date("W");?><br>Period: Monday Breakfast to <?php echo $b[0];?><br>
 	<center><table align="center" style="background-color: #CFD8DC;width: 45%"">
 					<tr>
-                        <td align="left"b>Item Name</b></td>
+                        <td align="left"<b>Item Name</b></td>
                         <td align="left"><b>Amount</b><br></td>
                     </tr><br>
 		 <?php while ($a = mysqli_fetch_array($a1)):; ?>
