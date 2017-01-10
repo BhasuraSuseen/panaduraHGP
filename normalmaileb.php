@@ -41,10 +41,14 @@ require "connect.php";
           </div>
           <div class="left_side_bar_down">
               <ul id="nav">
-                  <li  id="open_mail_1" class="letter_panel_list">  
-				              <i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;">
-                            </i>
-			                 </li>
+                  <li  id="open_mail_1" title="Update Letter Details"  class="letter_panel_list">  
+				          <i> <img src="images/web.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;">
+                  </i>
+			            </li>
+                  <li  id="open_mail_1" title="Reply to letters"  class="letter_panel_list">  
+                  <i> <img src="images/mailrep.ico" style="width:80%;height:auto; opacity: 0.6; padding: 5px;">
+                  </i>
+                  </li>
               </ul>
           </div>
       </div>

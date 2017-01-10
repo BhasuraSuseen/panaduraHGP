@@ -28,7 +28,10 @@
 					<li id="open_mail_1" title="Update Letter Details" style="border-left: 4px solid #c62828;">  
 						<i> <img src="images/web.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
 					</li>
-					 <li id="open_att_1" title="enter ward and staff counts" style="border-left: 4px solid #2980b9;">  
+                    <li id="open_mail_1" title="Reply to letters" style="border-left: 4px solid #c62828;">  
+                        <i> <img src="images/mailrep.ico" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
+                    </li>
+					 <li id="open_att_1" title="enter ward and staff counts" style="border-left: 4px solid #03c9a9;">  
 						<i> <img src="images/count.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
 					</li>
 					 
@@ -74,11 +77,11 @@
           </div>
           <div class="right_side_bar_down">
               <ul id="nav">
-                 <li id="open_hr_1" title="Diet Report" style="border-right: 4px solid #2980b9;"> 
+                 <li id="open_hr_1" title="Diet Report" style="border-right: 4px solid #03c9a9;"> 
 
             <i> <img src="images/food-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
           </li>
-		  <li id="open_hr_2" title="Add New Employee" style="border-right: 4px solid #2980b9;">  
+		  <li id="open_hr_2" title="View menus" style="border-right: 4px solid #03c9a9;">  
 	<i> <img src="images/menuv.png" style="width:80%;height:auto;opacity: 0.6;padding: 5px;"></i>
 					</li>
            
