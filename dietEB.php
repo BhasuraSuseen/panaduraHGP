@@ -12,6 +12,15 @@
   
 
 </script>
+<style>
+    body {
+    background-color: #ECEFF1;
+    font-family: 'Open Sans';
+    color: #607D8B ;
+    font-weight: 600; 
+    }
+   </style>
+
 </head>
 <body>
 
@@ -230,7 +239,7 @@
 	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>
         <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 	 <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
-    <b>Enter Letter EB to EB date</b><br>
+    <b>Enter Letter EB to EB date</b><br><br>
     <label>Letter ID</label>
       <?php  
       $eb=$_SESSION['ebno'];
@@ -246,8 +255,8 @@
         $select='<select><option></option></select>';
       }
       echo $select;
-      echo '</select>'?>
-      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required>
+      echo '</select><br><br>'?>
+      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required><br>
       <input type="submit" name="submitt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
   </form>

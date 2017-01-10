@@ -9,7 +9,12 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script  src="http://d3js.org/d3.v3.min.js"></script>
 <style>
+   
     body {
+    background-color: #ECEFF1;
+    font-family: 'Open Sans';
+    color: #607D8B ;
+    font-weight: 600; 
     }
     .node{
       fill:ECEFF1;
