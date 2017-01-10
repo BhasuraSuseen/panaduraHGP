@@ -28,7 +28,7 @@
                             <tr><td style="width:70%">Employees Present :</td><td><strong id="st1"></strong></td></tr>
                             <tr><td style="width:70%">Employees absent :</td><td><strong id="st2"></strong></td></tr>
                             <tr><td style="width:70%">Total Employees :</td><td><strong id="st3"></strong></td></tr>
-                            <tr><td style="width:60%;"><button class="attblack_btn" onclick="loadEbdata()">Get Report</button></td></tr>
+                            <tr><td style="width:60%;"><button class="attblack_btn" onclick="loadEbdata()">Summary</button></td></tr>
 
                         </table>
                     </div>
@@ -61,7 +61,7 @@
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                            <button class="attblack_btn" style="width: 150px" type="submit" onclick="callme();">Download</button>
+                            <button class="attblack_btn" type="submit" onclick="callme();">Download</button>
 
 
                     </div>
