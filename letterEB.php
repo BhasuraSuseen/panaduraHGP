@@ -369,7 +369,7 @@
                         <input type="radio" name="lettype" value="Other" required>Other<br><br>
                         <input type="submit" value="Add new letter" name="submit">
                         <input type="reset" value="Reset">
-                        <input type="submit" value="Last letter ID" name="submit1">
+                        <!--input type="submit" value="Last letter ID" name="submit1"-->
                         </form>
 
                         <b>Enter MC to MS date</b>

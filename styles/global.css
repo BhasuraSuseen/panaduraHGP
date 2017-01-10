@@ -426,7 +426,7 @@ ul#nav li:hover{
     background-color: #ffffff;
 } 
 
-input[type="text"], input[type="date"], input[type="number"], input[type="password"], textarea  {
+input[type="text"], input[type="date"], input[type="number"], input[type="password"],input[type="int"], textarea  {
     display: block;
     color: #455A64;
     outline: none;
@@ -450,7 +450,7 @@ input[type="submit"], input[type="file"], input[type="button"], input[type="rese
     margin-bottom: 0.8em;  
     color: white;
  }
-input[type="submit"]:hover , input[type="file"]:hover, input[type="button"]:hover, input[type="reset"]:hover{
+input[type="submit"]:hover , input[type="file"]:hover, input[type="button"]:hover,input[type="int"]:hover, input[type="reset"]:hover{
     background-color: #5e686f;
     outline: none;
     border: none;
