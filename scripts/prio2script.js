@@ -124,7 +124,7 @@ $.ajax({
 function func2(data){
 $.ajax({
     type: "POST",
-    url: "letter-det.php",
+    url: "letter-det2.php",
     data:'keyword='+data,
     beforeSend: function(){
       
