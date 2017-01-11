@@ -5,19 +5,19 @@
         <?php include 'datetime.php';?>
     </head>
     <body> 
-        <div class="all_container">
+        <div class="attall_container">
 
-            <div class="container">
-                <div class="middle_left">
+            <div class="attcontainer">
+                <div class="attmiddle_left">
                     <div style="height: 650px">
                         <div style="overflow-y: scroll">
                             <?php include './doctoratt.php'; ?>
                         </div>
                     </div>
                 </div>
-                <div class="middle_right">
+                <div class="attmiddle_right">
                     <!--<button class="button button1">GA</button>-->
-                    <div class="recordstyl"> 
+                    <div class="attrecordstyl"> 
                         <table border="0" style="width: 100%">
                             <tr><td style="width:70%">Employees Present :</td><td><strong id="st1"></strong></td></tr>
                             <tr><td style="width:70%">Employees absent :</td><td><strong id="st2"></strong></td></tr>
@@ -27,7 +27,7 @@
                         </table>
                     </div>
                     <br><br>
-                    <div class="recordstyl"> 
+                    <div class="attrecordstyl"> 
 
                         <table border="0" style="width: 100%">
                             <tr>Employee came</tr>
@@ -55,7 +55,7 @@
                             <tr><td><button class="black_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                            <button class="black_btn" style="width: 150px" type="submit" onclick="callme();">Download</button>
+                            <button class="attblack_btn" style="width: 150px" type="submit" onclick="callme();">Download</button>
 
 
                     </div>
@@ -64,5 +64,5 @@
             </div>
 
     </body>
-    <script type="text/javascript" src="jst.js"></script>
+    <script type="text/javascript" src="./attendence/jst.js"></script>
 </html>
