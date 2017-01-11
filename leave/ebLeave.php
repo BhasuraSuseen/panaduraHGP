@@ -1,6 +1,6 @@
 <?php
 include 'attendence/datetime.php';
-include '../connect.php';
+include 'attendence/connect.php';
 
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
