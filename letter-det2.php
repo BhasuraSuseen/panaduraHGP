@@ -18,7 +18,7 @@
                       <th><b> ". $array["letter_id"]." </b></th>
                     </tr>";
             echo"<tr>
-                      <th>Date recived</th>
+                      <th>Date Received</th>
                       <th><b> ". $array["date"]." </b></th>
                     </tr>";
             echo"<tr>
@@ -26,7 +26,7 @@
                       <th><b> ". $array["subject"]." </b></th>
                     </tr>";
              echo"<tr>
-                      <th>Received from</th>
+                      <th>Received From</th>
                       <th><b> ". $array["address"]." </b></th>
                     </tr>";
              echo"<tr>
@@ -138,21 +138,45 @@
                     </tr>";
             
             }
-            echo"</table>";
-            echo "<br><br><br><label><b><u>REPLY DETAILS</u></b><label><br>";
+            echo"</table><br>";
+            echo"<table>";
+            echo"<tr>
+                      <th><b>REPLY DETAILS</b></th>
+                      <th></th>
+                    </tr>";
           
             $letreply=mysqli_query($conn,"SELECT * FROM letter_rep WHERE letter_id='$letid'");
             $array1=mysqli_fetch_assoc($letreply);
             mysqli_close($conn); 
             if($array1 > 0){
-              echo "<br><label><b>Reply Letter ID : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["rep_id"]."<br>";
-             echo "<label><b>Date replied : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["date"]."<br>";
-             echo "<label><b>Subject : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["subject"]."<br>";
-             echo "<label><b>Reply Address : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["address"]."<br>";
-             echo "<label><b>Type : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["type"]."<br>";
+             echo"<tr>
+                      <th>Reply Letter ID</th>
+                      <th><b>". $array1["rep_id"]."</b></th>
+                    </tr>"; 
+              echo"<tr>
+                      <th>Date replied</th>
+                      <th><b>". $array1["date"]."</b></th>
+                    </tr>";
+             echo"<tr>
+                      <th>Subject</th>
+                      <th><b>". $array1["subject"]."</b></th>
+                    </tr>";
+             echo"<tr>
+                      <th>Reply Address</th>
+                      <th><b>". $array1["address"]."</b></th>
+                    </tr>";
+             echo"<tr>
+                      <thType</th>
+                      <th><b>". $array1["type"]."</b></th>
+                    </tr>";
+             
            }else{
-            echo "<br><label><b>NO REPLIES YET</b><label><br>";
-           }
             
+            echo"<tr>
+                      <th>No Replies Yet !</th>
+                      <th></th>
+                    </tr>";
+           }
+            echo"</table>";
             
               ?>
