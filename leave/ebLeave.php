@@ -132,6 +132,6 @@ FROM employee
 
     <script type="text/javascript" src="../jspdf.js"></script>
     <script type="text/javascript" src="../jquery.js"></script>
-    <script type="text/javascript" src="../jst.js"></script>
+    <script type="text/javascript" src="attendence/jst.js"></script>
  </body>
 </html>  
