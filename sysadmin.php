@@ -133,13 +133,13 @@ require "connect.php";
 					<li id="open_mail_1" title="Update Letter Details" style="border-left: 4px solid #c62828;">  
 						<i> <img src="images/web.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
 					</li>
-          <li id="open_mail_1" title="Reply to letters" style="border-left: 4px solid #c62828;">  
+          <li id="open_mail_3" title="Reply to letters" style="border-left: 4px solid #c62828;">  
             <i> <img src="images/mailrep.ico" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
           </li>
 					 <li id="open_att_1" title="Establishment Branch Attendence Record" style="border-left: 4px solid #2980b9;">  
 						<i> <img src="images/check.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
 					</li>
-           <li id="open_att_1" title="Establishment Branch Attendence Record" style="border-left: 4px solid #2980b9;">  
+           <li id="open_att_2" title="Establishment Branch Attendence Record" style="border-left: 4px solid #2980b9;">  
             <i> <img src="images/leave.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
           </li>
 					 <li id="open_hr_2" title="Add New Employee" style="border-left: 4px solid #2980b9;">  
@@ -418,9 +418,23 @@ require "connect.php";
         ?>
         </div>
   </div>
+  <div id="pop_box_mail_3">
+                <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">LETTER REPLY FORM </a></div>
+                          <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+                                    <?php echo "include here"; ?> 
+                          </div>
+            </div>
+      <div id="pop_box_att_2">
+      
+        <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> RECORD LEAVE</a></div>
+        <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+        <?php echo "include here"; ?> 
+        </div>    
+      </div>
+  
      	<div id="pop_box_att_1">
       
-      <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> RECORD ATTENDANCE / LEAVE </a></div>
+      <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> RECORD ATTENDANCE</a></div>
       <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
 	  	<?php include 'attendence/eb.php'; ?>	
       </div>		
@@ -450,6 +464,11 @@ require "connect.php";
                 $('#pop_box_att_1').fadeIn();
                 return false;
             });
+            $('#open_att_2').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_att_2').fadeIn();
+                return false;
+            });
 	         $('#open_hr_2').click(function(){
                 $('#pop_background').fadeIn();
                 $('#pop_box_hr_2').fadeIn();
@@ -458,6 +477,11 @@ require "connect.php";
 	          $('#open_mail_1').click(function(){
                 $('#pop_background').fadeIn();
                 $('#pop_box_mail_1').fadeIn();
+                return false;
+            });
+            $('#open_mail_3').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_mail_3').fadeIn();
                 return false;
             });
             $('#open_hr_3').click(function(){
@@ -470,10 +494,12 @@ require "connect.php";
                 $('#pop_box_report_1').fadeOut();
                 $('#pop_box_hr_1').fadeOut();
                 $('#pop_box_att_1').fadeOut();
+                $('#pop_box_att_2').fadeOut();
 		            $('#pop_box_hr_2').fadeOut();
 		            $('#pop_box_mail_1').fadeOut();
                 $('#pop_box_mail_2').fadeOut();
                 $('#pop_box_hr_3').fadeOut();
+                $('#pop_box_mail_3').fadeOut();
  
                 return false;
             });
