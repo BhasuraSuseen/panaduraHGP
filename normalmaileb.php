@@ -9,22 +9,14 @@
 <script  src="http://d3js.org/d3.v3.min.js"></script>
 <style>
     body {
+    background-color: #ECEFF1;
+    font-family: 'Open Sans';
+    color: #607D8B ;
+    font-weight: 600; 
     }
-    .node{
-      fill:ECEFF1;
-    }
-    .link{
-      stroke: #90A4AE;
-      stroke-width: 10px;
-    }
-    .arc {
-    fill: #ef5350;
-  }
-   .arcb {
-    fill: #CFD8DC;
-  }
-
+    
 </style>
+
 </head>
 <body> 
 <?php
@@ -101,8 +93,8 @@ require "connect.php";
         $select='<select><option></option></select>';
       }
       echo $select;
-      echo '</select>'?>
-      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required>
+      echo '</select><br><br>'?>
+      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required><br>
       <input type="submit" name="submitt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
   </form>

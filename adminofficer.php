@@ -133,7 +133,7 @@ header("Location:  index.php");
             <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>
                 <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
         			<form name="mstoao" action="adminofficer.php" method="post" accept-charset="utf-8">
-        				<b>Enter MS to AO date</b></br>
+        				<b>Enter MS to AO date</b></br><br>
         				  <label>Letter ID</label>
         						  <?php  
         				     			require "connect.php";
@@ -150,10 +150,10 @@ header("Location:  index.php");
         				        $select='<select><option></option></select>';
         				      }
         				      echo $select;
-        				      echo '</select>'
+        				      echo '</select><br><br>'
         					
         		    			?>
-        				      <input type="date" name="datemsao" placeholder="Date from MS" required>
+        				      <input type="date" name="datemsao" placeholder="Date from MS" required><br>
         				      <input type="submit" name="submitt" value="Enter Date">
         				      <input type="reset" name="reset" value="Reset">
         					</form>

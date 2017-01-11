@@ -12,7 +12,59 @@
   
 
 </script>
+<style>
+    body {
+    background-color: #ECEFF1;
+    font-family: 'Open Sans';
+    color: #607D8B ;
+    font-weight: 600; 
+    }
+   </style>
+
 </head>
+<script type="text/javascript">
+   <!--
+      // Form validation code will come here.
+      function validateForm()
+      {
+      
+         if( document.new_count.s1.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.s1.focus() ;
+            return false;
+         }
+		 if( document.new_count.s2.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.s2.focus() ;
+            return false;
+         }
+		 if( document.new_count.s3.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.s3.focus() ;
+            return false;
+         }
+		 if( document.new_count.norm_patients.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.norm_patients.focus() ;
+            return false;
+         }
+		 if( document.new_count.dd_patients.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.dd_patients.focus() ;
+            return false;
+         }
+		 if( document.new_count.staff.value == "" )
+         {
+            alert( "Please provide the count!" );
+            document.new_count.staff.focus() ;
+            return false;
+         }
+	</script>
 <body>
 
 	<div class="all_container">
@@ -173,9 +225,9 @@
 		<div style="position: absolute; width:100%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	  		<?php //include 'dui.php';?>
 		<div class="middle_left">
-			<center><form>
+			<center><form name="new_count" method="post" action="dietEB.php" onsubmit="return validateForm()">
                             <table>
-				    <thead><tr><th colspan=2 size="+2" color=#2980b9>ENTER COUNTS</th></tr></thead>
+				    <thead><tr><th colspan=2 size="+2" color=#2980b9><b>ENTER COUNTS</b></th></tr></thead>
 
                                 <tr><td>Meal Type</td><td>
                                         <input type="radio" id="meal" name="meal" value="Breakfast" onclick="myFunction()" required> Breakfast
@@ -230,7 +282,7 @@
 	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>
         <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 	 <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
-    <b>Enter Letter EB to EB date</b><br>
+    <b>Enter Letter EB to EB date</b><br><br>
     <label>Letter ID</label>
       <?php  
       $eb=$_SESSION['ebno'];
@@ -246,8 +298,8 @@
         $select='<select><option></option></select>';
       }
       echo $select;
-      echo '</select>'?>
-      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required>
+      echo '</select><br><br>'?>
+      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required><br>
       <input type="submit" name="submitt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
   </form>

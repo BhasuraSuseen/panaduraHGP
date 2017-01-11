@@ -284,7 +284,7 @@ require "connect.php";
        
       ?>
             </td></tr>
-            <tr><td>User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator<br>
+            <tr><td style="vertical-align:top;">User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator<br>
               <input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<br><input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer<br>
                 <input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<br><input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB<br>
                 <input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet Clerk<br><input type="radio" name="usertype" value="NB" onclick="myFunction()">Normal Mail EB</td></tr>
@@ -371,7 +371,7 @@ require "connect.php";
         <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px; "> LETTER UPDATE</a></div>
         <div style="width:100%;background: #fff;padding: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <form name="mctoeb" action="#" method="post" accept-charset="utf-8">
-        <b>Enter Letter EB to EB date</b><br>
+        <b>Enter Letter EB to EB date</b><br><br>
       <label>Letter ID</label>
           <?php  
           $eb=$_SESSION['ebno'];
@@ -388,8 +388,8 @@ require "connect.php";
       $select='<select><option></option></select>';
           }
           echo $select;
-          echo '</select>'?>
-          <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required>
+          echo '</select><br><br>'?>
+          <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required><br>
           <input type="submit" name="submitt" value="Enter Date">
           <input type="reset" name="reset" value="Reset">
       </form>     
