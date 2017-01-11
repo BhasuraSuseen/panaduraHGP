@@ -407,7 +407,7 @@
 
                         <!--methana enter karanne AO to MC date -->
                         <b>Enter AO to MC date</b>
-                        <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8"> 
+                        <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8" enctype="multipart/form-data"> 
                         <label>Letter ID</label>
                          <?php  
      
@@ -439,6 +439,7 @@
                           </select>
                           <input type="date" name="dateaomc" placeholder="Date from AO" required><br>
                           <input type="text" name="sub" placeholder="Subject">
+                          <input type="file" name="myimage" id="fileToUpload"><br>
                           <input type="submit" name="submittt" value="Enter details">
                           <input type="reset" name="reset" value="Reset">
                         </form>
@@ -508,7 +509,17 @@
                          /*ao to mc date and subject enter form */
                           if(isset($_POST["submittt"])){
                             if(isset($_POST['lid1'])){
-                            	if($_POST['sub']==''){
+                             $filename = $_FILES["myimage"]["name"];
+					        $filetype = $_FILES["myimage"]["type"];
+					        $filesize = $_FILES["myimage"]["size"];                           
+							$folder="lettercopies/";
+							echo $filetype;
+							echo $filesize;
+							move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$_FILES["myimage"]["name"]);
+						
+
+
+						if($_POST['sub']==''){
                         $sub="No subject entered";
                     	}
                         else{
@@ -517,7 +528,7 @@
                         $lid1=$_POST['lid1'];
                         $dateaomc=$_POST['dateaomc'];
                         $eb=$_POST['eb'];
-                        $sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc',eb='$eb' WHERE letter_id='$lid1'";
+                        $sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc',eb='$eb',path='$folder',imgname='$filename'  WHERE letter_id='$lid1'";
                         mysqli_query($conn,$sql2);
                          $message1= $lid1. " was forwarded";
                          echo  "<script type='text/javascript'>alert('$message1');</script>";
