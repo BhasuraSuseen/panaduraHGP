@@ -7,11 +7,18 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="attendence/jst.js"></script>
 	<script  src="http://d3js.org/d3.v3.min.js"></script>
-	<script type="text/javascript">
+	<SCRIPT language=Javascript>
+      <!--
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
 
-  
-
-</script>
+         return true;
+      }
+      //-->
+   </SCRIPT>
 <style>
     body {
     background-color: #ECEFF1;
@@ -22,49 +29,7 @@
    </style>
 
 </head>
-<script type="text/javascript">
-   <!--
-      // Form validation code will come here.
-      function validateForm()
-      {
-      
-         if( document.new_count.s1.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.s1.focus() ;
-            return false;
-         }
-		 if( document.new_count.s2.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.s2.focus() ;
-            return false;
-         }
-		 if( document.new_count.s3.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.s3.focus() ;
-            return false;
-         }
-		 if( document.new_count.norm_patients.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.norm_patients.focus() ;
-            return false;
-         }
-		 if( document.new_count.dd_patients.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.dd_patients.focus() ;
-            return false;
-         }
-		 if( document.new_count.staff.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.staff.focus() ;
-            return false;
-         }
-	</script>
+
 <body>
 
 	<div class="all_container">
@@ -225,7 +190,7 @@
 		<div style="position: absolute; width:100%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 	  		<?php //include 'dui.php';?>
 		<div class="middle_left">
-			<center><form name="new_count" method="post" action="dietEB.php" onsubmit="return validateForm()">
+			<center><form name="new_count" method="post" action="dietEB.php" onsubmit="return isNumberKey(event)">
                             <table>
 				    <thead><tr><th colspan=2 size="+2" color=#2980b9><b>ENTER COUNTS</b></th></tr></thead>
 
