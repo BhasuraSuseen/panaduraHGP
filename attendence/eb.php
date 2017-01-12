@@ -70,29 +70,8 @@
 
     </body>
         <script type="text/javascript" src="./attendence/jst.js"></script>
-        <script>
-        var obj1;
+       
 
 
-
-function checkBrowser() {
-    if (window.XMLHttpRequest) {
-        obj = new XMLHttpRequest();
-    } else {
-        obj = new ActiveXobject("Microfoft.ActiveXobject");
-    }
-}
-            
- function getpdf() {
   
-
-        checkBrowser();
-        obj1.onreadystatechange = function() {
-        alert 'okkkk'
-        };
-        obj1.open("POST", "report.php", true);
-        obj1.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        obj1.send();
- }
-        </script>
 </html>
