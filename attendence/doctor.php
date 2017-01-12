@@ -62,7 +62,7 @@
 
                 </div>
             </div>
- <script type="text/javascript" src="jst.js"></script>
+ <!--<script type="text/javascript" src="jst.js"></script>-->
             <script>
                 function loadEbdata() {
     checkBrowser();
