@@ -33,6 +33,10 @@ header("Location:  index.php");
    .arcb {
     fill: #CFD8DC;
   }
+  
+   .arcc {
+    fill: #B0BEC5;
+  }
   table {
     border-collapse: collapse;
     width: 100%;

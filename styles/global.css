@@ -71,6 +71,26 @@ a:hover{
 	color: #2980b9;
 	text-decoration: none;
 }
+button{
+  background-color: #263238;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 0.9em;
+    padding: 0.4em;
+    margin-bottom: 0.8em;  
+    color: white;
+}
+button:hover{
+     background-color: #5e686f;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 0.9em;
+    padding: 0.4em;
+    margin-bottom: 0.8em;  
+    color: white;
+}
 .button {
     background-color: #ECEFF1; /* Green */
     border: none;

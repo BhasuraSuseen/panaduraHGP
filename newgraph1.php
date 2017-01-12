@@ -48,46 +48,59 @@
              }
              
              $current_location='';
+             $location='';
              if (is_null($array["mceb"])==FALSE){
               if ($array["eb"]==1){
                 $current_location="EB1";
+                $location="EB";
               }
               elseif ($array["eb"]==2){
                 $current_location="EB2";
+                $location="EB";
               }
               elseif ($array["eb"]==3){
                 $current_location="EB3";
+                $location="EB";
               }
               elseif ($array["eb"]==4){
                 $current_location="EB4";
+                $location="EB";
               }
               elseif ($array["eb"]==5){
                 $current_location="EB5";
+                $location="EB";
               }
               elseif ($array["eb"]==6){
                 $current_location="EB6";
+                $location="EB";
               }
               elseif ($array["eb"]==7){
                 $current_location="EB7";
+                $location="EB";
               }
               elseif ($array["eb"]==8){
                 $current_location="EB8";
+                $location="EB";
               }     
              }
              else {
               if(is_null($array["aomc"])==FALSE){
                 $current_location="LC2";
+                $location="LC2";
               }
               else{
                 if(is_null($array["msao"])==FALSE){
                 $current_location="AO";
+                $location="AO";
                 }
                 else{
                   if(is_null($array["mcms"])==FALSE){
                     $current_location="MS";
+                    $location="MS";
                   }
                   else{
                     $current_location="LC1";
+                    $location="LC1";
                   }
                 }
               }
@@ -158,6 +171,13 @@ $eb8sql="select * from letter where mceb is NOT NULL and eb='8'";
 $eb8=mysqli_query($conn,$eb8sql);
 $eb88=mysqli_num_rows($eb8);
 //echo $eb88;
+$rplysql="select * from letter_rep where letter_id ='".$letter_id."'";
+$r=mysqli_query($conn,$rplysql);
+$r1=mysqli_num_rows($r);
+$replied = "F";
+if($r1>0){
+  $replied = "T";
+}
 mysqli_close($conn); 
 ?>
 
@@ -179,6 +199,16 @@ mysqli_close($conn);
                   {"name": "EB7", "value" : 0, "x_axis": 740, "y_axis": 475},
                   {"name": "EB8", "value" : 0, "x_axis": 740, "y_axis": 545}
                  ];
+      var nodesl=[{"name": "Letter", "value" : 0,"location" : "","type" : "Normal Letter","replied" : "F", "x_axis": 285, "y_axis": 120}];
+      var nodesr=[{"name": "Reply Status",  "x_axis": 100, "y_axis": 120},
+                  {"name": "Normal Letter",  "x_axis": 330, "y_axis": 50},
+                  {"name": "Registered Post",  "x_axis": 370, "y_axis": 100},
+                  {"name": "Post Card",  "x_axis": 370, "y_axis": 150},
+                  {"name": "Other Letters",  "x_axis": 330, "y_axis": 200}
+                  ];
+      nodesl[0].location="<?php echo $location ?>";
+      nodesl[0].type="<?php echo $type ?>";
+      nodesl[0].replied="<?php echo $replied ?>";
         var links = [{"x1": 60, "y1": 300, "x2": 210, "y2": 300},
                       {"x1": 210, "y1": 300, "x2": 360, "y2": 300},
                       {"x1": 360, "y1": 300, "x2": 510, "y2": 300},
@@ -205,8 +235,18 @@ mysqli_close($conn);
                   nodes[9].value = <?php echo $eb66 ?>;
                   nodes[10].value = <?php echo $eb77 ?>;
                   nodes[11].value = <?php echo $eb88 ?>;
-      var nodes3 = [{"name": "Letter ID : ", "value" : 0, "x_axis": 20, "y_axis": 25},
+
+      /*var nodes3 = [{"name": "Letter ID : ", "value" : 0, "x_axis": 20, "y_axis": 25},
                   {"name": "Date received ................. ", "value" : "", "x_axis": 20, "y_axis": 70},
+                  {"name": "Subject ............................ ", "value" : "", "x_axis": 20, "y_axis": 85},
+                  {"name": "Received from ................ ", "value" : "", "x_axis": 20, "y_axis": 100},
+                  {"name": "Type ................................. ", "value" : "", "x_axis": 20, "y_axis": 115},
+                  {"name": "Letter Clerk to Medical Superintendent date : ", "value" : "", "x_axis": 100, "y_axis": 250},
+                  {"name": "Medical Superintendent to Admin Officer date :", "value" : "", "x_axis": 250, "y_axis": 250},
+                  {"name": "Admin Officer to Letter Clerk date : ", "value" : "", "x_axis": 400, "y_axis": 250}
+                 ];*/
+      var nodes3 = [{"name": "Letter ID : ", "value" : 0, "x_axis": 255, "y_axis": 90},
+                  {"name": "Date received ................. ", "value" : "", "x_axis": 235, "y_axis": 120},
                   {"name": "Subject ............................ ", "value" : "", "x_axis": 20, "y_axis": 85},
                   {"name": "Received from ................ ", "value" : "", "x_axis": 20, "y_axis": 100},
                   {"name": "Type ................................. ", "value" : "", "x_axis": 20, "y_axis": 115},
@@ -329,6 +369,36 @@ mysqli_close($conn);
               .outerRadius(width * 0.038)
               .startAngle(0)
               .endAngle(2 * Math.PI);
+        var arc14 = d3.svg.arc()
+              .innerRadius(width * 0.08)
+              .outerRadius(width * 0.09)
+              .startAngle(0)
+              .endAngle(2 * Math.PI);
+        var arc15 = d3.svg.arc()
+              .innerRadius(width * 0.08)
+              .outerRadius(width * 0.09)
+              .startAngle(0)
+              .endAngle(0.25 * Math.PI);
+        var arc16 = d3.svg.arc()
+              .innerRadius(width * 0.08)
+              .outerRadius(width * 0.09)
+              .startAngle(0.25 * Math.PI)
+              .endAngle(0.5 * Math.PI);
+        var arc17 = d3.svg.arc()
+              .innerRadius(width * 0.08)
+              .outerRadius(width * 0.09)
+              .startAngle(0.5 * Math.PI)
+              .endAngle(0.75 * Math.PI);
+        var arc18 = d3.svg.arc()
+              .innerRadius(width * 0.08)
+              .outerRadius(width * 0.09)
+              .startAngle(0.75 * Math.PI)
+              .endAngle(1 * Math.PI);
+        var arc19 = d3.svg.arc()
+              .innerRadius(width * 0.08)
+              .outerRadius(width * 0.09)
+              .startAngle(1 * Math.PI)
+              .endAngle(2 * Math.PI);   
     var arcs1 = canvas.selectAll("g.a")
           .data(nodes)
           .enter()
@@ -361,6 +431,61 @@ mysqli_close($conn);
               .attr("stroke-width", function (d) { if(d.name == current_location){return width * 0.005}else{return width * 0.003} })
               .on("click", click1)
               ;
+      var arcs2 = canvas.selectAll("g.c")
+          .data(nodesl)
+          .enter()
+              .append("g")
+              .attr("transform",function(d) {return "translate(" + d.x_axis + " , " + d.y_axis + ")";})
+              .append("path")                          
+              .attr("class", "arcb")
+              .attr("d", function(d){return arc14(d)} );
+      
+      var arcs3 = canvas.selectAll("g.f")
+          .data(nodesl)
+          .enter()
+              .append("g")
+              .attr("transform",function(d) {return "translate(" + d.x_axis + " , " + d.y_axis + ")";})
+              .append("path")                          
+              .attr("class", "arcc")
+              .attr("d", function(d){ return arc16(d)} );
+      var arcs4 = canvas.selectAll("g.g")
+          .data(nodesl)
+          .enter()
+              .append("g")
+              .attr("transform",function(d) {return "translate(" + d.x_axis + " , " + d.y_axis + ")";})
+              .append("path")                          
+              .attr("class", "arcc")
+              .attr("d", function(d){ return arc18(d)} );
+
+      var arcs5 = canvas.selectAll("g.d")
+          .data(nodesl)
+          .enter()
+              .append("g")
+              .attr("transform",function(d) {return "translate(" + d.x_axis + " , " + d.y_axis + ")";})
+              .append("path")                          
+              .attr("class", "arc")
+              .attr("d", function(d){if(d.type == "Normal Letter"){return arc15(d)} if(d.type == "Registered Post"){return arc16(d)} if(d.type == "Post Card"){return arc17(d)} if(d.type == "Other"){return arc18(d)} } );
+      var arcs6 = canvas.selectAll("g.e")
+          .data(nodesl)
+          .enter()
+              .append("g")
+              .attr("transform",function(d) {return "translate(" + d.x_axis + " , " + d.y_axis + ")";})
+              .append("path")                          
+              .attr("class", "arc")
+              .attr("d", function(d){ if(d.replied == "T"){return arc19(d)}} );
+
+      var circles1 = canvas.selectAll("circle.a")
+          .data(nodesl)
+          .enter()
+              .append("circle")
+              .attr("cx", function (d) { return d.x_axis; })
+              .attr("cy", function (d) { return d.y_axis; })
+              .attr("r",width * 0.08)
+              .attr("fill","#ECEFF1")
+              .attr("stroke","#607D8B")
+              .attr("stroke-width", width * 0.003)
+              .on("click", click1)
+              ;
                //radius of circle
       
       canvas.selectAll("text.a")
@@ -383,7 +508,7 @@ mysqli_close($conn);
               .attr("text-align", "center")
               .attr("font-size", function (d,i) { if(i < 4){return 30; }else{return 25;}})
               .text(function(d){return d.name });
-       canvas.selectAll("text.c")
+     /*  canvas.selectAll("text.c")
           .data(nodes3)
           .enter()
               .append("text")
@@ -392,9 +517,19 @@ mysqli_close($conn);
               .attr("fill", "#607D8B")
               .attr("text-align", "center")
               .attr("font-size", function(d,i){if(i < 1){return 16 }else{ return 14}   })
-              .text(function(d,i){if(i < 5){return (d.name + d.value)}else{ return d.value}   });
+              .text(function(d,i){if(i < 5){return (d.name + d.value)}else{ return d.value}   });*/
+        canvas.selectAll("text.c")
+          .data(nodes3)
+          .enter()
+              .append("text")
+              .attr("x", function (d) { return d.x_axis })
+              .attr("y", function (d) { return d.y_axis + 20})
+              .attr("fill", "#607D8B")
+              .attr("text-align", "center")
+              .attr("font-size", function(d,i){return 20 })
+              .text(function(d,i){if(i < 2){return (d.value)}});
         
-        canvas.selectAll("text.d")
+       /* canvas.selectAll("text.d")
           .data(nodes4)
           .enter()
               .append("text")
@@ -403,6 +538,16 @@ mysqli_close($conn);
               .attr("fill", "#607D8B")
               .attr("text-align", "center")
               .attr("font-size", function (d,i) { if(i < 4){return 30; }else{return 25;}})
+              .text(function(d){return d.name  });*/
+        canvas.selectAll("text.e")
+          .data(nodesr)
+          .enter()
+              .append("text")
+              .attr("x", function (d,i) { return d.x_axis })
+              .attr("y", function (d,i) { return d.y_axis })
+              .attr("fill", "#607D8B")
+              .attr("text-align", "center")
+              .attr("font-size", function (d,i) { return 14; })
               .text(function(d){return d.name  });
        
        function click1(d){

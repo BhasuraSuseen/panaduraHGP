@@ -8,13 +8,31 @@
              require"connect.php";  
              $letdetailsq=mysqli_query($conn,"SELECT * FROM letter WHERE letter_id='$letid'");
              $array=mysqli_fetch_assoc($letdetailsq);
+            echo "<br><b>RECEIVED DETAILS</b><br>";
+            echo"<table>";
+             
+            echo"<tr>
+                      <th><b>Letter ID</b></th>
+                      <th> ". $array["letter_id"]." </th>
+                    </tr>";
+            echo"<tr>
+                      <th><b>Date Received</b></th>
+                      <th> ". $array["date"]." </th>
+                    </tr>";
+            echo"<tr>
+                      <th><b>Subject</b></th>
+                      <th> ". $array["subject"]." </th>
+                    </tr>";
+             echo"<tr>
+                      <th><b>Received From</b></th>
+                      <th> ". $array["address"]." </th>
+                    </tr>";
+             echo"<tr>
+                      <th><b>Type</b></th>
+                      <th> ". $array["type"]." </th>
+                    </tr>";
             
-             echo "<br><label><b><u>RECEIVED DETAILS</u></b><label><br>";
-            echo "<br><label><b>Letter ID : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["letter_id"]."<br>";
-             echo "<label><b>Date recived : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["date"]."<br>";
-             echo "<label><b>Subject : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["subject"]."<br>";
-             echo "<label><b>Received from : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["address"]."<br>";
-             echo "<label><b>Type : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["type"]."<br>";
+             
              $letter_id = $array["letter_id"];
              $date = $array["date"];
              $subject = $array["subject"];
@@ -25,32 +43,54 @@
              $AO_to_LC = "";
 
              if(is_null($array['mcms'])){
-              echo "<label><b>Letter Clerk to Medical Superintendent date : </b><label><br>&emsp;&emsp;&emsp;&emsp;Letter not forwarded<br>";
+              echo"<tr>
+                      <th><b>Letter Clerk to Medical Superintendent Date </b></th>
+                      <th>Letter not forwarded</th>
+                    </tr>";
                $LC_to_MS = "";
              }
              else{
-              echo "<label><b>Letter Clerk to Medical Superintendent date : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["mcms"]."<br>";
+              echo"<tr>
+                      <th><b>Letter Clerk to Medical Superintendent Date </b></th>
+                      <th>". $array["mcms"]."</th>
+                    </tr>";
               $LC_to_MS = $array["mcms"];
              }
               if(is_null($array['msao'])){
-              echo "<label><b>Medical Superintendent to Admin Officer date : </b><label><br>&emsp;&emsp;&emsp;&emsp;Letter not forwarded<br>";
+              echo"<tr>
+                      <th><b>Medical Superintendent to Admin Officer Date </b></th>
+                      <th>Letter not forwarded</th>
+                    </tr>";
               $MS_to_AO="";
              }
              else{
-             echo "<label><b>Medical Superintendent to Admin Officer date : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["msao"]."<br>";
+              echo"<tr>
+                      <th><b>Medical Superintendent to Admin Officer Date </b></th>
+                      <th>". $array["msao"]."</th>
+                    </tr>";
               $MS_to_AO = $array["msao"];
              }
               if(is_null($array['aomc'])){
-             echo "<label><b>Admin Officer to Letter Clerk date : </b><label><br>&emsp;&emsp;&emsp;&emsp;Letter not forwarded<br>";
+                echo"<tr>
+                      <th><b>Admin Officer to Letter Clerk Date</b></th>
+                      <th>Letter not forwarded</th>
+                    </tr>";
               $AO_to_LC = "";
              }
              else{
-             echo "<label><b>Admin Officer to Letter Clerk date : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array["aomc"]."<br>";
+              echo"<tr>
+                      <th><b>Admin Officer to Letter Clerk Date</b></th>
+                      <th> ". $array["aomc"]." </th>
+                    </tr>";
               $AO_to_LC = $array["aomc"];
              }
              
              $current_location='';
              if (is_null($array["mceb"])==FALSE){
+              $softcopypath = "lettercopies/";
+              $softcopypath .= $letter_id .".pdf";
+              echo("<button onclick=\"location.href='".$softcopypath." '\">Receieved Letter Soft copy</button>");
+
               if ($array["eb"]==1){
                 $current_location="EB1";
               }
@@ -94,18 +134,21 @@
                 }
               }
              }
-            echo "<lable><b>Current Location : </b></label><br>&emsp;&emsp;&emsp;&emsp;".$current_location;
-            }
-           echo"<table>";
-            echo"<tr>
-                      <th><b>REPLY DETAILS</b></th>
-                      <th></th>
+             echo"<tr>
+                      <th><b>Current Location</b></th>
+                      <th> ".$current_location." </th>
                     </tr>";
-          
+            
+            }
+            echo"</table>";
+
+            echo "<br><br><b>REPLY DETAILS</b><br>";
+           echo"<table>";
             $letreply=mysqli_query($conn,"SELECT * FROM letter_rep WHERE letter_id='$letid'");
             $array1=mysqli_fetch_assoc($letreply);
             mysqli_close($conn); 
             if($array1 > 0){
+
              echo"<tr>
                       <th><b>Reply Letter ID</b></th>
                       <th>". $array1["rep_id"]."</th>
@@ -126,7 +169,10 @@
                       <th><b>Type</b></th>
                       <th>". $array1["type"]."</th>
                     </tr>";
-             
+              $letter_id1 =  $array1["rep_id"];
+              $softcopypath1 = "lettercopies/";
+              $softcopypath1 .= $letter_id1 .".pdf";
+              echo("<button onclick=\"location.href='".$softcopypath1." '\">Replied Letter Soft copy</button>");
            }else{
             
             echo"<tr>
