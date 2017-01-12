@@ -50,7 +50,7 @@
                                         ?>
 
                                 </td></tr>
-                            <tr><td style="width:40%">Search by ID </td><td><input type="text" id="serId"></td></tr>
+                            <tr><td style="width:40%">Search by ID </td><td><input  class="attstyled-select" type="text" id="serId"></td></tr>
                             <tr><td style="width:40%">Status</td><td><label id="st6"></label></td></tr>
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
@@ -62,31 +62,8 @@
 
                 </div>
             </div>
- <!--<script type="text/javascript" src="jst.js"></script>-->
-            <script>
-                function loadEbdata() {
-    checkBrowser();
-       
-    obj.onreadystatechange = function() {
-
-
-       if (obj.readyState === 4 && obj.status === 200) {
-            //alert(obj.responseText);
-            var text = obj.responseText;
-
-            document.getElementById('st1').innerHTML = JSON.parse(text).a;
-            document.getElementById('st2').innerHTML = JSON.parse(text).b;
-            document.getElementById('st3').innerHTML = JSON.parse(text).c;
-
-        }
-    };
-    obj.open("POST", "viewEbArp.php", true);
-    obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    obj.send();
-
-}
-
-                </script>
+ <script type="text/javascript" src="./attendence/jst.js"></script>
+            
     </body>
    
 </html>
