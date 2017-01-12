@@ -421,7 +421,7 @@ require "connect.php";
   <div id="pop_box_mail_3">
                 <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">LETTER REPLY FORM </a></div>
                           <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                               <b> Reply to a letter</b>
+                              <b> Reply to a letter</b>
                               <form name="replyletter" action="sysadmin.php" method="post" accept-charset="utf-8">
                              
                               <label>Letter ID:</label>
@@ -448,8 +448,9 @@ require "connect.php";
                               <input type="text" name="addr" placeholder="Address/ Fax number"><br>
                               <input type="submit" name="submit2" value="Enter letter">
                               <input type="reset" name="reset2" value="Reset">
-                              
-                                <?php
+
+
+                            <?php
                             if(isset($_POST["submit2"])){
                               if(isset($_POST['idrep'])){
                               $date=$_POST['repdate'];
@@ -473,6 +474,8 @@ require "connect.php";
                             }
 
                             ?>
+
+                          </div>
             </div>
       <div id="pop_box_att_2">
       
