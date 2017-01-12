@@ -20,7 +20,7 @@ try
 
     // convert a web page and store the generated PDF into a $pdf variable
     //methana thmi link ekacedit kranna one--!!!!
-    $pdf = $client->convertURI('http://www.google.com/');
+    $pdf = $client->convertURI('http://omspanadura.azurewebsites.net/attendence/pdfReport.php');
 
     // set HTTP response headers
     header("Content-Type: application/pdf");
