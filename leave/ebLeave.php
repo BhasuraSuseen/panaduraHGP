@@ -15,38 +15,10 @@ FROM employee
     <head>
         <link rel="stylesheet" type="text/css" href="../attend styl.css" media="screen" />
         <title>Leave</title>
-        <script>
-            function tableToJson(table) {
-                var data = [];
-
-// first row needs to be headers
-                var headers = [];
-                for (var i = 0; i < table.rows[0].cells.length; i++) {
-                    headers[i] = table.rows[0].cells[i].innerHTML.toUpperCase().replace(/ /gi, '');
-                }
-                data.push(headers);
-// go through cells
-                for (var i = 1; i < table.rows.length; i++) {
-
-                    var tableRow = table.rows[i];
-                    var rowData = {};
-
-                    for (var j = 0; j < tableRow.cells.length; j++) {
-
-                        rowData[ headers[j] ] = tableRow.cells[j].value;
-
-                    }
-
-                    data.push(rowData);
-                }
-
-                return data;
-            }
-        </script>
-
+       
     </head>
     <body>
-        <div class="all_container">
+        <div class="attall_container">
             <center>
 
                 <h5 style="display: none"><?php echo $date2 ?></h5>
@@ -76,7 +48,7 @@ FROM employee
 
 
 
-                                <td style="width: 12%; background-color: lightgray"><select name="LvType" id="lvt" class="styled-select">
+                                <td style="width: 12%; background-color: lightgray"><select name="LvType" id="lvt" class="attstyled-select">
                                         <option>Mediacal Leave</option>
                                         <option>Half Day</option>
                                         <option>Short Leave</option>
@@ -87,7 +59,7 @@ FROM employee
                                     <input type="text" id="des" name="des">
                                 </td>
 
-                                <td style="width: 12%; background-color:#ECEFF1"><select class="styled-select" name="ReqType" onchange="saveLeave(document.getElementById('NIC').value, document.getElementById('lvt').value, document.getElementById('des').value, this.value, '<?php echo $row[0]; ?>')">
+                                <td style="width: 12%; background-color:#ECEFF1"><select class="attstyled-select" name="ReqType" onchange="saveLeave(document.getElementById('NIC').value, document.getElementById('lvt').value, document.getElementById('des').value, this.value, '<?php echo $row[0]; ?>')">
                                         <option>--Select Type--</option>
                                         <option>Letter</option>
                                         <option>Fax</option>
@@ -109,6 +81,6 @@ FROM employee
  
     
 
-    <script type="text/javascript" src="./attendence/jst.js"></script>
+    <script type="text/javascript" src="jst.js"></script>
  </body>
 </html>  
