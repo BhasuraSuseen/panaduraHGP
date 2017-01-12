@@ -191,7 +191,7 @@
 		
 	  		<?php //include 'dui.php';?>
 		<div class="middle_left" >
-		<div style="width:100%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+		<div style="width:50%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 			<center><form name="new_count" method="post" action="dietEB.php" onsubmit="return validateForm()">
                             <table>
 				    <thead><tr><th colspan=2 size="+2" color=#2980b9><b>ENTER COUNTS</b></th></tr></thead>
@@ -237,7 +237,7 @@
                     </center>
                 </div>
 		<div class="middle_right" >
-		<div style="width:100%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+		<div style="width:50%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 			<center><label style="background-color: #CFD8DC" align="center" id="lb1" ></label></center><br>
 		</div>
 		</div>
