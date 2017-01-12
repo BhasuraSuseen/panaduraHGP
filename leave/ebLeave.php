@@ -59,7 +59,7 @@ FROM employee
                                     <input type="text" id="des" name="des">
                                 </td>
 
-                                <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave(document.getElementById('nicc').value, document.getElementById('lt').value, document.getElementById('des').value, this.value, '<?php echo $row[0]; ?>')">
+                                <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave(document.getElementById('NIC').value, document.getElementById('lvt').value, document.getElementById('des').value, this.value, '<?php echo $row[0]; ?>')">
                                         <option>--Select Type--</option>
                                         <option>Letter</option>
                                         <option>Fax</option>
