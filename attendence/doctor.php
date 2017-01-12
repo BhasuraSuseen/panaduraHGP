@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
-        <?php include 'datetime.php';?>
+        <?php include '../datetime.php';?>
     </head>
     <body> 
         <div class="attall_container">
@@ -80,7 +80,7 @@
 
         }
     };
-    obj.open("POST", "./attendence/viewEbArp.php", true);
+    obj.open("POST", "viewEbArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     obj.send();
 
