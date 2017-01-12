@@ -370,17 +370,17 @@
                         <!--entering details of letters into databse for the first time -->
                         <form name="new_letter" action="letterEB.php" method="post" accept-charset="utf-8">
                         <!--input type="number" name="let_id" placeholder="Letter ID" required--><!--br-->
-                        <input type="date" name="fdate" placeholder="Date received" required><br>
-                        <input type="text" name="address" placeholder="Address"><br>
+                        <input type="date" name="fdate" placeholder="Date received" required>
+                        <input type="text" name="address" placeholder="Address">
                         <input type="radio" name="lettype" value="Post Card" required>Post Card
                         <input type="radio" name="lettype" value="Normal Letter" required>Normal Letter
                         <input type="radio" name="lettype" value="Registered Post" required>Registered Post
-                        <input type="radio" name="lettype" value="Other" required>Other<br><br>
+                        <input type="radio" name="lettype" value="Other" required>Other<br>
                         <input type="submit" value="Add new letter" name="submit">
                         <input type="reset" value="Reset">
                         <!--input type="submit" value="Last letter ID" name="submit1"-->
                         </form>
-
+                        <br>
                         <b>Enter MC to MS date</b>
                         <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8">
                               <label>Letter ID</label>
@@ -402,7 +402,7 @@
                           <input type="date" name="datemcms" placeholder="Date sent to MS" required>
                           <input type="submit" name="submitt" value="Enter Date">
                           <input type="reset" name="reset" value="Reset">
-
+                          	<br><br>
                         </form>
 
                         <!--methana enter karanne AO to MC date -->
@@ -437,13 +437,14 @@
                           <option>7</option>
                           <option>8</option>
                           </select>
-                          <input type="date" name="dateaomc" placeholder="Date from AO" required><br>
+                          <input type="date" name="dateaomc" placeholder="Date from AO" required>
                           <input type="text" name="sub" placeholder="Subject">
-                          <input type="file" name="myimage" id="fileToUpload" accept="image/*"><br>
+                          <input type="text" name="reci" placeholder="Recipient">
+                          <input type="file" name="myimage" id="fileToUpload"><br>
                           <input type="submit" name="submittt" value="Enter details">
                           <input type="reset" name="reset" value="Reset">
                         </form>
-
+                        	<br>
                         <form name="mctoeb" action="letterEB.php" method="post" accept-charset="utf-8">
 						    <b>Enter Letter EB to EB date</b><br>
 						 	<label>Letter ID</label>
@@ -509,40 +510,41 @@
                          /*ao to mc date and subject enter form */
       if(isset($_POST["submittt"])){
         	if(isset($_POST['lid1'])){
+        		$lid1=$_POST['lid1'];
                 $filename = $_FILES["myimage"]["name"];
 		        $filetype = $_FILES["myimage"]["type"];
 		        $filesize = $_FILES["myimage"]["size"]; 
 		        if($filename==''){
 		        	$folder='';
+		        	$newfilename='';
 		        }
 		        else{                          
 				$folder="lettercopies/";
+				$temp= explode(".", $filename);
+				$newfilename=$lid1.'.'.end($temp);
+				}
 				
-				echo $filetype;
-				echo $filesize;
-				if($filesize>5*1024*1024){
-					$error1="File is too large";
-					echo "<script type='text/javascript'>alert('$error1');</script>";
-					}
-						
-				else{
-
-					if($_POST['sub']==''){
-	               		 $sub="No subject entered";
-	            	}
-	                else{
-	                	$sub=$_POST['sub'];
-	                }
-	                $lid1=$_POST['lid1'];
-	                $dateaomc=$_POST['dateaomc'];
-	                $eb=$_POST['eb'];
-	                $sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc',eb='$eb',path='$folder',imgname='$filename'  WHERE letter_id='$lid1'";
-	                move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$_FILES["myimage"]["name"]);
-	                mysqli_query($conn,$sql2);
-	                 $message1= $lid1. " was forwarded";
-	                 echo  "<script type='text/javascript'>alert('$message1');</script>";
-	               }
-	           	}
+				if($_POST['sub']==''){
+               		 $sub="No subject entered";
+            	}
+                else{
+                	$sub=$_POST['sub'];
+                }
+                if($_POST['reci']==''){
+                	$reci="No recipient entered";	
+                }
+                else{
+                	$reci=$_POST['reci'];
+                }
+                $dateaomc=$_POST['dateaomc'];
+                $eb=$_POST['eb'];
+                $sql2="UPDATE letter SET subject ='$sub',recipient='$reci',aomc='$dateaomc',eb='$eb',path='$folder',imgname='$newfilename'  WHERE letter_id='$lid1'";
+                move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$newfilename);
+                mysqli_query($conn,$sql2);
+                 $message1= $lid1. " was forwarded";
+                 echo  "<script type='text/javascript'>alert('$message1');</script>";
+	               
+	           	
               	}
 	         else{
 	             $message1= "No letters to forward";
@@ -552,13 +554,7 @@
         }
 
 
-
-
-
-
-
-
-                          /*mc to ms date enter form */
+                      /*mc to ms date enter form */
                           if(isset($_POST["submitt"])){
                             if(isset($_POST['lid2'])){
                         $lid2=$_POST['lid2'];
@@ -587,7 +583,7 @@
              echo  "<script type='text/javascript'>alert('$message2');</script>";
 						}
             else{
-               $messag2="No letters to forward";
+               $message2="No letters to forward";
               echo  "<script type='text/javascript'>alert('$message2');</script>";
             }
           }
