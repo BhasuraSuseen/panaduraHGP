@@ -238,7 +238,7 @@ function searchAttends(day,id) {
 
                 }
             };
-            obj.open("POST", "saveLeave.php", true);
+            obj.open("POST", "./leave/saveLeave.php", true);
             obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             obj.send("nic=" + nic +  "&lvtype=" + lvType +"&descr="+des + "&rqType=" + rqtype);
 

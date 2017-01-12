@@ -55,7 +55,7 @@ FROM employee
                                         <option>Other</option>
                                     </select></td>
 
-                                <td style="width: 12%; background-color:#ECEFF1 " id="des" >
+                                <td style="width: 12%; background-color:#ECEFF1 " id="des1" >
                                     <input type="text" id="des" name="des">
                                 </td>
 
