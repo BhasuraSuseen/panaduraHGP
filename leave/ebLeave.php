@@ -1,11 +1,10 @@
 <?php
-include '../datetime.php';
+include 'datetime.php';
 include '../connect.php';
 
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
-  attend.$day,
   employee.E_type
 FROM employee
   INNER JOIN attend
@@ -132,6 +131,6 @@ FROM employee
 
     <script type="text/javascript" src="../jspdf.js"></script>
     <script type="text/javascript" src="../jquery.js"></script>
-    <script type="text/javascript" src="../jst.js"></script>
+    <script type="text/javascript" src="attendence/jst.js"></script>
  </body>
 </html>  
