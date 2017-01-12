@@ -1,7 +1,7 @@
 <?php
 
-include '../connect.php';
-include 'attendence/datetime.php';
+include 'connect.php';
+include 'datetime.php';
 $nic = $_POST['nic'];
 $LvType=$_POST['lvtype'];
 $des = $_POST['descr'];
