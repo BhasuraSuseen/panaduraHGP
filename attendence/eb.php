@@ -62,7 +62,7 @@
                         </table>
                         <br>
                       <!-- <button class="attblack_btn" onclick="getpdf()">pdf</button>-->
-                        <form action="report.php">
+                        <form action="./attendence/report.php" method="post">
                             <input type="submit" value="pdff">
                             </form>
                     </div>
