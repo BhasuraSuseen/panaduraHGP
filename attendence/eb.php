@@ -88,7 +88,9 @@ function checkBrowser() {
   
 
         checkBrowser();
-        obj.onreadystatechange = function() {};
+        obj.onreadystatechange = function() {
+        alert 'okkkk'
+        };
         obj.open("POST", "./report.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         obj.send();
