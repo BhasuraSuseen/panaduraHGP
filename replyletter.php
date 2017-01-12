@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Letter reply</title>
- <?php
- require "../connect.php";
- session_start();
- ?> 
-</head>
 
-<body>
+ <?php
+ require "connect.php";
+ ?> 
+
+
+
 
 <div><b> Reply to a letter</b>
   <form name="replyletter" action="replyletter.php" method="post" accept-charset="utf-8">
@@ -38,7 +34,7 @@
   <input type="submit" name="submit2" value="Enter letter">
   <input type="reset" name="reset2" value="Reset">
 </div>
-</body>
+
 <?php
 if(isset($_POST["submit2"])){
   if(isset($_POST['idrep'])){
@@ -61,6 +57,5 @@ else{
 }
 
 }
-
+mysqli_close($conn);
 ?>
-</html>
