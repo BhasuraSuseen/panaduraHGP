@@ -7,7 +7,7 @@ $LvType=$_POST['lvtype'];
 $des = $_POST['descr'];
 $rtype = $_POST['rqType'];
 
-echo $nic.",".$LvType.",".$des.",".$rtype.",".$date3."loooooo";
+echo $nic.",".$LvType.",".$des.",".$rtype.",".$date3;
 
 
 //    mysqli_query($server, "insert into attendence(leav,leav_type,req_by) values ('$leave','$type','$rtype') where empid = '$nic' and date = '$date3' ");
