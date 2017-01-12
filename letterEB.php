@@ -439,7 +439,7 @@
                           </select>
                           <input type="date" name="dateaomc" placeholder="Date from AO" required><br>
                           <input type="text" name="sub" placeholder="Subject">
-                          <input type="file" name="myimage" id="fileToUpload"><br>
+                          <input type="file" name="myimage" id="fileToUpload" accept="image/*"><br>
                           <input type="submit" name="submittt" value="Enter details">
                           <input type="reset" name="reset" value="Reset">
                         </form>
@@ -507,37 +507,57 @@
                                echo  "<script type='text/javascript'>alert('$message34');</script>";
                      }
                          /*ao to mc date and subject enter form */
-                          if(isset($_POST["submittt"])){
-                            if(isset($_POST['lid1'])){
-                             $filename = $_FILES["myimage"]["name"];
-					        $filetype = $_FILES["myimage"]["type"];
-					        $filesize = $_FILES["myimage"]["size"];                           
-							$folder="lettercopies/";
-							echo $filetype;
-							echo $filesize;
-							move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$_FILES["myimage"]["name"]);
+      if(isset($_POST["submittt"])){
+        	if(isset($_POST['lid1'])){
+                $filename = $_FILES["myimage"]["name"];
+		        $filetype = $_FILES["myimage"]["type"];
+		        $filesize = $_FILES["myimage"]["size"]; 
+		        if($filename==''){
+		        	$folder='';
+		        }
+		        else{                          
+				$folder="lettercopies/";
+				
+				echo $filetype;
+				echo $filesize;
+				if($filesize>5*1024*1024){
+					$error1="File is too large";
+					echo "<script type='text/javascript'>alert('$error1');</script>";
+					}
 						
+				else{
+
+					if($_POST['sub']==''){
+	               		 $sub="No subject entered";
+	            	}
+	                else{
+	                	$sub=$_POST['sub'];
+	                }
+	                $lid1=$_POST['lid1'];
+	                $dateaomc=$_POST['dateaomc'];
+	                $eb=$_POST['eb'];
+	                $sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc',eb='$eb',path='$folder',imgname='$filename'  WHERE letter_id='$lid1'";
+	                move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$_FILES["myimage"]["name"]);
+	                mysqli_query($conn,$sql2);
+	                 $message1= $lid1. " was forwarded";
+	                 echo  "<script type='text/javascript'>alert('$message1');</script>";
+	               }
+	           	}
+              	}
+	         else{
+	             $message1= "No letters to forward";
+	             echo  "<script type='text/javascript'>alert('$message1');</script>";
+	          	 }
+
+        }
 
 
-						if($_POST['sub']==''){
-                        $sub="No subject entered";
-                    	}
-                        else{
-                        	$sub=$_POST['sub'];
-                        }
-                        $lid1=$_POST['lid1'];
-                        $dateaomc=$_POST['dateaomc'];
-                        $eb=$_POST['eb'];
-                        $sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc',eb='$eb',path='$folder',imgname='$filename'  WHERE letter_id='$lid1'";
-                        mysqli_query($conn,$sql2);
-                         $message1= $lid1. " was forwarded";
-                         echo  "<script type='text/javascript'>alert('$message1');</script>";
-                          }
-                          else{
-                             $message1= "No letters to forward";
-                            echo  "<script type='text/javascript'>alert('$message1');</script>";
-                          }
-                        }
+
+
+
+
+
+
                           /*mc to ms date enter form */
                           if(isset($_POST["submitt"])){
                             if(isset($_POST['lid2'])){
