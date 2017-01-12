@@ -61,8 +61,9 @@
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
+                        <form action="./report.php" method="post">
                             <button class="attblack_btn" type="submit" onclick="getpdf();">Download</button>
-
+                        </form>
 
                     </div>
 
