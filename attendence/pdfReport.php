@@ -28,7 +28,7 @@ FROM employee
     <h4><?php echo $yearmon2.$date5 . ' ' . 'EB Attendence report' ?></h4>
    
     <table>
-        <table id="repo_tbl" border="0" style="width: 700%">
+        <table id="repo_tbl" border="0" style="width: 70%">
             <tr>
                 <td style="background-color: #CFD8DC"><br>ID</td>
                 <td style="background-color: #CFD8DC"><br>Name</td>
