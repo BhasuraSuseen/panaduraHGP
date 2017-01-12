@@ -61,7 +61,7 @@
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                            <button class="attblack_btn" type="submit" onclick="callme();">Download</button>
+                            <button class="attblack_btn" type="submit" onclick="getpdf();">Download</button>
 
 
                     </div>
@@ -71,4 +71,27 @@
 
     </body>
         <script type="text/javascript" src="./attendence/jst.js"></script>
+        <script>
+        var obj1;
+
+
+
+function checkBrowser() {
+    if (window.XMLHttpRequest) {
+        obj = new XMLHttpRequest();
+    } else {
+        obj = new ActiveXobject("Microfoft.ActiveXobject");
+    }
+}
+            
+ function getpdf() {
+  
+
+        checkBrowser();
+        obj.onreadystatechange = function() {};
+        obj.open("POST", "./report.php", true);
+        obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        obj.send();
+ }
+        </script>
 </html>
