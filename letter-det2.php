@@ -8,30 +8,28 @@
              require"connect.php";  
              $letdetailsq=mysqli_query($conn,"SELECT * FROM letter WHERE letter_id='$letid'");
              $array=mysqli_fetch_assoc($letdetailsq);
-             echo"<table>";
-             echo"<tr>
-                      <th><b>RECEIVED DETAILS</b></th>
-                      <th></th>
+            echo "<br><b>RECEIVED DETAILS</b><br>";
+            echo"<table>";
+             
+            echo"<tr>
+                      <th><b>Letter ID</b></th>
+                      <th> ". $array["letter_id"]." </th>
                     </tr>";
             echo"<tr>
-                      <th>Letter ID</th>
-                      <th><b> ". $array["letter_id"]." </b></th>
+                      <th><b>Date Received</b></th>
+                      <th> ". $array["date"]." </th>
                     </tr>";
             echo"<tr>
-                      <th>Date Received</th>
-                      <th><b> ". $array["date"]." </b></th>
-                    </tr>";
-            echo"<tr>
-                      <th>Subject</th>
-                      <th><b> ". $array["subject"]." </b></th>
+                      <th><b>Subject</b></th>
+                      <th> ". $array["subject"]." </th>
                     </tr>";
              echo"<tr>
-                      <th>Received From</th>
-                      <th><b> ". $array["address"]." </b></th>
+                      <th><b>Received From</b></th>
+                      <th> ". $array["address"]." </th>
                     </tr>";
              echo"<tr>
-                      <th>Type</th>
-                      <th><b> ". $array["type"]." </b></th>
+                      <th><b>Type</b></th>
+                      <th> ". $array["type"]." </th>
                     </tr>";
             
              
@@ -46,49 +44,53 @@
 
              if(is_null($array['mcms'])){
               echo"<tr>
-                      <th>Letter Clerk to Medical Superintendent date </th>
+                      <th><b>Letter Clerk to Medical Superintendent Date </b></th>
                       <th>Letter not forwarded</th>
                     </tr>";
                $LC_to_MS = "";
              }
              else{
               echo"<tr>
-                      <th>Letter Clerk to Medical Superintendent date </th>
-                      <th><b>". $array["mcms"]."</b></th>
+                      <th><b>Letter Clerk to Medical Superintendent Date </b></th>
+                      <th>". $array["mcms"]."</th>
                     </tr>";
               $LC_to_MS = $array["mcms"];
              }
               if(is_null($array['msao'])){
               echo"<tr>
-                      <th>Medical Superintendent to Admin Officer date </th>
+                      <th><b>Medical Superintendent to Admin Officer Date </b></th>
                       <th>Letter not forwarded</th>
                     </tr>";
               $MS_to_AO="";
              }
              else{
               echo"<tr>
-                      <th>Medical Superintendent to Admin Officer date </th>
-                      <th><b>". $array["msao"]."</b></th>
+                      <th><b>Medical Superintendent to Admin Officer Date </b></th>
+                      <th>". $array["msao"]."</th>
                     </tr>";
               $MS_to_AO = $array["msao"];
              }
               if(is_null($array['aomc'])){
                 echo"<tr>
-                      <th>Admin Officer to Letter Clerk date</th>
+                      <th><b>Admin Officer to Letter Clerk Date</b></th>
                       <th>Letter not forwarded</th>
                     </tr>";
               $AO_to_LC = "";
              }
              else{
               echo"<tr>
-                      <th>Admin Officer to Letter Clerk date</th>
-                      <th><b> ". $array["aomc"]." </b></th>
+                      <th><b>Admin Officer to Letter Clerk Date</b></th>
+                      <th> ". $array["aomc"]." </th>
                     </tr>";
               $AO_to_LC = $array["aomc"];
              }
              
              $current_location='';
              if (is_null($array["mceb"])==FALSE){
+              $softcopypath = "lettercopies/";
+              $softcopypath .= $letter_id .".pdf";
+              echo("<button onclick=\"location.href='".$softcopypath." '\">Receieved Letter Soft copy</button>");
+
               if ($array["eb"]==1){
                 $current_location="EB1";
               }
@@ -133,22 +135,20 @@
               }
              }
              echo"<tr>
-                      <th>Current Location</th>
-                      <th><b> ".$current_location."</b> </th>
+                      <th><b>Current Location</b></th>
+                      <th> ".$current_location." </th>
                     </tr>";
             
             }
-            echo"</table><br>";
-            echo"<table>";
-            echo"<tr>
-                      <th><b>REPLY DETAILS</b></th>
-                      <th></th>
-                    </tr>";
-          
+            echo"</table>";
+
+            echo "<br><br><b>REPLY DETAILS</b><br>";
+           echo"<table>";
             $letreply=mysqli_query($conn,"SELECT * FROM letter_rep WHERE letter_id='$letid'");
             $array1=mysqli_fetch_assoc($letreply);
             mysqli_close($conn); 
             if($array1 > 0){
+
              echo"<tr>
                       <th><b>Reply Letter ID</b></th>
                       <th>". $array1["rep_id"]."</th>
@@ -169,7 +169,10 @@
                       <th><b>Type</b></th>
                       <th>". $array1["type"]."</th>
                     </tr>";
-             
+              $letter_id1 =  $array1["rep_id"];
+              $softcopypath1 = "lettercopies/";
+              $softcopypath1 .= $letter_id1 .".pdf";
+              echo("<button onclick=\"location.href='".$softcopypath1." '\">Replied Letter Soft copy</button>");
            }else{
             
             echo"<tr>

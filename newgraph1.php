@@ -200,11 +200,11 @@ mysqli_close($conn);
                   {"name": "EB8", "value" : 0, "x_axis": 740, "y_axis": 545}
                  ];
       var nodesl=[{"name": "Letter", "value" : 0,"location" : "","type" : "Normal Letter","replied" : "F", "x_axis": 285, "y_axis": 120}];
-      var nodesr=[{"name": "Reply Status",  "x_axis": 100, "y_axis": 120},
+      var nodesr=[{"name": "Reply Status",  "x_axis": 110, "y_axis": 120},
                   {"name": "Normal Letter",  "x_axis": 330, "y_axis": 50},
                   {"name": "Registered Post",  "x_axis": 370, "y_axis": 100},
                   {"name": "Post Card",  "x_axis": 370, "y_axis": 150},
-                  {"name": "Other Letters",  "x_axis": 330, "y_axis": 200}
+                  {"name": "Other Letter",  "x_axis": 330, "y_axis": 200}
                   ];
       nodesl[0].location="<?php echo $location ?>";
       nodesl[0].type="<?php echo $type ?>";
