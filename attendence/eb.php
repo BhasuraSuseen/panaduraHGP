@@ -62,9 +62,10 @@
                         </table>
                         <br>
                       <!-- <button class="attblack_btn" onclick="getpdf()">pdf</button>
-                        <a href="/attendence/report.php">get pdf</a>--> 
-                         <form action="/attendence/report.php" method="post">
-                            <input type="submit" value="pdff">
+ <form action="/attendence/report.php" method="post">-->
+                        <a href="/attendence/report.php">  <input type="submit" value="pdff"></a> 
+                        
+                          
                             </form>
                     </div>
 
