@@ -22,16 +22,19 @@ FROM employee
 //}
 ?>
 <html>
-    <h4><?php echo $yearmon; ?></h4>
-    <h4><?php echo $date5 . ' ' . 'Attendence report' ?></h4>
+  <center>
+    <h3><?php echo 'Panadura Base Hospital' ?></h3>
+    
+    <h4><?php echo $yearmon2.$date5 . ' ' . 'EB Attendence report' ?></h4>
+   
     <table>
-        <table id="repo_tbl" border="0" style="width: 100%">
+        <table id="repo_tbl" border="0" style="width: 700%">
             <tr>
                 <td style="background-color: #CFD8DC"><br>ID</td>
                 <td style="background-color: #CFD8DC"><br>Name</td>
                 <td style="width: 16%; background-color: #CFD8DC"><br>Present</td>
                 <td style="width: 16%; background-color: #CFD8DC"><br>Absent</td>
-                <td style="width: 16%; background-color: #CFD8DC"><br>Leaves</td>
+        
 <!--                    <td style="width: 8%; background-color: #CFD8DC"><br>Thu</td>
                 <td style="width: 8%; background-color: #CFD8DC"><br>Fri</td>
                 <td style="width: 8%; background-color: #CFD8DC"><br>Sat</td>
