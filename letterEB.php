@@ -468,45 +468,24 @@
 						      <input type="reset" name="reset" value="Reset">
 						  </form>
                         <?php
-                        if($_POST){
-                         if(isset($_POST["submit"])){
-                          		submit();
-                         }
-                         elseif (isset($_POST["submit1"])) {
-                         		submit1();
-                         }
-                     }
-                     function submit(){
-                     	  //$id= $_POST['let_id'];
+                   
+                        	if(isset($_POST["submit"])){
                             $date= $_POST['fdate'];
                             $type=$_POST['lettype'];
                             $addr=$_POST['address'];
-                            /*check if the given id already exists*/
-                           // $letidheck="select * from letter where letter_id='$id'";
-                            //$result=mysqli_query($conn,$letidheck);
-                           // if(mysqli_num_rows($result)>=1){
-                            // $message4= $id." is already taken";
-                              // echo  "<script type='text/javascript'>alert('$message4');</script>";
-                           // }   
-                           // else{
+                         
                                 $sql="INSERT INTO letter (date, address,type) VALUES ('$date', '$addr','$type')";
                            		$newid="SELECT letter_id FROM letter ORDER BY letter_id DESC LIMIT 1";
                                 mysqli_query($conn,$sql);
                                	$newidd=mysqli_query($conn,$newid);
                                	$newiddd=mysqli_fetch_array($newidd);
                                  $message3="New letter entered \\nLetter id:".$newiddd[0];
+                                 echo $newiddd[0];
+                                 echo $sql;
                                echo  "<script type='text/javascript'>alert('$message3');</script>";
-                           // }
+                       	}
                             
-                     }
-                     function submit1(){
-                     	$new="SELECT letter_id FROM letter ORDER BY letter_id DESC LIMIT 1";
-                               
-                               	$neww=mysqli_query($conn,$new);
-                               	$newww=mysqli_fetch_array($neww);
-                               	$message34="Letter id:".$newww[0];
-                               echo  "<script type='text/javascript'>alert('$message34');</script>";
-                     }
+                 
                          /*ao to mc date and subject enter form */
       if(isset($_POST["submittt"])){
         	if(isset($_POST['lid1'])){
