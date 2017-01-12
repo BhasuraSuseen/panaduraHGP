@@ -49,7 +49,7 @@ FROM employee
 
 
                                 <td style="width: 12%; background-color: lightgray"><select name="LvType" id="lvt" class="attstyled-select">
-                                        <option>Mediacal Leave</option>
+                                        <option>Medical Leave</option>
                                         <option>Half Day</option>
                                         <option>Short Leave</option>
                                         <option>Other</option>
@@ -81,6 +81,6 @@ FROM employee
  
     
 
-    <script type="text/javascript" src="./attendence/jst.js"></script>
+    <script type="text/javascript" src="jst.js"></script>
  </body>
 </html>  
