@@ -65,7 +65,7 @@
                         <form action="ebatt.php" method="post">
                             <input type="submit" value="pdff">
                             </form>-->
-                        <a href="http://www.omspanadura.azurewebsites.net/attendence/report.php">get pdf</a> 
+                        <a href="omspanadura.azurewebsites.net/attendence/report.php">get pdf</a> 
                     </div>
 
                 </div>
