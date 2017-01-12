@@ -217,17 +217,9 @@ function searchAttends(day,id) {
 }
 
 
-    var obj;
+  
 
-    function checkBrowser() {
-        if (window.XMLHttpRequest) {
-            obj = new XMLHttpRequest();
-        } else {
-            obj = new ActiveXobject("Microfoft.ActiveXobject");
-        }
-    }
-
-    function saveLeave(leave, type, reqType, nic) {
+    function saveLeave(nic, lvType,des,rqtype ) {
         try {
 
             checkBrowser();
@@ -246,9 +238,9 @@ function searchAttends(day,id) {
 
                 }
             };
-            obj.open("POST", "./attendence/saveLeave.php", true);
+            obj.open("POST", "saveLeave.php", true);
             obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            obj.send("leave=" + leave + "&type=" + type + "&rtype=" + reqType + "&nic=" + nic);
+            obj.send("nic=" + nic +  "&lvtype=" + lvType +"&descr="+des + "&rqType=" + rqtype);
 
 
 
