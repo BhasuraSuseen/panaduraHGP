@@ -150,24 +150,24 @@
             mysqli_close($conn); 
             if($array1 > 0){
              echo"<tr>
-                      <th>Reply Letter ID</th>
-                      <th><b>". $array1["rep_id"]."</b></th>
+                      <th><b>Reply Letter ID</b></th>
+                      <th>". $array1["rep_id"]."</th>
                     </tr>"; 
               echo"<tr>
-                      <th>Date replied</th>
-                      <th><b>". $array1["date"]."</b></th>
+                      <th><b>Date replied</b></th>
+                      <th>". $array1["date"]."</th>
                     </tr>";
              echo"<tr>
-                      <th>Subject</th>
-                      <th><b>". $array1["subject"]."</b></th>
+                      <th><b>Subject</b></th>
+                      <th>". $array1["subject"]."</th>
                     </tr>";
              echo"<tr>
-                      <th>Reply Address</th>
-                      <th><b>". $array1["address"]."</b></th>
+                      <th><b>Reply Address</b></th>
+                      <th>". $array1["address"]."</th>
                     </tr>";
              echo"<tr>
-                      <thType</th>
-                      <th><b>". $array1["type"]."</b></th>
+                      <th><b>Type</b></th>
+                      <th>". $array1["type"]."</th>
                     </tr>";
              
            }else{

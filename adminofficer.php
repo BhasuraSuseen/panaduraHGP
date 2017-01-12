@@ -33,6 +33,20 @@ header("Location:  index.php");
    .arcb {
     fill: #CFD8DC;
   }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+      text-align: left;
+      padding: 5px;
+      font-weight: 600;
+  }
+
+  tr:nth-child(even) {
+      background-color: #F5F5F5;
+  }
   #suggesstion-box{ height: 100px; overflow-y: auto; overflow-x: hidden;display: none;}
   #letterid-list{list-style:none;margin:10px;padding:0;width:100%; }
   #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;}
