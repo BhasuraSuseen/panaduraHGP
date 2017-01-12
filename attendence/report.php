@@ -1,31 +1,32 @@
 <?php
 
-include 'datetime.php';
-include 'connection.php';
+//include 'datetime.php';
+//include 'connection.php';
 ?>
 
 
 <?php
 
-echo 'Panadura base hospital';
-echo "<br>";
-echo 'Month attendence report                                                                                                   ';
-echo $yearmon;
+//echo 'Panadura base hospital';
+//echo "<br>";
+//echo 'Month attendence report                                                                                                   ';
+//echo $yearmon;
 
 require 'pdfcrowd.php';
 try
 {   
     // create an API client instance
-    $client = new Pdfcrowd("dhananjaya", "be4790e49b23fdf1e17b2317758d46e3");
+    $client = new Pdfcrowd("homs1", "f8f24f27034ff2118a45c9eb6ae6b49c");
 
     // convert a web page and store the generated PDF into a $pdf variable
-    $pdf = $client->convertURI('http://omspanadura.azurewebsites.net/attendence/report.php/');
+    //methana thmi link ekacedit kranna one--!!!!
+    $pdf = $client->convertURI('http://www.google.com/');
 
     // set HTTP response headers
     header("Content-Type: application/pdf");
     header("Cache-Control: max-age=0");
     header("Accept-Ranges: none");
-    header("Content-Disposition: attachment; filename=\"google_com.pdf\"");
+    header("Content-Disposition: attachment; filename=\"Report.pdf\"");
 
     // send the generated PDF 
     echo $pdf;
