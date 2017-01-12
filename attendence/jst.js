@@ -257,16 +257,5 @@ function searchAttends(day,id) {
     }
 
 
-            
- function getpdf() {
-  
 
-        checkBrowser();
-        obj.onreadystatechange = function() {
-        alert 'okkkk'
-        };
-        obj.open("POST", "./attendence/report.php", true);
-        obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        obj.send();
- }
 
