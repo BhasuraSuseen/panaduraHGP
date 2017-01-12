@@ -173,7 +173,7 @@
                               <input type="file" name="myimage" id="fileToUpload"><br>
                               <input type="submit" name="submit2" value="Enter letter">
                               <input type="reset" name="reset2" value="Reset">
-
+                              </form>
 
                             <?php
                             if(isset($_POST["submit2"])){
