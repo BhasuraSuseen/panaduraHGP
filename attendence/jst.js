@@ -256,23 +256,7 @@ function searchAttends(day,id) {
         }
     }
 
-function getpdf() {
-    checkBrowser();
 
-    obj.onreadystatechange = function() {
-
-        //alert(obj.responseText);
-        if (obj.readyState === 4 && obj.status === 200) {
-                      
-//            alert(obj.responseText);
-        
-    };
-    obj.open("POST", "./attendence/report.php", true);
-    obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    obj.send();
-       } catch (err) {
-        }
-    }
 
 
 
