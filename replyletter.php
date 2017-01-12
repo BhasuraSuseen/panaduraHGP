@@ -3,7 +3,7 @@
 <head>
 	<title>Letter reply</title>
  <?php
- require "connect.php";
+ require "../connect.php";
  session_start();
  ?> 
 </head>

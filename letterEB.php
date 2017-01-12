@@ -370,17 +370,17 @@
                         <!--entering details of letters into databse for the first time -->
                         <form name="new_letter" action="letterEB.php" method="post" accept-charset="utf-8">
                         <!--input type="number" name="let_id" placeholder="Letter ID" required--><!--br-->
-                        <input type="date" name="fdate" placeholder="Date received" required><br>
-                        <input type="text" name="address" placeholder="Address"><br>
+                        <input type="date" name="fdate" placeholder="Date received" required>
+                        <input type="text" name="address" placeholder="Address">
                         <input type="radio" name="lettype" value="Post Card" required>Post Card
                         <input type="radio" name="lettype" value="Normal Letter" required>Normal Letter
                         <input type="radio" name="lettype" value="Registered Post" required>Registered Post
-                        <input type="radio" name="lettype" value="Other" required>Other<br><br>
+                        <input type="radio" name="lettype" value="Other" required>Other<br>
                         <input type="submit" value="Add new letter" name="submit">
                         <input type="reset" value="Reset">
                         <!--input type="submit" value="Last letter ID" name="submit1"-->
                         </form>
-
+                        <br>
                         <b>Enter MC to MS date</b>
                         <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8">
                               <label>Letter ID</label>
@@ -402,7 +402,7 @@
                           <input type="date" name="datemcms" placeholder="Date sent to MS" required>
                           <input type="submit" name="submitt" value="Enter Date">
                           <input type="reset" name="reset" value="Reset">
-
+                          	<br><br>
                         </form>
 
                         <!--methana enter karanne AO to MC date -->
@@ -444,7 +444,7 @@
                           <input type="submit" name="submittt" value="Enter details">
                           <input type="reset" name="reset" value="Reset">
                         </form>
-
+                        	<br>
                         <form name="mctoeb" action="letterEB.php" method="post" accept-charset="utf-8">
 						    <b>Enter Letter EB to EB date</b><br>
 						 	<label>Letter ID</label>
@@ -553,7 +553,7 @@
 
         }
 
-        
+
                       /*mc to ms date enter form */
                           if(isset($_POST["submitt"])){
                             if(isset($_POST['lid2'])){
@@ -583,7 +583,7 @@
              echo  "<script type='text/javascript'>alert('$message2');</script>";
 						}
             else{
-               $messag2="No letters to forward";
+               $message2="No letters to forward";
               echo  "<script type='text/javascript'>alert('$message2');</script>";
             }
           }

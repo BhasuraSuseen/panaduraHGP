@@ -421,7 +421,7 @@ require "connect.php";
   <div id="pop_box_mail_3">
                 <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">LETTER REPLY FORM </a></div>
                           <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                                    <?php echo "include here"; ?> 
+                                    <?php echo "methenta replyletter.php eka enna one"; ?> 
                           </div>
             </div>
       <div id="pop_box_att_2">
