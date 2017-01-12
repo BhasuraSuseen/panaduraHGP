@@ -120,7 +120,7 @@
                             <center><label  style="width: 100%" id="lbpop1"></label><br></center>
 				 <?php include 'report.php';?>
 		
-		<center><form action="downloadFile.php" method="post">
+		<center><form action="reportPDF.php" method="post">
 		<button style="background-color: #263238;
                             outline: none;
                             border: none;
@@ -475,7 +475,8 @@
             document.new_count.staff.focus() ;
             return false;
          }
-						</script>
+	}
+	</script>
 	
  </body>
  </html>

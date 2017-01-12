@@ -1,5 +1,5 @@
 <?php
-require('fpdf/fpdf.php');
+require('fpdf.php');
 class PDF_report extends FPDF { 
     function __construct ($orientation = 'P', $unit = 'pt', $format = 'Letter', $margin = 40) { 
         $this->FPDF($orientation, $unit, $format); 

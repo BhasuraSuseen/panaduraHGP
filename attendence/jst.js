@@ -257,54 +257,6 @@ function searchAttends(day,id) {
     }
 
 
-function tableToJson(table) {
-var data = [];
 
-// first row needs to be headers
-var headers = [];
-for (var i=0; i<table.rows[0].cells.length; i++) {
-headers[i] = table.rows[0].cells[i].innerHTML.toUpperCase().replace(/ /gi,'');
-}
-data.push(headers);
-// go through cells
-for (var i=1; i<table.rows.length; i++) {
-
-var tableRow = table.rows[i];
-var rowData = {};
-
-for (var j=0; j<tableRow.cells.length; j++) {
-
-rowData[ headers[j] ] = tableRow.cells[j].innerHTML;
-
-}
-
-data.push(rowData);
-}
-
-return data;
-}
-
-
-
-
-function callme(){
- var table = tableToJson($('tbl1').get(0));
- var doc = new jsPDF('l','pt','letter',true);
-
-
- $.each(table, function(i, row){
- $.each(row, function(j,cell){
- if(j=="DATE" | i==0){
- doc.cell(20,50,150,30,cell,i);
- }
- else{
- doc.cell(20,50,150,30,cell,i);
- }
-
- });
- });
-
- doc.save('Report.pdf');
- }
 
 
