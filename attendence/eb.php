@@ -63,7 +63,7 @@
                         <br>
                       <!-- <button class="attblack_btn" onclick="getpdf()">pdf</button>
  <form action="/attendence/report.php" method="post">-->
-                        <a href="/attendence/report.php">  <input type="submit" value="pdff"></a> 
+                        <a href="/attendence/report.php">  <input type="submit" value="Download Pdf"></a> 
                         
                           
                             </form>
