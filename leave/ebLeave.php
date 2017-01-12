@@ -1,7 +1,7 @@
 <?php
 include 'datetime.php';
 include '../connect.php';
-echo $date3;
+//echo $date3;
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
@@ -81,6 +81,6 @@ FROM employee
  
     
 
-    <script type="text/javascript" src="jst.js"></script>
+    <script type="text/javascript" src="./attendence/jst.js"></script>
  </body>
 </html>  
