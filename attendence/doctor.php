@@ -62,7 +62,7 @@
 
                 </div>
             </div>
-
+ <script type="text/javascript" src="jst.js"></script>
     </body>
-    <script type="text/javascript" src="./jst.js"></script>
+   
 </html>
