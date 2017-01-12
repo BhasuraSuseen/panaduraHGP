@@ -61,9 +61,7 @@
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                       <form action="report.php" method="post">
-                            <input type="submit" value="Download Pdf">
-                        </form>
+                       <button class="attblack_btn" onclick="getpdf()">pdf</button>
 
                     </div>
 
@@ -89,12 +87,12 @@ function checkBrowser() {
   
 
         checkBrowser();
-        obj.onreadystatechange = function() {
+        obj1.onreadystatechange = function() {
         alert 'okkkk'
         };
-        obj.open("POST", "./report.php", true);
-        obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        obj.send();
+        obj1.open("POST", "report.php", true);
+        obj1.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        obj1.send();
  }
         </script>
 </html>
