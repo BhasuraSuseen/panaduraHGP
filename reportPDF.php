@@ -19,7 +19,7 @@ try
     $client = new Pdfcrowd("homs1", "f8f24f27034ff2118a45c9eb6ae6b49c");
 
     // convert a web page and store the generated PDF into a $pdf variable
-    $pdf = $client->convertURI('report.php');
+    $pdf = $client->convertURI('http://omspanadura.azurewebsites.net/report.php');
 
     // set HTTP response headers
     header("Content-Type: application/pdf");
