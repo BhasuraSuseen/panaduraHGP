@@ -89,7 +89,7 @@
              if (is_null($array["mceb"])==FALSE){
               $softcopypath = "lettercopies/";
               $softcopypath .= $letter_id .".pdf";
-              echo("<button onclick=\"location.href='".$softcopypath." '\">Receieved Letter Soft copy</button>");
+              echo("<button onclick=\"location.href='".$softcopypath." '\">Received Letter Soft copy</button>");
 
               if ($array["eb"]==1){
                 $current_location="EB1";
