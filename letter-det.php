@@ -96,20 +96,45 @@
              }
             echo "<lable><b>Current Location : </b></label><br>&emsp;&emsp;&emsp;&emsp;".$current_location;
             }
-            echo "<br><br><br><label><b><u>REPLY DETAILS</u></b><label><br>";
+           echo"<table>";
+            echo"<tr>
+                      <th><b>REPLY DETAILS</b></th>
+                      <th></th>
+                    </tr>";
           
             $letreply=mysqli_query($conn,"SELECT * FROM letter_rep WHERE letter_id='$letid'");
             $array1=mysqli_fetch_assoc($letreply);
             mysqli_close($conn); 
             if($array1 > 0){
-              echo "<br><label><b>Reply Letter ID : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["rep_id"]."<br>";
-             echo "<label><b>Date replied : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["date"]."<br>";
-             echo "<label><b>Subject : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["subject"]."<br>";
-             echo "<label><b>Reply Address : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["address"]."<br>";
-             echo "<label><b>Type : </b><label><br>&emsp;&emsp;&emsp;&emsp;". $array1["type"]."<br>";
+             echo"<tr>
+                      <th><b>Reply Letter ID</b></th>
+                      <th>". $array1["rep_id"]."</th>
+                    </tr>"; 
+              echo"<tr>
+                      <th><b>Date replied</b></th>
+                      <th>". $array1["date"]."</th>
+                    </tr>";
+             echo"<tr>
+                      <th><b>Subject</b></th>
+                      <th>". $array1["subject"]."</th>
+                    </tr>";
+             echo"<tr>
+                      <th><b>Reply Address</b></th>
+                      <th>". $array1["address"]."</th>
+                    </tr>";
+             echo"<tr>
+                      <th><b>Type</b></th>
+                      <th>". $array1["type"]."</th>
+                    </tr>";
+             
            }else{
-            echo "<br><label><b>NO REPLIES YET</b><label><br>";
+            
+            echo"<tr>
+                      <th>No Replies Yet !</th>
+                      <th></th>
+                    </tr>";
            }
+            echo"</table>";
             
             
               ?>
