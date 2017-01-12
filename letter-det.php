@@ -86,9 +86,9 @@
              }
              
              $current_location='';
-             if (is_null($array["mceb"])==FALSE){
+             if ((is_null($array["mceb"])==FALSE)and($array['imgname']!='')){
               $softcopypath = "lettercopies/";
-              $softcopypath .= $letter_id .".pdf";
+              $softcopypath .= $letter_id.".pdf";
               echo("<button onclick=\"location.href='".$softcopypath." '\">Received Letter Soft copy</button>");
 
               if ($array["eb"]==1){
@@ -169,10 +169,12 @@
                       <th><b>Type</b></th>
                       <th>". $array1["type"]."</th>
                     </tr>";
-              $letter_id1 =  $array1["rep_id"];
-              $softcopypath1 = "lettercopies/";
-              $softcopypath1 .= $letter_id1 .".pdf";
+              $letter_id1 =  $array1["letter_id"];
+              $softcopypath1 = "letterreplies/";
+              $softcopypath1 .= $letter_id1 ."reply.pdf";
+              if($array1['file']!=''){
               echo("<button onclick=\"location.href='".$softcopypath1." '\">Replied Letter Soft copy</button>");
+            }
            }else{
             
             echo"<tr>

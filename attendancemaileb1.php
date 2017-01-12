@@ -145,7 +145,79 @@
             <div id="pop_box_mail_2">
                 <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">LETTER REPLY FORM </a></div>
                           <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                                    <?php echo "include here"; ?> 
+                                    <b> Reply to a letter</b>
+                              <form name="replyletter" action="attendancemaileb1.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                             
+                              <label>Letter ID:</label>
+                               <?php  
+                                  $a=mysqli_query($conn,"select letter.letter_id from letter where mceb is NOT NULL and eb ='".$_SESSION['ebno']."' and letter.letter_id not in(select letter_rep.letter_id from letter_rep)");
+                                  if(mysqli_num_rows($a)>0){
+                                  $select2= '<select name="idrep">';
+                                  while($r=mysqli_fetch_array($a)){
+                                 
+                                  $select2.='<option value="' .$r[0]. '">'.$r[0].'</option>';
+                                   }
+                                  }
+                                  else{
+                                    $select2='<select><option></option></select>';
+                                  }
+                                  echo $select2;
+                                  echo '</select>'?><br>
+                              <input type="date" name="repdate" placeholder="Date replied" required><br>
+                              <input type="text" name="subject" placeholder="subject of the letter"><br>
+                              <input type="radio" name="type" value="Normal letter" checked>Normal Letter
+                              <input type="radio" name="type" value="Registered letter">Registered Letter
+                              <input type="radio" name="type" value="Fax">Fax
+                              <input type="radio" name="type" value="Other">Other<br>
+                              <input type="text" name="addr" placeholder="Address/ Fax number" required><br>
+                              <input type="file" name="myimage" id="fileToUpload"><br>
+                              <input type="submit" name="submit2" value="Enter letter">
+                              <input type="reset" name="reset2" value="Reset">
+
+
+                            <?php
+                            if(isset($_POST["submit2"])){
+                              if(isset($_POST['idrep'])){
+                                    $idrep=$_POST['idrep'];
+                                    $filename = $_FILES['myimage']['name'];
+                                    $filetype = $_FILES['myimage']['type'];
+                                    $filesize = $_FILES['myimage']['size']; 
+                                    if($filename==''){
+                                      $folder='';
+                                      $newfilename='';
+                                    }
+                                    else{                          
+                                      $folder="letterreplies/";
+                                      $temp= explode(".", $filename);
+                                      $newfilename=$idrep.'reply.'.end($temp);
+                                    }
+                                    if($_POST['subject']==''){
+                                    $subject="No subject entered";
+                                    }
+                                    else{
+                                    $subject=$_POST['subject'];
+                                        }
+                                      $date=$_POST['repdate'];                                    
+                                      $type=$_POST['type'];
+                                      $addr=($_POST['addr']); 
+                                      $user=$_SESSION['username'];
+
+                                      $sql="INSERT INTO letter_rep (date,subject,type,address,letter_id,user,folder,file) VALUES ('$date','$subject','$type','$addr','$idrep','$user','$folder','$newfilename')";
+                              move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$newfilename);        
+                              mysqli_query($conn,$sql);
+                              $message= $idrep. " was entered";
+                              echo  "<script type='text/javascript'>alert('$message');</script>";
+                            }
+                            else{
+                              $message="No letters to reply";
+                              echo  "<script type='text/javascript'>alert('$message');</script>";
+                                 }      
+                            
+
+                            }
+
+                            ?>
+
                           </div>
             </div>
             <div id="pop_box_att_1">
