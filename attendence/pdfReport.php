@@ -32,7 +32,7 @@ FROM employee
             <tr>
                 <td style="background-color: #CFD8DC"><br>ID</td>
                 <td style="background-color: #CFD8DC"><br>Name</td>
-                <td style="width: 16%; background-color: #CFD8DC"><br>Present</td>
+                <td style="width: 16%; background-color: #CFD8DC"><br>Prasent</td>
                 <td style="width: 16%; background-color: #CFD8DC"><br>Absent</td>
         
 <!--                    <td style="width: 8%; background-color: #CFD8DC"><br>Thu</td>
