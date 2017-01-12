@@ -55,7 +55,8 @@
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                            <button class="attblack_btn" type="submit" onclick="callme();">Download</button>
+                           <a href="/attendence/reportDr.php">  <input type="submit" value="Download Pdf"></a> 
+
 
 
                     </div>
