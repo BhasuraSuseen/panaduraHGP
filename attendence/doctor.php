@@ -22,7 +22,7 @@
                             <tr><td style="width:70%">Employees Present </td><td><strong id="st1"></strong></td></tr>
                             <tr><td style="width:70%">Employees absent </td><td><strong id="st2"></strong></td></tr>
                             <tr><td style="width:70%">Total Employees </td><td><strong id="st3"></strong></td></tr>
-                            <tr><td style="width:60%;"><button class="attblack_btn" onclick="loadEbdata()">Summary</button></td></tr>
+                            <tr><td style="width:60%;"><button class="attblack_btn" onclick="loadDrdata()">Summary</button></td></tr>
 
                         </table>
                     </div>
@@ -62,7 +62,7 @@
 
                 </div>
             </div>
- <script type="text/javascript" src="./attendence/jst.js"></script>
+ <script type="text/javascript" src="attendence/jst.js"></script>
             
     </body>
    
