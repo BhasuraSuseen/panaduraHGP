@@ -421,14 +421,67 @@ require "connect.php";
   <div id="pop_box_mail_3">
                 <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">LETTER REPLY FORM </a></div>
                           <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                                    <?php include 'replyletter.php'; ?> 
+                              <b> Reply to a letter</b>
+                              <form name="replyletter" action="sysadmin.php" method="post" accept-charset="utf-8">
+                             
+                              <label>Letter ID:</label>
+                               <?php  
+                                  $a=mysqli_query($conn,"select letter.letter_id from letter where mceb is NOT NULL and eb ='".$_SESSION['ebno']."' and letter.letter_id not in(select letter_rep.letter_id from letter_rep)");
+                                  if(mysqli_num_rows($a)>0){
+                                  $select2= '<select name="idrep">';
+                                  while($r=mysqli_fetch_array($a)){
+                                 
+                                  $select2.='<option value="' .$r[0]. '">'.$r[0].'</option>';
+                                   }
+                                  }
+                                  else{
+                                    $select2='<select><option></option></select>';
+                                  }
+                                  echo $select2;
+                                  echo '</select>'?><br>
+                              <input type="date" name="repdate" placeholder="Date replied" required><br>
+                              <input type="text" name="subject" placeholder="subject of the letter"><br>
+                              <input type="radio" name="type" value="Normal letter" checked>Normal Letter
+                              <input type="radio" name="type" value="Registered letter">Registered Letter
+                              <input type="radio" name="type" value="Fax">Fax
+                              <input type="radio" name="type" value="Other">Other<br>
+                              <input type="text" name="addr" placeholder="Address/ Fax number"><br>
+                              <input type="submit" name="submit2" value="Enter letter">
+                              <input type="reset" name="reset2" value="Reset">
+
+
+                            <?php
+                            if(isset($_POST["submit2"])){
+                              if(isset($_POST['idrep'])){
+                              $date=$_POST['repdate'];
+                              $subject=$_POST['subject'];
+                              $type=$_POST['type'];
+                              $addr=($_POST['addr']); 
+                              $idrep=$_POST['idrep'];
+                              $user=$_SESSION['username'];
+                              $sql="INSERT INTO letter_rep (date,subject,type,address,letter_id,user) VALUES ('$date','$subject','$type','$addr','$idrep','$user')";
+
+                              mysqli_query($conn,$sql);
+                              $message= $idrep. " was entered";
+                              echo  "<script type='text/javascript'>alert('$message');</script>";
+                            }
+                            else{
+                              $message="No letters to reply";
+                              echo  "<script type='text/javascript'>alert('$message');</script>";
+                              
+                            }
+
+                            }
+
+                            ?>
+
                           </div>
             </div>
       <div id="pop_box_att_2">
       
         <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> RECORD LEAVE</a></div>
         <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-        <?php include 'leave/ebLeave.php'; ?> 
+        <?php echo "include here"; ?> 
         </div>    
       </div>
   

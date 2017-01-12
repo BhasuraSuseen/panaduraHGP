@@ -475,7 +475,8 @@
             document.new_count.staff.focus() ;
             return false;
          }
-						</script>
+	}
+	</script>
 	
  </body>
  </html>
