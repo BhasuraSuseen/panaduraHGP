@@ -35,7 +35,7 @@ $(document).ready(function(){
     url: "readPrio2.php",
     data:'keyword='+$(this).val(),
     beforeSend: function(){
-      $("#search-box").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+      $("#search-box").css("background","#FFF");
     },
     success: function(data){
       $("#suggesstion-box").show();
@@ -94,18 +94,27 @@ $("#search-box").val(val);
 $("#suggesstion-box").hide();
 func1(val);
 func2(val);
+document.getElementById("search-box").value="";
+document.getElementById("search-box1").value="";
+document.getElementById("search-box2").value="";
 }
 function selectletterid1(val) {
 $("#search-box1").val(val);
 $("#suggesstion-box").hide();
 func1(val);
 func2(val);
+document.getElementById("search-box").value="";
+document.getElementById("search-box1").value="";
+document.getElementById("search-box2").value="";
 }
 function selectaddress(val) {
 $("#search-box2").val(val);
 $("#suggesstion-box").hide();
 func1(val);
 func2(val);
+document.getElementById("search-box").value="";
+document.getElementById("search-box1").value="";
+document.getElementById("search-box2").value="";
 }
 function func1(data){
 $.ajax({
@@ -117,6 +126,8 @@ $.ajax({
     },
     success: function(data){
      $("#svgcontent").html(data)
+     
+
     }
   });
  
