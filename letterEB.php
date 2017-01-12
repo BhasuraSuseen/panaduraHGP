@@ -437,8 +437,9 @@
                           <option>7</option>
                           <option>8</option>
                           </select>
-                          <input type="date" name="dateaomc" placeholder="Date from AO" required><br>
+                          <input type="date" name="dateaomc" placeholder="Date from AO" required>
                           <input type="text" name="sub" placeholder="Subject">
+                          <input type="text" name="reci" placeholder="Recipient">
                           <input type="file" name="myimage" id="fileToUpload"><br>
                           <input type="submit" name="submittt" value="Enter details">
                           <input type="reset" name="reset" value="Reset">
@@ -515,27 +516,29 @@
 		        $filesize = $_FILES["myimage"]["size"]; 
 		        if($filename==''){
 		        	$folder='';
+		        	$newfilename='';
 		        }
 		        else{                          
 				$folder="lettercopies/";
 				$temp= explode(".", $filename);
 				$newfilename=$lid1.'.'.end($temp);
 				}
-				echo $filetype;
-				echo $filesize;
-					
 				
-
 				if($_POST['sub']==''){
                		 $sub="No subject entered";
             	}
                 else{
                 	$sub=$_POST['sub'];
                 }
-                
+                if($_POST['reci']==''){
+                	$reci="No recipient entered";	
+                }
+                else{
+                	$reci=$_POST['reci'];
+                }
                 $dateaomc=$_POST['dateaomc'];
                 $eb=$_POST['eb'];
-                $sql2="UPDATE letter SET subject ='$sub', aomc='$dateaomc',eb='$eb',path='$folder',imgname='$newfilename'  WHERE letter_id='$lid1'";
+                $sql2="UPDATE letter SET subject ='$sub',recipient='$reci',aomc='$dateaomc',eb='$eb',path='$folder',imgname='$newfilename'  WHERE letter_id='$lid1'";
                 move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$newfilename);
                 mysqli_query($conn,$sql2);
                  $message1= $lid1. " was forwarded";
@@ -550,14 +553,8 @@
 
         }
 
-
-
-
-
-
-
-
-                          /*mc to ms date enter form */
+        
+                      /*mc to ms date enter form */
                           if(isset($_POST["submitt"])){
                             if(isset($_POST['lid2'])){
                         $lid2=$_POST['lid2'];
