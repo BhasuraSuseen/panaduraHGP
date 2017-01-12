@@ -1,7 +1,7 @@
 <?php
 include 'datetime.php';
 include '../connect.php';
-
+echo $date3;
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
@@ -102,35 +102,13 @@ FROM employee
 
                     <input type="submit" value="View Report"><br><br>
                 </form>
-                <button  style="width: 150px" onclick="callme();">Download
+                <button  style="width: 150px" onclick="">Download
                 </button>
             </center>
         </div>
  
-        <script> function callme() {
-                var table = tableToJson($('#lvtbl').get(0));
-                var doc = new jsPDF('l', 'pt', 'letter', true);
+    
 
-
-                $.each(table, function(i, row) {
-                    $.each(row, function(j, cell) {
-                        if (j == "DATE" | i == 0) {
-                            doc.cell(20, 50, 150,40,  cell, i);
-                        }
-                        else {
-                            doc.cell(20, 50, 150,40, cell, i);
-                        }
-
-                    });
-                });
-
-                doc.save('Report.pdf');
-              
-            }
-        </script>
-
-    <script type="text/javascript" src="../jspdf.js"></script>
-    <script type="text/javascript" src="../jquery.js"></script>
-    <script type="text/javascript" src="attendence/jst.js"></script>
+    <script type="text/javascript" src="./attendence/jst.js"></script>
  </body>
 </html>  
