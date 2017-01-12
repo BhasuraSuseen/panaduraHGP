@@ -4,6 +4,7 @@
 <head>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
+	<link rel="stylesheet" type="text/css" href="del/styles.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script  src="http://d3js.org/d3.v3.min.js"></script>
@@ -199,7 +200,7 @@
                 $('#pop_background').fadeOut();
                 $('#pop_box_mail_1').fadeOut();
                 $('#pop_box_mail_2').fadeOut();
-                $('#pop_box_hr_1').fadeOut();
+                $('#pop_box_att_1').fadeOut();
                 $('#pop_box_hr_2').fadeOut();
                 $('#pop_box_report_1').fadeOut();
  
