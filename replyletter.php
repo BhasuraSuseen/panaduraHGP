@@ -1,11 +1,4 @@
 
- <?php
- require "connect.php";
- ?> 
-
-
-
-
 <div><b> Reply to a letter</b>
   <form name="replyletter" action="replyletter.php" method="post" accept-charset="utf-8">
  
@@ -57,5 +50,5 @@ else{
 }
 
 }
-mysqli_close($conn);
+
 ?>

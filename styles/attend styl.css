@@ -174,7 +174,7 @@ input[type="text"], input[type="date"], input[type="number"], input[type="passwo
 
 
 }
-input[type="submit"], input[type="file"], button[type="button"], input[type="reset"]{
+input[type="submit"], button[type="button"], input[type="reset"]{
     background-color: #263238;
     outline: none;
     border: none;
@@ -184,7 +184,7 @@ input[type="submit"], input[type="file"], button[type="button"], input[type="res
     margin-bottom: 0.8em;  
     color: white;
 }
-input[type="submit"]:hover , input[type="file"]:hover, button[type="button"]:hover, input[type="reset"]:hover{
+input[type="submit"]:hover , button[type="button"]:hover, input[type="reset"]:hover{
     background-color: #263238;
     outline: none;
     border: none;
