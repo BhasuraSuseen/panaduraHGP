@@ -265,7 +265,7 @@ function searchAttends(day,id) {
         obj.onreadystatechange = function() {
         alert 'okkkk'
         };
-        obj.open("POST", "report.php", true);
+        obj.open("POST", "./attendence/report.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         obj.send();
  }
