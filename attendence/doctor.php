@@ -63,6 +63,30 @@
                 </div>
             </div>
  <script type="text/javascript" src="jst.js"></script>
+            <script>
+                function loadEbdata() {
+    checkBrowser();
+       
+    obj.onreadystatechange = function() {
+
+
+       if (obj.readyState === 4 && obj.status === 200) {
+            //alert(obj.responseText);
+            var text = obj.responseText;
+
+            document.getElementById('st1').innerHTML = JSON.parse(text).a;
+            document.getElementById('st2').innerHTML = JSON.parse(text).b;
+            document.getElementById('st3').innerHTML = JSON.parse(text).c;
+
+        }
+    };
+    obj.open("POST", "./attendence/viewEbArp.php", true);
+    obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    obj.send();
+
+}
+
+                </script>
     </body>
    
 </html>
