@@ -246,7 +246,7 @@
 	  		<?php //include 'dui.php';?>
 		<div class="middle_left" style = "width: 50%;">
 		
-			<center><form>
+			<center><form name="new_count" method="post" action="dietEB.php">
                             <table>
 				    <thead><tr><th colspan=2 size="+2" color=#2980b9><b>ENTER COUNTS</b></th></tr></thead>
 
