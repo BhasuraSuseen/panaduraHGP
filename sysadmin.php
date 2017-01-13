@@ -332,7 +332,7 @@ require "connect.php";
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit">
                 </form>
-                <!--<iframe class="iframe1" name="iframe"></iframe>-->
+                <iframe class="iframe1" name="iframe"></iframe >
                 
                 <form action="hr.php" method="post" target="iframehr">
                     <table style="width: 90%"><tr>
