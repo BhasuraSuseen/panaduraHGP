@@ -19,11 +19,9 @@ FROM employee
 //$res2 = mysqli_query($conn, "SELECT * FROM attleave");
 ?>
 
-<html>
 
-    <header>
         <title>Doctor Atendence</title>
-    </header>
+
     <center>
 
         <h5 ><? //php echo $date2   ?></h5>
@@ -215,4 +213,4 @@ FROM employee
 <script type="text/javascript" src="./attendence/jst.js"></script>
 
 
-</html>
+
