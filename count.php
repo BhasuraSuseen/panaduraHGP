@@ -1,6 +1,6 @@
 <?php
-include './datetime.php';
-include './connect.php';
+include 'datetime.php';
+include 'connect.php';
 
 $monb = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Br,C_S2Br,C_S3Br,P_Br,DD_Br,S_Br, item.unit1, menu_mon.Item_id FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
 $monl = mysqli_query($conn, "SELECT item.Item_name, menu_mon.C_S1Lu,C_S2Lu,C_S3Lu,P_Lu,DD_Lu,S_Lu, item.unit1, menu_mon.Item_id FROM item INNER JOIN menu_mon ON item.Item_id = menu_mon.Item_id");
@@ -1334,6 +1334,8 @@ if($date == $date3 && $meal == "Dinner"){?>
 				
 		 endwhile; ?>
 			</table>
+
+			
  <?php }	 
  		
 				
