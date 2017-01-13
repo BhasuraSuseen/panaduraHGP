@@ -1,22 +1,22 @@
+
 <?php
 include 'datetime.php';
 include '../connect.php';
-
+//echo $date3;
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
   employee.E_type
 FROM employee
   INNER JOIN attend
-    ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon' and employee.E_type='doctor' ");
+    ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon'  and employee.E_type = 'doctor' ");
 ?>
 
-
-   
         <link rel="stylesheet" type="text/css" href="../attend styl.css" media="screen" />
-  
-      
-
+       
+       
+   
+   
         <div class="attall_container">
             <center>
 
@@ -35,7 +35,7 @@ FROM employee
                         <?php while ($row = mysqli_fetch_array($res)): ?>
 
                             <tr>
-                                <td id="nic"><input type="text" value="<?php echo $row['Nic_no']; ?>"  id="NIC" readonly></td>
+                                <td id="nicc"><input type="text" value="<?php echo $row['Nic_no']; ?>"  id="NIC" readonly></td>
                                 <td><input type="text" value="<?php echo $row['F_Name'] . " " . $row['L_Name']; ?>" name="name" readonly</td>
                                 <td style="width: 12%; background-color: lightgray"><?php
                                     if ($row[3] == 1) {
@@ -47,8 +47,8 @@ FROM employee
 
 
 
-                                <td style="width: 12%; background-color: lightgray"><select name="LvType" id="lvt" class="attstyled-select">
-                                        <option>Mediacal Leave</option>
+                                <td style="width: 12%; background-color: lightgray" id="lt"><select name="LvType" id="lvt" class="attstyled-select">
+                                        <option>Medical Leave</option>
                                         <option>Half Day</option>
                                         <option>Short Leave</option>
                                         <option>Other</option>
@@ -58,7 +58,7 @@ FROM employee
                                     <input type="text" id="des" name="des">
                                 </td>
 
-                                <td style="width: 12%; background-color:#ECEFF1"><select class="attstyled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('lvt').value, document.getElementById('des').value, this.value)">
+                                <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave(document.getElementById('NIC').value, document.getElementById('lvt').value, document.getElementById('des').value, this.value, '<?php echo $row[0]; ?>')">
                                         <option>--Select Type--</option>
                                         <option>Letter</option>
                                         <option>Fax</option>
@@ -73,12 +73,11 @@ FROM employee
 
                     <input type="submit" value="View Report"><br><br>
                 </form>
-                <button  style="width: 150px" onclick="callme();">Download
+                <button  style="width: 150px" onclick="">Download
                 </button>
             </center>
         </div>
  
-   
+    
 
     <script type="text/javascript" src="../jst.js"></script>
- 
