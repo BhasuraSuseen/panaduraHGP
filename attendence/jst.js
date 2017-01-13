@@ -126,7 +126,7 @@ function saveAttends(name, date, attend) {
    
    
     try {
- alert("attendance awa");
+ alert("attended!!");
         checkBrowser();
         
         
