@@ -445,7 +445,7 @@
                             checkBrowser();
                             obj.onreadystatechange = function () {
 
-                                alert("awaaaa");
+                                alert(obj.responseText;);
                                 if (obj.readyState === 4 && obj.status === 200) {
                                     var text = obj.responseText;
                                     document.getElementById('lb1').innerHTML = text;
