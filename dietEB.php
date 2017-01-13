@@ -9,17 +9,7 @@
 	<script  src="http://d3js.org/d3.v3.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
   <script src="scripts/prio2script.js"></script>
-	<script LANGUAGE="JavaScript">
-		function ValidateForm(form){
-		ErrorText= "";
-		if ( ( form.meal[0].checked == false ) && ( form.meal[1].checked == false ) && ( form.meal[2].checked == false ) )
-		{
-		alert ( "Please choose the meal" );
-		return false;
-		}
-		if (ErrorText= "") { form.submit() }
-		}
-	</script>
+	
 <style>
     body {
     background-color: #ECEFF1;
@@ -500,47 +490,7 @@
                         catch (err) {
                         }
                     }
-                </script>
-	<script type="text/javascript">
-	function validateForm(){
-      
-         if( document.new_count.s1.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.s1.focus() ;
-            return false;
-         }
-		 if( document.new_count.s2.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.s2.focus() ;
-            return false;
-         }
-		 if( document.new_count.s3.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.s3.focus() ;
-            return false;
-         }
-		 if( document.new_count.norm_patients.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.norm_patients.focus() ;
-            return false;
-         }
-		 if( document.new_count.dd_patients.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.dd_patients.focus() ;
-            return false;
-         }
-		 if( document.new_count.staff.value == "" )
-         {
-            alert( "Please provide the count!" );
-            document.new_count.staff.focus() ;
-            return false;
-         }
-	}
+        
 	</script>
 	
  </body>
