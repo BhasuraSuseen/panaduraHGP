@@ -11,13 +11,11 @@ FROM employee
     ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon'  and employee.E_type = 'eb' ");
 ?>
 
-<html>
-    <head>
         <link rel="stylesheet" type="text/css" href="../attend styl.css" media="screen" />
-        <title>Leave</title>
        
-    </head>
-    <body>
+       
+   
+   
         <div class="attall_container">
             <center>
 
@@ -82,5 +80,4 @@ FROM employee
     
 
     <script type="text/javascript" src="../jst.js"></script>
- </body>
-</html>  
+
