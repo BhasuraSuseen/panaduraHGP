@@ -9,7 +9,7 @@ $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.E_type
 FROM employee
   INNER JOIN attend
-    ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon'  and employee.E_type = 'doctor' ");
+    ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon' ");
 ?>
 
 
