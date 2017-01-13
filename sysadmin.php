@@ -376,7 +376,7 @@ require "connect.php";
                                        
                     <input type="submit" value="Save" name = "submit">
                 </form>
-                <!--<iframe class="iframehr" name="iframehr"></iframe>-->
+                <iframe class="iframehr" name="iframehr"  height="30px" width="50%"></iframe>
 
 			<!--?php include 'employee_hr/hr.php'; ?-->
  	    
