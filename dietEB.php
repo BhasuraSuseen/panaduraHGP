@@ -430,9 +430,8 @@
                                     meal1 = meal[i].value;
                                 }
                             }
-
-
-                            checkBrowser();
+				checkBrowser();
+				alert("awaaaaa");
                             obj.onreadystatechange = function () {
 
                                 alert(obj.responseText;);
