@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="scripts/prio2script.js"></script>
 	<script type="text/javascript" src="attendence/jst.js"></script>
 	<script  src="http://d3js.org/d3.v3.min.js"></script>
 	<SCRIPT language=Javascript>
@@ -26,6 +27,37 @@
     color: #607D8B ;
     font-weight: 600; 
     }
+    .node{
+      fill:ECEFF1;
+    }
+    .link{
+      stroke: #90A4AE;
+      stroke-width: 10px;
+    }
+    .arc {
+    fill: #ef5350;
+  }
+   .arcb {
+    fill: #CFD8DC;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+      text-align: left;
+      padding: 5px;
+      font-weight: 600;
+  }
+
+  tr:nth-child(even) {
+      background-color: #F5F5F5;
+  }
+  #suggesstion-box{ height: 100px; overflow-y: auto; overflow-x: hidden;display: none;}
+  #letterid-list{list-style:none;margin:10px;padding:0;width:100%; }
+  #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;}
+  #letterid-list li:hover{background:#fafafa;}
    </style>
 
 </head>
@@ -79,11 +111,42 @@
 		    </div>
 			
 			
-            <div id="middle_left" >
-		 
-               
+            <div id="middle_leftp1">
+                <div class="current-flow-left" style="float: left; width:75%;">
+                <div class="current-flow-left-top" style="float: left; width:100%;">
+                <div class="current-flow-left-top-left" style="width:100%; float: left; ">
+                  <div class="search-letters" style="width:100%; min-height: 80px; margin: 10px; margin-left: 20px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <div style="width: 100%; float: left;background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
+                  
+                      <input type="text" id="search-box"  placeholder=" Select by letter ID" style="float: left;width:30%; margin: 10px; background:#fff;"/>
+                      <input type="text" id="search-box1" placeholder=" Select by Subject" style="float: left;width:30%; margin: 10px;background:#fff;"/>
+                      <input type="text" id="search-box2" placeholder=" Select by Address" style="float: left;width:30%; margin: 10px;background:#fff;" />
 
-            </div>
+                    <div id="suggesstion-box" style="width: 100%; "></div>
+                  
+                </div>
+                </div>
+               
+              </div>
+                <div class="current-flow" style="float: left; width:100%; margin:10px; margin-left: 20px; margin-top:20px;background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                  <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">LETTER DETAILS</a></div>
+                  <div id ="lettercontent" style="width:100%; padding: 20px; overflow:auto;"><p>Hellow</p></div>
+                </div>
+              </div>
+              <script> 
+               func1(1000); 
+               func2(1000);          
+              </script>
+              <div class="current-flow-right" style="float: left; width:20%; margin-left: 20px">
+                <div class="letters-details" style="width:100%; margin: 10px; margin-left: 20px;  background: #fff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                  <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px; ">DISTRIBUTION</a></div>
+                  
+                  <div id ="svgcontent" style="width:100%; padding :10px; overflow:auto; font-size: 14px;"></div>
+                </div>
+              </div>          
+                                                          
+                      
+          </div>
 	
             <div class="middle_right">
             
