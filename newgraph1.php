@@ -245,7 +245,7 @@ mysqli_close($conn);
                   {"name": "Medical Superintendent to Admin Officer date :", "value" : "", "x_axis": 250, "y_axis": 250},
                   {"name": "Admin Officer to Letter Clerk date : ", "value" : "", "x_axis": 400, "y_axis": 250}
                  ];*/
-      var nodes3 = [{"name": "Letter ID : ", "value" : 0, "x_axis": 255, "y_axis": 90},
+      var nodes3 = [{"name": "Letter ID : ", "value" : 0, "x_axis": 245, "y_axis": 90},
                   {"name": "Date received ................. ", "value" : "", "x_axis": 235, "y_axis": 120},
                   {"name": "Subject ............................ ", "value" : "", "x_axis": 20, "y_axis": 85},
                   {"name": "Received from ................ ", "value" : "", "x_axis": 20, "y_axis": 100},
@@ -526,8 +526,8 @@ mysqli_close($conn);
               .attr("y", function (d) { return d.y_axis + 20})
               .attr("fill", "#607D8B")
               .attr("text-align", "center")
-              .attr("font-size", function(d,i){return 20 })
-              .text(function(d,i){if(i < 2){return (d.value)}});
+              .attr("font-size", function(d,i){if(i == 0){return 30 }if(i == 1){return 20 }if(i > 4){ return 14}   })
+              .text(function(d,i){if(i < 2){return (d.value)}if(i>4){return d.value}});
         
        /* canvas.selectAll("text.d")
           .data(nodes4)
