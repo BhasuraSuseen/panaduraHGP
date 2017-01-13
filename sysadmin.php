@@ -342,9 +342,7 @@ require "connect.php";
                         </tr></table>
                     <table style="width: 90%"><tr>
                     Birth Date<br>
-                    <td><input type="date" name="bdate" style="width: 100%"></td>
-                    <td></td>
-                    <td></td>
+                    <td><input type="date" name="bdate" style="width: 30%"></td>
                         </tr>
                     </table>
                     <table style="width: 90%">
