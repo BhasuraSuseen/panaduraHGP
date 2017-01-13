@@ -2,8 +2,9 @@
 
 <?php
 require_once "connect.php";
+session_start();
 if(!empty($_POST["keyword"])) {
-	$p1letters=mysqli_query($conn,"SELECT * FROM letter WHERE mceb IS NOT NULL AND eb='1' AND letter_id LIKE '" . $_POST["keyword"] . "%'");
+	$p1letters=mysqli_query($conn,"SELECT * FROM letter WHERE mceb IS NOT NULL AND eb='" . $_SESSION["ebno"] . "' AND letter_id LIKE '" . $_POST["keyword"] . "%'");
 	if(!empty($p1letters)){
 		?>
 		<ul id="letterid-list">
@@ -19,7 +20,7 @@ if(!empty($_POST["keyword"])) {
 	}
 }
 if(!empty($_POST["keyword1"])) {
-	$p1letters=mysqli_query($conn,"SELECT * FROM letter WHERE mceb IS NOT NULL AND eb='1' AND  subject LIKE '%" . $_POST["keyword1"] . "%'");
+	$p1letters=mysqli_query($conn,"SELECT * FROM letter WHERE mceb IS NOT NULL AND eb='" . $_SESSION["ebno"] . "' AND  subject LIKE '%" . $_POST["keyword1"] . "%'");
 	if(!empty($p1letters)){
 		?>
 		<ul id="letterid-list">
@@ -35,7 +36,7 @@ if(!empty($_POST["keyword1"])) {
 	}
 }
 if(!empty($_POST["keyword2"])) {
-	$p1letters=mysqli_query($conn,"SELECT * FROM letter WHERE mceb IS NOT NULL AND eb='1' AND address LIKE '%" . $_POST["keyword2"] . "%'");
+	$p1letters=mysqli_query($conn,"SELECT * FROM letter WHERE mceb IS NOT NULL AND eb='" . $_SESSION["ebno"] . "' AND address LIKE '%" . $_POST["keyword2"] . "%'");
 	if(!empty($p1letters)){
 		?>
 		<ul id="letterid-list">
