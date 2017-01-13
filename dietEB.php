@@ -9,18 +9,17 @@
 	<script  src="http://d3js.org/d3.v3.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
   <script src="scripts/prio2script.js"></script>
-	<SCRIPT language=Javascript>
-      <!--
-      function isNumberKey(evt)
-      {
-         var charCode = (evt.which) ? evt.which : event.keyCode
-         if (charCode > 31 && (charCode < 48 || charCode > 57))
-            return false;
-
-         return true;
-      }
-      //-->
-   </SCRIPT>
+	<script LANGUAGE="JavaScript">
+		function ValidateForm(form){
+		ErrorText= "";
+		if ( ( form.meal[0].checked == false ) && ( form.meal[1].checked == false ) && ( form.meal[2].checked == false ) )
+		{
+		alert ( "Please choose the meal" );
+		return false;
+		}
+		if (ErrorText= "") { form.submit() }
+		}
+	</script>
 <style>
     body {
     background-color: #ECEFF1;
@@ -257,7 +256,7 @@
 	  		<?php //include 'dui.php';?>
 		<div class="middle_left" style = "width: 50%;">
 		
-			<center><form name="new_count" method="post" action="dietEB.php" onsubmit="return validateForm()">
+			<center><form>
                             <table>
 				    <thead><tr><th colspan=2 size="+2" color=#2980b9><b>ENTER COUNTS</b></th></tr></thead>
 
@@ -298,7 +297,7 @@
                                 font-size: 0.9em;
                                 padding: 0.4em;
                                 margin-bottom: 0.8em;  
-                                color: white;" onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
+                                color: white;" onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value), ValidateForm(this.form)">Calculate</button>
                     </center>
                 </div>
 		<div class="middle_right" style = "width: 50%;" >
