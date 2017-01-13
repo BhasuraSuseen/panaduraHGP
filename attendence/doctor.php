@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
+
         <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
         <?php include '../datetime.php';?>
-    </head>
+   
     <body> 
         <div class="attall_container">
 
@@ -65,6 +63,4 @@
             </div>
  <script type="text/javascript" src="attendence/jst.js"></script>
             
-    </body>
-   
-</html>
+ 
