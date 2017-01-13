@@ -257,7 +257,7 @@ require "connect.php";
         
         <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> CREATE SYSTEM USER</a></div>
         <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-				          <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
+	 <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
             <table>
             <thead>
             <tr>
@@ -342,9 +342,9 @@ require "connect.php";
                         </tr></table>
                     <table style="width: 90%"><tr>
                     Birth Date<br>
-                    <td><input type="date" name="bdateY" placeholder="Year" style="width: 100%"></td>
-                    <td><input type="date" name="bdateM" placeholder="Month" style="width: 100%"></td>
-                    <td><input type="date" name="bdateD"placeholder="Day" style="width: 100%"></td>
+                    <td><input type="date" name="bdate" style="width: 100%"></td>
+                    <td></td>
+                    <td></td>
                         </tr>
                     </table>
                     <table style="width: 90%">
