@@ -31,7 +31,7 @@
 
                         <table border="0" style="width: 100%">
                             <tr>Search Employee Attendence</tr>
-                            <tr><td style="width:40%">Day</td><td><?php echo $yearmon;?><select class="styled-select" style="width:30%" id="day">
+                            <tr><td style="width:40%">Day</td><td><?php echo $yearmon;?><select class="attstyled-select" style="width:30%" id="day">
 
 
                                         <?php
@@ -55,7 +55,8 @@
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                            <button class="attblack_btn" type="submit" onclick="callme();">Download</button>
+                           <a href="/attendence/reportDr.php">  <input class="attblack_btn" type="submit" value="Download Pdf"></a> 
+
 
 
                     </div>

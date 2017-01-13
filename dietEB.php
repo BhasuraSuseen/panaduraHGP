@@ -120,7 +120,7 @@
                             <center><label  style="width: 100%" id="lbpop1"></label><br></center>
 				 <?php include 'report.php';?>
 		
-		<center><form action="downloadFile.php" method="post">
+		<center><form action="reportPDF.php" method="post">
 		<button style="background-color: #263238;
                             outline: none;
                             border: none;
@@ -157,7 +157,7 @@
                                         </select></td>
 
 
-                                    <th>Catogary</th><td height="50px">  
+                                    <th>Category</th><td height="50px">  
                                         <select  id="type" name="type">
                                             <option  value="c_s1">Children S1</option>
                                             <option  value="c_s2">Children S2</option>
@@ -187,10 +187,12 @@
 	</div>
 	
      	<div id="pop_box_att_1">
-		<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET SCHEDULE </a></div>
-		<div style="position: absolute; width:100%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET SCHEDULE </a></div>
+	<div style="width:100%; height:100%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
+		
 	  		<?php //include 'dui.php';?>
-		<div class="middle_left">
+		<div class="middle_left" >
+		
 			<center><form name="new_count" method="post" action="dietEB.php" onsubmit="return validateForm()">
                             <table>
 				    <thead><tr><th colspan=2 size="+2" color=#2980b9><b>ENTER COUNTS</b></th></tr></thead>
@@ -235,13 +237,11 @@
                                 color: white;" onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
                     </center>
                 </div>
-		<div class="middle_right" style="float: left;
-        height:90%;
-	width:40%;">
+		<div class="middle_right" >
 			<center><label style="background-color: #CFD8DC" align="center" id="lb1" ></label></center><br>
 		</div>
 		</div>
-	</div>
+
 	       
 	
 	<div id="pop_box_hr_3">
@@ -286,7 +286,7 @@
 		</div>           
  	</div>
 
-	</div>
+	
 	
   <div>
    

@@ -61,9 +61,12 @@
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                            <button class="attblack_btn" type="submit" onclick="callme();">Download</button>
-
-
+                      <!-- <button class="attblack_btn" onclick="getpdf()">pdf</button>
+ <form action="/attendence/report.php" method="post">-->
+                        <a href="/attendence/report.php">  <input type="submit" value="Download Pdf"></a> 
+                        
+                          
+                            </form>
                     </div>
 
                 </div>
@@ -71,4 +74,8 @@
 
     </body>
         <script type="text/javascript" src="./attendence/jst.js"></script>
+       
+
+
+  
 </html>
