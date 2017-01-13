@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
+
         <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
         <?php include 'datetime.php';?>
    
-    </head>
+
     <body> 
         
         
@@ -66,7 +64,7 @@
                         <a href="/attendence/report.php">  <input type="submit" value="Download Pdf"></a> 
                         
                           
-                            </form>
+                    
                     </div>
 
                 </div>
@@ -78,4 +76,4 @@
 
 
   
-</html>
+

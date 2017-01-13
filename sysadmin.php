@@ -257,7 +257,7 @@ require "connect.php";
         
         <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> CREATE SYSTEM USER</a></div>
         <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-				          <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
+	 <form name="new_user" action="newuser.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
             <table>
             <thead>
             <tr>
@@ -323,7 +323,8 @@ require "connect.php";
   
 	<div id="pop_box_hr_2">
   
-  <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> RECORD EMPLOYEE DETALIS</a></div>
+  
+<div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> RECORD EMPLOYEE DETALIS</a></div>
 		<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">  
                  <form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
                     <input type="text" name="nic" placeholder="NIC NO ">
@@ -331,45 +332,55 @@ require "connect.php";
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit">
                 </form>
-                <iframe class="iframe1" name="iframe"></iframe>
+                <iframe class="iframe11" name="iframe" height="30px" width="50%"></iframe >
                 
                 <form action="hr.php" method="post" target="iframehr">
-                    <input type="text" name="fname" placeholder="First Name">
-                    <input type="text" name="lname" placeholder="Last Name">
-                    Birth Date
-                    <input type="date" name="bdate" placeholder="Birth Date yyyy-mm-dd">
-                    <input type="text" name="address" placeholder="Address">
-                    <input type="int" name="cnumber" placeholder="Contact NO">
-                    <input type="text" name="gender" placeholder="Gender M/F">
-                    <input type="text" name="nic" placeholder="NIC NO ">
+                    <table style="width: 90%"><tr>
                     
-                    <input type="text" name="etype" placeholder="Employee type">
+                            <td>First Name<br><input style="width: 100%" type="text" name="fname"></td>
+                            <td>Last Name<br><input style="width: 100%" type="text" name="lname"></td>
+                        </tr></table>
+                    <table style="width: 90%"><tr>
+                    Birth Date<br>
+                    <td><input type="date" name="bdate" style="width: 30%"></td>
+                        </tr>
+                    </table>
+                    <table style="width: 90%">
+                        <tr><td> Address
+                                <input type="text" name="address" style="width: 100%"></td></tr></table>
+                        <table style="width: 90%">
+                    <tr><td>NIC No<input type="text" name="nic" style="width: 100%"></td>
+                            <td>Contact No<br><input type="int" name="cnumber"  style="width: 100%"></td>
+                            <td>Gender <br><input type="text" name="gender"  style="width: 100%"></td>
+                    </tr></table>
+                    Employee Type<br>
+                    <input type="text" name="etype" >
                     
-             
-                    First Employment Date
-                    <input type="Date" name="fedate" placeholder="FE Date ">
-                    Employment Commencement Date
-                    <input type="Date" name="ecdate" placeholder="EC Date ">
-                    Socond Grade Promotion Date
-                    <input type="Date" name="sgpdate" placeholder="SGP Date ">
-                    First Grade Promotion Date
-                    <input type="Date" name="fgpdate" placeholder="FGP Date ">
-                    Special Grade Promotion Date
-                    <input type="Date" name="cgpdate" placeholder="CGP Date ">
-                    <input type="number" name="salary" placeholder="Salary"> 
-                    Salary Incremental Date
-                    <input type="Date" name="sidate" placeholder="SI Date ">
-                    <input type="text" name="remarks" placeholder="Remarks">
-                    
+                    <table style="width: 90%"><tr><td>
+                                First Employment Date<br>
+                    <input type="Date" name="fedate" placeholder="FE Date " style="width: 100%"></td>
+                            <td>Employment Commencement Date<br>
+                                <input type="Date" name="ecdate" style="width: 100%"></td></tr>
+                        <tr> <td>Socond Grade Promotion Date<br>
+                    <input type="Date" name="sgpdate" style="width: 100%" ></td>
+                            <td> First Grade Promotion Date<br>
+                                <input type="Date" name="fgpdate" style="width: 100%"></td></tr>
+                        <tr><td>    Special Grade Promotion Date<br>
+                                <input type="Date" name="cgpdate" style="width: 100%"></td>
+                    <td>Salary<br>
+                        <input type="number" name="salary" style="width: 100%"></td></tr> 
+                        <tr><td>Salary Incremental Date<br>
+                        <input type="Date" name="sidate" style="width: 100%"></td>
+                    <td>Remarks<br><input type="text" name="remarks" style="width: 100%"></td>
+                    </tr></table>
                                        
                     <input type="submit" value="Save" name = "submit">
                 </form>
-                <iframe class="iframehr" name="iframehr"></iframe>
+                <!--<iframe class="iframehr" name="iframehr"></iframe>-->
 
 			<!--?php include 'employee_hr/hr.php'; ?-->
  	    
-      </div>
-      </div>
+    </div>
 	</div>
 	 <div id="pop_box_mail_1">
           

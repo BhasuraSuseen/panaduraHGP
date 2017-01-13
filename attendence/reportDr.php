@@ -1,6 +1,6 @@
 <?php
 
-//include 'datetime.php';
+include 'datetime.php';
 //include 'connection.php';
 ?>
 
@@ -26,7 +26,7 @@ try
     header("Content-Type: application/pdf");
     header("Cache-Control: max-age=0");
     header("Accept-Ranges: none");
-    header("Content-Disposition: attachment; filename=\"Report.pdf\"");
+    header("Content-Disposition: attachment; filename=\"Doctor Attendes($date3).pdf\"");
 
     // send the generated PDF 
     echo $pdf;
