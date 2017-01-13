@@ -234,8 +234,7 @@
                                 font-size: 0.9em;
                                 padding: 0.4em;
                                 margin-bottom: 0.8em;  
-                                color: white;" 
-								onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
+                                color: white;" onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
                     </center>
                 </div>
 		<div class="middle_right" >
