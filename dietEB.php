@@ -241,6 +241,7 @@
 			<center><label style="background-color: #CFD8DC" align="center" id="lb1" ></label></center><br>
 		</div>
 		</div>
+    </div>
 
 	       
 	
