@@ -186,8 +186,8 @@ mysqli_close($conn);
       
       var width = 800;
       var height = 600;
-      var nodes = [{"name": "LC1", "value" : 0, "x_axis": 60, "y_axis": 300},
-                  {"name": "MS", "value" : 0, "x_axis": 210, "y_axis": 300},
+      var nodes = [{"name": "LC1", "name1": "Letter Clerk", "value" : 0, "x_axis": 60, "y_axis": 300},
+                  {"name": "MS","name1": "Medical Superintendent", "value" : 0, "x_axis": 210, "y_axis": 300},
                   {"name": "AO", "value" : 0, "x_axis": 360, "y_axis": 300},
                   {"name": "LC2", "value" : 0, "x_axis": 510, "y_axis": 300},
                   {"name": "EB1", "value" : 0, "x_axis": 740, "y_axis": 55},
@@ -198,6 +198,19 @@ mysqli_close($conn);
                   {"name": "EB6", "value" : 0, "x_axis": 740, "y_axis": 405},
                   {"name": "EB7", "value" : 0, "x_axis": 740, "y_axis": 475},
                   {"name": "EB8", "value" : 0, "x_axis": 740, "y_axis": 545}
+                 ];
+      var noden = [{"name": "Letter Clerk", "value" : 0, "x_axis": 60, "y_axis": 300},
+                  {"name": "Medical Superintendent", "value" : 0, "x_axis": 210, "y_axis": 300},
+                  {"name": "Administrative Officer", "value" : 0, "x_axis": 360, "y_axis": 300},
+                  {"name": "Letter Clerk Revisited ", "value" : 0, "x_axis": 510, "y_axis": 300},
+                  {"name": "EB head", "value" : 0, "x_axis": 740, "y_axis": 55},
+                  {"name": "Letter Clerk", "value" : 0, "x_axis": 740, "y_axis": 125},
+                  {"name": "Diet Clerk", "value" : 0, "x_axis": 740, "y_axis": 195},
+                  {"name": "Nurse Clerk", "value" : 0, "x_axis": 740, "y_axis": 265},
+                  {"name": "Paramedical Clerk", "value" : 0, "x_axis": 740, "y_axis": 335},
+                  {"name": "Doctor's Clerk", "value" : 0, "x_axis": 740, "y_axis": 405},
+                  {"name": "Maintanance Clerk", "value" : 0, "x_axis": 740, "y_axis": 475},
+                  {"name": "Minor Staff Clerk", "value" : 0, "x_axis": 740, "y_axis": 545}
                  ];
       var nodesl=[{"name": "Letter", "value" : 0,"location" : "","type" : "Normal Letter","replied" : "F", "x_axis": 285, "y_axis": 120}];
       var nodesr=[{"name": "Reply Status",  "x_axis": 110, "y_axis": 120},
@@ -507,6 +520,16 @@ mysqli_close($conn);
               .attr("fill", "#607D8B")
               .attr("text-align", "center")
               .attr("font-size", function (d,i) { if(i < 4){return 30; }else{return 25;}})
+              .text(function(d){return d.name });
+      canvas.selectAll("text.f")
+          .data(noden)
+          .enter()
+              .append("text")
+              .attr("x", function (d,i) { if(i < 4){return d.x_axis - 35;}else{return d.x_axis - 110;} })
+              .attr("y", function (d,i) { if(i < 4){return d.y_axis + 90; }else{return d.y_axis +20;}})
+              .attr("fill", "#607D8B")
+              .attr("text-align", "center")
+              .attr("font-size", function (d,i) { if(i < 4){return 10; }else{return 9;}})
               .text(function(d){return d.name });
      /*  canvas.selectAll("text.c")
           .data(nodes3)
