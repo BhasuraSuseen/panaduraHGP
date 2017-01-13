@@ -5,11 +5,10 @@ include '../connect.php';
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
-  attend.$day,
   employee.E_type
 FROM employee
   INNER JOIN attend
-    ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon' ");
+    ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon' and employee.E_type='doctor' ");
 ?>
 
 
