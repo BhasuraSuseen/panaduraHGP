@@ -300,10 +300,10 @@ require "connect.php";
                 <input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<br><input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB<br>
                 <input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet Clerk<br><input type="radio" name="usertype" value="NB" onclick="myFunction()">Normal Mail EB</td></tr>
               <tr><td>EB type</td><td> <select id="myText" name="ebno">
-                <option name="ebno" value="5">Type 1</option>
-                  <option name="ebno" value="6">Type 2</option>
-                  <option name="ebno" value="7">Type 3</option>
-                <option name="ebno" value="8">Type 4</option>
+                <option name="ebno" value="5">Doctor (EB5)</option>
+                  <option name="ebno" value="6">Nurse (EB6)</option>
+                  <option name="ebno" value="7">Para Medic (EB7)</option>
+                <option name="ebno" value="8">Minor staff (EB8)</option>
                 </select>  </td></tr>
 
             <tr><td colspan=2 align="center"><br>

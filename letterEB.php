@@ -226,7 +226,7 @@
                         <!--input type="submit" value="Last letter ID" name="submit1"-->
                         </form>
                         <br>
-                        <b>Enter MC to MS date</b>
+                        <b>Enter Letter Clerk to Medical Supirintendantad date</b>
                         <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8">
                               <label>Letter ID</label>
                           <?php  
