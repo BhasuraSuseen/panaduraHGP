@@ -291,7 +291,7 @@
 
 
 				    <tr><td></td><td>
-					    <input type ="reset" value="Reset"></td></tr>
+					    <center><input type ="reset" value="Reset"></center></td></tr>
 
                             </table>
                             <tr><td><input  style="display:none"type ="submit"></td></tr>
