@@ -2,7 +2,8 @@
         <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
         <?php include '../datetime.php';?>
    
-    <body> 
+ 
+
         <div class="attall_container">
 
             <div class="attcontainer">
