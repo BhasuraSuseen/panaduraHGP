@@ -252,11 +252,11 @@ require "connect.php";
                       <?php include "del/list_user.php"  ?>       
                </div>
          </div>
-         <div id="pop_box_hr_3" style="width: 90%;">
+         <div id="pop_box_hr_3" style ="width:90%">
       
                 <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> UPDATE EMPLOYEE DETAILS </a></div>
                 <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                   <?php include 'hrupdate.php'?>
+                   <?php include 'hrupdate.php' ?>
                 </div>    
         </div>
      		<div id="pop_box_hr_1">

@@ -1,7 +1,7 @@
 
  
     <!--<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">-->
-    <input type="text" name="nic1" id="nic1" placeholder="NIC NO "><button onclick="get(document.getElementById('nic1').value)">Search</button>
+    <input type="text" name="nic1" id="nic1" placeholder="NIC NO "><button style="width: 100px" onclick="get(document.getElementById('nic1').value)">Search</button>
     <!--Employee photo :-->
     <!--<input type="file" name="fileToUpload" id="fileToUpload">-->
     <!--<input type="submit" value="Upload Image" name="submit">-->
