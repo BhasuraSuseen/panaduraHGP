@@ -318,7 +318,7 @@ else{
             });
             $('#open_att_2').click(function(){
                 $('#pop_background').fadeIn();
-                $('#pop_box_hr_2').fadeIn();
+                $('#pop_box_att_2').fadeIn();
                 return false;
             });
             $('#open_report_1').click(function(){
