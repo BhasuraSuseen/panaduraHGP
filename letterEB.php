@@ -226,7 +226,7 @@
                         <!--input type="submit" value="Last letter ID" name="submit1"-->
                         </form>
                         <br>
-                        <b>Enter Letter Clerk to Medical Supirintendantad date</b>
+                        <b>Enter Letter Clerk to Medical Supirintendent date</b>
                         <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8">
                               <label>Letter ID</label>
                           <?php  
@@ -251,7 +251,7 @@
                         </form>
 
                         <!--methana enter karanne AO to MC date -->
-                        <b>Enter AO to MC date</b>
+                        <b>Enter Admin Officer to Letter Clerk date</b>
                         <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8" enctype="multipart/form-data"> 
                         <label>Letter ID</label>
                          <?php  
@@ -291,7 +291,7 @@
                         </form>
                         	<br>
                         <form name="mctoeb" action="letterEB.php" method="post" accept-charset="utf-8">
-						    <b>Enter Letter EB to EB date</b><br>
+						    <b>Enter Letter Clerk to EB date</b><br>
 						 	<label>Letter ID</label>
 						      <?php  
 						      $eb=$_SESSION['ebno'];
