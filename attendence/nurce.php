@@ -22,7 +22,7 @@
                             <tr><td style="width:70%">Employees Present :</td><td><strong id="st1"></strong></td></tr>
                             <tr><td style="width:70%">Employees absent :</td><td><strong id="st2"></strong></td></tr>
                             <tr><td style="width:70%">Total Employees :</td><td><strong id="st3"></strong></td></tr>
-                            <tr><td style="width:60%;"><button class="black_btn" onclick="loadNurcedata()">Get Report</button></td></tr>
+                            <tr><td style="width:60%;"><button class="attblack_btn" onclick="loadNurcedata()">Get Report</button></td></tr>
 
                         </table>
                     </div>
@@ -31,7 +31,7 @@
 
                         <table border="0" style="width: 100%">
                             <tr>Employee came</tr>
-                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select class="styled-select" style="width:30%" id="day">
+                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select class="attstyled-select" style="width:30%" id="day">
 
 
                                         <?php
@@ -55,7 +55,7 @@
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                            <button class="attblack_btn" style="width: 150px" type="submit" onclick="callme();">Download</button>
+                            <a href="/attendence/reportNurse.php">  <input class="attblack_btn" type="submit" value="Download Pdf"></a> 
 
 
                     </div>

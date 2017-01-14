@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ateendace EB 2</title>
+<title>Attendence EB 2(Nurse)</title>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -291,7 +291,7 @@ else{
               <div id="pop_box_report_1">
                   <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">EMPLOYEE DETAILS </a></div>
                   <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                                   <?php  echo "include hre"; ?>
+                                   <?php  include 'hrreport.php'; ?>
                   </div>
             </div>
             <div id="pop_box_att_1">

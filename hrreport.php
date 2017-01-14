@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
-<select id="ser" style="width: 30%; height: 40px">
-    <option value="">Select Dpt: Type</option>
+<select id="ser" style="width: 30%; height: 35px">
+    <option value="sdfjsdeesfsdd">Select Dpt: Type</option>
     <option value="doctor">Doctor</option>
     <option value="nurce">Nurse</option>
     <option value="eb">EB Office</option>
