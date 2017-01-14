@@ -209,7 +209,7 @@
 					
 
      			</div>
-	<div id="pop_box_menu_2">
+	<div id="pop_box_diet_1">
 	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> SELECT MENU </a></div>	
 	<div style="width:100%;height:70%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 		 <form>
@@ -521,7 +521,7 @@
             });
       	    $('#open_hr_2').click(function(){
                       $('#pop_background').fadeIn();
-                      $('#pop_box_menu_2').fadeIn();
+                      $('#pop_box_diet_1').fadeIn();
                       return false;
                   });
       		 $('#open_mail_1').click(function(){
