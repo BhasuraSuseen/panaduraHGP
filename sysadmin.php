@@ -256,8 +256,7 @@ require "connect.php";
       
                 <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> UPDATE EMPLOYEE DETAILS </a></div>
                 <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                   <a>Sajini / Ramba<br> this is your part<br> do this in a separate file and include it here  <br> 1. There should be a dropdown of alll the emploees/ Or Search. <br>
-                                              2. Should be able to update selected Employees details.</a>
+                   <?php include 'hrupdate.php'?>
                 </div>    
         </div>
      		<div id="pop_box_hr_1">
