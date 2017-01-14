@@ -83,7 +83,7 @@
           if (obj.readyState === 4 && obj.status === 200) {
 
                 var text1 = obj.responseText;
-                alert(text1);
+                //alert(text1);
 //                
 //                if(text1 == ""){
 //                    alert("Check thID!");
