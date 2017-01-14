@@ -290,16 +290,16 @@
                                         <input type="number" id="staff" name="staff" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
 
-				    
+				    <tr><td></td><td>
+					    <input type ="reset" value="Reset"></td></tr>
 
                             </table>
                             <tr><td><input  style="display:none"type ="submit"></td></tr>
                         </form>
-				<tr><td></td><td>
-					    <input type ="reset" value="Reset"></td></tr>
-                        <button style="
+				
+                        <tr><td></td><td><button style="
                                 width: 100px;
-                                " onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
+                                " onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button></td>
                     </center>
                 </div>
 		<div class="middle_right" >
