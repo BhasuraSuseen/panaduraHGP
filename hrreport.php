@@ -1,4 +1,5 @@
 
+<link rel="stylesheet" type="text/css" href="./styles/global.css" media="screen" />
 Type:<select id="ser">
     <option value="doctor">Doctor</option>
     <option value="nurce">Nurse</option>
@@ -7,10 +8,10 @@ Type:<select id="ser">
     <option value="minor">Minor Staff</option>
     
 </select>
-<button onclick="hrser(document.getElementById('ser').value)">Search</button>
+<button class="button" style="width: 50%" onclick="hrser(document.getElementById('ser').value)">Search</button>
 <label id="lbview"></label>
 <script>
-<script>
+
 
 var obj;
 
