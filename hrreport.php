@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" type="text/css" href="./styles/global.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
 Type:<select id="ser">
     <option value="doctor">Doctor</option>
     <option value="nurce">Nurse</option>
@@ -8,7 +8,7 @@ Type:<select id="ser">
     <option value="minor">Minor Staff</option>
     
 </select>
-<button class="button" style="width: 50%" onclick="hrser(document.getElementById('ser').value)">Search</button>
+<button class="attblack_button" style="width: 50%" onclick="hrser(document.getElementById('ser').value)">Search</button>
 <label id="lbview"></label>
 <script>
 
