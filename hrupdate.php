@@ -8,7 +8,7 @@
     </form>
         <!--<<iframe class="iframe1" name="iframe" height="75px"></iframe>-->
 
-    <form action="Update.php" method="post" target="iframehr">
+    <form action="hrup.php" method="post" target="iframehr">
         <table style="width: 90%"><tr>
 
                 <td>First Name<br><input id="fname" name="fname" style="width: 88%" type="text" name="fname" readonly>*</td>
