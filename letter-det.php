@@ -86,10 +86,13 @@
              }
              
              $current_location='';
-             if ((is_null($array["mceb"])==FALSE)and($array['imgname']!='')){
+             if($array['imgname']!=''){
               $softcopypath = "lettercopies/";
               $softcopypath .= $letter_id.".pdf";
-              echo("<button onclick=\"location.href='".$softcopypath." '\">Received Letter Soft copy</button>");
+              echo("<button onclick=\"location.href='".$softcopypath." '\">Received Letter Soft copy</button>"); 
+             }
+             if (is_null($array["mceb"])==FALSE){
+
 
               if ($array["eb"]==1){
                 $current_location="EB1";
