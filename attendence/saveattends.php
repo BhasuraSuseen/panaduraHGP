@@ -19,7 +19,7 @@ echo $NIC .$DATE .$Atten.$day.$yearmon;
 //mysqli_query($conn, "insert into attleave(date,employee_nic,attend) values ('$DATE','$NIC','$val')");
     //mysqli_query($conn, "update attend set $day= '$val' WHERE employee_nic='$NIC' and date='$yearmon'");
    mysqli_query($conn, "update attend set `$day` = '$val' WHERE employee_nic='$NIC' and date='$yearmon'");
-    echo 'Hri mcn';
+
 } catch (Exception $exc) {
 }
 ?>
