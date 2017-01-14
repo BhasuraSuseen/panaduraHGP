@@ -1,7 +1,15 @@
 
-Type:<input type="text" id="ser">
+Type:<select id="ser">
+    <option value="doctor">Doctor</option>
+    <option value="nurce">Nurse</option>
+    <option value="eb">EB Office</option>
+    <option value="para">Para Medical Officer</option>
+    <option value="minor">Minor Staff</option>
+    
+</select>
 <button onclick="hrser(document.getElementById('ser').value)">Search</button>
 <label id="lbview"></label>
+<script>
 <script>
 
 var obj;
