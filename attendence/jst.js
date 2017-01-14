@@ -132,19 +132,6 @@ function saveAttends(name, date, attend) {
         
         obj.onreadystatechange = function() {
 
-
-            //           if (obj.readyState === 4 && obj.status === 200) {
-           //alert(obj.responseText);
-//                       
-//                    if (obj.responseText == "Hri mcn") {
-//
-//                         alert(obj.responseText);
-//                    } else {
-//                        alert("Not Added!!");
-//                    }
-//
-//
-            //            }
         };
         obj.open("POST", "./attendence/saveattends.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -155,29 +142,6 @@ function saveAttends(name, date, attend) {
 
 }
 
-//function chng(){
-//    
-//   document.getElementById('a5').src = "WWW.YIFY-TORRENTS.COM.jpg";
-//    
-//}
-//function chng_out(){
-//    
-//   document.getElementById('a5').src = "mthu.jpg";
-//    
-//}
-//
-//
-//
-//
-//    if (!Modernizr.touch || !Modernizr.inputtypes.date) {
-//        $('input[type=date]')
-//            .attr('type', 'text')
-//            .datepicker({
-//                // Consistent format with the HTML5 picker
-//                dateFormat: 'yy-mm-dd'
-//            });
-//    }
-//
 function searchAttends(day,id) {
     checkBrowser();
 
@@ -187,22 +151,8 @@ function searchAttends(day,id) {
         if (obj.readyState === 4 && obj.status === 200) {
 
             var text = obj.responseText;
-            
-            //alert(obj.responseText);
-//
-//            var abc;
-//
-//            if (text == '0'){
-//                abc = "Absent";
-//            }else if(text == '1'){
-//                abc = "Present";
-//            }else if(text == null){
-//                abc = "valid error";
-//            }else{
-//                abc = text;
-//            }
-            
-            
+  
+                   
 //            alert(obj.responseText);
             document.getElementById('st6').innerHTML = text;
           
@@ -228,14 +178,7 @@ function searchAttends(day,id) {
                 if (obj.readyState === 4 && obj.status === 200) {
 
 
-                        alert(obj.responseText);
-//                    if (obj.responseText == "Hri mcn") {
-//
-//                    } else {
-//                        alert("Not Added!!")
-//                    }
-
-
+                        alert("Record Added!");
                 }
             };
             obj.open("POST", "./leave/saveLeave.php", true);
