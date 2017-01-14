@@ -1,6 +1,6 @@
 <?php
-include 'datetime.php';
-include 'connect.php';
+include 'attendence/datetime.php';
+include '../connect.php';
 $res1 = mysqli_query($conn, "SELECT * FROM employee");
 while ($row1 = mysqli_fetch_array($res1)) {
     $nic = $row1[0];
@@ -18,12 +18,6 @@ FROM employee
 
 //$res2 = mysqli_query($conn, "SELECT * FROM attleave");
 ?>
-
-<html>
-
-    <header>
-        <title>Para Atendence</title>
-    </header>
     <center>
                
                 <h5 ><? //php echo $date2  ?></h5>
@@ -199,9 +193,6 @@ FROM employee
 
 
     </center>
-</body>
 
 <script type="text/javascript" src="jst.js"></script>
 
-
-</html>
