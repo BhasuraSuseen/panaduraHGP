@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script src="scripts/prio2script.js"></script>
+  
 	<script type="text/javascript" src="attendence/jst.js"></script>
 	<script  src="http://d3js.org/d3.v3.min.js"></script>
 	<SCRIPT language=Javascript>
@@ -133,10 +133,17 @@
                   <div id ="lettercontent" style="width:100%; padding: 20px; overflow:auto;"><p>Hellow</p></div>
                 </div>
               </div>
-              <script> 
-               func1(1000); 
-               func2(1000);          
-              </script>
+                <?php
+                  $eb = $_SESSION["ebno"];
+                  $recentletter=mysqli_query($conn,"select max(letter_id) from letter where eb ='".$eb."'");
+                  $rslt=mysqli_fetch_array($recentletter);
+                  $letteridtoload = $rslt[0];  ?>
+                  <script src="scripts/prio2script.js"></script>
+                  <script> 
+                      
+                   func1(<?php echo $letteridtoload ?>); 
+                   func2(<?php echo $letteridtoload ?>);          
+                  </script>
               <div class="current-flow-right" style="float: left; width:20%; margin-left: 20px">
                 <div class="letters-details" style="width:100%; margin: 10px; margin-left: 20px;  background: #fff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                   <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px; ">DISTRIBUTION</a></div>
@@ -261,9 +268,9 @@
 				    <thead><tr><th colspan=2 size="+2" color=#2980b9><b>ENTER COUNTS</b></th></tr></thead>
 
                                 <tr><td>Meal Type</td><td>
-                                        <input type="radio" id="meal" name="meal" value="Breakfast" onclick="myFunction()" required> Breakfast
-                                        <input type="radio" id="meal" name="meal" value="Lunch" onclick="myFunction()" required> Lunch
-                                        <input type="radio" id="meal" name="meal" value="Dinner" onclick="myFunction()" required> Dinner</td></tr><br>
+                                        <input type="radio" id="meal" name="meal" value="Breakfast" required> Breakfast
+                                        <input type="radio" id="meal" name="meal" value="Lunch"  required> Lunch
+                                        <input type="radio" id="meal" name="meal" value="Dinner"  required> Dinner</td></tr><br>
                                 <tr><td>Children S1 </td><td> 
                                         <input type="number" id="s1" name="children_s1" value="" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
@@ -353,42 +360,7 @@
 
 	
 	
-
-     
-        <script>
-         $(document).ready(function(){
-            $('#open_hr_1').click(function(){
-                $('#pop_background').fadeIn();
-                $('#pop_box_report_2').fadeIn();
-                return false;
-            });
-            $('#open_att_1').click(function(){
-                $('#pop_background').fadeIn();
-                $('#pop_box_att_1').fadeIn();
-                return false;
-            });
-	    $('#open_hr_2').click(function(){
-                $('#pop_background').fadeIn();
-                $('#pop_box_hr_2').fadeIn();
-                return false;
-            });
-		 $('#open_mail_1').click(function(){
-                $('#pop_background').fadeIn();
-                $('#pop_box_hr_3').fadeIn();
-                return false;
-            });
-            $('#pop_background').click(function(){
-                $('#pop_background').fadeOut();
-                $('#pop_box_report_2').fadeOut();
-                $('#pop_box_att_1').fadeOut();
-		$('#pop_box_hr_2').fadeOut();
-		$('#pop_box_hr_3').fadeOut();
- 
-                return false;
-            });
-         });
-     </script>
-	 <script>
+ <script>
                     var obj;
                     function checkBrowser() {
                         if (window.XMLHttpRequest) {
@@ -478,7 +450,7 @@
                         catch (err) {
                         }
                     }
-	 function report(day, type) {
+   function report(day, type) {
                         try {
 //                            alert(day);
 //                            alert(type);
@@ -498,8 +470,8 @@
                         }
                     }
                 </script>
-	<script type="text/javascript">
-	function validateForm(){
+  <script type="text/javascript">
+  function validateForm(){
       
          if( document.new_count.s1.value == "" )
          {
@@ -507,38 +479,73 @@
             document.new_count.s1.focus() ;
             return false;
          }
-		 if( document.new_count.s2.value == "" )
+     if( document.new_count.s2.value == "" )
          {
             alert( "Please provide the count!" );
             document.new_count.s2.focus() ;
             return false;
          }
-		 if( document.new_count.s3.value == "" )
+     if( document.new_count.s3.value == "" )
          {
             alert( "Please provide the count!" );
             document.new_count.s3.focus() ;
             return false;
          }
-		 if( document.new_count.norm_patients.value == "" )
+     if( document.new_count.norm_patients.value == "" )
          {
             alert( "Please provide the count!" );
             document.new_count.norm_patients.focus() ;
             return false;
          }
-		 if( document.new_count.dd_patients.value == "" )
+     if( document.new_count.dd_patients.value == "" )
          {
             alert( "Please provide the count!" );
             document.new_count.dd_patients.focus() ;
             return false;
          }
-		 if( document.new_count.staff.value == "" )
+     if( document.new_count.staff.value == "" )
          {
             alert( "Please provide the count!" );
             document.new_count.staff.focus() ;
             return false;
          }
-	}
-	</script>
+  }
+  </script>
+     
+        <script>
+         $(document).ready(function(){
+            $('#open_hr_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_report_2').fadeIn();
+                return false;
+            });
+            $('#open_att_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_att_1').fadeIn();
+                return false;
+            });
+      	    $('#open_hr_2').click(function(){
+                      $('#pop_background').fadeIn();
+                      $('#pop_box_hr_2').fadeIn();
+                      return false;
+                  });
+      		 $('#open_mail_1').click(function(){
+                      $('#pop_background').fadeIn();
+                      $('#pop_box_hr_3').fadeIn();
+                      return false;
+                  });
+            $('#pop_background').click(function(){
+                $('#pop_background').fadeOut();
+                $('#pop_box_report_2').fadeOut();
+                $('#pop_box_att_1').fadeOut();
+            		$('#pop_box_hr_2').fadeOut();
+            		$('#pop_box_hr_3').fadeOut();
+ 
+                return false;
+            });
+         });
+     </script>
+	
 	
  </body>
  </html>
