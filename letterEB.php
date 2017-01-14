@@ -178,10 +178,17 @@
     <div id ="svgcontent" style="width:100%; overflow:auto;"></div>
   </div>
 </div>
-<script> 
- func1(1000); 
- func2(1000);          
-</script>
+			 <?php
+                
+                $recentletter=mysqli_query($conn,"select max(letter_id) from letter");
+                $rslt=mysqli_fetch_array($recentletter);
+                $letteridtoload = $rslt[0];  ?>
+                
+                <script> 
+                    
+                 func1(<?php echo $letteridtoload ?>); 
+                 func2(<?php echo $letteridtoload ?>);          
+                </script>
 <div class="current-flow-right" style="float: left; width:30%; margin-left: 20px">
   <div class="letters-details" style="width:100%; margin: 10px; margin-left: 20px;  background: #fff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px; ">LETTER DETAILS</a></div>

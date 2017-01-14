@@ -1,33 +1,5 @@
 $(document).ready(function(){
-  $('#open_report_1').click(function(){
-                $('#pop_background').fadeIn();
-                $('#pop_box_report_1').fadeIn();
-                return false;
-  });
-   $('#open_diet_1').click(function(){
-                $('#pop_background').fadeIn();
-                $('#pop_box_report_2').fadeIn();
-                return false;
-  });
-  $('#open_mail_1').click(function(){
-      $('#pop_background').fadeIn();
-      $('#pop_box_mail_1').fadeIn();
-      return false;
-  });
-     $('#open_mail_2').click(function(){
-     $('#pop_background').fadeIn();
-     $('#pop_box_mail_2').fadeIn();
-      return false;
-  });
-  $('#pop_background').click(function(){
-     $('#pop_background').fadeOut();
-     $('#pop_box_mail_1').fadeOut();
-     $('#pop_box_mail_2').fadeOut();
-     $('#pop_box_report_1').fadeOut();
-     $('#pop_box_report_2').fadeOut();
  
-      return false;
-  });
 
   $("#search-box").keyup(function(){
     $.ajax({
