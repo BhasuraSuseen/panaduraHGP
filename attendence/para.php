@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
+
         <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
         <?php include 'datetime.php';?>
-    </head>
-    <body> 
+
+
         <div class="attall_container">
 
             <div class="attcontainer">
@@ -55,7 +53,7 @@
                             <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                             <a href="/attendence/reportpara.php">  <input class="attblack_btn" type="submit" value="Download Pdf"></a> 
+                             <a href="/attendence/reportPara.php">  <input class="attblack_btn" type="submit" value="Download Pdf"></a> 
 
 
                     </div>
@@ -63,6 +61,5 @@
                 </div>
             </div>
 
-    </body>
     <script type="text/javascript" src="attendence/jst.js"></script>
-</html>
+
