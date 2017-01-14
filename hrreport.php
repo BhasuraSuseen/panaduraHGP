@@ -25,7 +25,7 @@ function checkBrowser() {
 }
 
 function hrser(type){
-    alert(type)
+   // alert(type)
       checkBrowser();
     obj.onreadystatechange = function() {
 
