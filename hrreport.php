@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
-<table><tr><td>
+<table style="width: 95%"><tr><td style="width: 40%">
 Type:<select id="ser" class="attstyled-select">
     <option value="doctor">Doctor</option>
     <option value="nurce">Nurse</option>
