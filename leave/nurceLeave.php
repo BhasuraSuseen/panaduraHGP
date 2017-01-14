@@ -5,7 +5,6 @@ include '../connect.php';
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
-  attend.$day,
   employee.E_type
 FROM employee
   INNER JOIN attend
@@ -14,12 +13,12 @@ FROM employee
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../attend styl.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
         <title>Leave</title>
         
     </head>
     <body>
-        <div class="all_container">
+        <div class="attall_container">
             <center>
 
                 <h5 style="display: none"><?php echo $date2 ?></h5>
@@ -60,7 +59,7 @@ FROM employee
                                     <input type="text" id="des" name="des">
                                 </td>
 
-                                <td style="width: 12%; background-color:#ECEFF1"><select class="styled-select" name="ReqType" onchange="saveLeave(document.getElementById('NIC').value, document.getElementById('lvt').value, document.getElementById('des').value, this.value, '<?php echo $row[0]; ?>')">
+                                <td style="width: 12%; background-color:#ECEFF1"><select class="styled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('lvt').value, document.getElementById('des').value, this.value)">
                                         <option>--Select Type--</option>
                                         <option>Letter</option>
                                         <option>Fax</option>
