@@ -361,22 +361,38 @@
                
           	</div>
 		 <div id="pop_background"></div>
-            <div id="pop_box_hr_1">
+            <div id="pop_box_hr_1"></div>
+		<div id="pop_box_report_2">
+      
+                <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET REPORT </a></div>
+                <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
+                   <label  style="width: 100%" id="lbpop1"></label><br>
+				 <?php include 'report.php';?>
+		
+		<center><button style="width: 100px;" >Download</button></center>
+                </div>    
+</div>
+		    
                        
-            </div>
+            
 	</div>
      
         <script>
          $(document).ready(function(){
-            $('#open_mail_1').click(function(){
+            $('#open_hr_1').click(function(){
                 $('#pop_background').fadeIn();
                 $('#pop_box_hr_1').fadeIn();
+                return false;
+            });
+	$('#open_diet_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_report_2').fadeIn();
                 return false;
             });
             $('#pop_background').click(function(){
                 $('#pop_background').fadeOut();
                 $('#pop_box_hr_1').fadeOut();
- 
+ 		$('#pop_box_report_2').fadeOut();
                 return false;
             });
          });
