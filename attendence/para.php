@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="attend styl.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
         <?php include 'datetime.php';?>
     </head>
     <body> 
-        <div class="all_container">
+        <div class="attall_container">
 
-            <div class="container">
+            <div class="attcontainer">
                 <div class="middle_left">
                     <div style="height: 650px">
                         <div style="overflow-y: scroll">
@@ -15,23 +15,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="middle_right">
+                <div class="attmiddle_right">
                     <!--<button class="button button1">GA</button>-->
-                    <div class="recordstyl"> 
+                    <div class="attrecordstyl"> 
                         <table border="0" style="width: 100%">
                             <tr><td style="width:70%">Employees Present :</td><td><strong id="st1"></strong></td></tr>
                             <tr><td style="width:70%">Employees absent :</td><td><strong id="st2"></strong></td></tr>
                             <tr><td style="width:70%">Total Employees :</td><td><strong id="st3"></strong></td></tr>
-                            <tr><td style="width:60%;"><button class="black_btn" onclick="loadParadata()">Get Report</button></td></tr>
+                            <tr><td style="width:60%;"><button class="attblack_btn" onclick="loadParadata()">Get Report</button></td></tr>
 
                         </table>
                     </div>
                     <br><br>
-                    <div class="recordstyl"> 
+                    <div class="attrecordstyl"> 
 
                         <table border="0" style="width: 100%">
                             <tr>Employee came</tr>
-                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select class="styled-select" style="width:30%" id="day">
+                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select class="attstyled-select" style="width:30%" id="day">
 
 
                                         <?php
@@ -52,10 +52,10 @@
                                 </td></tr>
                             <tr><td style="width:40%">Search by ID :</td><td><input type="text" id="serId"></td></tr>
                             <tr><td style="width:40%">Status:</td><td><label id="st6"></label></td></tr>
-                            <tr><td><button class="black_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
+                            <tr><td><button class="attblack_btn" onclick="searchAttends(document.getElementById('day').value, document.getElementById('serId').value)" >Search</button></td></tr>
                         </table>
                         <br>
-                            <button class="black_btn" style="width: 150px" type="submit" onclick="callme();">Download</button>
+                             <a href="/attendence/reportpara.php">  <input class="attblack_btn" type="submit" value="Download Pdf"></a> 
 
 
                     </div>
@@ -64,5 +64,5 @@
             </div>
 
     </body>
-    <script type="text/javascript" src="jst.js"></script>
+    <script type="text/javascript" src="attendence/jst.js"></script>
 </html>
