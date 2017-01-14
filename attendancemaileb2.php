@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ateendace EB 2</title>
+<title>Attendence EB 2(Nurse)</title>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
