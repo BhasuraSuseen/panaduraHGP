@@ -297,14 +297,9 @@
                             </table>
                             <tr><td><input  style="display:none"type ="submit"></td></tr>
                         </form>
-                        <button style="background-color: #263238;
-                                outline: none;
-                                border: none;
+                        <button style="
                                 width: 100px;
-                                font-size: 0.9em;
-                                padding: 0.4em;
-                                margin-bottom: 0.8em;  
-                                color: white;" onclick="count(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
+                                " onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
                     </center>
                 </div>
 		<div class="middle_right" >
@@ -400,7 +395,7 @@
                         }
                     }
 
-                    function count(meal, s1, s2, s3, patients, dp, staff) {
+                    function countdiet(meal, s1, s2, s3, patients, dp, staff) {
                         try {
 
                             var meal1;
