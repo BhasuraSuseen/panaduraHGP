@@ -59,7 +59,7 @@
 
         <input type="submit" value="Update" name = "submit">
     </form>
-    <iframe class="iframehr" name="iframehr"  height="35px" width="70%"></iframe>
+    <iframe class="iframehr" name="iframehr"  height="3%" width="70%"></iframe>
 
     <!--?php include 'employee_hr/hr.php'; ?-->
 
