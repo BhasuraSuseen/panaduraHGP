@@ -332,41 +332,42 @@ require "connect.php";
   
 <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> RECORD EMPLOYEE DETALIS</a></div>
 		<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">  
-                 <form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
-                    <input type="text" name="nic" placeholder="NIC NO ">
+                 <form action="sysadmin.php" method="post" enctype="multipart/form-data"> 
                     Select Employee photo to upload:
                     <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit">
-                </form>
-                <iframe class="iframe1" name="iframe" height="30px" width="50%"></iframe >
-                
-                <form action="hr.php" method="post" target="iframehr">
+
                     <table style="width: 90%"><tr>
                     
-                            <td>First Name<br><input style="width: 100%" type="text" name="fname"></td>
-                            <td>Last Name<br><input style="width: 100%" type="text" name="lname"></td>
+                            <td>First Name<br><input style="width: 100%" type="text" name="fname" required></td>
+                            <td>Last Name<br><input style="width: 100%" type="text" name="lname" required></td>
                         </tr></table>
                     <table style="width: 90%"><tr>
                     Birth Date<br>
-                    <td><input type="date" name="bdate" style="width: 30%"></td>
+                    <td><input type="date" name="bdate" style="width: 30%" required></td>
                         </tr>
                     </table>
                     <table style="width: 90%">
                         <tr><td> Address
-                                <input type="text" name="address" style="width: 100%"></td></tr></table>
+                                <input type="text" name="address" style="width: 100%" required></td></tr></table>
                         <table style="width: 90%">
-                    <tr><td>NIC No<input type="text" name="nic" style="width: 100%"></td>
-                            <td>Contact No<br><input type="int" name="cnumber"  style="width: 100%"></td>
-                            <td>Gender <br><input type="text" name="gender"  style="width: 100%"></td>
+                    <tr><td>NIC No<input type="text" name="nic" style="width: 100%" minlength="10" maxlength="10" required></td>
+                            <td>Contact No<br><input type="number" name="cnumber"  style="width: 100%" min="0" max="9999999999" required></td>
+                            <td>Gender <br><input type="text" name="gender"  style="width: 100%" required></td>
                     </tr></table>
                     Employee Type<br>
-                    <input type="text" name="etype" >
+                    <select name="etype"> 
+                    <option value="doctor">Doctor</option>
+                    <option value="para">Para Medic</option>
+                    <option value="nurce">Nurse</option>
+                    <option value="minor">Minor Staff</option>
+                    <option value="eb">Other Staff</option>
+                    </select>
                     
                     <table style="width: 90%"><tr><td>
                                 First Employment Date<br>
-                    <input type="Date" name="fedate" placeholder="FE Date " style="width: 100%"></td>
+                    <input type="Date" name="fedate" placeholder="FE Date " style="width: 100%" required></td>
                             <td>Employment Commencement Date<br>
-                                <input type="Date" name="ecdate" style="width: 100%"></td></tr>
+                                <input type="Date" name="ecdate" style="width: 100%" required></td></tr>
                         <tr> <td>Socond Grade Promotion Date<br>
                     <input type="Date" name="sgpdate" style="width: 100%" ></td>
                             <td> First Grade Promotion Date<br>
@@ -380,11 +381,41 @@ require "connect.php";
                     <td>Remarks<br><input type="text" name="remarks" style="width: 100%"></td>
                     </tr></table>
                                        
-                    <input type="submit" value="Save" name = "submit">
+                    <input type="submit" value="Save" name="enter">
                 </form>
-                <iframe class="iframehr" name="iframehr"  height="30px" width="50%"></iframe>
 
-			<!--?php include 'employee_hr/hr.php'; ?-->
+             <?php
+
+
+              if(isset($_POST["enter"])){
+                $nic=$_POST['nic'];
+                $filename = $_FILES["fileToUpload"]["name"];
+                $filetype = $_FILES["fileToUpload"]["type"];
+                $filesize = $_FILES["fileToUpload"]["size"]; 
+                  if($filename==''){
+                      $folder='';
+                      $newfilename='';
+                      }
+                  else{                          
+                      $folder="uploads/";
+                      $temp= explode(".", $filename);
+                      $newfilename=$nic.'.'.end($temp);
+                      }
+                  
+              $sql = "INSERT INTO employee (NIC_NO, F_Name, L_Name, B_Date, Address, Contact_NO, Gender, E_Type, 
+              FE_Date, EC_Date, FGP_Date, SGP_Date, CGP_Date, Salary, SI_Date, Remarks,folder,photo)
+              VALUES ('{$_POST["nic"]}', '{$_POST["fname"]}', '{$_POST["lname"]}', '{$_POST["bdate"]}', '{$_POST["address"]}', '{$_POST["cnumber"]}', '{$_POST["gender"]}'
+              , '{$_POST["etype"]}', '{$_POST["fedate"]}', '{$_POST["ecdate"]}', '{$_POST["fgpdate"]}', '{$_POST["sgpdate"]}', '{$_POST["cgpdate"]}', '{$_POST["salary"]}', '{$_POST["sidate"]}', '{$_POST["remarks"]}','$folder','$newfilename')";
+              if (mysqli_query($conn, $sql)) {
+                  $successmessage="New employee was entered";
+                  echo  "<script type='text/javascript'>alert('$successmessage');</script>";
+                   move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "$folder".$newfilename);
+              } else {
+                  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+              }
+              }
+        
+              ?>
  	    
     </div>
 	</div>
