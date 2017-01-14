@@ -1,15 +1,17 @@
 
 <link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
+<table><tr><td>
 Type:<select id="ser" class="attstyled-select">
     <option value="doctor">Doctor</option>
     <option value="nurce">Nurse</option>
     <option value="eb">EB Office</option>
     <option value="para">Para Medical Officer</option>
     <option value="minor">Minor Staff</option>
-    
+  </td><td>  
 </select>
 <button class="attblack_button" style="width: 30%" onclick="hrser(document.getElementById('ser').value)">Search</button>
-<label id="lbview"></label>
+</td></tr></table>
+    <label id="lbview"></label>
 <script>
 
 
