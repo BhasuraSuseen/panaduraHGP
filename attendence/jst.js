@@ -126,7 +126,7 @@ function saveAttends(name, date, attend) {
    
    
     try {
- alert("attended!!");
+ alert("Attendence Recorded!");
         checkBrowser();
         
         
@@ -178,7 +178,7 @@ function searchAttends(day,id) {
                 if (obj.readyState === 4 && obj.status === 200) {
 
 
-                        alert("Record Added!");
+                        alert("Leave Record Added!");
                 }
             };
             obj.open("POST", "./leave/saveLeave.php", true);
