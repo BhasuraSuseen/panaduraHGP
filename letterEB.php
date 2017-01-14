@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script  src="http://d3js.org/d3.v3.min.js"></script>
+<script src="scripts/prio1script.js"></script>
 <style>
    
     body {
@@ -29,6 +30,28 @@
    .arcb {
     fill: #CFD8DC;
   }
+  .arcc {
+    fill: #B0BEC5;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+      text-align: left;
+      padding: 5px;
+      font-weight: 600;
+  }
+
+  tr:nth-child(even) {
+      background-color: #F5F5F5;
+  }
+  #suggesstion-box{ height: 100px; overflow-y: auto; overflow-x: hidden;display: none;}
+  #letterid-list{list-style:none;margin:10px;padding:0;width:100%; }
+  #letterid-list li{padding: 5px; background:#fff;border-bottom:#F0F0F0 1px solid;}
+  #letterid-list li:hover{background:#fafafa;}
+
 
 </style>
 </head>
@@ -72,7 +95,7 @@
 	 
 			     
 			
-          <div id="middle_leftp1">
+          
               <?php
             
                 //mail clerk 1 letter count//
@@ -137,225 +160,37 @@
                 //echo $eb88;
                 ?>  
                     
-                    <script>
-                     
-                      var width = 1000;
-                      var height = 600;
-                     var nodes = [{"name": "LC1", "value" : 0, "x_axis": 80, "y_axis": 300},
-				  {"name": "MS", "value" : 0, "x_axis": 280, "y_axis": 300},
-				  {"name": "AO", "value" : 0, "x_axis": 480, "y_axis": 300},
-				  {"name": "LC2", "value" : 0, "x_axis": 680, "y_axis": 300},
-				  {"name": "EB1", "value" : 0, "x_axis": 940, "y_axis": 55},
-				  {"name": "EB2", "value" : 0, "x_axis": 940, "y_axis": 125},
-				  {"name": "EB3", "value" : 0, "x_axis": 940, "y_axis": 195},
-				  {"name": "EB4", "value" : 0, "x_axis": 940, "y_axis": 265},
-				  {"name": "EB5", "value" : 0, "x_axis": 940, "y_axis": 335},
-				  {"name": "EB6", "value" : 0, "x_axis": 940, "y_axis": 405},
-				  {"name": "EB7", "value" : 0, "x_axis": 940, "y_axis": 475},
-				  {"name": "EB8", "value" : 0, "x_axis": 940, "y_axis": 545}
-				 ];
-			var links = [{"x1": 80, "y1": 300, "x2": 280, "y2": 300},
-				      {"x1": 280, "y1": 300, "x2": 480, "y2": 300},
-				      {"x1": 480, "y1": 300, "x2": 680, "y2": 300},
-				      {"x1": 680, "y1": 300, "x2": 800, "y2": 300},
-				      {"x1": 800, "y1": 50, "x2": 800, "y2": 550},
-				      {"x1": 800, "y1": 55, "x2": 850, "y2": 55},
-				      {"x1": 800, "y1": 125, "x2": 850, "y2": 125},
-				      {"x1": 800, "y1": 195, "x2": 850, "y2": 195},
-				      {"x1": 800, "y1": 265, "x2": 850, "y2": 265},
-				      {"x1": 800, "y1": 335, "x2": 850, "y2": 335},
-				      {"x1": 800, "y1": 405, "x2": 850, "y2": 405},
-				      {"x1": 800, "y1": 475, "x2": 850, "y2": 475},
-				      {"x1": 800, "y1": 545, "x2": 850, "y2": 545}
-				 ];
-                                nodes[0].value = <?php echo $a1 ?>;
-                                nodes[1].value = <?php echo $b1 ?>;
-                                nodes[2].value = <?php echo $c1 ?>;
-                                nodes[3].value = <?php echo $d1 ?>;
-                                nodes[4].value = <?php echo $eb11 ?>;
-                                nodes[5].value = <?php echo $eb22 ?>;
-                                nodes[6].value = <?php echo $eb33 ?>;
-                                nodes[7].value = <?php echo $eb44 ?>;
-                                nodes[8].value = <?php echo $eb55 ?>;
-                                nodes[9].value = <?php echo $eb66 ?>;
-                                nodes[10].value = <?php echo $eb77 ?>;
-                                nodes[11].value = <?php echo $eb88 ?>;
-			 var count = 0;
-			      for (i = 0; i < 12; i++) { 
-				  count = count + nodes[i].value;
-			      }
+                   
+          <div id="middle_leftp1">
+  <div class="current-flow-left" style="float: left; width:65%;">
+  <div class="search-letters" style="width:100%; min-height: 80px; margin: 10px; margin-left: 20px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
+	
+      <input type="text" id="search-box"  placeholder=" Select by letter ID" style="float: left;width:30%; margin: 10px; background:#fff;"/>
+      <input type="text" id="search-box1" placeholder=" Select by Subject" style="float: left;width:30%; margin: 10px;background:#fff;"/>
+      <input type="text" id="search-box2" placeholder=" Select by Address" style="float: left;width:30%; margin: 10px;background:#fff;" />
 
-                       var canvas = d3.select("#middle_leftp1").append("svg")
-                              .attr('width', width)
-                              .attr('height', height);
-                            var lines = canvas.selectAll("line")
-                                    .data(links)
-                                    .enter()
-                                      .append("line")
-                                      .attr("x1", function (d) { return d.x1;})
-                                      .attr("y1", function (d) { return d.y1;})
-                                      .attr("x2", function (d) { return d.x2;})
-                                      .attr("y2", function (d) { return d.y2;})
-                                      .attr("stroke-width", 5)
-                                      .attr("stroke", "#90A4AE");
-			var a0 = (nodes[0].value  /  count) * 2 ;
-			var a1 = (nodes[1].value  /  count) * 2  ;
-			var a2 = (nodes[2].value  /  count) * 2  ;
-			var a3 = (nodes[3].value  /  count) * 2  ;
-			var a4 = (nodes[4].value  /  count) * 2  ;
-			var a5 = (nodes[5].value  /  count) * 2  ;
-			var a6 = (nodes[6].value  /  count) * 2  ;
-			var a7 = (nodes[7].value  /  count) * 2  ;
-			var a8 = (nodes[8].value  /  count) * 2  ;
-			var a9 = (nodes[9].value  /  count) * 2  ;
-			var a10 = (nodes[10].value  /  count) * 2  ;
-			var a11 = (nodes[11].value  /  count) * 2  ;
-			var arc = d3.svg.arc()
-			      .innerRadius(width * 0.045)
-			      .outerRadius(width * 0.055)
-			      .startAngle(0)
-			      .endAngle(a0 * Math.PI); 
-			var arc1 = d3.svg.arc()
-			      .innerRadius(width * 0.045)
-			      .outerRadius(width * 0.055)
-			      .startAngle(0)
-			      .endAngle(a1 * Math.PI);
-			var arc2 = d3.svg.arc()
-			      .innerRadius(width * 0.045)
-			      .outerRadius(width * 0.055)
-			      .startAngle(0)
-			      .endAngle(a2 * Math.PI); 
-			var arc3 = d3.svg.arc()
-			      .innerRadius(width * 0.045)
-			      .outerRadius(width * 0.055)
-			      .startAngle(0)
-			      .endAngle(a3 * Math.PI); 
-			var arc4 = d3.svg.arc()
-			      .innerRadius(width * 0.03)
-			      .outerRadius(width * 0.035)
-			      .startAngle(0)
-			      .endAngle(a4 * Math.PI); 
-			var arc5 = d3.svg.arc()
-			      .innerRadius(width * 0.03)
-			      .outerRadius(width * 0.035)
-			      .startAngle(0)
-			      .endAngle(a5 * Math.PI); 
-			var arc6 = d3.svg.arc()
-			      .innerRadius(width * 0.03)
-			      .outerRadius(width * 0.035)
-			      .startAngle(0)
-			      .endAngle(a6 * Math.PI); 
-			var arc7 = d3.svg.arc()
-			      .innerRadius(width * 0.03)
-			      .outerRadius(width * 0.035)
-			      .startAngle(0)
-			      .endAngle(a7 * Math.PI); 
-			var arc8 = d3.svg.arc()
-			      .innerRadius(width * 0.03)
-			      .outerRadius(width * 0.035)
-			      .startAngle(0)
-			      .endAngle(a8 * Math.PI); 
-			var arc9 = d3.svg.arc()
-			      .innerRadius(width * 0.03)
-			      .outerRadius(width * 0.035)
-			      .startAngle(0)
-			      .endAngle(a9 * Math.PI); 
-			var arc10 = d3.svg.arc()
-			      .innerRadius(width * 0.03)
-			      .outerRadius(width * 0.035)
-			      .startAngle(0)
-			      .endAngle(a10 * Math.PI); 
-			var arc11 = d3.svg.arc()
-			      .innerRadius(width * 0.03)
-			      .outerRadius(width * 0.035)
-			      .startAngle(0)
-			      .endAngle(a11 * Math.PI);
-			var arc12 = d3.svg.arc()
-			      .innerRadius(width * 0.045)
-			      .outerRadius(width * 0.055)
-			      .startAngle(0)
-			      .endAngle(2 * Math.PI);
-			var arc13 = d3.svg.arc()
-			      .innerRadius(width * 0.03)
-			      .outerRadius(width * 0.035)
-			      .startAngle(0)
-			      .endAngle(2 * Math.PI);
-		    var arcs1 = canvas.selectAll("g.a")
-			  .data(nodes)
-			  .enter()
-			      .append("g")
-			      .attr("transform",function(d) {return "translate(" + d.x_axis + " , " + d.y_axis + ")";})
-			      .append("path")                          
-			      .attr("class", "arcb")
-			      .attr("d", function(d){if(d.name == "LC1"){return arc12(d)}if(d.name == "MS"){return arc12(d)}if(d.name == "AO"){return arc12(d)}if(d.name == "LC2"){return arc12(d)}if(d.name == "EB1"){return arc13(d)}if(d.name == "EB2"){return arc13(d)}if(d.name == "EB3"){return arc13(d)}if(d.name == "EB4"){return arc13(d)}if(d.name == "EB5"){return arc13(d)}if(d.name == "EB6"){return arc13(d)}if(d.name == "EB7"){return arc13(d)}if(d.name == "EB8"){return arc13(d)}} );
-		      var arcs = canvas.selectAll("g.b")
-			  .data(nodes)
-			  .enter()
-			      .append("g")
-			      .attr("transform",function(d) {return "translate(" + d.x_axis + " , " + d.y_axis + ")";})
-			      .append("path")                          
-			      .attr("class", "arc")
-			      .attr("d", function(d){if(d.name == "LC1"){return arc(d)}if(d.name == "MS"){return arc1(d)}if(d.name == "AO"){return arc2(d)}if(d.name == "LC2"){return arc3(d)}if(d.name == "EB1"){return arc4(d)}if(d.name == "EB2"){return arc5(d)}if(d.name == "EB3"){return arc6(d)}if(d.name == "EB4"){return arc7(d)}if(d.name == "EB5"){return arc8(d)}if(d.name == "EB6"){return arc9(d)}if(d.name == "EB7"){return arc10(d)}if(d.name == "EB8"){return arc11(d)}} );
-
-                             var circles = canvas.selectAll("circle")
-				  .data(nodes)
-				  .enter()
-				      .append("circle")
-				      .attr("cx", function (d) { return d.x_axis; })
-				      .attr("cy", function (d) { return d.y_axis; })
-				      .attr("r",function (d,i) { if(i > 3){return width * 0.03}else{return width * 0.045} })
-				      .attr("fill","#ECEFF1")
-				      .attr("stroke", "#607D8B")
-				      .attr("stroke-width", width * 0.003)
-				      .on("click", click1)
-				      ; //radius of circle
-                                  canvas.selectAll("text.a")
-					  .data(nodes)
-					  .enter()
-					      .append("text")
-					      .attr("x", function (d) { return d.x_axis - 16; })
-					      .attr("y", function (d) { return d.y_axis + 11; })
-					      .attr("fill", "#607D8B")
-					      .attr("text-align", "center")
-					      .attr("font-size", 30)
-					      .text(function(d){return d.value });
-				      canvas.selectAll("text.b")
-					  .data(nodes)
-					  .enter()
-					      .append("text")
-					      .attr("x", function (d,i) { if(i < 4){return d.x_axis - 25;}else{return d.x_axis - 85;} })
-					      .attr("y", function (d,i) { if(i < 4){return d.y_axis + 80; }else{return d.y_axis +10;}})
-					      .attr("fill", "#607D8B")
-					      .attr("text-align", "center")
-					      .attr("font-size", function (d,i) { if(i < 4){return 30; }else{return 25;}})
-					      .text(function(d){return d.name });
-                              
-                             function click1(d){
-                          /*this.parentNode.appendChild(this);*/
-                        d3.select(this)
-                           /* .style("pointer-events", "none")*/
-                            .transition()
-                            .duration(1500)
-                            .ease("elastic")
-                            .attr("r", width * 0.05)
-                            .each("start",function(d){d3.select(this).attr("stroke","#ef5350");})
-                            .each("end",function(d){d3.select(this).on("click", click2);});
-
-                        }  
-                               function click2(d){
-                         /* this.parentNode.appendChild(this);*/
-                        d3.select(this)
-                           /* .style("pointer-events", "none")*/
-                            .transition()
-                            .duration(1500)
-                            .ease("elastic")
-                            .attr("r", width * 0.045)
-                            .each("start",function(d){d3.select(this).attr("stroke","#607D8B");})
-                            .each("end",function(d){d3.select(this).on("click", click1);});
-                        }    
-                      //d3.json("mydata.json",function(data){
-                      // })
-                    </script>
+		<div id="suggesstion-box" style="width: 100%; "></div>
+  
+</div>
+  <div class="current-flow" style="width:100%; margin:10px; margin-left: 20px; margin-top:20px;background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">CURRENT FLOW</a></div>
+    <div id ="svgcontent" style="width:100%; overflow:auto;"></div>
+  </div>
+</div>
+<script> 
+ func1(1000); 
+ func2(1000);          
+</script>
+<div class="current-flow-right" style="float: left; width:30%; margin-left: 20px">
+  <div class="letters-details" style="width:100%; margin: 10px; margin-left: 20px;  background: #fff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fff; padding: 10px; ">LETTER DETAILS</a></div>
+    
+    <div id ="lettercontent" style="width:100%; padding :10px; overflow:auto; font-size: 14px;"></div>
+  </div>
+</div>          
+			             				           				
+				
           </div>
           <div id="middle_rightp1">
  
