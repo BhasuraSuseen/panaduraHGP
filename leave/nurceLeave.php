@@ -48,7 +48,7 @@ FROM employee
 
 
 
-                                <td style="width: 12%; background-color: lightgray"><select name="LvType" id="lvt" class="styled-select">
+                                <td style="width: 12%; background-color: lightgray"><select name="LvType" id="lvt" class="attstyled-select">
                                         <option>Mediacal Leave</option>
                                         <option>Half Day</option>
                                         <option>Short Leave</option>
@@ -59,7 +59,7 @@ FROM employee
                                     <input type="text" id="des" name="des">
                                 </td>
 
-                                <td style="width: 12%; background-color:#ECEFF1"><select class="styled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('lvt').value, document.getElementById('des').value, this.value)">
+                                <td style="width: 12%; background-color:#ECEFF1"><select class="attstyled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('lvt').value, document.getElementById('des').value, this.value)">
                                         <option>--Select Type--</option>
                                         <option>Letter</option>
                                         <option>Fax</option>
