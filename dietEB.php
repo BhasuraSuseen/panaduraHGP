@@ -296,11 +296,11 @@
                             </table>
                             <tr><td><input  style="display:none"type ="submit"></td></tr>
                         </form>
-			</center>	
+				
                         <button style="
                                 width: 100px;
                                 " onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
-                    
+                    </center>
                 </div>
 		<div class="middle_right" >
 			<center><label style="background-color: #CFD8DC" align="center" id="lb1" ></label></center><br>
