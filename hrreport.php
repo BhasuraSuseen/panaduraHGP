@@ -1,15 +1,16 @@
 
-<link rel="stylesheet" type="text/css" href="./styles/global.css" media="screen" />
-Type:<select id="ser">
+<link rel="stylesheet" type="text/css" href="./styles/attend styl.css" media="screen" />
+<select id="ser" style="width: 30%; height: 40px">
+    <option value="">Select Dpt: Type</option>
     <option value="doctor">Doctor</option>
     <option value="nurce">Nurse</option>
     <option value="eb">EB Office</option>
     <option value="para">Para Medical Officer</option>
     <option value="minor">Minor Staff</option>
-    
-</select>
-<button class="button" style="width: 50%" onclick="hrser(document.getElementById('ser').value)">Search</button>
-<label id="lbview"></label>
+  </select>
+<button class="attblack_button" style="width: 30%" onclick="hrser(document.getElementById('ser').value)">Search</button>
+
+    <label id="lbview"></label>
 <script>
 
 
