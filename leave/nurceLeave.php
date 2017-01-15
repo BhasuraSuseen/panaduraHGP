@@ -1,5 +1,5 @@
 <?php
-include 'datetime.php';
+include 'attendence/datetime.php';
 include '../connect.php';
 echo $day3;
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
