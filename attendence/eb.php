@@ -53,7 +53,7 @@
                     <br><br>
                     <div class="recordstyl"> 
 
-                        <table border="0" style="width: 100%">
+                        <table border="1" style="width: 100%">
                             <tr>Search Employee Attendence</tr>
                             <tr><td style="width:40%">Day</td><td><?php echo $yearmon;?><select class="attstyled-select" style="width:30%" id="day">
 
