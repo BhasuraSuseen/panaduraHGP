@@ -178,7 +178,7 @@ function searchAttends(day,id) {
                 if (obj.readyState === 4 && obj.status === 200) {
 
 
-                        alert("Leave Record Added!");
+                      alert(obj.responseText);
                 }
             };
             obj.open("POST", "./leave/saveLeave.php", true);
