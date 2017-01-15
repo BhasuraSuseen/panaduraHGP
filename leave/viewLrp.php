@@ -23,11 +23,11 @@ FROM employee
 	<h3><?php echo $date3;?> EB Leave report</h3>
 <table border = '0' style='width: 70%' id="lvtbl" name="lvtbl" >
     <tr style='background-color: appworkspace' >
-        <td>NIC</td>
-        <td>Name</td>
-        <td>Leave Type</td>
-        <td>Description</td>
-        <td>Requre Type</td></tr>
+        <td style="background-color: #CFD8DC">NIC</td>
+        <td style="background-color: #CFD8DC">Name</td>
+        <td style="background-color: #CFD8DC">Leave Type</td>
+        <td style="background-color: #CFD8DC">Description</td>
+        <td style="background-color: #CFD8DC">Requre Type</td></tr>
 
 <?php while ($row = mysqli_fetch_array($res)) :; ?>
     <tr><td><?php echo $row[0];?></td>
