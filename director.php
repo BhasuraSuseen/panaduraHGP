@@ -224,7 +224,7 @@
                    <label  style="width: 100%" id="lbpop1"></label><br>
 				 <?php include 'report.php';?>
 		
-		<center><button style="width: 100px;" >Download</button></center>
+		
                 </div>    
 </div>
 		    
