@@ -286,19 +286,19 @@
             <div id="pop_box_att_2">
                   <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">LEAVE </a></div>
                   <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                                    <?php  echo 'include here'; ?> 
+                                    <?php  include 'leave/minorLeave.php' ?>
                   </div>
             </div>
             <div id="pop_box_report_1">
                   <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">EMPLOYEE DETAILS </a></div>
                   <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                                    <?php echo "include here"; ?> 
+                                    <?php  include 'hrreport.php' ?> 
                   </div>
             </div>
             <div id="pop_box_att_1">
                   <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;">ATTENDANCE </a></div>
                   <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
-                                    <?php  echo 'include here'; ?>  
+                                    <?php  include 'attendence/minor.php'; ?>  
                   </div>
             </div>
     
