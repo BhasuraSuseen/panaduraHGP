@@ -18,7 +18,7 @@ echo $nic.",".$LvType.",".$des.",".$rtype.",".$date3;
   // echo 'Leave record Added!';
   // } 
   // else {
-   mysqli_query($conn, "update  `leave` SET `leave`.leave_type='$LvType',`leave`.description='$des',`leave`.req_type='$rtype' `leave`.date='$date3' AND `leave`.nic='$nic' )");
+   mysqli_query($conn, "update  `leave` SET `leave`.leave_type='$LvType',`leave`.description='$des',`leave`.req_type='$rtype' `leave`.date='$date3' WHERE `leave`.nic='$nic' )");
   echo 'Leave record Updated!';
    
   // }
