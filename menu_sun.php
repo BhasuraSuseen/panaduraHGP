@@ -33,7 +33,7 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
 
 
 		if($type == "c_s1") {?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -95,9 +95,9 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
                                     </table></td>
 	
 	  	<?php }else if($type == "c_s2"){ ?>
-		 	<table style="background-color: #CFD8DC;width: 60%" >
+		 	<table style="background-color: #CFD8DC;width: 80%" >
                             <tr><td align="left"><b>Children S2</b></td></tr></table>
-                        <!--elanga table eka(2) metnta-->
+                        
                         <table align="left" style="background-color: #ECEFF1;width: 60%">
                             <tr><td align="left"><b>Breakfirst</b></td>
                                 <td align="left"><b>Lunch</b></td>
