@@ -33,7 +33,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
 
 
 		if($type == "c_s1") {?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
