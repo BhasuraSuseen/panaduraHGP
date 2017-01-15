@@ -65,7 +65,7 @@ $des = 'des'.$row['Nic_no'];
                                 </td>
 
                                 <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('<?php echo $combx; ?>').value, document.getElementById('<?php echo $des; ?>').value, this.value)">
-                                       
+                                       <option>--Select Type--</option>
                                         <option>Letter</option>
                                         <option>Fax</option>
                                         <option>Tele-Mail</option>
