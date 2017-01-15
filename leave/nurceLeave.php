@@ -74,10 +74,9 @@ FROM employee
 
                     </table><br><br>
 
-                    <input type="submit" value="View Report"><br><br>
                 </form>
-                <button  style="width: 150px" onclick="callme();">Download
-                </button>
+                 <a href="/leave/LreportNurse.php">  <input class="attblack_btn" type="submit" value="Download Pdf"></a> 
+
             </center>
         </div>
  </div>
