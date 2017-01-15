@@ -31,7 +31,7 @@
 	
 
 		if($type == "c_s1") {?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -93,7 +93,7 @@
                                     </table></td>
 	
 	  	<?php }else if($type == "c_s2"){ ?>
-		 	<table style="width: 60%"><tr><td style="width:50%">
+		 	<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -155,7 +155,7 @@
 					
 		 	
 		<?php } else if( $type == "c_s3") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -217,7 +217,7 @@
                                     </table></td>
 									
 						<?php } else if($type == "patients") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -278,8 +278,8 @@
 
                                     </table></td>
 									
-									<?php } else if($type == "dd") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+		<?php } else if($type == "dd") { ?>
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -341,7 +341,7 @@
                                     </table></td>
 									
 									<?php } else if($type == "staff") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">

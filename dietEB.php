@@ -258,7 +258,7 @@
 	
 	<div id="pop_box_diet_2">
 	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET SCHEDULE </a></div>
-	<div style="position: absolute; width:96.7%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
+	<div style="position: absolute; width:97%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 		
 	  		<?php //include 'dui.php';?>
 		<div class="middle_left" >
@@ -290,16 +290,16 @@
                                         <input type="number" id="staff" name="staff" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
 
-				    <tr><td></td><td>
+				    <tr><td style="width:250px"></td><td>
 					    <input type ="reset" value="Reset"></td></tr>
 
                             </table>
                             <tr><td><input  style="display:none"type ="submit"></td></tr>
                         </form>
-				
-                        <button style="
+				<table><tr><td style="width:250px"></td>	
+                        <td><button style="
                                 width: 100px;
-                                " onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
+                                " onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button></td></tr></table>
                     </center>
                 </div>
 		<div class="middle_right" >

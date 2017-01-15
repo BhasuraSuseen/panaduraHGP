@@ -33,7 +33,7 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
 
 
 		if($type == "c_s1") {?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -95,7 +95,7 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
                                     </table></td>
 	
 	  	<?php }else if($type == "c_s2"){ ?>
-		 	<table style="width: 60%"><tr><td style="width:50%">
+		 	<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -159,7 +159,7 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
 					
 		 	
 		<?php } else if($type == "c_s3") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -221,7 +221,7 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
                                     </table></td>
 									
 			<?php } else if($type == "patients") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -283,7 +283,7 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
                                     </table></td>
 									
 			<?php } else if($type == "dd") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -345,7 +345,7 @@ $satsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sat.S_Di, item.unit 
                                     </table></td>
 									
 		<?php } else if($type == "staff") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">

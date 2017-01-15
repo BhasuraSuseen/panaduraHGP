@@ -16,12 +16,35 @@
                 </div>
                 <div class="attmiddle_right">
                     <!--<button class="button button1">GA</button>-->
-                    <div class="attrecordstyl"> 
+                    <div class="attrecordstyl">
+                            <table border="0" style="width: 100%">
+                        <tr>Employee Attendence Day Summary</tr>
+                                
+                        <tr><td style="width:40%">Day</td><td><?php echo $yearmon;?><select class="attstyled-select" style="width:30%" id="day1">
+
+
+                                        <?php
+                                        for ($x = 1; $x <= 30; $x++) {
+                                            if ($x < 10) {
+                                                ?>
+                                                <option>0<?php echo $x; ?></option>
+
+                                            <?php } else if ($x >= 10) { ?>
+
+                                                <option><?php echo $x; ?></option>
+
+                                                <?php
+                                            }
+                                        }
+                                        ?>
+
+                                </td></tr>
+</table>
                         <table border="0" style="width: 100%">
                             <tr><td style="width:70%">Employees Present </td><td><strong id="st1"></strong></td></tr>
                             <tr><td style="width:70%">Employees absent </td><td><strong id="st2"></strong></td></tr>
                             <tr><td style="width:70%">Total Employees </td><td><strong id="st3"></strong></td></tr>
-                            <tr><td style="width:60%;"><button class="attblack_btn" onclick="loadDrdata()">Summary</button></td></tr>
+                            <tr><td style="width:60%;"><button class="attblack_btn" onclick="loadDrdata(document.getElementById('day1').value)">Summary</button></td></tr>
 
                         </table>
                     </div>

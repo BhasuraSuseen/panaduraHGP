@@ -31,6 +31,10 @@
                       <th><b>Type</b></th>
                       <th> ". $array["type"]." </th>
                     </tr>";
+            echo"<tr>
+                      <th><b>Recipient</b></th>
+                      <th> ". $array["recipient"]." </th>
+                    </tr>";
             
              
              $letter_id = $array["letter_id"];

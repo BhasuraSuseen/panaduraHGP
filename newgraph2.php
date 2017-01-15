@@ -164,7 +164,7 @@ mysqli_close($conn);
     <script id = "scriptid1"src="http://d3js.org/d3.v3.min.js"></script>
 
     <script id = "scriptid2">
-      d3.select("p").text("D3 is working");
+      
       var width = 800;
       var height = 600;
       var nodes = [
