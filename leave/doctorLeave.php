@@ -6,7 +6,7 @@ include '../connect.php';
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
-	attend.`02`,
+	attend.`$day`,
   employee.E_type,
 	`leave`.leave_type,
 	`leave`.description,
