@@ -20,6 +20,7 @@ FROM employee
 
     </head>
     <body>
+      <div style="height: 650px; overflow-y: scroll">
         <div class="attall_container">
             <center>
 
@@ -80,7 +81,7 @@ FROM employee
                 </button>
             </center>
         </div>
- 
+ </div>
            <script type="text/javascript" src="./attendence/jst.js"></script>
  </body>
 </html>  
