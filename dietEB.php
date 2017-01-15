@@ -290,17 +290,17 @@
                                         <input type="number" id="staff" name="staff" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
 
-				    <tr><td></td><td>
+				    <tr><td>
 					    <input type ="reset" value="Reset"></td></tr>
 
                             </table>
                             <tr><td><input  style="display:none"type ="submit"></td></tr>
                         </form>
-				
+			</center>	
                         <button style="
                                 width: 100px;
                                 " onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button>
-                    </center>
+                    
                 </div>
 		<div class="middle_right" >
 			<center><label style="background-color: #CFD8DC" align="center" id="lb1" ></label></center><br>
