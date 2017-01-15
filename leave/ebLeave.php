@@ -9,6 +9,14 @@ $res = mysqli_query($conn, "SELECT  employee.Nic_no,
 FROM employee
   INNER JOIN attend
     ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon'  and employee.E_type = 'eb' ");
+
+$res2=  mysqli_query($conn,"SELECT  employee.NIC_NO,
+ `leave`.leave_type,
+`leave`.description,
+`leave`.req_type
+FROM employee
+ INNER JOIN `leave`
+ ON `leave`.nic = employee.NIC_NO where `leave`.date = '$date3'");
 ?>
 
         <link rel="stylesheet" type="text/css" href="../attend styl.css" media="screen" />
@@ -32,7 +40,7 @@ FROM employee
 
                         </tr>
                         <?php while ($row = mysqli_fetch_array($res)): ?>
-
+                         <?php if ($row2 = mysqli_fetch_array($res2)){ ?>
                             <tr>
                                 <td id="nicc"><input type="text" value="<?php echo $row['Nic_no']; ?>"  id="NIC" readonly></td>
                                 <td><input type="text" value="<?php echo $row['F_Name'] . " " . $row['L_Name']; ?>" name="name" readonly</td>
@@ -47,6 +55,7 @@ FROM employee
 
 
                                 <td style="width: 12%; background-color: lightgray" id="lt"><select name="LvType" id="lvt" class="attstyled-select">
+                                         <option><?php echo $row2[1]?></option>
                                         <option>Medical Leave</option>
                                         <option>Half Day</option>
                                         <option>Short Leave</option>
@@ -54,18 +63,18 @@ FROM employee
                                     </select></td>
 
                                 <td style="width: 12%; background-color:#ECEFF1 " id="des1" >
-                                    <input type="text" id="des" name="des">
+                                    <input type="text" id="des" name="des" placeholder='<?php echo $row2[2]?>'>
                                 </td>
 
                                 <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('lvt').value, document.getElementById('des').value, this.value)">
-                                        <option>--Select Type--</option>
+                                        <option><?php echo $row2[3]?></option>
                                         <option>Letter</option>
                                         <option>Fax</option>
                                         <option>Tele-Mail</option>
                                         <option>Phone Call</option>
                                     </select></td>
                             </tr>
-
+                         <?php } ?>
                         <?php endwhile; ?>
 
                     </table><br><br>
