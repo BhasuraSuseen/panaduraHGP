@@ -95,7 +95,12 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
                                     </table></td>
 	
 	  	<?php }else if($type == "c_s2"){ ?>
-		 	<table style="background-color: #CFD8DC;width: 80%" >
+		 	<table style="width: 80%"><tr><td style="width:50%">
+            
+            <table style="width: 100%">
+                <tr><td style="background-color: white">
+
+                        <table style="background-color: #CFD8DC;width: 100%" >
                             <tr><td align="left"><b>Children S2</b></td></tr></table>
                         
                         <table align="left" style="background-color: #ECEFF1;width: 100%">
@@ -106,7 +111,6 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
                                         <tr>
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
-
                                         </tr>
                                         <?php while ($scs2b = mysqli_fetch_array($sunc_s2br)):; ?>
                                         <tr>
@@ -118,6 +122,7 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
 
 
                                     </table></td>
+                            
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
                                             <td align="left"><b>Item Name</b></td>
@@ -133,7 +138,7 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
 
 
                                     </table></td>
-
+                                    
 
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
@@ -150,7 +155,6 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
 
 
                                     </table></td>
-	 	
 					
 		 	
 		<?php } else if($type == "c_s3") { ?>
