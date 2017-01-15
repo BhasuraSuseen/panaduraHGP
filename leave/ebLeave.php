@@ -45,9 +45,14 @@ FROM employee
                                     }
                                     ?></td>
 
+<?php
 
+$combx = 'lvt'.$row['Nic_no'];
+$des = 'des'.$row['Nic_no'];
 
-                                <td style="width: 12%; background-color: lightgray" id="lt"><select name="LvType" id="lvt" class="attstyled-select">
+?>
+
+                                <td style="width: 12%; background-color: lightgray" id="lt"><select name="LvType" id="<?php echo $combx; ?>" class="attstyled-select">
                                        
                                         <option>Medical Leave</option>
                                         <option>Half Day</option>
@@ -56,10 +61,10 @@ FROM employee
                                     </select></td>
 
                                 <td style="width: 12%; background-color:#ECEFF1 " id="des1" >
-                                    <input type="text" id="des" name="des" >
+                                    <input type="text" id="<?php echo $des; ?>" name="des" >
                                 </td>
 
-                                <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('lvt').value, document.getElementById('des').value, this.value)">
+                                <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('<?php echo $combx; ?>').value, document.getElementById('<?php echo $des; ?>').value, this.value)">
                                        
                                         <option>Letter</option>
                                         <option>Fax</option>
