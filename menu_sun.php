@@ -98,7 +98,7 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
 		 	<table style="background-color: #CFD8DC;width: 80%" >
                             <tr><td align="left"><b>Children S2</b></td></tr></table>
                         
-                        <table align="left" style="background-color: #ECEFF1;width: 60%">
+                        <table align="left" style="background-color: #ECEFF1;width: 100%">
                             <tr><td align="left"><b>Breakfirst</b></td>
                                 <td align="left"><b>Lunch</b></td>
                                 <td align="left"><b>Dinner</b></td></tr>
@@ -154,7 +154,7 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
 					
 		 	
 		<?php } else if($type == "c_s3") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -216,7 +216,7 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
                                     </table></td>
 									
 			<?php } else if($type == "patients") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -278,7 +278,7 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
                                     </table></td>
 									
 			<?php } else if($type == "dd") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
@@ -340,7 +340,7 @@ $sunsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_sun.S_Di, item.unit 
                                     </table></td>
 									
 		<?php } else if($type == "staff") { ?>
-			<table style="width: 60%"><tr><td style="width:50%">
+			<table style="width: 80%"><tr><td style="width:50%">
             
             <table style="width: 100%">
                 <tr><td style="background-color: white">
