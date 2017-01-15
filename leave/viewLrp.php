@@ -21,7 +21,7 @@ FROM employee
 ?>
 <center>
 	<h3>Panadura Base Hospital</h3>
-	<h3>$date3 Leave report</h3>
+	<h3><?php echo $date3;?> Leave report</h3>
 <table border = '0' style='width: 70%' id="lvtbl" name="lvtbl" >
     <tr style='background-color: appworkspace' >
         <td>NIC</td>
