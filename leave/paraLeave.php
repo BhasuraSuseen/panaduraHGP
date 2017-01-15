@@ -1,5 +1,5 @@
 <?php
-include '../datetime.php';
+include 'datetime.php';
 include '../connect.php';
 
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
@@ -20,7 +20,7 @@ FROM employee
 
     </head>
     <body>
-        <div class="all_container">
+        <div class="attall_container">
             <center>
 
                 <h5 style="display: none"><?php echo $date2 ?></h5>
