@@ -3,9 +3,9 @@
 
 <?php
 
-include '../datetime.php';
+include 'datetime.php';
 
-include '../connect.php';
+include 'connect.php';
 
 $res = mysqli_query($conn, "SELECT  employee.NIC_NO,
   employee.F_Name,
