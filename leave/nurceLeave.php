@@ -5,6 +5,7 @@ include '../connect.php';
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
+   attend.`$day`,
   employee.E_type
 FROM employee
   INNER JOIN attend
