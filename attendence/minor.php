@@ -8,7 +8,7 @@
         <div class="attall_container">
 
             <div class="attcontainer">
-                <div class="middle_left">
+                <div class="attmiddle_left">
                     <div style="height: 650px; overflow-y: scroll">
                      
                             <?php include 'minoratt.php'; ?>

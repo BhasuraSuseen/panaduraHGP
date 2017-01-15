@@ -11,7 +11,7 @@ function checkBrowser() {
         obj = new ActiveXobject("Microfoft.ActiveXobject");
     }
 }
-function loadParadata() {
+function loadParadata(day) {
     checkBrowser();
     obj.onreadystatechange = function() {
 
@@ -28,12 +28,12 @@ function loadParadata() {
     };
     obj.open("POST", "./attendence/viewParaArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    obj.send();
+    obj.send("day="+day);
 
 
 }
 
-function loadDrdata() {
+function loadDrdata(day) {
     checkBrowser();
     obj.onreadystatechange = function() {
 
@@ -50,12 +50,12 @@ function loadDrdata() {
     };
     obj.open("POST", "./attendence/viewDoctorArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    obj.send();
+    obj.send("day="+day);
 
 
 }
 
-function loadEbdata() {
+function loadEbdata(day) {
     checkBrowser();
        
     obj.onreadystatechange = function() {
@@ -73,12 +73,12 @@ function loadEbdata() {
     };
     obj.open("POST", "./attendence/viewEbArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    obj.send();
+    obj.send("day="+day);
 
 }
 
 
-function loadNurcedata() {
+function loadNurcedata(day) {
     checkBrowser();
     obj.onreadystatechange = function() {
 
@@ -95,12 +95,12 @@ function loadNurcedata() {
     };
     obj.open("POST", "./attendence/viewNurceArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    obj.send();
+    obj.send("day="+day);
 
 
 }
 
-function loadMinordata() {
+function loadMinordata(day) {
     checkBrowser();
     obj.onreadystatechange = function() {
 
@@ -117,7 +117,7 @@ function loadMinordata() {
     };
     obj.open("POST", "./attendence/viewMinorArp.php", true);
     obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    obj.send();
+    obj.send("day="+day);
 
 
 }
@@ -126,7 +126,7 @@ function saveAttends(name, date, attend) {
    
    
     try {
- alert("Attendence Recorded!");
+ //alert("Attendence Recorded!");
         checkBrowser();
         
         
