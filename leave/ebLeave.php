@@ -16,7 +16,7 @@ $res2=  mysqli_query($conn,"SELECT  employee.NIC_NO,
 `leave`.req_type
 FROM employee
  INNER JOIN `leave`
- ON `leave`.nic = employee.NIC_NO where `leave`.date = '$date3'");
+ ON `leave`.nic = employee.NIC_NO where `leave`.date = '$date3' and employee.E_type = 'eb'");
 ?>
 
         <link rel="stylesheet" type="text/css" href="../attend styl.css" media="screen" />
@@ -40,7 +40,7 @@ FROM employee
 
                         </tr>
                         <?php while ($row = mysqli_fetch_array($res)): ?>
-                         <?php if ($row2 = mysqli_fetch_array($res2)){ ?>
+                         <?php while ($row2 = mysqli_fetch_array($res2)): ?>
                             <tr>
                                 <td id="nicc"><input type="text" value="<?php echo $row['Nic_no']; ?>"  id="NIC" readonly></td>
                                 <td><input type="text" value="<?php echo $row['F_Name'] . " " . $row['L_Name']; ?>" name="name" readonly</td>
@@ -74,7 +74,7 @@ FROM employee
                                         <option>Phone Call</option>
                                     </select></td>
                             </tr>
-                         <?php } ?>
+                         <?php endwhile; ?>
                         <?php endwhile; ?>
 
                     </table><br><br>
