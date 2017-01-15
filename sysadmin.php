@@ -330,8 +330,7 @@ require "connect.php";
 <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> RECORD EMPLOYEE DETAILS</a></div>
 		<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">  
                  <form action="sysadmin.php" method="post" enctype="multipart/form-data"> 
-                    Select Employee photo to upload:
-                    <input type="file" name="fileToUpload" id="fileToUpload">
+               
 
                     <table style="width: 90%"><tr>
                     
@@ -386,27 +385,16 @@ require "connect.php";
 
               if(isset($_POST["enter"])){
                 $nic=$_POST['nic'];
-                $filename = $_FILES["fileToUpload"]["name"];
-                $filetype = $_FILES["fileToUpload"]["type"];
-                $filesize = $_FILES["fileToUpload"]["size"]; 
-                  if($filename==''){
-                      $folder='';
-                      $newfilename='';
-                      }
-                  else{                          
-                      $folder="uploads/";
-                      $temp= explode(".", $filename);
-                      $newfilename=$nic.'.'.end($temp);
-                      }
+              
                   
               $sql = "INSERT INTO employee (NIC_NO, F_Name, L_Name, B_Date, Address, Contact_NO, Gender, E_Type, 
-              FE_Date, EC_Date, FGP_Date, SGP_Date, CGP_Date, Salary, SI_Date, Remarks,folder,photo)
+              FE_Date, EC_Date, FGP_Date, SGP_Date, CGP_Date, Salary, SI_Date, Remarks)
               VALUES ('{$_POST["nic"]}', '{$_POST["fname"]}', '{$_POST["lname"]}', '{$_POST["bdate"]}', '{$_POST["address"]}', '{$_POST["cnumber"]}', '{$_POST["gender"]}'
-              , '{$_POST["etype"]}', '{$_POST["fedate"]}', '{$_POST["ecdate"]}', '{$_POST["fgpdate"]}', '{$_POST["sgpdate"]}', '{$_POST["cgpdate"]}', '{$_POST["salary"]}', '{$_POST["sidate"]}', '{$_POST["remarks"]}','$folder','$newfilename')";
+              , '{$_POST["etype"]}', '{$_POST["fedate"]}', '{$_POST["ecdate"]}', '{$_POST["fgpdate"]}', '{$_POST["sgpdate"]}', '{$_POST["cgpdate"]}', '{$_POST["salary"]}', '{$_POST["sidate"]}', '{$_POST["remarks"]}')";
               if (mysqli_query($conn, $sql)) {
                   $successmessage="New employee was entered";
                   echo  "<script type='text/javascript'>alert('$successmessage');</script>";
-                   move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "$folder".$newfilename);
+                 
               } else {
                   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
               }
