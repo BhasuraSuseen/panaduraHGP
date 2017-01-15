@@ -6,11 +6,16 @@ include '../connect.php';
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
-    attend.`$day`,
-  employee.E_type
+	attend.`02`,
+  employee.E_type,
+	`leave`.leave_type,
+	`leave`.description,
+	`leave`.req_type
 FROM employee
   INNER JOIN attend
-    ON attend.Employee_Nic = employee.Nic_no where attend.date = '$yearmon'  and employee.E_type = 'doctor' ");
+    ON attend.Employee_Nic = employee.Nic_no 
+LEFT JOIN `leave` 
+ON employee.NIC_NO = `leave`.nic  where attend.date = '2017-01-' and employee.E_type = 'nurce' ");
 ?>
 
         <link rel="stylesheet" type="text/css" href="../attend styl.css" media="screen" />
@@ -52,18 +57,19 @@ $des = 'des'.$row['Nic_no'];
 
 
                                 <td style="width: 12%; background-color: lightgray" id="lt"><select name="LvType" id="<?php echo $combx; ?>" class="attstyled-select">
-                                        <option>Medical Leave</option>
+                                   <option><?php echo $row[5]?></option>      
+                                  <option>Medical Leave</option>
                                         <option>Half Day</option>
                                         <option>Short Leave</option>
                                         <option>Other</option>
                                     </select></td>
 
                                 <td style="width: 12%; background-color:#ECEFF1 " id="des1" >
-                                    <input type="text" id="<?php echo $des; ?>" name="des">
+                                    <input type="text" id="<?php echo $des; ?>" name="des"  placeholder='<?php echo $row[6]?>'>
                                 </td>
 
                                 <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('<?php echo $combx; ?>').value, document.getElementById('<?php echo $des; ?>').value, this.value)">
-                                        <option>--Select Type--</option>
+                                        <option><?php echo $row[7]?></option>
                                         <option>Letter</option>
                                         <option>Fax</option>
                                         <option>Tele-Mail</option>
