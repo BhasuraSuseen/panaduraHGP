@@ -15,7 +15,7 @@ FROM employee
   INNER JOIN attend
     ON attend.Employee_Nic = employee.Nic_no 
 LEFT JOIN `leave` 
-ON employee.NIC_NO = `leave`.nic  where attend.date = '2017-01-' and employee.E_type = 'nurce' ");
+ON employee.NIC_NO = `leave`.nic  where attend.date = '2017-01-' and employee.E_type = 'doctor' ");
 ?>
 
         <link rel="stylesheet" type="text/css" href="../attend styl.css" media="screen" />
