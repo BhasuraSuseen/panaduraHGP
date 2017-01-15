@@ -17,10 +17,12 @@ $res = mysqli_query($conn, "SELECT  employee.NIC_NO,
 	
 FROM employee
   INNER JOIN `leave`
-    ON `leave`.nic = employee.NIC_NO where `leave`.date = '$date3'"); //and attendence = 0
+    ON `leave`.nic = employee.NIC_NO where `leave`.date = '$date3' and employee.E_type='eb'"); //and attendence = 0
 ?>
-
-<table border = '1' style='width: 70%' id="lvtbl" name="lvtbl" >
+<center>
+	<h3>Panadura Base Hospital</h3>
+	<h3>$date3 Leave report</h3>
+<table border = '0' style='width: 70%' id="lvtbl" name="lvtbl" >
     <tr style='background-color: appworkspace' >
         <td>NIC</td>
         <td>Name</td>
@@ -37,13 +39,8 @@ FROM employee
 <?php endwhile;?>
 </table>
 
-
-         <button  style="width: 150px" onclick="callme();">Download
-                </button>
-</body>
-
-    <script type="text/javascript" src="../jspdf.js"></script>
-    <script type="text/javascript" src="../jquery.js"></script>
+</center>
+  
     <script type="text/javascript" src="../jst.js"></script>
     
-</html>
+
