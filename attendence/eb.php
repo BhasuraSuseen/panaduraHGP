@@ -19,10 +19,10 @@
                 </div>
                 <div class="attmiddle_right">
                     <!--<button class="button button1">GA</button>-->
-                    <div class="attrecordstyl">
+                    <div class="recordstyl">
                             
                         <table border="0" style="width: 100%">
-                        <tr><td style="width:30%">Day</td><td><?php echo $yearmon;?><select class="attstyled-select" style="width:40%" id="day1">
+                        <tr><td style="width:40%">Day</td><td><?php echo $yearmon;?><select class="attstyled-select" style="width:30%" id="day1">
 
 
                                         <?php
