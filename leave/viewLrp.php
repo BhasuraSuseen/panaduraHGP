@@ -1,11 +1,10 @@
-<html>
-    <body>
+
 
 <?php
 
 include 'datetime.php';
 
-include 'connect.php';
+include '../connect.php';
 
 $res = mysqli_query($conn, "SELECT  employee.NIC_NO,
   employee.F_Name,
@@ -21,7 +20,7 @@ FROM employee
 ?>
 <center>
 	<h3>Panadura Base Hospital</h3>
-	<h3><?php echo $date3;?> Leave report</h3>
+	<h3><?php echo $date3;?> EB Leave report</h3>
 <table border = '0' style='width: 70%' id="lvtbl" name="lvtbl" >
     <tr style='background-color: appworkspace' >
         <td>NIC</td>
