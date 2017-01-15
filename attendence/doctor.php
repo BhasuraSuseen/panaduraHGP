@@ -8,10 +8,10 @@
 
             <div class="attcontainer">
                 <div class="attmiddle_left">
-                    <div style="height: 650px">
-                        <div style="overflow-y: scroll">
+                    <div style="height: 650px; overflow-y: scroll">
+                       
                             <?php include 'doctoratt.php'; ?>
-                        </div>
+                     
                     </div>
                 </div>
                 <div class="attmiddle_right">

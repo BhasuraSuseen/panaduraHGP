@@ -11,10 +11,10 @@
 
             <div class="attcontainer">
                 <div class="attmiddle_left">
-                    <div style="height: 650px">
-                
+                    <div style="height: 650px; overflow-y: scroll">
+             
                             <?php include 'ebatt.php'; ?>
-                       
+                      
                     </div>
                 </div>
                 <div class="attmiddle_right">
