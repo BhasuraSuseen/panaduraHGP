@@ -57,7 +57,7 @@ $des = 'des'.$row['Nic_no'];
 
 
                                 <td style="width: 12%; background-color: lightgray" id="lt"><select name="LvType" id="<?php echo $combx; ?>" class="attstyled-select">
-                                   <option><?php echo $row[5]?></option>      
+                                   <!--<option><?php echo $row[5]?></option>-->      
                                   <option>Medical Leave</option>
                                         <option>Half Day</option>
                                         <option>Short Leave</option>
@@ -65,11 +65,11 @@ $des = 'des'.$row['Nic_no'];
                                     </select></td>
 
                                 <td style="width: 12%; background-color:#ECEFF1 " id="des1" >
-                                    <input type="text" id="<?php echo $des; ?>" name="des"  placeholder='<?php echo $row[6]?>'>
+                                    <input type="text" id="<?php echo $des; ?>" name="des" >
                                 </td>
 
                                 <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('<?php echo $combx; ?>').value, document.getElementById('<?php echo $des; ?>').value, this.value)">
-                                        <option><?php echo $row[7]?></option>
+                                        <!--<option><?php echo $row[7]?></option>-->
                                         <option>Letter</option>
                                         <option>Fax</option>
                                         <option>Tele-Mail</option>
