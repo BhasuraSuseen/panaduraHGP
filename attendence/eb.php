@@ -22,7 +22,7 @@
                     <div class="attrecordstyl">
                             
                         <table border="0" style="width: 100%">
-                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select  class="attstyled-select" style="width:30%" id="day1">
+                            <tr><td style="width:40%">Day:</td><td><?php echo $yearmon;?><select  class="attstyled-select" id="day1">
 
 
                                         <?php
