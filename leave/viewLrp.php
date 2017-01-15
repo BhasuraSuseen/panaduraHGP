@@ -21,7 +21,7 @@ FROM employee
 <center>
 	<h3>Panadura Base Hospital</h3>
 	<h3><?php echo $date3;?> EB Leave report</h3>
-<table border = '0' style='width: 70%' id="lvtbl" name="lvtbl" >
+<table border = '1' style='width: 90%' id="lvtbl" name="lvtbl" >
     <tr style='background-color: appworkspace' >
         <td style="background-color: #CFD8DC">NIC</td>
         <td style="background-color: #CFD8DC">Name</td>
