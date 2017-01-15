@@ -32,7 +32,7 @@
                       <th> ". $array["type"]." </th>
                     </tr>";
             echo"<tr>
-                      <th><b>Type</b></th>
+                      <th><b>Recipient</b></th>
                       <th> ". $array["recipient"]." </th>
                     </tr>";
             
