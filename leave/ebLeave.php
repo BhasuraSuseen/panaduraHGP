@@ -79,7 +79,7 @@ $des = 'des'.$row['Nic_no'];
 
                     
                 </form>
-                <a href="/leave/report.php">  <input class="attblack_btn" type="submit" value="Download Pdf"></a> 
+                <a href="/leave/LreportEB.php">  <input class="attblack_btn" type="submit" value="Download Pdf"></a> 
 
             </center>
         </div>
