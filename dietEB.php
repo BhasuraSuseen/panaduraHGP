@@ -296,7 +296,7 @@
                             </table>
                             <tr><td><input  style="display:none"type ="submit"></td></tr>
                         </form>
-				<table><tr><td></td>	
+				<table><tr><td style="width:100px"></td>	
                         <td><button style="
                                 width: 100px;
                                 " onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button></td></tr></table>
