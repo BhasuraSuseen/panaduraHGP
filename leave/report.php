@@ -1,6 +1,6 @@
 <?php
 
-//include 'datetime.php';
+include 'datetime.php';
 //include 'connection.php';
 ?>
 
@@ -20,13 +20,13 @@ try
 
     // convert a web page and store the generated PDF into a $pdf variable
     //methana thmi link ekacedit kranna one--!!!!
-    $pdf = $client->convertURI('http://www.google.com/');
+    $pdf = $client->convertURI('http://omspanadura.azurewebsites.net/leave/viewLrp.php/');
 
     // set HTTP response headers
     header("Content-Type: application/pdf");
     header("Cache-Control: max-age=0");
     header("Accept-Ranges: none");
-    header("Content-Disposition: attachment; filename=\"Report.pdf\"");
+    header("Content-Disposition: attachment; filename=\"EB Leave Report($date3).pdf\"");
 
     // send the generated PDF 
     echo $pdf;
