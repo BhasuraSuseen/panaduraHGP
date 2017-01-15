@@ -3,30 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    background-color: #ECEFF1;
-    font-family: 'Open Sans';
-}	
-
-spanh1{
-    font-family: 'Open Sans';
-    font-size: 30px;
-    font-weight: 400;
-    color: #455A64;
-}
-
-/*a{
-    font-family: 'Open Sans';
-    font-size: 16px;
-    font-weight: 600;
-    color: #455A64;
-}
-a:hover{
-    font-family: 'Open Sans';
-    font-size: 16px;
-    font-weight: 600;
-    color: #2980b9;
-}*/
 .attbutton {
     background-color: #ECEFF1; /* Green */
     border: none;
@@ -50,23 +26,26 @@ a:hover{
 }
 
 .attblack_btn{
-    background-color: #263238;
+     background-color: #455A64;
     outline: none;
     border: none;
-    width: 100px;
+    width: 100%;
     font-size: 0.9em;
     padding: 0.4em;
     margin-bottom: 0.8em;  
-    color: white;
+color: white;
 }
 
 
 .attblack_btn:hover{
-    background-color: #607D8B;
-    width: 100%;
-    background-color: #607D8B ;
+     background-color: #607D8B;
+    outline: none;
     border: none;
-    color: white;
+    width: 100%;
+    font-size: 0.9em;
+    padding: 0.4em;
+    margin-bottom: 0.8em;  
+color: white;
 }
 
 .attbutton1:hover {
@@ -95,26 +74,7 @@ a:hover{
     float: left; 
 }
 
-ul#nav li{
-    list-style: none;
-    fill: #455A64;
-    color: #455A64;
-    display: block;    
-    font-size: 14px;
-    text-align: center;
-    background-color:#fafafa;
-    /*border-left: 4px solid #B0BEC5;*/
-    transition: 0.2s;
-    text-align: center;
 
-
-}
-ul#nav li:hover{
-    background-color: #CFD8DC;   
-    /*border-left: 4px solid #c62828;*/
-    cursor: pointer;
-
-}
 
 .attmiddle_left{
     float: left;
@@ -139,76 +99,11 @@ ul#nav li:hover{
     display: none;
     z-index: 1000;       
 }
-#attpop_box_hr_1{
-    position: absolute;
-    background: #ECEFF1;
-    font-size: 0.9em;
-    width: 54%;
-    margin: 3% 0 0 5%;
-    padding: 20px;
-    opacity: 0.9;
-    z-index: 1500;
-    display: none;
-    border-top: 3px solid #ef5350;
-    border-bottom: 5px solid #ef5350; 
-}
 
-#attpop_box_hr_2{
-    position: fixed;
-    padding-left: 500px;
-    left: 810px;
-    background: beige;
-    font-size: 0.9em;
-    width: 30%;
-    margin: 3% 0 0 5%;
-    padding: 20px;
-    opacity: 0.9;
-    z-index: 1500;
-    display: none;
-    border-top: 3px solid #ef5350;
-    border-bottom: 5px solid #ef5350; 
-}
-
-input[type="text"], input[type="date"], input[type="number"], input[type="password"], textarea  {
-    display: block;
-    color: #455A64;
-    outline: none;
-    width: 200px;
-    font-size: 0.9em;
-    padding: 0.4em;
-    margin-bottom: 0.8em;
-    -webkit-appearance: none;
-    background: none;
-    border: 2px solid #cccccc ;
-
-
-}
-input[type="submit"], button[type="button"], input[type="reset"]{
-    background-color: #263238;
-    outline: none;
-    border: none;
-    width: 100px;
-    font-size: 0.9em;
-    padding: 0.4em;
-    margin-bottom: 0.8em;  
-    color: white;
-}
-input[type="submit"]:hover , button[type="button"]:hover, input[type="reset"]:hover{
-    background-color: #263238;
-    outline: none;
-    border: none;
-    width: 100px;
-    font-size: 0.9em;
-    padding: 0.4em;
-    margin-bottom: 0.8em;  
-    color: white;
-}
 .attrecordstyl{
 
     font-size: 1em;
     opacity: 0.9;
-
-
 
 }
 .attstyled-select{
