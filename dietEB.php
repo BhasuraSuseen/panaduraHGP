@@ -290,7 +290,7 @@
                                         <input type="number" id="staff" name="staff" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
 
-				    <tr><td></td><td>
+				    <tr><td style="width:250px"></td><td>
 					    <input type ="reset" value="Reset"></td></tr>
 
                             </table>
