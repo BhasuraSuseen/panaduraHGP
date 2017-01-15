@@ -39,7 +39,8 @@ FROM employee
 </table>
 
 </center>
-  
+ _______________________
+      Signature
     <script type="text/javascript" src="../jst.js"></script>
     
 
