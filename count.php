@@ -51,13 +51,13 @@ $staff = $_POST['staff'];
 
 	if ($num_rows == 0) {
 		if (mysqli_query($conn, $sql1)) {
-				//echo "New record created successfully";
-			} else {
-				echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-			}
+			//echo "New record created successfully";
+		} else {
+			echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+		}
 	}else{
 		if (mysqli_query($conn, $sql2)) {
-			//echo "New record created successfully";
+			//echo "New record updated successfully";
 		} else {
 			echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 		}
@@ -67,42 +67,38 @@ $staff = $_POST['staff'];
 	
 
 
-if($date4 == "Monday"){
-	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
- if($date == $date3 && $meal == "Breakfast"){
-	 ?>
+	if($date4 == "Monday"){
+		echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
+ 		if($date == $date3 && $meal == "Breakfast"){
+	 	?>
 		<center>
 		<table align="center" style="width: 60%">
-		
-		<tr>
-            <td align="left"><b>Item Name</b></td>
-            <td align="left"><b>Amount</b></td>
-            </tr>
+		<tr><td align="left"><b>Item Name</b></td>
+            	<td align="left"><b>Amount</b></td></tr>
 		 <?php 
 		 $x =  mysqli_query($conn,"SELECT Item_id FROM report");
-							while ($y = mysqli_fetch_array($x)){
-								$sql3 = "INSERT INTO report (Item_id,mon_br,mon_lu,mon_di,tue_br,tue_lu,tue_di,wed_br,wed_lu,wed_di,thu_br,thu_lu,thu_di,fri_br,fri_lu,fri_di,sat_br,sat_lu,sat_di,sun_br
-								sun_lu,sun_di) VALUES('$y[0]','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0')";
-								$sql33= "Update report SET Item_id='$y[0]', mon_br='0', mon_lu='0', mon_di='0', tue_br='0', tue_lu='0', tue_di='0', wed_br='0', wed_lu='0', wed_di='0',
-								thu_br='0', thu_lu='0', thu_di='0',fri_br='0', fri_lu='0', fri_di='0', sat_br='0', sat_lu='0', sat_di='0', sun_br='0', sun_lu='0', sun_di='0' WHERE Item_id='$y[0]'";
+		while ($y = mysqli_fetch_array($x)){
+			$sql3 = "INSERT INTO report (Item_id,mon_br,mon_lu,mon_di,tue_br,tue_lu,tue_di,wed_br,wed_lu,wed_di,thu_br,thu_lu,thu_di,fri_br,fri_lu,fri_di,sat_br,sat_lu,sat_di,sun_br
+			sun_lu,sun_di) VALUES('$y[0]','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0')";
+								
+			$sql33= "Update report SET Item_id='$y[0]', mon_br='0', mon_lu='0', mon_di='0', tue_br='0', tue_lu='0', tue_di='0', wed_br='0', wed_lu='0', wed_di='0',
+			thu_br='0', thu_lu='0', thu_di='0',fri_br='0', fri_lu='0', fri_di='0', sat_br='0', sat_lu='0', sat_di='0', sun_br='0', sun_lu='0', sun_di='0' WHERE Item_id='$y[0]'";
 							
-								
-								$num_rows = mysqli_num_rows($x);
-								
-								if ($num_rows == 0) {
-									if (mysqli_query($conn, $sql3)) {
-										//echo "New record created successfully";
-									} else {
-										echo "Error: " . $sql3 . "<br>" . mysqli_error($conn);
-									}
-								}else{
-									if (mysqli_query($conn, $sql33)) {
-										//echo "New record created successfully";
-									} else {
-										echo "Error: " . $sql33 . "<br>" . mysqli_error($conn);
-									}
-								}
-							}
+			$num_rows = mysqli_num_rows($x);
+			if ($num_rows == 0) {
+				if (mysqli_query($conn, $sql3)) {
+					//echo "New record created successfully";
+				} else {
+					echo "Error: " . $sql3 . "<br>" . mysqli_error($conn);
+				}
+			}else{
+				if (mysqli_query($conn, $sql33)) {
+					//echo "New record updated successfully";
+				} else {
+					echo "Error: " . $sql33 . "<br>" . mysqli_error($conn);
+				}
+			}
+		}
 	 
 		 
 		 while ($mb = mysqli_fetch_array($monb)):; ?>
