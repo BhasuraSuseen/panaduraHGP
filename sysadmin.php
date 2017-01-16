@@ -348,7 +348,10 @@ require "connect.php";
                         <table style="width: 90%">
                     <tr><td>NIC No<input type="text" name="nic" style="width: 100%" minlength="10" maxlength="10" required></td>
                             <td>Contact No<br><input type="number" name="cnumber"  style="width: 100%" min="0" max="9999999999" required></td>
-                            <td>Gender <br><input type="text" name="gender"  style="width: 100%" required></td>
+                            <td>Gender <br><select type="text" name="gender"  style="width: 100%" required>
+				    <option>Male</option>
+				    <option>Female</option>
+				    </select></td>
                     </tr></table>
                     Employee Type<br>
                     <select name="etype"> 
