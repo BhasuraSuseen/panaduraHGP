@@ -6,7 +6,7 @@
 <?php
 require "connect.php";
 session_start();
-if($_SESSION['admin']!='AB') AND ($_SESSION['ebno']!=5){
+if(($_SESSION['admin']!='AB')or($_SESSION['ebno']!=5)){
 header("Location:  index.php");
 }
 ?>
@@ -92,11 +92,7 @@ header("Location:  index.php");
               </div>
                       <div class="middle_top_right">
                         <?php 
-                          require "connect.php";
-                          session_start();
-                          if($_SESSION['username']==''){
-                            header("Location:  index.php");
-                          }
+
                           echo"<a>".$_SESSION['username']."</a>";?><br>
 			                   <a href="logout.php">Log Out</a>
                         </div>
