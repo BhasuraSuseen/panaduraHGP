@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>Attendance EB 3</title>
 <?php
+//check if logged in
 require "connect.php";
 session_start();
 if(($_SESSION['admin']!='AB')or($_SESSION['ebno']!=7)){

@@ -2,12 +2,13 @@
 <html>
 <head>
 <?php 
+//check if logged in
 require "connect.php";
-             session_start();
-             if($_SESSION['admin']!='SA'){
-            header("Location:  index.php");
-          }
-            ?>
+session_start();
+if($_SESSION['admin']!='SA'){
+header("Location:  index.php");
+}
+?>
 <meta charset=utf-8 />
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
   <link rel="stylesheet" type="text/css" href="del/styles.css" />
@@ -294,15 +295,15 @@ require "connect.php";
       ?>
             </td></tr>
             <tr><td style="vertical-align:top;">User Type</td><td><input type="radio" name="usertype" value="SA" onclick="myFunction()"> System Administrator<br>
-              <input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<br><input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer<br>
-                <input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<br><input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB<br>
-                <input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet Clerk<br><input type="radio" name="usertype" value="NB" onclick="myFunction()">Normal Mail EB</td></tr>
-              <tr><td>EB type</td><td> <select id="myText" name="ebno">
-                <option name="ebno" value="5">Doctor (EB5)</option>
-                  <option name="ebno" value="6">Nurse (EB6)</option>
-                  <option name="ebno" value="7">Para Medic (EB7)</option>
-                <option name="ebno" value="8">Minor staff (EB8)</option>
-                </select>  </td></tr>
+            <input type="radio" name="usertype" value="DIR" onclick="myFunction()" required> Director<br><input type="radio" name="usertype" value="AO" onclick="myFunction()"> Admin Officer<br>
+            <input type="radio" name="usertype" value="MC" required onclick="myFunction()"> Mail Clerk<br><input type="radio" name="usertype" value="AB" onclick="myFunction1()"> Attendance EB<br>
+            <input type="radio" name="usertype" value="DC" required onclick="myFunction()"> Diet Clerk<br><input type="radio" name="usertype" value="NB" onclick="myFunction()">Normal Mail EB</td></tr>
+            <tr><td>EB type</td><td> <select id="myText" name="ebno">
+            <option name="ebno" value="5">Doctor (EB5)</option>
+            <option name="ebno" value="6">Nurse (EB6)</option>
+            <option name="ebno" value="7">Para Medic (EB7)</option>
+            <option name="ebno" value="8">Minor staff (EB8)</option>
+            </select>  </td></tr>
 
             <tr><td colspan=2 align="center"><br>
             <input type="submit" value="Add new user" name="submit">

@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <?php
-
+//check if logged in
+require "connect.php";
 session_start();
 if($_SESSION['admin']!='AO'){
 header("Location:  index.php");
@@ -95,7 +95,7 @@ header("Location:  index.php");
 	 
 			     
 			
-          <div id="middle_leftp1">
+  <div id="middle_leftp1">
   <div class="current-flow-left" style="float: left; width:65%;">
   <div class="search-letters" style="width:100%; min-height: 80px; margin: 10px; margin-left: 20px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
@@ -113,7 +113,7 @@ header("Location:  index.php");
   </div>
 </div>
           <?php
-                require "connect.php";
+                
                 
                 $recentletter=mysqli_query($conn,"select max(letter_id) from letter");
                 $rslt=mysqli_fetch_array($recentletter);
@@ -189,7 +189,7 @@ header("Location:  index.php");
         				
         				 /*ms to ao date enter form */
         				  if(isset($_POST["submitt"])){
-                    if(isset($_POST['select'])){
+                  if(isset($_POST['select'])){
         				$lid=$_POST['select'];
         				$datemsao=$_POST['datemsao'];
         				

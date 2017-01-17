@@ -2,6 +2,7 @@
 <html>
 <head>
 <?php
+//check if logged in
  require "connect.php";
 session_start();
 if($_SESSION['admin']!='MC'){
@@ -25,7 +26,7 @@ header("Location:  index.php");
     font-weight: 600; 
     }
     .node{
-      fill:ECEFF1;
+      fill:#ECEFF1;
     }
     .link{
       stroke: #90A4AE;
@@ -94,75 +95,7 @@ header("Location:  index.php");
 			                   <a href="logout.php">Log Out</a>
                         </div>
               </div>
-	 
-			     
-			
-          
-              <?php
-            
-                //mail clerk 1 letter count//
-                $mcsql1="select * from letter where date is NOT NULL and mcms IS NULL";
-                $a=mysqli_query($conn,$mcsql1);
-                $a1=mysqli_num_rows($a);
-                //echo $a1;
-                //medical spurintendant letter count//
-                $mssql1="select * from letter where mcms is NOT NULL and msao IS NULL";
-                $b=mysqli_query($conn,$mssql1);
-                $b1=mysqli_num_rows($b);
-                //echo $b1;
-                //admin officer letter count//
-                $aosql1="select * from letter where msao is NOT NULL and aomc IS NULL";
-                $c=mysqli_query($conn,$aosql1);
-                $c1=mysqli_num_rows($c);
-                //echo $c1;
-                //mail clerk letter count 2//
-                $mcsql2="select * from letter where aomc is NOT NULL and mceb IS NULL";
-                $d=mysqli_query($conn,$mcsql2);
-                $d1=mysqli_num_rows($d);
-                //echo $d1;
-                //eb1 letter count//
-                $eb1sql="select * from letter where mceb is NOT NULL and eb='1'";
-                $eb1=mysqli_query($conn,$eb1sql);
-                $eb11=mysqli_num_rows($eb1);
-                //echo $eb11;
-                //eb2 letter count//
-                $eb2sql="select * from letter where mceb is NOT NULL and eb='2'";
-                $eb2=mysqli_query($conn,$eb2sql);
-                $eb22=mysqli_num_rows($eb2);
-                //echo $eb22;
-                //eb3 letter count//
-                $eb3sql="select * from letter where mceb is NOT NULL and eb='3'";
-                $eb3=mysqli_query($conn,$eb3sql);
-                $eb33=mysqli_num_rows($eb3);
-                //echo $eb33;
-                //eb4 letter count//
-                $eb4sql="select * from letter where mceb is NOT NULL and eb='4'";
-                $eb4=mysqli_query($conn,$eb4sql);
-                $eb44=mysqli_num_rows($eb4);
-                //echo $eb44;
-                //eb5 letter count//
-                $eb5sql="select * from letter where mceb is NOT NULL and eb='5'";
-                $eb5=mysqli_query($conn,$eb5sql);
-                $eb55=mysqli_num_rows($eb5);
-                //echo $eb55;
-                //eb6 letter count//
-                $eb6sql="select * from letter where mceb is NOT NULL and eb='6'";
-                $eb6=mysqli_query($conn,$eb6sql);
-                $eb66=mysqli_num_rows($eb6);
-                //echo $eb66;
-                //eb7 letter count//
-                $eb7sql="select * from letter where mceb is NOT NULL and eb='7'";
-                $eb7=mysqli_query($conn,$eb7sql);
-                $eb77=mysqli_num_rows($eb7);
-                //echo $eb77;
-                //eb8 letter count//
-                $eb8sql="select * from letter where mceb is NOT NULL and eb='8'";
-                $eb8=mysqli_query($conn,$eb8sql);
-                $eb88=mysqli_num_rows($eb8);
-                //echo $eb88;
-                ?>  
-                    
-                   
+	
           <div id="middle_leftp1">
   <div class="current-flow-left" style="float: left; width:65%;">
   <div class="search-letters" style="width:100%; min-height: 80px; margin: 10px; margin-left: 20px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -345,21 +278,21 @@ header("Location:  index.php");
 		        	$newfilename='';
 		        }
 		        else{                          
-				$folder="lettercopies/";
-				$temp= explode(".", $filename);
-				$newfilename=$lid1.'.'.end($temp);
-				}
+        				$folder="lettercopies/";
+        				$temp= explode(".", $filename);
+        				$newfilename=$lid1.'.'.end($temp);
+        				}
 				
-				if($_POST['sub']==''){
+				    if($_POST['sub']==''){
                		 $sub="No subject entered";
             	}
-                else{
+            else{
                 	$sub=$_POST['sub'];
                 }
-                if($_POST['reci']==''){
+            if($_POST['reci']==''){
                 	$reci="No recipient entered";	
                 }
-                else{
+            else{
                 	$reci=$_POST['reci'];
                 }
                 $dateaomc=$_POST['dateaomc'];
@@ -380,41 +313,43 @@ header("Location:  index.php");
         }
 
 
-                      /*mc to ms date enter form */
-                          if(isset($_POST["submitt"])){
-                            if(isset($_POST['lid2'])){
-                        $lid2=$_POST['lid2'];
-                        $datemcms=$_POST['datemcms'];
-                        $sql3="UPDATE letter SET mcms='$datemcms'WHERE letter_id='$lid2'";
-                        mysqli_query($conn,$sql3);
-                         $message= $lid2. " was forwarded";
-                        echo  "<script type='text/javascript'>alert('$message');</script>";
-                        }
-                        else{
-                           $message= "No letters to forward";
-                            echo  "<script type='text/javascript'>alert('$message');</script>";
-                        }
-                         } 
-                        ?>
-                          <?php
-						   if(isset($_POST["submitttt"])){
-                if(isset($_POST['lid'])){
+              /*mc to ms date enter form */
+              if(isset($_POST["submitt"])){
+                  if(isset($_POST['lid2'])){
+                    $lid2=$_POST['lid2'];
+                    $datemcms=$_POST['datemcms'];
+                    $sql3="UPDATE letter SET mcms='$datemcms'WHERE letter_id='$lid2'";
+                    mysqli_query($conn,$sql3);
+                    $message= $lid2. " was forwarded";
+                    echo  "<script type='text/javascript'>alert('$message');</script>";
+                  }
+                  else{
+                    $message= "No letters to forward";
+                    echo  "<script type='text/javascript'>alert('$message');</script>";
+                      }
+              } 
+              ?>
 
-						$lid=$_POST['lid'];
-						$datemceb=$_POST['datemceb'];
+                  <?php
+                  //mc to eb form
+                  if(isset($_POST["submitttt"])){
+                      if(isset($_POST['lid'])){
 
-						$sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
-						mysqli_query($conn,$sql);
-						 $message2= $lid. " was entered";
-             echo  "<script type='text/javascript'>alert('$message2');</script>";
-						}
-            else{
-               $message2="No letters to forward";
-              echo  "<script type='text/javascript'>alert('$message2');</script>";
-            }
-          }
-						?>
-            </div>
+                        $lid=$_POST['lid'];
+                        $datemceb=$_POST['datemceb'];
+
+                        $sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
+                        mysqli_query($conn,$sql);
+                        $message2= $lid. " was entered";
+                        echo  "<script type='text/javascript'>alert('$message2');</script>";
+                        }
+                      else{
+                        $message2="No letters to forward";
+                        echo  "<script type='text/javascript'>alert('$message2');</script>";
+                        }
+                  }
+                  ?>
+                              </div>
 	</div>
   </div>
   <div id="pop_box_mail_2" >
@@ -478,11 +413,11 @@ header("Location:  index.php");
                                       $user=$_SESSION['username'];
 
                                       $sql="INSERT INTO letter_rep (date,subject,type,address,letter_id,user,folder,file) VALUES ('$date','$subject','$type','$addr','$idrep','$user','$folder','$newfilename')";
-                              move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$newfilename);        
-                              mysqli_query($conn,$sql);
-                              $message= $idrep. " was entered";
-                              echo  "<script type='text/javascript'>alert('$message');</script>";
-                            }
+                                      move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$newfilename);        
+                                      mysqli_query($conn,$sql);
+                                      $message= $idrep. " was entered";
+                                      echo  "<script type='text/javascript'>alert('$message');</script>";
+                                    }
                             else{
                               $message="No letters to reply";
                               echo  "<script type='text/javascript'>alert('$message');</script>";

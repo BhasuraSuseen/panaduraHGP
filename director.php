@@ -8,8 +8,9 @@ require "connect.php";
 session_start();
 if($_SESSION['admin']!='DIR'){
 header("Location:  index.php");
+}
 ?>
-  <title>Director</title>
+<title>Director</title>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,8 +92,6 @@ header("Location:  index.php");
               </div>
                       <div class="middle_top_right">
                         <?php 
-
-                          }
                           echo"<a>".$_SESSION['username']."</a>";?><br>
 			                   <a href="logout.php">Log Out</a>
                         </div>

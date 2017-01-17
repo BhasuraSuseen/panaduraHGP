@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>Attendance EB 2</title>
 <?php
+//check if logged in
 require "connect.php";
 session_start();
 if(($_SESSION['admin']!='AB')or($_SESSION['ebno']!=6)){
@@ -183,26 +183,26 @@ header("Location:  index.php");
       <input type="submit" name="submitt" value="Enter Date">
       <input type="reset" name="reset" value="Reset">
   </form>
-  <?php
-   if(isset($_POST["submitt"])){
-    if(isset($_POST['lid'])){
+            <?php
+            if(isset($_POST["submitt"])){
+                if(isset($_POST['lid'])){
 
-$lid=$_POST['lid'];
-$datemceb=$_POST['datemceb'];
+                  $lid=$_POST['lid'];
+                  $datemceb=$_POST['datemceb'];
 
-$sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
-mysqli_query($conn,$sql);
-$message= $lid. " was updated";
-  echo  "<script type='text/javascript'>alert('$message');</script>";
-}
-else{
-  $message="No letters to reply";
-  echo  "<script type='text/javascript'>alert('$message');</script>";
-  
-}
+                  $sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
+                  mysqli_query($conn,$sql);
+                  $message= $lid. " was updated";
+                  echo  "<script type='text/javascript'>alert('$message');</script>";
+                  }
+                else{
+                  $message="No letters to reply";
+                  echo  "<script type='text/javascript'>alert('$message');</script>";
 
-}
-?>
+                  }
+
+            }
+            ?>
             </div>
 	</div>
       <div id="pop_box_mail_2">
