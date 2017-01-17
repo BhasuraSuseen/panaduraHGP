@@ -325,7 +325,7 @@ require "connect.php";
      			
           
   
-	<div id="pop_box_hr_2">
+	<div id="pop_box_hr_2"> <!--popout of employee details recording-->
   
   
 <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> RECORD EMPLOYEE DETAILS</a></div>
@@ -363,12 +363,12 @@ require "connect.php";
                     <option value="eb">Other Staff</option>
                     </select>
                     
-                    <table style="width: 90%"><tr><td>
+                    <table style="width: 90%"><tr><td> <!-- table strating to record other details-->
                                 First Employment Date<br>
                     <input type="Date" name="fedate" placeholder="FE Date " style="width: 100%" required></td>
                             <td>Employment Commencement Date<br>
                                 <input type="Date" name="ecdate" style="width: 100%" required></td></tr>
-                        <tr> <td>Socond Grade Promotion Date<br>
+                        <tr> <td>Second Grade Promotion Date<br>
                     <input type="Date" name="sgpdate" style="width: 100%" ></td>
                             <td> First Grade Promotion Date<br>
                                 <input type="Date" name="fgpdate" style="width: 100%"></td></tr>
@@ -381,7 +381,7 @@ require "connect.php";
                     <td>Remarks<br><input type="text" name="remarks" style="width: 100%"></td>
                     </tr></table>
                                        
-                    <input type="submit" value="Save" name="enter">
+                    <input type="submit" value="Save" name="enter"> <!--button creation-->
                 </form>
 
              <?php
