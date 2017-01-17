@@ -179,7 +179,7 @@
 	
 	
          <div id="pop_background"></div>
-		
+		<!-- pop box of diet report -->
      		<div id="pop_box_report_2">
 		<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET REPORT </a></div>
 		<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
@@ -209,7 +209,7 @@
 					
 
      			</div>
-	<div id="pop_box_diet_1">
+	<div id="pop_box_diet_1"> <!-- pop box of menu view -->
 	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> SELECT MENU </a></div>	
 	<div style="width:100%;height:70%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 		 <form>
@@ -256,7 +256,7 @@
  	</div>
 	</div>
 	
-	<div id="pop_box_diet_2">
+	<div id="pop_box_diet_2"> <!-- pop box of count -->
 	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET SCHEDULE </a></div>
 	<div style="position: absolute; width:97%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 		
@@ -311,7 +311,7 @@
 
 	       
 	
-	<div id="pop_box_hr_3">
+	<div id="pop_box_hr_3"> <!--pop box of letter update -->
 	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>
         <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
 	 <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
@@ -354,7 +354,7 @@
  	</div>
 
 	
-	<div id="pop_box_mail_2" >
+	<div id="pop_box_mail_2" > <!-- pop box of letter update -->
             <div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER REPLY </a></div>
                 <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> 
                  <b> Reply to a letter</b>
