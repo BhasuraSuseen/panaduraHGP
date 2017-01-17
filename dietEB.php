@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php
-require "connect.php";
-session_start();
-if($_SESSION['admin']!='DC'){
-header("Location:  index.php");
-}
-?>
 <meta charset=utf-8 />
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
@@ -74,53 +67,51 @@ header("Location:  index.php");
 
 	<div class="all_container">
 		
-		<div class="left_side_bar" >
-            		<div class="left_side_bar_top">                   
-            		</div>
-            		<div class="left_side_bar_down" >
+		<div class="left_side_bar" ><!-- left side bar icons -->  
+            		<div class="left_side_bar_top"></div>
+            		<div class="left_side_bar_down"><!-- left side bar down-Update Letter Details,Reply to letters,ward and staff counts --> 
                 		<ul id="nav">
-					
 					<a style="margin-top: -10px;"></a>
-					
 					<li id="open_mail_1" title="Update Letter Details" style="border-left: 4px solid #c62828;">  
 						<i> <img src="images/web.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
 					</li>
-                    <li id="open_mail_2" title="Reply to letters" style="border-left: 4px solid #c62828;">  
-                        <i> <img src="images/mailrep.ico" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
-                    </li>
-					 <li id="open_att_1" title="enter ward and staff counts" style="border-left: 4px solid #03c9a9;">  
+                    			<li id="open_mail_2" title="Reply to letters" style="border-left: 4px solid #c62828;">  
+                        			<i> <img src="images/mailrep.ico" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
+                    			</li>
+					<li id="open_att_1" title="enter ward and staff counts" style="border-left: 4px solid #03c9a9;">  
 						<i> <img src="images/count.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
 					</li>
-					 
 				</ul>
            		</div>
         	</div>
 		<div class="container">
-		    <div class="middle_top">
+		    <div class="middle_top"><!--top of the page-->
 			<div class="middle_top_left">
 				<img src="images/oms4.png"  style= "padding: 5px;">
 			</div>
 			<div class="middle_top_middle">			
 				    <div id="clockbox"></div>
-			      	    </div>
-			   <div class="middle_top_right">
+			</div>
+			<div class="middle_top_right"><!--display login username and logout-->
 			   		
 				  <?php 
-                          
+                          require "connect.php";
+                          session_start();
+                          if($_SESSION['username']==''){
+                            header("Location:  index.php");
+                          }
                           echo"<a>".$_SESSION['username']."</a>";?><br>
-			                   <a href="logout.php">Log Out</a>
-
-				 
-			   </div>
+			   <a href="logout.php">Log Out</a>
+			 </div>
 		    </div>
 			
 			
-            <div id="middle_leftp1">
+            <div id="middle_leftp1"><!--search letter-->
                 <div class="current-flow-left" style="float: left; width:75%;">
                 <div class="current-flow-left-top" style="float: left; width:100%;">
                 <div class="current-flow-left-top-left" style="width:100%; float: left; ">
-                  <div class="search-letters" style="width:100%; min-height: 80px; margin: 10px; margin-left: 20px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                    <div style="width: 100%; float: left;background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
+                <div class="search-letters" style="width:100%; min-height: 80px; margin: 10px; margin-left: 20px;  background: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div style="width: 100%; float: left;background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;">SEARCH LETTER</a></div>
                   
                       <input type="text" id="search-box"  placeholder=" Select by letter ID" style="float: left;width:30%; margin: 10px; background:#fff;"/>
                       <input type="text" id="search-box1" placeholder=" Select by Subject" style="float: left;width:30%; margin: 10px;background:#fff;"/>
@@ -166,48 +157,42 @@ header("Location:  index.php");
 	<div class="right_side_bar"> <!-- right side bar icons --> 
                <div class="right_side_bar_top">                   
           </div>
-          <div class="right_side_bar_down">
+          <div class="right_side_bar_down"><!-- right side bar down-diet report and menu view --> 
               <ul id="nav">
                  <li id="open_hr_1" title="Diet Report" style="border-right: 4px solid #03c9a9;"> 
-
-            <i> <img src="images/food-1.png" style="width:80%;height:auto; opacity: 0.6; padding: 5px;"></i>
-          </li>
-		  <li id="open_hr_2" title="View menus" style="border-right: 4px solid #03c9a9;">  
-	<i> <img src="images/menuv.png" style="width:80%;height:auto;opacity: 0.6;padding: 5px;"></i>
-					</li>
-           
-          
-              </ul>
+			 <i><img src="images/food-1.png" style="width:80%;height:auto;opacity: 0.6; padding: 5px;"></i>
+          	</li>
+		 <li id="open_hr_2" title="View menus" style="border-right: 4px solid #03c9a9;">
+			 <i><img src="images/menuv.png" style="width:80%;height:auto;opacity: 0.6;padding: 5px;"></i>
+		</li>
+           </ul>
           </div> 
-            </div>
+        </div>
 	
 	
          <div id="pop_background"></div>
 		<!-- pop box of diet report -->
      		<div id="pop_box_report_2">
-		<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET REPORT </a></div>
-		<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
-	
-				 
-               
-                    
-                            <center><label  style="width: 100%" id="lbpop1"></label><br></center>
+			<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET REPORT </a></div>
+			<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+
+			<!--<center><label  style="width: 100%" id="lbpop1"></label><br></center>-->
 				 <?php include 'report.php';?>
 		
-		<center><form action="reportPDF.php" method="post">
-		<button style="background-color: #263238;
-                            outline: none;
-                            border: none;
-                            width: 100px;
-                            font-size: 0.9em;
-                            padding: 0.4em;
-                            margin-bottom: 0.8em;  
-                            color: white;" type="submit">Download</button></form></center>
+			<center><form action="reportPDF.php" method="post"><!--get the pdf of diet report-->
+					<button style="background-color: #263238;
+                            				outline: none;
+                            				border: none;
+                            				width: 100px;
+                            				font-size: 0.9em;
+                            				padding: 0.4em;
+                            				margin-bottom: 0.8em;  
+                            				color: white;"
+						type="submit">Download</button>
+				</form></center>
 				
-				
-					
 			</div>
-     			</div>
+     		</div>
 				 
 				
 					
