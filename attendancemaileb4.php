@@ -3,6 +3,13 @@
 <html>
 <head>
 <title>Attendance EB 4</title>
+<?php
+require "connect.php";
+session_start();
+if($_SESSION['admin']=='AB' AND $_SESSION['ebno']!='8'){
+header("Location:  index.php");
+}
+?>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,11 +91,7 @@
               </div>
                       <div class="middle_top_right">
                         <?php 
-                          require "connect.php";
-                          session_start();
-                          if($_SESSION['username']==''){
-                            header("Location:  index.php");
-                          }
+
                           echo"<a>".$_SESSION['username']."</a>";?><br>
                          <a href="logout.php">Log Out</a>
                         </div>

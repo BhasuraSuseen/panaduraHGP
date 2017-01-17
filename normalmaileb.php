@@ -2,6 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php
+require "connect.php";
+  session_start();
+  if($_SESSION['admin']!='NB'){
+    header("Location:  index.php");
+  }
+  
+?>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,14 +64,7 @@
 
 </head>
 <body> 
-<?php
-require "connect.php";
-  session_start();
-  if($_SESSION['username']==''){
-    header("Location:  index.php");
-  }
-  
-?>
+
 	<div class="all_container">
 		  <div class="left_side_bar">
           <div class="left_side_bar_top">                   

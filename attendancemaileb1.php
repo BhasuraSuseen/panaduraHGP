@@ -3,6 +3,13 @@
 <html>
 <head>
 <title>Attendance EB 1</title>
+<?php
+require "connect.php";
+session_start();
+if($_SESSION['admin']!='AB' AND $_SESSION['ebno']!='5'){
+header("Location:  index.php");
+}
+?>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 	<link rel="stylesheet" type="text/css" href="del/styles.css" />
