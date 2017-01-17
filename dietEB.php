@@ -193,152 +193,137 @@
 				
 			</div>
      		</div>
-				 
-				
-					
-
-     			</div>
+	</div>
 	<div id="pop_box_diet_1"> <!-- pop box of menu view -->
-	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> SELECT MENU </a></div>	
-	<div style="width:100%;height:70%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
-		 <form>
-			 <center><table>
-                                <tr><th>Day</th><td height="50px"> 
-                                        <select id="dy" name="day">
-                                            
-                                            <option>Monday</option>
-                                            <option>Tuesday</option>
-                                            <option>Wednesday</option>
-                                            <option>Thursday</option>
-                                            <option>Friday</option>
-                                            <option>Saturday</option>
-											<option>Sunday</option>
-                                        </select></td>
-
-
-                                    <th>Category</th><td height="50px">  
-                                        <select  id="type" name="type">
-                                            <option  value="c_s1">Children S1</option>
-                                            <option  value="c_s2">Children S2</option>
-                                            <option  value="c_s3">Children S3</option>
-                                            <option  value="patients">Patients</option>
-                                            <option  value="dd">Diabetics Patients</option>
-                                            <option  value="staff">Staff</option>
-                                        </select></td>
-
-                            </table><tr>
-                            <td height="50px" colspan=2>	
-                                <input  style="display:none"type ="submit"></td></tr>
-                        </center>
-                    </form>
-                    <center><button style="background-color: #263238;
-                            outline: none;
-                            border: none;
-                            width: 100px;
-                            font-size: 0.9em;
-                            padding: 0.4em;
-                            margin-bottom: 0.8em;  
-                            color: white;" onclick="menu_view(document.getElementById('dy').value, document.getElementById('type').value)">Search</button></center>
-                    
-		<center><label  style="width: 100%" id="lbpop"></label><br></center>
+		<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> SELECT MENU </a></div>	
+		<div style="width:100%;height:70%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
+		 	<form>
+				<center><table><!--menu view form-->
+					<tr><th>Day</th><td height="50px">
+						<select id="dy" name="day">
+							<option>Monday</option>
+                                            		<option>Tuesday</option>
+                                            		<option>Wednesday</option>
+                                            		<option>Thursday</option>
+                                            		<option>Friday</option>
+                                            		<option>Saturday</option>
+							<option>Sunday</option>
+                                        	</select></td>
+						<th>Category</th><td height="50px">
+						<select  id="type" name="type">
+							<option  value="c_s1">Children S1</option>
+                                            		<option  value="c_s2">Children S2</option>
+                                            		<option  value="c_s3">Children S3</option>
+                                            		<option  value="patients">Patients</option>
+                                            		<option  value="dd">Diabetics Patients</option>
+                                            		<option  value="staff">Staff</option>
+						</select></td>
+					</table>
+					<tr><td height="50px" colspan=2>
+						<input  style="display:none"type ="submit"></td></tr>
+				</center>
+			</form>
+				<center><button style="background-color: #263238;
+					outline: none;
+					border: none;
+                       			width: 100px;
+                            		font-size: 0.9em;
+                            		padding: 0.4em;
+                            		margin-bottom: 0.8em;  
+                            		color: white;"
+						onclick="menu_view(document.getElementById('dy').value, document.getElementById('type').value)">Search</button></center>
+                    				<!--call the 'menu_view' function in line 427-->
+				<center>
+					<label  style="width: 100%" id="lbpop"></label><br><!--view the menu in the same page-->
+				</center>
                
  	</div>
 	</div>
 	
 	<div id="pop_box_diet_2"> <!-- pop box of count -->
-	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET SCHEDULE </a></div>
-	<div style="position: absolute; width:97%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
-		
-	  		<?php //include 'dui.php';?>
-		<div class="middle_left" >
-		
+		<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> DIET SCHEDULE </a></div>
+		<div style="position: absolute; width:97%; background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
+		<div class="middle_left"><!--counter enter form-->
 			<center><form name="new_count" method="post" action="dietEB.php" onsubmit="return validateForm()">
                             <table>
 				    <thead><tr><th colspan=2 size="+2" color=#2980b9><b>ENTER COUNTS</b></th></tr></thead>
+				    <tr><td>Meal Type</td><td><!--ratio buttons to select meal type-->
+					    <input type="radio" id="meal" name="meal" value="Breakfast" required> Breakfast
+					    <input type="radio" id="meal" name="meal" value="Lunch"  required> Lunch
+                                            <input type="radio" id="meal" name="meal" value="Dinner"  required> Dinner
+					    </td>
+				    </tr><br>
+				    <tr><td>Children S1 </td><td> 
+                                            <input type="number" id="s1" name="children_s1" value="" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
-                                <tr><td>Meal Type</td><td>
-                                        <input type="radio" id="meal" name="meal" value="Breakfast" required> Breakfast
-                                        <input type="radio" id="meal" name="meal" value="Lunch"  required> Lunch
-                                        <input type="radio" id="meal" name="meal" value="Dinner"  required> Dinner</td></tr><br>
-                                <tr><td>Children S1 </td><td> 
-                                        <input type="number" id="s1" name="children_s1" value="" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
+                                    <tr><td>Children S2 </td><td> 
+                                            <input type="number" id="s2" name="children_s2" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
-                                <tr><td>Children S2 </td><td> 
-                                        <input type="number" id="s2" name="children_s2" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
+                                    <tr><td>Children S3 </td><td> 
+                                            <input type="number" id="s3" name="children_s3" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
-                                <tr><td>Children S3 </td><td> 
-                                        <input type="number" id="s3" name="children_s3" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
+                                    <tr><td>Normal Patients </td><td> 
+                                            <input type="number" id="patients" name="patients" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
-                                <tr><td>Normal Patients </td><td> 
-                                        <input type="number" id="patients" name="patients" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
+                                    <tr><td>DD Patients </td><td> 
+                                            <input type="number" id="dp" name="diabetics_patients" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
-                                <tr><td>DD Patients </td><td> 
-                                        <input type="number" id="dp" name="diabetics_patients" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
-
-                                <tr><td>Staff </td><td> 
-                                        <input type="number" id="staff" name="staff" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
+                                    <tr><td>Staff </td><td> 
+                                            <input type="number" id="staff" name="staff" size="20" pattern="[0-9]{1,}" min="0" step="1" required></td></tr>
 
 
 				    <tr><td style="width:250px"></td><td>
 					    <input type ="reset" value="Reset"></td></tr>
-
-                            </table>
-                            <tr><td><input  style="display:none"type ="submit"></td></tr>
-                        </form>
-				<table><tr><td style="width:250px"></td>	
-                        <td><button style="
-                                width: 100px;
-                                " onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button></td></tr></table>
-                    </center>
-                </div>
-		<div class="middle_right" >
-			<center><label style="background-color: #CFD8DC" align="center" id="lb1" ></label></center><br>
-		</div>
+				</table>
+				<tr><td><input  style="display:none"type ="submit"></td></tr>
+				</form>
+				<table><tr><td style="width:250px"></td>
+					<td><button style="width: 100px;"
+						    onclick="countdiet(document.getElementsByName('meal'), document.getElementById('s1').value, document.getElementById('s2').value, document.getElementById('s3').value, document.getElementById('patients').value, document.getElementById('dp').value, document.getElementById('staff').value)">Calculate</button></td></tr></table>
+							<!--call the 'menu_view' function in line 427-->
+			</center>
+			</div>
+			<div class="middle_right">
+				<center><label style="background-color: #CFD8DC" align="center" id="lb1" ></label></center><br>
+			</div>
 		</div>
 	</div>
     
-
-	       
-	
 	<div id="pop_box_hr_3"> <!--pop box of letter update -->
 	<div style="width: 100%; background-color: #2980b9;"><a style="font-size: 16px; color: #fafafa; padding: 10px;"> LETTER UPDATE </a></div>
-        <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">	
-	 <form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
-    <b>Enter Letter EB to EB date</b><br><br>
-    <label>Letter ID</label>
-      <?php  
-      $eb=$_SESSION['ebno'];
-      $abcd=mysqli_query($conn,"select letter_id from letter where mceb is NULL and eb ='".$eb."'");
-      if(mysqli_num_rows($abcd)>0){
-      $select= '<select name="lid">';
-      while($rsl=mysqli_fetch_array($abcd)){
-     
-      $select.='<option value="' .$rsl[0]. '">'.$rsl[0].'</option>';
-       }
-      }
-       else{
-        $select='<select><option></option></select>';
-      }
-      echo $select;
-      echo '</select><br><br>'?>
-      <input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required><br>
-      <input type="submit" name="submitt" value="Enter Date">
-      <input type="reset" name="reset" value="Reset">
-  </form>
+        <div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+		<form name="mctoeb" action="dietEB.php" method="post" accept-charset="utf-8">
+    			<b>Enter Letter EB to EB date</b><br><br>
+    			<label>Letter ID</label>
+      				<?php  
+      					$eb=$_SESSION['ebno'];
+      					$abcd=mysqli_query($conn,"select letter_id from letter where mceb is NULL and eb ='".$eb."'");
+      					if(mysqli_num_rows($abcd)>0){
+      						$select= '<select name="lid">';
+      						while($rsl=mysqli_fetch_array($abcd)){
+     							$select.='<option value="' .$rsl[0]. '">'.$rsl[0].'</option>';
+       						}
+      					}
+       					else{
+        					$select='<select><option></option></select>';
+      					}
+      					echo $select;
+      					echo '</select><br><br>'?>
+      					<input type="date" name="datemceb" placeholder="Date recieved from Letter EB" required><br>
+      					<input type="submit" name="submitt" value="Enter Date">
+      					<input type="reset" name="reset" value="Reset">
+  		</form>
 		
-  <?php
-   if(isset($_POST["submitt"])){
+   			<?php
+   				if(isset($_POST["submitt"])){
+					$lid=$_POST['lid'];
+    					$datemceb=$_POST['datemceb'];
+					$sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
+    					mysqli_query($conn,$sql);
+    					echo $lid . "was updated";
+    				}
+    			?>
 
-    $lid=$_POST['lid'];
-    $datemceb=$_POST['datemceb'];
-
-    $sql="UPDATE letter SET mceb='$datemceb' WHERE letter_id='$lid'";
-    mysqli_query($conn,$sql);
-    echo $lid . "was updated";
-    }
-    ?>
-
-		
 		</div>           
  	</div>
 
@@ -586,26 +571,26 @@
                 return false;
             });
       	    $('#open_hr_2').click(function(){
-                      $('#pop_background').fadeIn();
-                      $('#pop_box_diet_1').fadeIn();
+                $('#pop_background').fadeIn();
+                $('#pop_box_diet_1').fadeIn();
                       return false;
-                  });
-      		 $('#open_mail_1').click(function(){
-                      $('#pop_background').fadeIn();
-                      $('#pop_box_hr_3').fadeIn();
-                      return false;
-                  });
-           $('#open_mail_2').click(function(){
-                      $('#pop_background').fadeIn();
-                      $('#pop_box_mail_2').fadeIn();
-                      return false;
-                  });
+            });
+      	    $('#open_mail_1').click(function(){
+                $('#pop_background').fadeIn();
+                $('#pop_box_hr_3').fadeIn();
+                     return false;
+            });
+            $('#open_mail_2').click(function(){
+                 $('#pop_background').fadeIn();
+                 $('#pop_box_mail_2').fadeIn();
+                 return false;
+            });
             $('#pop_background').click(function(){
                 $('#pop_background').fadeOut();
                 $('#pop_box_report_2').fadeOut();
                 $('#pop_box_diet_2').fadeOut();
-            		$('#pop_box_diet_1').fadeOut();
-            		$('#pop_box_hr_3').fadeOut();
+            	$('#pop_box_diet_1').fadeOut();
+            	$('#pop_box_hr_3').fadeOut();
                 $('#pop_box_mail_2').fadeOut();
                 return false;
             });
