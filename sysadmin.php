@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php 
+require "connect.php";
+             session_start();
+             if($_SESSION['admin']!='SA'){
+            header("Location:  index.php");
+          }
+            ?>
 <meta charset=utf-8 />
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
   <link rel="stylesheet" type="text/css" href="del/styles.css" />
@@ -109,13 +116,7 @@
 <title>System Administrator</title>
 </head>
 <body>
-<?php 
-require "connect.php";
-			   		 session_start();
-             if($_SESSION['admin']!='SA'){
-            header("Location:  index.php");
-          }
-            ?>
+
 	<div class="all_container">
 		<div class="left_side_bar" >
             		<div class="left_side_bar_top">

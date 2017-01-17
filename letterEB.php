@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php
+ require "connect.php";
+session_start();
+if($_SESSION['admin']!='MC'){
+header("Location:  index.php");
+} 
+?>
 <title>Letter EB</title>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
@@ -83,11 +90,6 @@
               </div>
                       <div class="middle_top_right">
                         <?php 
-                          require "connect.php";
-                          session_start();
-                          if($_SESSION['admin']!='MC'){
-                            header("Location:  index.php");
-                          }
                           echo"<a>".$_SESSION['username']."</a>";?><br>
 			                   <a href="logout.php">Log Out</a>
                         </div>

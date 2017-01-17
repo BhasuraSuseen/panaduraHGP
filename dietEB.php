@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php
+require "connect.php";
+session_start();
+if($_SESSION['admin']!='DC'){
+header("Location:  index.php");
+}
+?>
 <meta charset=utf-8 />
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
@@ -99,11 +106,7 @@
 			   <div class="middle_top_right">
 			   		
 				  <?php 
-                          require "connect.php";
-                          session_start();
-                          if($_SESSION['username']==''){
-                            header("Location:  index.php");
-                          }
+                          
                           echo"<a>".$_SESSION['username']."</a>";?><br>
 			                   <a href="logout.php">Log Out</a>
 

@@ -5,7 +5,7 @@
 <?php
 
 session_start();
-if($_SESSION['username']==''){
+if($_SESSION['admin']!='AO'){
 header("Location:  index.php");
 }
 ?>

@@ -1,8 +1,15 @@
 
 <!DOCTYPE html>
 <html>
-	<title>Director</title>
+
 <head>
+ <?php
+require "connect.php";
+session_start();
+if($_SESSION['admin']!='DIR'){
+header("Location:  index.php");
+?>
+  <title>Director</title>
 <meta charset=utf-8 />
 <link rel="stylesheet" type="text/css" href="styles/global.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,10 +91,7 @@
               </div>
                       <div class="middle_top_right">
                         <?php 
-                          require "connect.php";
-                          session_start();
-                          if($_SESSION['username']==''){
-                            header("Location:  index.php");
+
                           }
                           echo"<a>".$_SESSION['username']."</a>";?><br>
 			                   <a href="logout.php">Log Out</a>
