@@ -368,7 +368,7 @@ require "connect.php";
                     <input type="Date" name="fedate" placeholder="FE Date " style="width: 100%" required></td>
                             <td>Employment Commencement Date<br>
                                 <input type="Date" name="ecdate" style="width: 100%" required></td></tr>
-                        <tr> <td>Socond Grade Promotion Date<br>
+                        <tr> <td>Second Grade Promotion Date<br>
                     <input type="Date" name="sgpdate" style="width: 100%" ></td>
                             <td> First Grade Promotion Date<br>
                                 <input type="Date" name="fgpdate" style="width: 100%"></td></tr>
