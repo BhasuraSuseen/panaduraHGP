@@ -6,7 +6,7 @@
 <?php
 require "connect.php";
 session_start();
-if($_SESSION['admin']!='AB' AND $_SESSION['ebno']!='5'){
+if($_SESSION['admin']!='AB' AND $_SESSION['ebno']!=5){
 header("Location:  index.php");
 }
 ?>
