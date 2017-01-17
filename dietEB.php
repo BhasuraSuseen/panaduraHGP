@@ -8,7 +8,8 @@
   
 	<script type="text/javascript" src="attendence/jst.js"></script>
 	<script  src="http://d3js.org/d3.v3.min.js"></script>
-	<SCRIPT language=Javascript>
+	<!--validation of count-->
+	<SCRIPT language=Javascript>   
       <!--
       function isNumberKey(evt)
       {
@@ -159,7 +160,7 @@
             
             </div>
 		</div>
-	<div class="right_side_bar"> 
+	<div class="right_side_bar"> <!-- right side bar icons --> 
                <div class="right_side_bar_top">                   
           </div>
           <div class="right_side_bar_down">
