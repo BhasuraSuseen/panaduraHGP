@@ -42,13 +42,14 @@ $dd = $_POST['diabetics_patients'];
 $staff = $_POST['staff'];
 	
 		
-		
+	//Insert the data to counts table	
 	$sql1 = "INSERT INTO counts(Date,meal,C_S1,C_S2,C_S3,Patients,DD,Staff) VALUES('$date','$meal','$c_s1','$c_s2','$c_s3','$patients','$dd','$staff')";
+	//Update the data in counts table
 	$sql2= "Update counts SET Date='$date', meal='$meal', C_S1='$c_s1', C_S2='$c_s2', C_S3='$c_s3', Patients='$patients', DD='$dd', Staff='$staff' WHERE Date='$date3' AND meal='$meal' ";
 			
 	$result = mysqli_query($conn, "SELECT Date,meal FROM counts WHERE Date='$date3' AND meal ='$meal'");
 	$num_rows = mysqli_num_rows($result);
-
+	//check whether data are in the row or not
 	if ($num_rows == 0) {
 		if (mysqli_query($conn, $sql1)) {
 			//echo "New record created successfully";
@@ -716,506 +717,502 @@ $staff = $_POST['staff'];
 				
 	}				
 	?>
-<?php if($date4 == "Friday"){
-	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
- if($date == $date3 && $meal == "Breakfast"){?>
-			<table align="center" style="width: 60%">
-					<tr>
-                        <td align="left"><b>Item Name</b></td>
-                        <td align="left"><b>Amount</b></td>
-                    </tr>
-				 <?php while ($fb = mysqli_fetch_array($frib)):; 
-						$result = ($fb[1]*$c_s1) + ($fb[2]*$c_s2) + ($fb[3]*$c_s3) + ($fb[4]*$patients) + ($fb[5]*$dd) + ($fb[6]*$staff);
-				
-					if($fb[7] == "kg" || $fb[7] == "L"){
-								$result = $result/1000;
-							}else{
-								$result1 = round($result);
-								if($result1 == $result || $result1 > $result){
-									$result = $result1;
-								}else{
-									$result = $result1 + 1;
-								}
-							}
-							$sql1 = "INSERT INTO report(Item_id,fri_br) VALUES('$fb[8]','$result')";
-							$sql2= "Update report SET Item_id='$fb[8]', fri_br='$result' WHERE Item_id='$fb[8]'";
-							$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$fb[8]'");
-							$num_rows = mysqli_num_rows($result1);
+	<?php if($date4 == "Friday"){
+		echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
+		if($date == $date3 && $meal == "Breakfast"){?>
+		<table align="center" style="width: 60%">
+		<tr><td align="left"><b>Item Name</b></td>
+                <td align="left"><b>Amount</b></td> </tr>			
+                <?php while ($fb = mysqli_fetch_array($frib)):; 
+			$result = ($fb[1]*$c_s1) + ($fb[2]*$c_s2) + ($fb[3]*$c_s3) + ($fb[4]*$patients) + ($fb[5]*$dd) + ($fb[6]*$staff);
+			if($fb[7] == "kg" || $fb[7] == "L"){
+				$result = $result/1000;
+			}else{
+				$result1 = round($result);
+				if($result1 == $result || $result1 > $result){
+					$result = $result1;
+				}else{
+					$result = $result1 + 1;
+				}
+			}
+		$sql1 = "INSERT INTO report(Item_id,fri_br) VALUES('$fb[8]','$result')";
+		$sql2= "Update report SET Item_id='$fb[8]', fri_br='$result' WHERE Item_id='$fb[8]'";
+		$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$fb[8]'");
+		$num_rows = mysqli_num_rows($result1);
 
-							if ($num_rows == 0) {
-								if (mysqli_query($conn, $sql1)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-								}
-							}else{
-								if (mysqli_query($conn, $sql2)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-								}
-							}
-							$sql4 = "UPDATE report SET lastenter= 'Friday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br";
+		if ($num_rows == 0) {
+			if (mysqli_query($conn, $sql1)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+			}
+		}else{
+			if (mysqli_query($conn, $sql2)) {
+				//echo "New record updated successfully";
+			} else {
+				echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+			}
+		}
+		$sql4 = "UPDATE report SET lastenter= 'Friday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br";
 							
-							if (mysqli_query($conn, $sql4)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
-								}
+		if (mysqli_query($conn, $sql4)) {
+			//echo "New record created successfully";
+		} else {
+			echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+		}
 							
-							if($result != 0){
-							?> 
-					<tr>
-                            <td align="left"><?php echo $fb[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$fb[7]; ?></td></tr>
-				<?php }
+		if($result != 0){
+		?> 
+		<tr><td align="left"><?php echo $fb[0]; ?></td>
+                 <td align="left"><?php echo $result.' '.$fb[7]; ?></td></tr>
+		<?php }
 				
 		 endwhile;?>
-			</table>
- <?php }
-if($date == $date3 && $meal == "Lunch"){?>
-					<table align="center" style="width: 60%">
-					<tr>
-                        <td align="left"><b>Item Name</b></td>
-                        <td align="left"><b>Amount</b></td>
-                    </tr>
-					 <?php while ($fl = mysqli_fetch_array($fril)):; 
-						$result = ($fl[1]*$c_s1) + ($fl[2]*$c_s2) + ($fl[3]*$c_s3) + ($fl[4]*$patients) + ($fl[5]*$dd) + ($fl[6]*$staff);
+		</table>
+ 		<?php }
+	if($date == $date3 && $meal == "Lunch"){?>
+	<table align="center" style="width: 60%">
+					
+                       <tr><td align="left"><b>Item Name</b></td>
+                        <td align="left"><b>Amount</b></td></tr>
+                    
+			<?php while ($fl = mysqli_fetch_array($fril)):; 
+				$result = ($fl[1]*$c_s1) + ($fl[2]*$c_s2) + ($fl[3]*$c_s3) + ($fl[4]*$patients) + ($fl[5]*$dd) + ($fl[6]*$staff);
 						
-							if($fl[7] == "kg" || $fl[7] == "L"){
-								$result = $result/1000;
-							}else{
-								$result1 = round($result);
-								if($result1 == $result || $result1 > $result){
-									$result = $result1;
-								}else{
-									$result = $result1 + 1;
-								}
-							}
-							$sql1 = "INSERT INTO report(Item_id,fri_lu) VALUES('$fl[8]','$result')";
-							$sql2= "Update report SET Item_id='$fl[8]', fri_lu='$result' WHERE Item_id='$fl[8]'";
-							$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$fl[8]'");
-							$num_rows = mysqli_num_rows($result1);
+				if($fl[7] == "kg" || $fl[7] == "L"){
+					$result = $result/1000;
+				}else{
+					$result1 = round($result);
+					if($result1 == $result || $result1 > $result){
+						$result = $result1;
+					}else{
+						$result = $result1 + 1;
+					}
+				}
+			$sql1 = "INSERT INTO report(Item_id,fri_lu) VALUES('$fl[8]','$result')";
+			$sql2= "Update report SET Item_id='$fl[8]', fri_lu='$result' WHERE Item_id='$fl[8]'";
+			$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$fl[8]'");
+			$num_rows = mysqli_num_rows($result1);
 
-							if ($num_rows == 0) {
-								if (mysqli_query($conn, $sql1)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-								}
-							}else{
-								if (mysqli_query($conn, $sql2)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-								}
-							}
-							$sql4 = "UPDATE report SET lastenter= 'Friday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu";
+			if ($num_rows == 0) {
+				if (mysqli_query($conn, $sql1)) {
+					//echo "New record created successfully";
+				} else {
+					echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+				}
+			}else{
+				if (mysqli_query($conn, $sql2)) {
+					//echo "New record updated successfully";
+				} else {
+					echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+				}
+			}
+			$sql4 = "UPDATE report SET lastenter= 'Friday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu";
 							
-							if (mysqli_query($conn, $sql4)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
-								}
-							if($result != 0){
-							?> 
-							<tr>
-                            <td align="left"><?php echo $fl[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$fl[7]; ?></td></tr>
-						<?php }
-                     endwhile; ?>
-					 </table>
-<?php }
-if($date == $date3 && $meal == "Dinner"){?>
+			if (mysqli_query($conn, $sql4)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+			}
+			if($result != 0){
+			?> 
+							
+                           <tr><td align="left"><?php echo $fl[0]; ?></td>
+                           <td align="left"><?php echo $result.' '.$fl[7]; ?></td></tr>
+			<?php }
+                     	endwhile; ?>
+			</table>
+		<?php }
+		if($date == $date3 && $meal == "Dinner"){?>
 		<table align="center" style="width: 60%">
-					<tr>
-                        <td align="left"><b>Item Name</b></td>
-                        <td align="left"><b>Amount</b></td>
-                    </tr>
-		 <?php while ($fd = mysqli_fetch_array($frid)):; 
+					
+                        <tr><td align="left"><b>Item Name</b></td>
+                        <td align="left"><b>Amount</b></td> </tr>
+                   
+		 	<?php while ($fd = mysqli_fetch_array($frid)):; 
 				$result = ($fd[1]*$c_s1) + ($fd[2]*$c_s2) + ($fd[3]*$c_s3) + ($fd[4]*$patients) + ($fd[5]*$dd) + ($fd[6]*$staff);
 				
-					if($fd[7] == "kg" || $fd[7] == "L"){
-								$result = $result/1000;
-							}else{
-								$result1 = round($result);
-								if($result1 == $result || $result1 > $result){
-									$result = $result1;
-								}else{
-									$result = $result1 + 1;
-								}
-							}
-							$sql1 = "INSERT INTO report(Item_id,fri_di) VALUES('$fd[8]','$result')";
-							$sql2= "Update report SET Item_id='$fd[8]', fri_di='$result' WHERE Item_id='$fd[8]'";
-							$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$fd[8]'");
-							$num_rows = mysqli_num_rows($result1);
+				if($fd[7] == "kg" || $fd[7] == "L"){
+					$result = $result/1000;
+				}else{
+					$result1 = round($result);
+					if($result1 == $result || $result1 > $result){
+						$result = $result1;
+					}else{
+						$result = $result1 + 1;
+					}
+				}
+		$sql1 = "INSERT INTO report(Item_id,fri_di) VALUES('$fd[8]','$result')";
+		$sql2= "Update report SET Item_id='$fd[8]', fri_di='$result' WHERE Item_id='$fd[8]'";
+		$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$fd[8]'");
+		$num_rows = mysqli_num_rows($result1);
 
-							if ($num_rows == 0) {
-								if (mysqli_query($conn, $sql1)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-								}
-							}else{
-								if (mysqli_query($conn, $sql2)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-								}
-							}
-							$sql4 = "UPDATE report SET lastenter= 'Friday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_di";
+		if ($num_rows == 0) {
+			if (mysqli_query($conn, $sql1)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+			}
+		}else{
+			if (mysqli_query($conn, $sql2)) {
+				//echo "New record updated successfully";
+			} else {
+				echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+			}
+		}
+		$sql4 = "UPDATE report SET lastenter= 'Friday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_di";
 							
-							if (mysqli_query($conn, $sql4)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
-								}
-							if($result != 0){
-							?> 
-					<tr>
-                        <td align="left"><?php echo $fd[0]; ?></td>
-                        <td align="left"><?php echo $result.' '.$fd[7]; ?></td></tr>
-				<?php }
+		if (mysqli_query($conn, $sql4)) {
+			//echo "New record created successfully";
+		} else {
+			echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+		}
+		if($result != 0){
+		?> 
+					
+                 <tr><td align="left"><?php echo $fd[0]; ?></td>
+                 <td align="left"><?php echo $result.' '.$fd[7]; ?></td></tr>
+	<?php }
 				
 		 endwhile; ?>
-			</table>
- <?php }	 
+		</table>
+ 	<?php }	 
  		
 				
-}				
-?>
+	}				
+	?>
 
-<?php if($date4 == "Saturday"){
-	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
- if($date == $date3 && $meal == "Breakfast"){?>
-			<table align="center" style="width: 60%">
-					<tr>
-                        <td align="left"><b>Item Name</b></td>
-                        <td align="left"><b>Amount</b></td>
-                    </tr>
-				 <?php while ($sb = mysqli_fetch_array($satb)):; 
-						$result = ($sb[1]*$c_s1) + ($sb[2]*$c_s2) + ($sb[3]*$c_s3) + ($sb[4]*$patients) + ($sb[5]*$dd) + ($sb[6]*$staff);
-				
-					if($sb[7] == "kg" || $sb[7] == "L"){
-								$result = $result/1000;
-							}else{
-								$result1 = round($result);
-								if($result1 == $result || $result1 > $result){
-									$result = $result1;
-								}else{
-									$result = $result1 + 1;
-								}
-							}
-							$sql1 = "INSERT INTO report(Item_id,sat_br) VALUES('$sb[8]','$result')";
-							$sql2= "Update report SET Item_id='$sb[8]', sat_br='$result' WHERE Item_id='$sb[8]'";
-							$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sb[8]'");
-							$num_rows = mysqli_num_rows($result1);
-
-							if ($num_rows == 0) {
-								if (mysqli_query($conn, $sql1)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-								}
-							}else{
-								if (mysqli_query($conn, $sql2)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-								}
-							}
-							$sql4 = "UPDATE report SET lastenter= 'Saturday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di +sat_br";
-							
-							if (mysqli_query($conn, $sql4)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
-								}
-							
-							if($result != 0){
-							?> 
-					<tr>
-                            <td align="left"><?php echo $sb[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$sb[7]; ?></td></tr>
-				<?php }
-				
-		 endwhile;?>
-			</table>
- <?php }
-if($date == $date3 && $meal == "Lunch"){?>
-					<table align="center" style="width: 60%">
-					<tr>
-                        <td align="left"><b>Item Name</b></td>
-                        <td align="left"><b>Amount</b></td>
-                    </tr>
-					 <?php while ($sl = mysqli_fetch_array($satl)):; 
-						$result = ($sl[1]*$c_s1) + ($sl[2]*$c_s2) + ($sl[3]*$c_s3) + ($sl[4]*$patients) + ($sl[5]*$dd) + ($sl[6]*$staff);
-						
-							if($sl[7] == "kg" || $sl[7] == "L"){
-								$result = $result/1000;
-							}else{
-								$result1 = round($result);
-								if($result1 == $result || $result1 > $result){
-									$result = $result1;
-								}else{
-									$result = $result1 + 1;
-								}
-							}
-							$sql1 = "INSERT INTO report(Item_id,sat_lu) VALUES('$sl[8]','$result')";
-							$sql2= "Update report SET Item_id='$sl[8]', sat_lu='$result' WHERE Item_id='$sl[8]'";
-							$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sl[8]'");
-							$num_rows = mysqli_num_rows($result1);
-
-							if ($num_rows == 0) {
-								if (mysqli_query($conn, $sql1)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-								}
-							}else{
-								if (mysqli_query($conn, $sql2)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-								}
-							}
-							$sql4 = "UPDATE report SET lastenter= 'Saturday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu ";
-							
-							if (mysqli_query($conn, $sql4)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
-								}
-							if($result != 0){
-							?> 
-							<tr>
-                            <td align="left"><?php echo $sl[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$sl[7]; ?></td></tr>
-						<?php }
-                     endwhile; ?>
-					 </table>
-<?php }
-if($date == $date3 && $meal == "Dinner"){?>
+	<?php if($date4 == "Saturday"){
+		echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
+ 		if($date == $date3 && $meal == "Breakfast"){?>
 		<table align="center" style="width: 60%">
-					<tr>
-                        <td align="left"><b>Item Name</b></td>
-                        <td align="left"><b>Amount</b></td>
-                    </tr>
-		 <?php while ($sd = mysqli_fetch_array($satd)):; 
-				$result = ($sd[1]*$c_s1) + ($sd[2]*$c_s2) + ($sd[3]*$c_s3) + ($sd[4]*$patients) + ($sd[5]*$dd) + ($sd[6]*$staff);
+					
+                        <tr><td align="left"><b>Item Name</b></td>
+                        <td align="left"><b>Amount</b></td></tr>
+                    
+			<?php while ($sb = mysqli_fetch_array($satb)):; 
+				$result = ($sb[1]*$c_s1) + ($sb[2]*$c_s2) + ($sb[3]*$c_s3) + ($sb[4]*$patients) + ($sb[5]*$dd) + ($sb[6]*$staff);
 				
-					if($sd[7] == "kg" || $sd[7] == "L"){
-								$result = $result/1000;
-							}else{
-								$result1 = round($result);
-								if($result1 == $result || $result1 > $result){
-									$result = $result1;
-								}else{
-									$result = $result1 + 1;
-								}
-							}
-							$sql1 = "INSERT INTO report(Item_id,sat_di) VALUES('$sd[8]','$result')";
-							$sql2= "Update report SET Item_id='$sd[8]', sat_di='$result' WHERE Item_id='$sd[8]'";
-							$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sd[8]'");
-							$num_rows = mysqli_num_rows($result1);
+				if($sb[7] == "kg" || $sb[7] == "L"){
+					$result = $result/1000;
+				}else{
+					$result1 = round($result);
+					if($result1 == $result || $result1 > $result){
+						$result = $result1;
+					}else{
+						$result = $result1 + 1;
+					}
+				}
+			$sql1 = "INSERT INTO report(Item_id,sat_br) VALUES('$sb[8]','$result')";
+			$sql2= "Update report SET Item_id='$sb[8]', sat_br='$result' WHERE Item_id='$sb[8]'";
+			$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sb[8]'");
+			$num_rows = mysqli_num_rows($result1);
 
-							if ($num_rows == 0) {
-								if (mysqli_query($conn, $sql1)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-								}
-							}else{
-								if (mysqli_query($conn, $sql2)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-								}
-							}
-							$sql4 = "UPDATE report SET lastenter= 'Saturday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di";
+			if ($num_rows == 0) {
+				if (mysqli_query($conn, $sql1)) {
+					//echo "New record created successfully";
+				} else {
+					echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+				}
+			}else{
+				if (mysqli_query($conn, $sql2)) {
+					//echo "New record created successfully";
+				} else {
+					echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+				}
+			}
+			$sql4 = "UPDATE report SET lastenter= 'Saturday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di +sat_br";
 							
-							if (mysqli_query($conn, $sql4)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
-								}
-							if($result != 0){
-							?> 
-					<tr>
-                        <td align="left"><?php echo $sd[0]; ?></td>
-                        <td align="left"><?php echo $result.' '.$sd[7]; ?></td></tr>
-				<?php }
+			if (mysqli_query($conn, $sql4)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+			}
+							
+			if($result != 0){
+			?> 
+					
+                            <tr><td align="left"><?php echo $sb[0]; ?></td>
+                            <td align="left"><?php echo $result.' '.$sb[7]; ?></td></tr>
+			<?php }
+				
+		 	endwhile;?>
+			</table>
+ 		<?php }
+		if($date == $date3 && $meal == "Lunch"){?>
+		<table align="center" style="width: 60%">
+					
+                 <tr><td align="left"><b>Item Name</b></td>
+                 <td align="left"><b>Amount</b></td></tr>
+                    
+		<?php while ($sl = mysqli_fetch_array($satl)):; 
+			$result = ($sl[1]*$c_s1) + ($sl[2]*$c_s2) + ($sl[3]*$c_s3) + ($sl[4]*$patients) + ($sl[5]*$dd) + ($sl[6]*$staff);
+						
+			if($sl[7] == "kg" || $sl[7] == "L"){
+				$result = $result/1000;
+			}else{
+				$result1 = round($result);
+				if($result1 == $result || $result1 > $result){
+					$result = $result1;
+				}else{
+					$result = $result1 + 1;
+				}
+			}
+		$sql1 = "INSERT INTO report(Item_id,sat_lu) VALUES('$sl[8]','$result')";
+		$sql2= "Update report SET Item_id='$sl[8]', sat_lu='$result' WHERE Item_id='$sl[8]'";
+		$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sl[8]'");
+		$num_rows = mysqli_num_rows($result1);
+
+		if ($num_rows == 0) {
+			if (mysqli_query($conn, $sql1)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+			}
+		}else{
+			if (mysqli_query($conn, $sql2)) {
+				//echo "New record updated successfully";
+			} else {
+				echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+			}
+		}
+		$sql4 = "UPDATE report SET lastenter= 'Saturday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu ";
+							
+		if (mysqli_query($conn, $sql4)) {
+			//echo "New record created successfully";
+		} else {
+			echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+		}
+		if($result != 0){
+		?> 
+							
+                 <tr><td align="left"><?php echo $sl[0]; ?></td>
+                 <td align="left"><?php echo $result.' '.$sl[7]; ?></td></tr>
+		<?php }
+                 endwhile; ?>
+		</table>
+		<?php }
+		if($date == $date3 && $meal == "Dinner"){?>
+		<table align="center" style="width: 60%">
+					
+                        <tr><td align="left"><b>Item Name</b></td>
+                        <td align="left"><b>Amount</b></td> </tr>
+                   
+		 <?php while ($sd = mysqli_fetch_array($satd)):; 
+			$result = ($sd[1]*$c_s1) + ($sd[2]*$c_s2) + ($sd[3]*$c_s3) + ($sd[4]*$patients) + ($sd[5]*$dd) + ($sd[6]*$staff);
+				
+			if($sd[7] == "kg" || $sd[7] == "L"){
+				$result = $result/1000;
+			}else{
+				$result1 = round($result);
+				if($result1 == $result || $result1 > $result){
+					$result = $result1;
+				}else{
+					$result = $result1 + 1;
+				}
+			}
+		$sql1 = "INSERT INTO report(Item_id,sat_di) VALUES('$sd[8]','$result')";
+		$sql2= "Update report SET Item_id='$sd[8]', sat_di='$result' WHERE Item_id='$sd[8]'";
+		$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sd[8]'");
+		$num_rows = mysqli_num_rows($result1);
+
+		if ($num_rows == 0) {
+			if (mysqli_query($conn, $sql1)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+			}
+		}else{
+			if (mysqli_query($conn, $sql2)) {
+				//echo "New record updated successfully";
+			} else {
+				echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+			}
+		}
+		$sql4 = "UPDATE report SET lastenter= 'Saturday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di";
+							
+		if (mysqli_query($conn, $sql4)) {
+			//echo "New record created successfully";
+		} else {
+			echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+		}
+		if($result != 0){
+		?> 
+		<tr><td align="left"><?php echo $sd[0]; ?></td>
+                <td align="left"><?php echo $result.' '.$sd[7]; ?></td></tr>			
+                        
+		<?php }
 				
 		 endwhile; ?>
-			</table>
- <?php }	 
+		</table>
+ 		<?php }	 
  		
 				
-}				
-?>
+	}				
+	?>
 
-<?php if($date4 == "Sunday"){
-	echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
- if($date == $date3 && $meal == "Breakfast"){?>
+	<?php if($date4 == "Sunday"){
+		echo '<b>'.$date3.' '.$meal.' '."Menu List".'</b>'.'<br>'.'<br>';
+ 		if($date == $date3 && $meal == "Breakfast"){?>
 			<table align="center" style="width: 60%">
-					<tr>
-                        <td align="left"><b>Item Name</b></td>
-                        <td align="left"><b>Amount</b></td>
-                    </tr>
-				 <?php while ($sb = mysqli_fetch_array($sunb)):; 
-						$result = ($sb[1]*$c_s1) + ($sb[2]*$c_s2) + ($sb[3]*$c_s3) + ($sb[4]*$patients) + ($sb[5]*$dd) + ($sb[6]*$staff);
+					
+                        <tr><td align="left"><b>Item Name</b></td>
+                        <td align="left"><b>Amount</b></td></tr>
+                    
+			<?php while ($sb = mysqli_fetch_array($sunb)):; 
+				$result = ($sb[1]*$c_s1) + ($sb[2]*$c_s2) + ($sb[3]*$c_s3) + ($sb[4]*$patients) + ($sb[5]*$dd) + ($sb[6]*$staff);
 				
-					if($sb[7] == "kg" || $sb[7] == "L"){
-								$result = $result/1000;
-							}else{
-								$result1 = round($result);
-								if($result1 == $result || $result1 > $result){
-									$result = $result1;
-								}else{
-									$result = $result1 + 1;
-								}
-							}
-							$sql1 = "INSERT INTO report(Item_id,sun_br) VALUES('$sb[8]','$result')";
-							$sql2= "Update report SET Item_id='$sb[8]', sun_br='$result' WHERE Item_id='$sb[8]'";
-							$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sb[8]'");
-							$num_rows = mysqli_num_rows($result1);
+				if($sb[7] == "kg" || $sb[7] == "L"){
+					$result = $result/1000;
+				}else{
+					$result1 = round($result);
+					if($result1 == $result || $result1 > $result){
+						$result = $result1;
+					}else{
+						$result = $result1 + 1;
+					}
+				}
+			$sql1 = "INSERT INTO report(Item_id,sun_br) VALUES('$sb[8]','$result')";
+			$sql2= "Update report SET Item_id='$sb[8]', sun_br='$result' WHERE Item_id='$sb[8]'";
+			$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sb[8]'");
+			$num_rows = mysqli_num_rows($result1);
 
-							if ($num_rows == 0) {
-								if (mysqli_query($conn, $sql1)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-								}
-							}else{
-								if (mysqli_query($conn, $sql2)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-								}
-							}
-							$sql4 = "UPDATE report SET lastenter= 'Sunday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di +sat_br + sat_lu + sat_di+ sun_br";
+			if ($num_rows == 0) {
+				if (mysqli_query($conn, $sql1)) {
+					//echo "New record created successfully";
+				} else {
+					echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+				}
+			}else{
+				if (mysqli_query($conn, $sql2)) {
+					//echo "New record created successfully";
+				} else {
+					echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+				}
+			}
+		$sql4 = "UPDATE report SET lastenter= 'Sunday Breakfast', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di +sat_br + sat_lu + sat_di+ sun_br";
 							
-							if (mysqli_query($conn, $sql4)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
-								}
+		if (mysqli_query($conn, $sql4)) {
+			//echo "New record created successfully";
+		} else {
+			echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+		}
 							
-							if($result != 0){
-							?> 
-					<tr>
-                            <td align="left"><?php echo $sb[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$sb[7]; ?></td></tr>
-				<?php }
+		if($result != 0){
+		?> 
+					
+                <tr><td align="left"><?php echo $sb[0]; ?></td>
+                <td align="left"><?php echo $result.' '.$sb[7]; ?></td></tr>
+		<?php }
 				
 		 endwhile;?>
-			</table>
- <?php }
-if($date == $date3 && $meal == "Lunch"){?>
-					<table align="center" style="width: 60%">
-					<tr>
-                        <td align="left"><b>Item Name</b></td>
-                        <td align="left"><b>Amount</b></td>
-                    </tr>
-					 <?php while ($sl = mysqli_fetch_array($sunl)):; 
-						$result = ($sl[1]*$c_s1) + ($sl[2]*$c_s2) + ($sl[3]*$c_s3) + ($sl[4]*$patients) + ($sl[5]*$dd) + ($sl[6]*$staff);
+		</table>
+ 		<?php }
+		if($date == $date3 && $meal == "Lunch"){?>
+		<table align="center" style="width: 60%">
+					
+                        <tr><td align="left"><b>Item Name</b></td>
+                        <td align="left"><b>Amount</b></td></tr>
+                    
+			<?php while ($sl = mysqli_fetch_array($sunl)):; 
+				$result = ($sl[1]*$c_s1) + ($sl[2]*$c_s2) + ($sl[3]*$c_s3) + ($sl[4]*$patients) + ($sl[5]*$dd) + ($sl[6]*$staff);
 						
-							if($sl[7] == "kg" || $sl[7] == "L"){
-								$result = $result/1000;
-							}else{
-								$result1 = round($result);
-								if($result1 == $result || $result1 > $result){
-									$result = $result1;
-								}else{
-									$result = $result1 + 1;
-								}
-							}
-							$sql1 = "INSERT INTO report(Item_id,sun_lu) VALUES('$sl[8]','$result')";
-							$sql2= "Update report SET Item_id='$sl[8]', sun_lu='$result' WHERE Item_id='$sl[8]'";
-							$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sl[8]'");
-							$num_rows = mysqli_num_rows($result1);
+				if($sl[7] == "kg" || $sl[7] == "L"){
+					$result = $result/1000;
+				}else{
+					$result1 = round($result);
+					if($result1 == $result || $result1 > $result){
+						$result = $result1;
+					}else{
+						$result = $result1 + 1;
+					}
+				}
+			$sql1 = "INSERT INTO report(Item_id,sun_lu) VALUES('$sl[8]','$result')";
+			$sql2= "Update report SET Item_id='$sl[8]', sun_lu='$result' WHERE Item_id='$sl[8]'";
+			$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sl[8]'");
+			$num_rows = mysqli_num_rows($result1);
 
-							if ($num_rows == 0) {
-								if (mysqli_query($conn, $sql1)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-								}
-							}else{
-								if (mysqli_query($conn, $sql2)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-								}
-							}
-							$sql4 = "UPDATE report SET lastenter= 'Sunday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di + sun_br + sun_lu";
+			if ($num_rows == 0) {
+				if (mysqli_query($conn, $sql1)) {
+					//echo "New record created successfully";
+				} else {
+					echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+				}
+			}else{
+				if (mysqli_query($conn, $sql2)) {
+					//echo "New record created successfully";
+				} else {
+					echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+				}
+			}
+			$sql4 = "UPDATE report SET lastenter= 'Sunday Lunch', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di + sun_br + sun_lu";
 							
-							if (mysqli_query($conn, $sql4)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
-								}
-							if($result != 0){
-							?> 
-							<tr>
-                            <td align="left"><?php echo $sl[0]; ?></td>
-                            <td align="left"><?php echo $result.' '.$sl[7]; ?></td></tr>
-						<?php }
-                     endwhile; ?>
-					 </table>
-<?php }
-if($date == $date3 && $meal == "Dinner"){?>
+			if (mysqli_query($conn, $sql4)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+			}
+			if($result != 0){
+			?> 
+							
+                          <tr><td align="left"><?php echo $sl[0]; ?></td>
+                           <td align="left"><?php echo $result.' '.$sl[7]; ?></td></tr>
+			<?php }
+                     	endwhile; ?>
+			</table>
+			<?php }
+		if($date == $date3 && $meal == "Dinner"){?>
 		<table align="center" style="width: 60%">
 					<tr>
                         <td align="left"><b>Item Name</b></td>
                         <td align="left"><b>Amount</b></td>
                     </tr>
 		 <?php while ($sd = mysqli_fetch_array($sund)):; 
-				$result = ($sd[1]*$c_s1) + ($sd[2]*$c_s2) + ($sd[3]*$c_s3) + ($sd[4]*$patients) + ($sd[5]*$dd) + ($sd[6]*$staff);
+			$result = ($sd[1]*$c_s1) + ($sd[2]*$c_s2) + ($sd[3]*$c_s3) + ($sd[4]*$patients) + ($sd[5]*$dd) + ($sd[6]*$staff);
 				
-					if($sd[7] == "kg" || $sd[7] == "L"){
-								$result = $result/1000;
-							}else{
-								$result1 = round($result);
-								if($result1 == $result || $result1 > $result){
-									$result = $result1;
-								}else{
-									$result = $result1 + 1;
-								}
-							}
-							$sql1 = "INSERT INTO report(Item_id,sun_di) VALUES('$sd[8]','$result')";
-							$sql2= "Update report SET Item_id='$sd[8]', sun_di='$result' WHERE Item_id='$sd[8]'";
-							$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sd[8]'");
-							$num_rows = mysqli_num_rows($result1);
+			if($sd[7] == "kg" || $sd[7] == "L"){
+				$result = $result/1000;
+			}else{
+				$result1 = round($result);
+				if($result1 == $result || $result1 > $result){
+					$result = $result1;
+				}else{
+					$result = $result1 + 1;
+				}
+			}
+		$sql1 = "INSERT INTO report(Item_id,sun_di) VALUES('$sd[8]','$result')";
+		$sql2= "Update report SET Item_id='$sd[8]', sun_di='$result' WHERE Item_id='$sd[8]'";
+		$result1 = mysqli_query($conn, "SELECT Item_id FROM report WHERE Item_id='$sd[8]'");
+		$num_rows = mysqli_num_rows($result1);
 
-							if ($num_rows == 0) {
-								if (mysqli_query($conn, $sql1)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-								}
-							}else{
-								if (mysqli_query($conn, $sql2)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-								}
-							}
-							$sql4 = "UPDATE report SET lastenter= 'Sunday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di + sun_br + sun_lu + sun_di";
+		if ($num_rows == 0) {
+			if (mysqli_query($conn, $sql1)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+			}
+		}else{
+			if (mysqli_query($conn, $sql2)) {
+				//echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+			}
+		}
+		$sql4 = "UPDATE report SET lastenter= 'Sunday Dinner', total = mon_br + mon_lu + mon_di + tue_br + tue_lu + tue_di + wed_br + wed_lu + wed_di + thu_br + thu_lu + thu_di + fri_br + fri_lu + fri_di + sat_br + sat_lu + sat_di + sun_br + sun_lu + sun_di";
 							
-							if (mysqli_query($conn, $sql4)) {
-									//echo "New record created successfully";
-								} else {
-									echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
-								}
-							if($result != 0){
-							?> 
-					<tr>
-                        <td align="left"><?php echo $sd[0]; ?></td>
+		if (mysqli_query($conn, $sql4)) {
+			//echo "New record created successfully";
+		} else {
+			echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+		}
+		if($result != 0){
+		?> 
+					
+                        <tr><td align="left"><?php echo $sd[0]; ?></td>
                         <td align="left"><?php echo $result.' '.$sd[7]; ?></td></tr>
-				<?php }
+			<?php }
 				
-		 endwhile; ?>
+		 	endwhile; ?>
 			</table>
 
 			
