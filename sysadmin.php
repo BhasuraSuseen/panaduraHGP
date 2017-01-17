@@ -112,7 +112,7 @@
 <?php 
 require "connect.php";
 			   		 session_start();
-             if($_SESSION['username']==''){
+             if($_SESSION['admin']!='SA'){
             header("Location:  index.php");
           }
             ?>
