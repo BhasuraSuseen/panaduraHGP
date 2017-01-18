@@ -384,7 +384,7 @@ header("Location:  index.php");
                                        
                     <input type="submit" value="Save" name="enter"> <!--button creation-->
                 </form>
-   <iframe class="iframe" name="iframe"  height="3%" width="70%"></iframe>
+   
              <?php
 
 
