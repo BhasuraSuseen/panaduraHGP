@@ -1,6 +1,6 @@
 $(document).ready(function(){
  
-
+  /** Search box ajax functions for priority 2 level interfacess**/
   $("#search-box").keyup(function(){
     $.ajax({
     type: "POST",
