@@ -1,8 +1,6 @@
 var obj;
 
-function abc(a){
-alet(a);
-}
+//function to check the browser
 
 function checkBrowser() {
     if (window.XMLHttpRequest) {
@@ -11,6 +9,7 @@ function checkBrowser() {
         obj = new ActiveXobject("Microfoft.ActiveXobject");
     }
 }
+//functonalities to get values to display in attendence summery
 function loadParadata(day) {
     checkBrowser();
     obj.onreadystatechange = function() {
@@ -121,18 +120,16 @@ function loadMinordata(day) {
 
 
 }
-
+//functonality to save attendence
 function saveAttends(name, date, attend) {
    
-   
     try {
- //alert("Attendence Recorded!");
-        checkBrowser();
-        
-        
+
+        checkBrowser();        
         obj.onreadystatechange = function() {
 
         };
+        //set target file and send data to target file
         obj.open("POST", "./attendence/saveattends.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         obj.send("nic=" + name + "&date=" + date + "&attend=" + attend);
@@ -151,12 +148,9 @@ function searchAttends(day,id) {
         if (obj.readyState === 4 && obj.status === 200) {
 
             var text = obj.responseText;
-  
-                   
-//            alert(obj.responseText);
+  //            alert(obj.responseText);
             document.getElementById('st6').innerHTML = text;
           
-
         }
     };
     obj.open("POST", "./attendence/search.php", true);
@@ -166,10 +160,8 @@ function searchAttends(day,id) {
 
 }
 
-
-  
-
-    function saveLeave(nic, lvType,des,rqtype ) {
+//functionalities to save leave records
+   function saveLeave(nic, lvType,des,rqtype ) {
         try {
 
             checkBrowser();
