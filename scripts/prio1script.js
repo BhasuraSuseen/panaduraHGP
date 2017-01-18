@@ -28,7 +28,7 @@ $(document).ready(function(){
  
       return false;
   });
-
+// Search box ajax functions
   $("#search-box").keyup(function(){
     $.ajax({
     type: "POST",
@@ -47,7 +47,7 @@ $(document).ready(function(){
   $("#suggesstion-box").click(function(){
     $.ajax({
     type: "POST",
-    url: "readCountry.php",
+    url: "readPrio1.php",
     data:'keyword='+$(this).val(),
     beforeSend: function(){
       
@@ -57,11 +57,11 @@ $(document).ready(function(){
     }
     });
   });
-  
+  //these ajax post messeges will get data from database. while typing in the search boxess
   $("#search-box1").keyup(function(){
     $.ajax({
     type: "POST",
-    url: "readCountry.php",
+    url: "readPrio1.php",
     data:'keyword1='+$(this).val(),
     beforeSend: function(){
       $("#search-box1").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
@@ -76,7 +76,7 @@ $(document).ready(function(){
     $("#search-box2").keyup(function(){
     $.ajax({
     type: "POST",
-    url: "readCountry.php",
+    url: "readPrio1.php",
     data:'keyword2='+$(this).val(),
     beforeSend: function(){
       $("#search-box2").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
@@ -89,6 +89,7 @@ $(document).ready(function(){
     });
   });
 });
+//Graph genertion, letter data retrive function calls 
 function selectletterid(val) {
 $("#search-box").val(val);
 $("#suggesstion-box").hide();
@@ -116,6 +117,8 @@ document.getElementById("search-box").value="";
 document.getElementById("search-box1").value="";
 document.getElementById("search-box2").value="";
 }
+
+//function for dynamic graph generation, dynamic data are passed through this function, then the svg graph will be generated 
 function func1(data){
 $.ajax({
     type: "POST",
@@ -130,6 +133,7 @@ $.ajax({
   });
  
 }
+//function for letter deatail retriving 
 function func2(data){
 $.ajax({
     type: "POST",

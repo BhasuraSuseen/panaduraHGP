@@ -33,11 +33,12 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
 
 
 		if($type == "c_s1") {?>
-			<table style="width: 80%"><tr><td style="width:50%">
+		<!--create a table-->
+		<table style="width: 80%"><tr><td style="width:50%">
             
-            <table style="width: 100%">
+            	<table style="width: 100%">
                 <tr><td style="background-color: white">
-
+			<!--create an another table in a table-->
                         <table style="background-color: #CFD8DC;width: 100%" >
                             <tr><td align="left"><b>Children S1</b></td></tr></table>
                         
@@ -97,8 +98,8 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
 	  	<?php }else if($type == "c_s2"){ ?>
 		 	<table style="width: 80%"><tr><td style="width:50%">
             
-            <table style="width: 100%">
-                <tr><td style="background-color: white">
+            		<table style="width: 100%">
+                	<tr><td style="background-color: white">
 
                         <table style="background-color: #CFD8DC;width: 100%" >
                             <tr><td align="left"><b>Children S2</b></td></tr></table>

@@ -164,6 +164,7 @@ mysqli_close($conn);
     <script id = "scriptid1"src="http://d3js.org/d3.v3.min.js"></script>
 
     <script id = "scriptid2">
+    /* svg dynamic graph script using D3 (priority 2 graphs)*/
       
       var width = 800;
       var height = 600;
@@ -187,7 +188,7 @@ mysqli_close($conn);
                   nodes[6].value = <?php echo $eb77 ?>;
                   nodes[7].value = <?php echo $eb88 ?>;
                   
-      
+      /* Propotion calculation allocation*/
       var current_location = "<?php echo $current_location ?>";
                  
       var count = 0;
@@ -263,6 +264,7 @@ mysqli_close($conn);
               .outerRadius(width * 0.038)
               .startAngle(0)
               .endAngle(2 * Math.PI);
+    /* Graph drawing layer by layer*/
     var arcs1 = canvas.selectAll("g.a")
           .data(nodes)
           .enter()

@@ -1,6 +1,6 @@
 
 <?php
-
+            // letter detail retriving
             
              if(!empty($_POST["keyword"])){
 
@@ -145,7 +145,7 @@
             
             }
             echo"</table>";
-
+            // letter Reply detail detail retriving
             echo "<br><br><b>REPLY DETAILS</b><br>";
            echo"<table>";
             $letreply=mysqli_query($conn,"SELECT * FROM letter_rep WHERE letter_id='$letid'");

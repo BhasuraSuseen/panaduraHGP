@@ -1,7 +1,7 @@
 
 <?php
 
-            
+            // letter detail retriving
              if(!empty($_POST["keyword"])){
 
               $letid=$_POST["keyword"];
@@ -45,7 +45,7 @@
              $LC_to_MS = "";
              $MS_to_AO = "";
              $AO_to_LC = "";
-
+             // flow details
              if(is_null($array['mcms'])){
               echo"<tr>
                       <th><b>Letter Clerk to Medical Superintendent Date </b></th>
@@ -148,7 +148,7 @@
             
             }
             echo"</table>";
-
+            // reply letter detail retriving
             echo "<br><br><b>REPLY DETAILS</b><br>";
            echo"<table>";
             $letreply=mysqli_query($conn,"SELECT * FROM letter_rep WHERE letter_id='$letid'");

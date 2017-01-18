@@ -1,6 +1,6 @@
 $(document).ready(function(){
  
-
+  // Search box ajax functions for priority 2 level interfacess
   $("#search-box").keyup(function(){
     $.ajax({
     type: "POST",
@@ -88,6 +88,7 @@ document.getElementById("search-box").value="";
 document.getElementById("search-box1").value="";
 document.getElementById("search-box2").value="";
 }
+// function for Dynamic graph creation
 function func1(data){
 $.ajax({
     type: "POST",
@@ -104,6 +105,7 @@ $.ajax({
   });
  
 }
+// function for Dynamic Letter Data retrive
 function func2(data){
 $.ajax({
     type: "POST",
