@@ -499,25 +499,25 @@ header("Location:  index.php");
                         catch (err) {
                         }
                     }
-   function report(day, type) {
-                        try {
+   //function report(day, type) {
+                        //try {
 //                            alert(day);
 //                            alert(type);
-                            checkBrowser();
-                            obj.onreadystatechange = function () {
+                            //checkBrowser();
+                            //obj.onreadystatechange = function () {
                             //alert(obj.responseText);
-                                if (obj.readyState === 4 && obj.status === 200) {
-                                    var text1 = obj.responseText;
-                                    document.getElementById('lbpop1').innerHTML = text1;
-                                }
-                            };
-                            obj.open("POST", "report.php", true);
-                            obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                            obj.send("day=" + day + "&type=" + type);
-                        }
-                        catch (err) {
-                        }
-                    }
+                               // if (obj.readyState === 4 && obj.status === 200) {
+                                    //var text1 = obj.responseText;
+                                    //document.getElementById('lbpop1').innerHTML = text1;
+                                //}
+                            //};
+                            //obj.open("POST", "report.php", true);
+                            //obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                            //obj.send("day=" + day + "&type=" + type);
+                       // }
+                        //catch (err) {
+                        //}
+                   // }
                 </script>
   <script type="text/javascript">
   function validateForm(){
