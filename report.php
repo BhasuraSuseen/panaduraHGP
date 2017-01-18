@@ -16,7 +16,7 @@ Consumption of food items:<br>
 <center>
 	<table align="center" style="background-color: #ECEFF1;width: 50%">
 		<tr>
-			<td align=left><b>Item ID</b></td>
+			<td align=left><b>Item id</b></td>
 			<td align=left><b>Item Name</b></td>
                         <td align=right><b>Amount</b><br></td>
 		</tr><br>
