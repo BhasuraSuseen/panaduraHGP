@@ -56,7 +56,8 @@ FROM employee
                                                       Where homs1.attend.employee_nic = '$row[0]' and date='$yearmon'");
                     ?>
                     <?php while ($row2 = mysqli_fetch_array($res2)):; ?>
-                        <?php if ($row['E_type'] == "eb") { ?>
+                         <?php if ($row2[0] == 0 ) { ?> 
+                        <?php if ($row['E_type'] == "eb" ) { ?>
                             <td><?php echo $row2[0]; ?></td>
                             <td>
                                 <?php
@@ -70,6 +71,7 @@ FROM employee
                                 ?>
                             </td>
                         <?php } ?>
+               <?php } ?>
                     <?php endwhile; ?>
 
 
