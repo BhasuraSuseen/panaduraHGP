@@ -331,7 +331,7 @@ header("Location:  index.php");
   
 <div style="width: 100%; background-color: #2980b9;"><a style=" font-size: 16px; color: #fff; padding: 10px;"> RECORD EMPLOYEE DETAILS</a></div>
 		<div style="width:100%;background: #fff; padding: 10px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">  
-                 <form action="sysadmin.php" method="post" enctype="multipart/form-data" target="iframe" > 
+                 <form action="sysadmin.php" method="post" enctype="multipart/form-data" > 
                
 
                     <table style="width: 90%"><tr>
