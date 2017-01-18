@@ -68,6 +68,7 @@
 <script>
 
     var obj;
+ //create a fuction to check the browser
     function checkBrowser() {
         if (window.XMLHttpRequest) {
             obj = new XMLHttpRequest();
@@ -75,6 +76,7 @@
             obj = new ActiveXobject("Microfoft.ActiveXobject");
         }
     }
+ //function to get the ID and by that fill the form according to Id enetred
     function get(id) {
         checkBrowser();
         obj.onreadystatechange = function() {
@@ -82,15 +84,11 @@
 
             
           if (obj.readyState === 4 && obj.status === 200) {
-
+//assigning a variable to response text
                 var text1 = obj.responseText;
-                //alert(text1);
-//                
-//                if(text1 == ""){
-//                    alert("Check thID!");
-//                }else{
+                //get the response text as an array
                 var edd =JSON.parse(text1);
-                //alert(edd.etype);
+               //set the array elemnts to forms 
 
                 document.getElementById('nic').value =edd.nic;
                 document.getElementById('fname').value = edd.fname;
@@ -113,6 +111,7 @@
 
             }
         };
+     //set the target file and send data to that target file
         obj.open("POST", "./hrget.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         obj.send("nic=" + id);
