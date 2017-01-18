@@ -1,7 +1,7 @@
 
 
 <?php
-
+// Search by letter id, current users letters only
 require_once "connect.php";
 session_start();
 if(!empty($_POST["keyword"])) {
@@ -20,6 +20,7 @@ if(!empty($_POST["keyword"])) {
 		<?php 
 	}
 }
+//Search by letter subject, current users letters only
 
 require_once "connect.php";
 if(!empty($_POST["keyword1"])) {
@@ -38,7 +39,7 @@ if(!empty($_POST["keyword1"])) {
 		<?php 
 	}
 }
-
+//Search by letter Address, current users letters only
 if(!empty($_POST["keyword2"])) {
 	$p1letters=mysqli_query($conn,"SELECT * FROM letter WHERE mceb IS NOT NULL AND eb='" . $_SESSION["ebno"] . "' AND address LIKE '%" . $_POST["keyword2"] . "%'");
 	if(!empty($p1letters)){

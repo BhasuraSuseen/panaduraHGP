@@ -28,7 +28,7 @@ $(document).ready(function(){
  
       return false;
   });
-/* Search box ajax functions*/
+// Search box ajax functions
   $("#search-box").keyup(function(){
     $.ajax({
     type: "POST",
@@ -57,7 +57,7 @@ $(document).ready(function(){
     }
     });
   });
-  /* these ajax post messeges will get data from database. while typing in the search boxess*/
+  //these ajax post messeges will get data from database. while typing in the search boxess
   $("#search-box1").keyup(function(){
     $.ajax({
     type: "POST",
@@ -89,7 +89,7 @@ $(document).ready(function(){
     });
   });
 });
-/* Graph genertion, letter data retrive function calls */
+//Graph genertion, letter data retrive function calls 
 function selectletterid(val) {
 $("#search-box").val(val);
 $("#suggesstion-box").hide();
@@ -118,7 +118,7 @@ document.getElementById("search-box1").value="";
 document.getElementById("search-box2").value="";
 }
 
-/* function for dynamic graph generation, dynamic data are passed through this function, then the svg graph will be generated */
+//function for dynamic graph generation, dynamic data are passed through this function, then the svg graph will be generated 
 function func1(data){
 $.ajax({
     type: "POST",
@@ -133,7 +133,7 @@ $.ajax({
   });
  
 }
-/* function for letter deatail retriving */
+//function for letter deatail retriving 
 function func2(data){
 $.ajax({
     type: "POST",
