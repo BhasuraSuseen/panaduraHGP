@@ -38,15 +38,15 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
             
             	<table style="width: 100%">
                 <tr><td style="background-color: white">
-			<!--create an another table in a table-->
-                        <table style="background-color: #CFD8DC;width: 100%" >
-                            <tr><td align="left"><b>Children S1</b></td></tr></table>
+		<!--create an another table in a table-->
+			<table style="background-color: #CFD8DC;width: 100%" >
+				<tr><td align="left"><b>Children S1</b></td></tr></table>
                         
                         <table align="left" style="background-color: #ECEFF1;width: 100%">
-                            <tr><td align="left"><b>Breakfirst</b></td>
-                                <td align="left"><b>Lunch</b></td>
-                                <td align="left"><b>Dinner</b></td></tr>
-                            <tr><td><table align="left" style="background-color: #ECEFF1;width: 100%">
+                            	<tr><td align="left"><b>Breakfirst</b></td>
+					<td align="left"><b>Lunch</b></td>
+                                	<td align="left"><b>Dinner</b></td></tr>
+				<tr><td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
@@ -60,7 +60,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
                                         <?php endwhile; ?>
 
 
-                                    </table></td>
+                                    	</table></td>
                             
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
@@ -99,16 +99,16 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
 		 	<table style="width: 80%"><tr><td style="width:50%">
             
             		<table style="width: 100%">
-                	<tr><td style="background-color: white">
+                		<tr><td style="background-color: white">
 
                         <table style="background-color: #CFD8DC;width: 100%" >
-                            <tr><td align="left"><b>Children S2</b></td></tr></table>
+                        	<tr><td align="left"><b>Children S2</b></td></tr></table>
                         
                         <table align="left" style="background-color: #ECEFF1;width: 100%">
-                            <tr><td align="left"><b>Breakfirst</b></td>
-                                <td align="left"><b>Lunch</b></td>
-                                <td align="left"><b>Dinner</b></td></tr>
-                            <tr><td><table align="left" style="background-color: #ECEFF1;width: 100%">
+                        	<tr><td align="left"><b>Breakfirst</b></td>
+                                	<td align="left"><b>Lunch</b></td>
+                                	<td align="left"><b>Dinner</b></td></tr>
+                            	<tr><td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
                                             <td align="left"><b>Item Name</b></td>
                                             <td align="left"><b>Amount</b></td>
@@ -122,7 +122,7 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
                                         <?php endwhile; ?>
 
 
-                                    </table></td>
+                                    	</table></td>
                             
                                 <td><table align="left" style="background-color: #ECEFF1;width: 100%">
                                         <tr>
@@ -161,8 +161,8 @@ $monsdi  = mysqli_query($conn, "SELECT item.Item_name, menu_mon.S_Di, item.unit 
 		<?php } else if($type == "c_s3") { ?>
 			<table style="width: 80%"><tr><td style="width:50%">
             
-            <table style="width: 100%">
-                <tr><td style="background-color: white">
+            		<table style="width: 100%">
+               		<tr><td style="background-color: white">
 
                         <table style="background-color: #CFD8DC;width: 100%" >
                             <tr><td align="left"><b>Children S3</b></td></tr></table>
