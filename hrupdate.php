@@ -9,7 +9,7 @@
         <!--<<iframe class="iframe1" name="iframe" height="75px"></iframe>-->
 
     <form action="hrup.php" method="post" target="iframehr">
-     * fields are not editable
+     * Fields that are not editable
         <table style="width: 90%"><tr>
             
                 <td>First Name<br><input id="fname" name="fname" style="width: 88%" type="text" name="fname" readonly>*</td>
