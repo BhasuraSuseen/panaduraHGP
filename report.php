@@ -23,7 +23,8 @@ Consumption of food items:<br>
 		<?php while ($a = mysqli_fetch_array($a1)):; ?>
 		<tr>
 			<td align=left><?php echo $a[0]; ?></td>
-                        <td align=right><?php echo $a[2].' '.$a[1]; ?></td></tr>
+			<td align=left><?php echo $a[1]; ?></td>
+                        <td align=right><?php echo $a[3].' '.$a[2]; ?></td></tr>
 		<?php
 		endwhile;
 		?>
