@@ -1,8 +1,10 @@
 
 <?php
+//include necessary files
 include 'attendence/datetime.php';
 include '../connect.php';
 //echo $day;
+//query for get data from tables by inner join and outter join
 $res = mysqli_query($conn, "SELECT  employee.Nic_no,
   employee.F_Name,
   employee.L_Name,
@@ -38,6 +40,7 @@ ON employee.NIC_NO = `leave`.nic  where attend.date = '2017-01-' and employee.E_
                             <td style="width: 12%; background-color: #CFD8DC">Req. Letter type</td>
 
                         </tr>
+			    <!-- set query data to array -->
                         <?php while ($row = mysqli_fetch_array($res)): ?>
 
                             <tr>
@@ -67,7 +70,7 @@ $des = 'des'.$row['Nic_no'];
                                 <td style="width: 12%; background-color:#ECEFF1 " id="des1" >
                                     <input type="text" id="<?php echo $des; ?>" name="des" >
                                 </td>
-
+ <!--call the functon when change the drop box value -->
                                 <td style="width: 12%; background-color:#ECEFF1" id="ty"><select class="attstyled-select" name="ReqType" onchange="saveLeave( '<?php echo $row[0]; ?>', document.getElementById('<?php echo $combx; ?>').value, document.getElementById('<?php echo $des; ?>').value, this.value)">
                                         <!--<option><?php echo $row[7]?></option>-->
                                         <option>Letter</option>
@@ -83,11 +86,12 @@ $des = 'des'.$row['Nic_no'];
 
                     
                 </form>
+		     <!--set link to get the report pdf -->
                 <a href="/leave/LreportDoctor.php">  <input class="attblack_btn" type="submit" value="Download Pdf"></a> 
 
             </center>
         </div>
  
     </div>
-
+ <!-- include script file-->
     <script type="text/javascript" src="../jst.js"></script>
