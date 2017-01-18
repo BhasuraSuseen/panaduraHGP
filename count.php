@@ -77,8 +77,8 @@ $staff = $_POST['staff'];
 		<tr><td align="left"><b>Item Name</b></td>
             	<td align="left"><b>Amount</b></td></tr>
 		 <?php
-			//clear report table once a week
-		 $x =  mysqli_query($conn,"SELECT Item_id FROM report");
+			//clear the report table once a week
+		$x =  mysqli_query($conn,"SELECT Item_id FROM report");
 		while ($y = mysqli_fetch_array($x)){
 			$sql3 = "INSERT INTO report (Item_id,mon_br,mon_lu,mon_di,tue_br,tue_lu,tue_di,wed_br,wed_lu,wed_di,thu_br,thu_lu,thu_di,fri_br,fri_lu,fri_di,sat_br,sat_lu,sat_di,sun_br
 			sun_lu,sun_di) VALUES('$y[0]','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0')";
