@@ -2,9 +2,10 @@
 include 'datetime.php';
 include 'connect.php';
 $NIC = $_POST['nic'];
-
+//query for get all data from employee table
 $qury =mysqli_query($conn, "SELECT *FROM homs1.employee
   WHERE homs1.employee.NIC_NO= '$NIC'");
+//get that result data for array and asign that values to variables
 if($row1 = mysqli_fetch_array($qury)){
       $nic = $row1[0];
       $fname = $row1[1];
@@ -24,9 +25,10 @@ if($row1 = mysqli_fetch_array($qury)){
       $remarks = $row1[15];
       $photo = $row1[16];
     
-     // echo $absent." Employees Absent today.";
+    
 }
-
+//create a json array 
 $json = '{"nic":"'.$nic.'","fname":"'.$fname.'","lname":"'.$lname.'","bday":"'.$bday.'","address":"'.$address.'","cno":"'.$cno.'","gender":"'.$gender.'","etype":"'.$etype.'","fedate":"'.$fedate.'","ecdate":"'.$ecdate.'","fgpdate":"'.$fgpdate.'","cgpdate":"'.$cgpdate.'","sgpdate":"'.$sgpdate.'","salary":"'.$salary.'","sidate":"'.$sidate.'","remarks":"'.$remarks.'"}';
+//echo array 
 echo $json;
 ?>
