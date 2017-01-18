@@ -76,7 +76,8 @@ $staff = $_POST['staff'];
 		<table align="center" style="width: 60%">
 		<tr><td align="left"><b>Item Name</b></td>
             	<td align="left"><b>Amount</b></td></tr>
-		 <?php 
+		 <?php
+			//clear report table once a week
 		 $x =  mysqli_query($conn,"SELECT Item_id FROM report");
 		while ($y = mysqli_fetch_array($x)){
 			$sql3 = "INSERT INTO report (Item_id,mon_br,mon_lu,mon_di,tue_br,tue_lu,tue_di,wed_br,wed_lu,wed_di,thu_br,thu_lu,thu_di,fri_br,fri_lu,fri_di,sat_br,sat_lu,sat_di,sun_br
@@ -103,8 +104,10 @@ $staff = $_POST['staff'];
 	 
 		 
 		 while ($mb = mysqli_fetch_array($monb)):; ?>
-			<?php $result = ($mb[1]*$c_s1) + ($mb[2]*$c_s2) + ($mb[3]*$c_s3) + ($mb[4]*$patients) + ($mb[5]*$dd) + ($mb[6]*$staff);?>
 			<?php 
+			//calculate food amounts
+			$result = ($mb[1]*$c_s1) + ($mb[2]*$c_s2) + ($mb[3]*$c_s3) + ($mb[4]*$patients) + ($mb[5]*$dd) + ($mb[6]*$staff);
+			 //convert g to kg or ml to L
 			if($mb[7] == "kg" || $mb[7] == "L"){
 				$result = $result/1000;
 			}else{
@@ -115,8 +118,7 @@ $staff = $_POST['staff'];
 					$result = $result1 + 1;
 				}
 			}
-			//$y = mysqli_query($conn,"SELECT Item_id,mon_br,mon_lu,mon_di FROM report");
-			//$x=  mysqli_fetch_array($y);
+			
 		$sql11 = "INSERT INTO report(Item_id,mon_br) VALUES('$mb[8]','$result')";
 		$sql22= "Update report SET Item_id='$mb[8]', mon_br='$result' WHERE Item_id='$mb[8]'";
 							
