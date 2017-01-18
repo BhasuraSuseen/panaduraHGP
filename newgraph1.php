@@ -180,12 +180,13 @@ if($r1>0){
 }
 mysqli_close($conn); 
 ?>
-
+    
     <script id = "scriptid1"src="http://d3js.org/d3.v3.min.js"></script>
     <script id = "scriptid2">
-      
+      /* Svg dynamic graph script created Using D3(Data driven document ) library*/
       var width = 800;
       var height = 600;
+      /* jason objects for graph nodes*/
       var nodes = [{"name": "LC1", "name1": "Letter Clerk", "value" : 0, "x_axis": 60, "y_axis": 300},
                   {"name": "MS","name1": "Medical Superintendent", "value" : 0, "x_axis": 210, "y_axis": 300},
                   {"name": "AO", "value" : 0, "x_axis": 360, "y_axis": 300},
@@ -199,6 +200,7 @@ mysqli_close($conn);
                   {"name": "EB7", "value" : 0, "x_axis": 740, "y_axis": 475},
                   {"name": "EB8", "value" : 0, "x_axis": 740, "y_axis": 545}
                  ];
+      /* jason objects for graph nodes name tags*/
       var noden = [{"name": "Letter Clerk", "value" : 0, "x_axis": 60, "y_axis": 300},
                   {"name": "Medical Superintendent", "value" : 0, "x_axis": 210, "y_axis": 300},
                   {"name": "Administrative Officer", "value" : 0, "x_axis": 360, "y_axis": 300},
@@ -212,6 +214,7 @@ mysqli_close($conn);
                   {"name": "Maintanance Clerk", "value" : 0, "x_axis": 740, "y_axis": 475},
                   {"name": "Minor Staff Clerk", "value" : 0, "x_axis": 740, "y_axis": 545}
                  ];
+       /* jason object for Letter detai circle tags*/
       var nodesl=[{"name": "Letter", "value" : 0,"location" : "","type" : "Normal Letter","replied" : "F", "x_axis": 285, "y_axis": 120}];
       var nodesr=[{"name": "Reply Status",  "x_axis": 110, "y_axis": 120},
                   {"name": "Normal Letter",  "x_axis": 330, "y_axis": 50},
@@ -219,6 +222,7 @@ mysqli_close($conn);
                   {"name": "Post Card",  "x_axis": 370, "y_axis": 150},
                   {"name": "Other Letter",  "x_axis": 330, "y_axis": 200}
                   ];
+      /* dynamic data allocation for nodes*/
       nodesl[0].location="<?php echo $location ?>";
       nodesl[0].type="<?php echo $type ?>";
       nodesl[0].replied="<?php echo $replied ?>";
@@ -275,7 +279,7 @@ mysqli_close($conn);
                   nodes3[5].value = "<?php echo $LC_to_MS ?>";
                   nodes3[6].value = "<?php echo $MS_to_AO ?>";
                   nodes3[7].value = "<?php echo $AO_to_LC ?>";
-                  
+      /* letter counts and propotion calculation*/
       var current_location = "<?php echo $current_location ?>";
                  
       var count = 0;
@@ -412,6 +416,7 @@ mysqli_close($conn);
               .outerRadius(width * 0.09)
               .startAngle(1 * Math.PI)
               .endAngle(2 * Math.PI);   
+    /* Graph drawing layer by layer these are svg drawings*/
     var arcs1 = canvas.selectAll("g.a")
           .data(nodes)
           .enter()
@@ -500,7 +505,7 @@ mysqli_close($conn);
               .on("click", click1)
               ;
                //radius of circle
-      
+      /* text layers*/
       canvas.selectAll("text.a")
           .data(nodes)
           .enter()
