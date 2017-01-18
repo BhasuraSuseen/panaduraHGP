@@ -12,12 +12,12 @@
      * Fields that are not editable
         <table style="width: 90%"><tr>
             
-                <td>First Name<br><input id="fname" name="fname" style="width: 88%" type="text" name="fname" readonly>*</td>
-                <td>Last Name<br><input id="lname" name="lname" style="width: 88%" type="text" name="lname" readonly>*</td>
+                <td>*First Name<br><input id="fname" name="fname" style="width: 88%" type="text" name="fname" readonly></td>
+                <td>*Last Name<br><input id="lname" name="lname" style="width: 88%" type="text" name="lname" readonly></td>
             </tr></table>
         <table style="width: 90%"><tr>
-                Birth Date<br>
-            <td><input id="bdate" type="date" name="bdate" style="width: 88%" readonly>*</td>
+                *Birth Date<br>
+            <td><input id="bdate" type="date" name="bdate" style="width: 88%" readonly></td>
 
             </tr>
         </table>
@@ -25,9 +25,9 @@
             <tr><td> Address
                     <input id="address" type="text" name="address" style="width: 100%"></td></tr></table>
         <table style="width: 90%">
-            <tr><td>NIC No<br><input id="nic" type="text" name="nic" style="width: 88%" readonly>*</td>
+            <tr><td>*NIC No<br><input id="nic" type="text" name="nic" style="width: 88%" readonly></td>
                 <td>Contact No<br><input id="cno" type="int" name="cnumber"  style="width: 88%"></td>
-                <td>Gender <br><input id="gender" type="text" name="gender"  style="width: 88%" readonly>*</td>
+                <td>*Gender <br><input id="gender" type="text" name="gender"  style="width: 88%" readonly></td>
             </tr></table>
         Employee Type<br>
         <select>
@@ -41,10 +41,10 @@
         </select>
 
         <table style="width: 90%"><tr><td>
-                    First Employment Date<br>
-                    <input type="Date" name="fedate" id="fedate" style="width: 88%" readonly>*</td>
-                <td>Employment Commencement Date<br>
-                    <input type="Date" id="ecdate" name="ecdate" style="width: 88%" readonly>*</td></tr>
+                    *First Employment Date<br>
+                    <input type="Date" name="fedate" id="fedate" style="width: 88%" readonly></td>
+                <td>*Employment Commencement Date<br>
+                    <input type="Date" id="ecdate" name="ecdate" style="width: 88%" readonly></td></tr>
             <tr> <td>Socond Grade Promotion Date<br>
                     <input type="Date" name="sgpdate" id="sgpdate" style="width: 100%" ></td>
                 <td> First Grade Promotion Date<br>
