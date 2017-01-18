@@ -16,8 +16,8 @@
                 <td>Last Name<br><input id="lname" name="lname" style="width: 88%" type="text" name="lname" readonly>*</td>
             </tr></table>
         <table style="width: 90%"><tr>
-                *Birth Date<br>
-            <td><input id="bdate" type="date" name="bdate" style="width: 88%" readonly></td>
+                Birth Date<br>
+            <td><input id="bdate" type="date" name="bdate" style="width: 88%" readonly>*</td>
 
             </tr>
         </table>
