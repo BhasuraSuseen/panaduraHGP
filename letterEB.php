@@ -148,7 +148,7 @@ header("Location:  index.php");
 
                         <b>New Letter Details</b>
                         <!--entering details of letters into databse for the first time -->
-                        <form name="new_letter" action="letterEB.php" method="post" accept-charset="utf-8">
+                        <form name="new_letter" action="letterEB.php" method="post" accept-charset="utf-8" onsubmit="date();">
                         <!--input type="number" name="let_id" placeholder="Letter ID" required--><!--br-->
                         <input type="date" name="fdate" placeholder="Date received" required>
                         <input type="text" name="address" placeholder="Address">
@@ -160,6 +160,25 @@ header("Location:  index.php");
                         <input type="reset" value="Reset">
                         <!--input type="submit" value="Last letter ID" name="submit1"-->
                         </form>
+                        <script>
+function date() {
+    document.getElementById("demo").innerHTML = "Hello World";
+  var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+
+today = mm+'/'+dd+'/'+yyyy;
+}
+</script>
                         <br>
                         <b>Enter Letter Clerk to Medical Supirintendent date</b>
                         <form name="mctoms" action="letterEB.php" method="post" accept-charset="utf-8">
@@ -247,6 +266,11 @@ header("Location:  index.php");
 						      <input type="submit" name="submitttt" value="Enter Date">
 						      <input type="reset" name="reset" value="Reset">
 						  </form>
+
+
+
+
+
                         <?php
                    
                         	if(isset($_POST["submit"])){
