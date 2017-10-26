@@ -133,6 +133,7 @@ function saveAttends(name, date, attend) {
         obj.open("POST", "./attendence/saveattends.php", true);
         obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         obj.send("nic=" + name + "&date=" + date + "&attend=" + attend);
+        alert("awa");
 
     } catch (err) {
     }
