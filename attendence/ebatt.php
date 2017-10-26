@@ -204,6 +204,6 @@ FROM employee
     </center>
 </body>
 <!--clude the java script files from jst.js-->
-<script type="text/javascript" src="./attendence/jst.js"></script>
+<script type="text/javascript" src="./jst.js"></script>
 
 
